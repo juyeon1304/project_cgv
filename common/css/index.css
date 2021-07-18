@@ -1,0 +1,38 @@
+
+.nav_skip { position: absolute; left: 0; right: 0; top: -100%; background: rgba(0,0,0,0.7); text-align: center;}
+.nav_skip.focus { top:0}
+.nav_skip a { color: #fff}
+.body_idx { background: #fdfcf0}
+
+/* main */
+.sec_visual { background: url(../images/bg/bg_bricks.png) repeat-x 0 0}
+.sec_visual .slide { position: relative; height: 450px; overflow: hidden;}
+.nav_controls button { position: absolute; cursor: pointer;}
+.sec_visual .nav_controls .btn_next, .nav_controls .btn_prev { top: 50%; transform: translateY(-50%); z-index: 10; width: 26px; height: 52px;}
+.sec_visual .nav_controls .btn_next { right: 20px; background-position: -30px -97px}
+.sec_visual .nav_controls .btn_prev { left: 20px; background-position: 0 -97px}
+
+.sec_movie .clear > .left { width: 733px; height: 388px;  overflow: hidden;}
+.sec_movie .clear > .left iframe { width: 100%; height: 100%}
+.sec_movie .clear > .right { width: 240px; height: 388px; }
+.sec_event .list_type1 { padding:16px 0 30px; border-bottom: 3px solid #241d1e}
+.sec_news { position: relative; padding: 10px 0 0 90px; margin: 0 0 108px;  height: 35px; overflow: hidden; border-bottom: 1px solid #222}
+.sec_news h2 { position: absolute; padding: 0 0 0 25px; left: 0; height: 35px; background: url(../images/ico_news.png) no-repeat left center; line-height: 35px; font-size:15px; }
+.list_news > li > a { height: 35px; line-height: 33px; font-size: 13px; color: #666}
+.list_news > li > a:after { content:""; display: block; clear: both;}
+.list_news > li > a > p { float: left}
+.list_news > li > a > span { float: right}
+
+.sec_special { border-top: 1px solid #949494; border-bottom: 1px solid #949494;}
+.sec_special ul { display: flex; justify-content: space-between;}
+.sec_special ul li { padding: 10px 0}
+.sec_special ul li a { display: block; height: 44px;}
+.sec_special ul li.dx a { width:49px; background-position: 0 -768px;}
+.sec_special ul li.imax a { width:59px; background-position: -74px -768px;}
+.sec_special ul li.screenx a{ width:88px; background-position: -159px -768px;}
+.sec_special ul li.spherex a{ width:76px; background-position: -273px -768px;}
+.sec_special ul li.gold a{ width:84px; background-position: -567px -768px;}
+.sec_special ul li.cine a{ width:89px; background-position: -679px -768px;}
+.sec_special ul li.cinema a{ width:86px; background-position: 0 -826px;}
+.sec_special ul li.kids a{ width:70px; background-position: -113px -826px;}
+.sec_special ul li.cinenforet a{ width:120px; background-position: -207px -826px;}

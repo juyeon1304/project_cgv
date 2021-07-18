@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'CJONLYONE';
+    src: url('../font/CJONLYONE/CJONLYONEMedium.eot');
+    src: url('../font/CJONLYONE/CJONLYONEMedium.eot?#iefix') format('embedded-opentype'),
+        url('../font/CJONLYONE/CJONLYONEMedium.woff2') format('woff2'),
+        url('../font/CJONLYONE/CJONLYONEMedium.woff') format('woff'),
+        url('../font/CJONLYONE/CJONLYONEMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CJONLYONE';
+    src: url('../font/CJONLYONE/CJONLYONEBold.eot');
+    src: url('../font/CJONLYONE/CJONLYONEBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/CJONLYONE/CJONLYONEBold.woff2') format('woff2'),
+        url('../font/CJONLYONE/CJONLYONEBold.woff') format('woff'),
+        url('../font/CJONLYONE/CJONLYONEBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ========================
+sprite background
+========================*/
+header .wrap_util a,
+header .wrap_gnb nav > ul > li > a,
+footer .sec_info .list_share > li > a,
+.sec_special ul li a
+{
+  background-image:url(../images/sprite/sprite_common1.png);
+  background-repeat: no-repeat;
+}
+
+.slide button {
+  background-image: url(../images/sprite/sprite_btn.png);
+  background-repeat: no-repeat;
+  background-color: transparent
+}
+
+.bg_line {
+  background: url(../images/bg/bg_line.jpg) repeat-x 0 50%;
+}
+
+
+/* ========================
+header
+========================*/
+header { background: url(../images/bg/bg_header.gif) repeat-x 0 0 #fdfcf0 }
+header > .wrap_com { position: relative; padding: 30px 0 0; }
+header .wrap_util { position: absolute; top: 0; left: 0; right: 0}
+/* header .wrap_util li { float: left} */
+header .wrap_util a { display: block; height:  30px; line-height: 30px;}
+header .wrap_util .left > * { float: left}
+header .list_util > li { float: left; border-left: 1px solid #ddd;}
+header .list_util > li a { padding: 0 10px}
+header .list_util > li.login a { width: 29px; background-position: 10px 9px; }
+header .list_util > li.join a { width: 39px; background-position: -42px 9px;}
+header .list_util > li.my a { width: 39px; background-position: -103px 9px;}
+header .list_util > li.vip a { width: 62px; background-position: -170px 9px;}
+header .list_util > li.club a { width: 53px; background-position: -254px 9px;}
+header .list_util > li.cs a { width: 38px; background-position: -328px 9px;
+}
+header .list_util > li.en a { width: 106px; background-position: -388px 9px;}
+
+header .list_sns > li { float: left; border-left: 1px solid #ddd;}
+header .list_sns > li a { padding: 0 10px}
+header .list_sns > li.app a { width: 74px; background-position: 10px -714px;}
+header .list_sns > li.facebook a { width: 44px; background-position: -85px -714px;}
+header .list_sns > li.insta a { width: 60px; background-position: -263px -714px;
+}
+header .frugal { padding: 0 10px; width: 85px; border-left: 1px solid #ddd; border-right: 1px solid #ddd; background-position: -151px -714px; }
+header .wrap_gnb { display: flex; justify-content: space-between; align-items: flex-end; height: 120px; padding: 0 0 32px ; box-sizing: border-box;}
+header .wrap_gnb nav:before { content:""; display: block; width: 428px; height: 31px; background: url(../images/txt_cultureplex.png) no-repeat center/ auto
+100%}
+header .wrap_gnb nav > ul { display: table; padding: 10px 0 0; margin: 0 auto}
+header .wrap_gnb nav > ul > li { position: relative; float: left}
+header .wrap_gnb nav > ul > li > a {  position: relative;  display: block; height: 17px; width: 60px; }
+header .wrap_gnb nav > ul > li ~ li { margin-left: 25px}
+header .wrap_gnb nav > ul > li.movie > a { background-position:13px -28px }
+header .wrap_gnb nav > ul > li.booking > a { background-position:-77px -28px }
+header .wrap_gnb nav > ul > li.theaters > a { background-position:-166px -28px }
+header .wrap_gnb nav > ul > li.event > a { background-position: -517px -28px; width: 90px}
+/* snb */
+header .wrap_gnb nav > ul > li:hover .wrap_snb{ display: block;}
+header .wrap_snb { display: none; position: absolute; left: 0; z-index: 10; padding: 10px 0 0; width: 164px;  box-sizing: border-box;}
+header .wrap_snb:before { content: ""; position: absolute; left: 50%; top: 0; width: 20px; height: 10px; background: url(../images/ico_smenu_arrow.png) no-repeat center / auto 100%; transform: translateX(-50%);}
+header .wrap_snb > div {  background:url(../images/bg/bg_smenu.png) repeat-y 0 0; padding:3px; }
+header .wrap_snb > div > ul { padding: 15px 0 ; border: 2px solid #828282;}
+header .wrap_snb > div > ul > li ~ li { padding: 5px 0 0}
+header .wrap_snb > div > ul a { display: block; padding: 0 0 0 15px; color: #fff; font-weight: 500;
+font-size: 13px; line-height: 20px; box-sizing: border-box;}
+/* 위치조정 */
+header li.movie .wrap_snb { transform:translateX(-52px);}
+header li.booking .wrap_snb { transform:translateX(-52px);}
+header li.theaters .wrap_snb { transform:translateX(-52px);}
+header li.event .wrap_snb { transform:translateX(-35px);}
+header .wrap_gnb .ad { background: #fef8dc}
+header .wrap_gnb .search { position: relative; padding: 5px 0 0}
+header .wrap_gnb .search input { padding: 0 34px 0 5px; width: 141px; height: 24px; border: 1px solid #b5b5b5; box-sizing: border-box;}
+header .wrap_gnb .search button { position: absolute; right: 0; bottom: 0; background: #e71a0f; color: #fff; width: 31px; height: 24px; font-size: 10px}
+
+/* ========================
+footer
+========================*/
+footer { padding: 0 0 147px; background: url(../images/bg/bg_footer.gif) repeat-x 0 97%}
+footer .sec_info .list1 { padding: 28px 0 20px; }
+footer .sec_info .list1 > li { float: left; font-size: 13px; letter-spacing: -0.2em}
+footer .sec_info .list1 > li a { color: #444}
+footer .sec_info .list1 > li a.color_org { color:#e7612e }
+footer .sec_info .list1 > li ~ li:before { content:""; display: inline-block; margin: 0 5px; width: 1px; height: 13px; background: #949494; vertical-align: -1px}
+footer .sec_info .list2 { position: relative; padding: 0 0 0 113px; font-size: 12px;}
+footer .sec_info .list2:before { display: block; content: ""; width: 90px; height: 43px; position: absolute; left: 0; top: 5px; background: url(../images/sprite/sprite_common1.png) no-repeat -145px -319px}
+footer .sec_info .list2 > li { float: left; line-height: 20px; letter-spacing: -0.05em}
+footer .sec_info .list2 > li.copy { float: right;}
+footer .sec_info .list2 .link_ftc { display: inline-block; height: 21px; width: 78px; border: 1px solid #b4b3aa; border-radius: 4px; color: #333; font-size: 11px; box-sizing: border-box; text-align: center; letter-spacing: -0.07em; vertical-align:0px;}
+footer .sec_info .btm { position: relative;}
+footer .sec_info .btm .bx_float { display: flex; align-items: center; position: absolute; right: 0; top: 0}
+footer .sec_info .btm .bx_float > * { float: left}
+footer .sec_info .list_share > li { float: left; margin-left: 2px}
+footer .sec_info .list_share > li > a { display: block; width: 34px; height: 34px; border-radius: 100%;}
+footer .sel_family { padding: 0 0 0 10px}
+footer .sel_family select {  padding: 3px 5px; height: 29px; width: 140px; background: transparent; border: 1px solid #999; box-sizing: border-box;}
+footer .sel_family button { width: 29px; height: 29px; background-color: #666; color: #fdfcf0; font-family: verdana, sans-serif; font-size: 10px; font-weight: bold; text-align: center;}
+
+/* ========================
+basic
+========================*/
+button { cursor: pointer;}
+
+
+
+/* ========================
+layout
+========================*/
+.wrap_com { width: 980px; margin: 0 auto; box-sizing: border-box;}
+.float_none { float: none}
+
+
+/* ========================
+common
+========================*/
+.nav_quick { position: fixed; left: 1461.5px; top: 240px;}
+.nav_quick ul { padding: 0 4px; border: 3px solid #e71a0f; width: 116px; border-radius: 8px; overflow: hidden; background: #fdfcf0; box-sizing: border-box;}
+.nav_quick ul li a { display: block;  }
+.nav_quick .btn_top { width: 116px; height: 72px; background: url(../images/btn_top.png) no-repeat center }
+
+/* heading */
+.h_type1 { height: 41px; margin: 30px 0 15px; text-align: center;}
+.h_type1 img { display:inline-block; padding: 0 10px; background-color: #fdfcf0;}
+
+/* tab */
+.tab_type1:before,
+.tab_type1:after { content:""; display: inline-block; width: 19px; height: 39px; }
+.tab_type1:before { background: url(../images/sprite/sprite_corner.png) 0 -20px no-repeat}
+.tab_type1:after { background: url(../images/ribon_right.png) no-repeat center / 100% auto;}
+.tab_type1 { display: flex; justify-content: center; }
+.tab_type1 ul { padding: 0 15px; background: #e71a0f }
+.tab_type1 li { float: left}
+.tab_type1 li ~ li a:before { content:""; display: inline-block; margin: 0 15px; height: 14px; width: 1px; background: #fff; vertical-align:-1px;}
+.tab_type1 li a { display: block; line-height: 39px; background: #e71a0f; color: #fff; font-size: 15px;}
+
+
+/* list */
+.list_type1 > li { float: left; margin-right: 6.6px;}
+.list_type1 > li:nth-child(4n) { margin-right: 0;}
+.list_type1 > li > a { display: block; width: 240px; height: 200px;}
+.list_type1 > li > a > img { object-fit: cover;}
+
+
+/* box */
+.bx_type1 { display: flex; padding: 30px 0 0; justify-content: space-between;}
+.bx_type1 > .bx_outer { padding: 3px; width: 240px; height: 273px; border: 3px solid #241d1e; box-sizing: border-box;}
+.bx_type1 > .bx_outer:nth-child(2) { width: 486px;}
+.bx_type1 .bx_inner { border: 1px solid #241d1e;}
+.bx_type1 img { width: 100%; height: 100%;}
+
+
+/* banner */
+.banner_hori > a { position: relative; display: block; height: 182px; text-align: center; background-color: #19407c}
+.banner_hori > a > div { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}

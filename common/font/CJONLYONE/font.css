@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'CJ ONLYONE';
+    src: url('CJONLYONEMedium.eot');
+    src: url('CJONLYONEMedium.eot?#iefix') format('embedded-opentype'),
+        url('CJONLYONEMedium.woff2') format('woff2'),
+        url('CJONLYONEMedium.woff') format('woff'),
+        url('CJONLYONEMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CJ ONLYONE';
+    src: url('CJONLYONEBold.eot');
+    src: url('CJONLYONEBold.eot?#iefix') format('embedded-opentype'),
+        url('CJONLYONEBold.woff2') format('woff2'),
+        url('CJONLYONEBold.woff') format('woff'),
+        url('CJONLYONEBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
