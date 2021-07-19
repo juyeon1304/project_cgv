@@ -307,7 +307,7 @@ height: 49px; padding-left: 198px; }
 .wrap_theaterinfo .box_img_size .com_img a 
 { position: absolute; right: 20px; top: 20px; display: block; width: 104px; height: 29px; }
 .wrap_theaterinfo .contents_box { 
-  position: relative; left: 0; bottom: 165px; width: 920px; height: 124px; padding: 20px 30px; background: url(https://img.cgv.co.kr/R2014/images/common/bg/bg_dim80.png) 0 0 repeat; color: #fdfcf0;
+  position: absolute; left: 0; bottom: 0px; width: 920px; height: 124px; padding: 20px 30px; background: url(https://img.cgv.co.kr/R2014/images/common/bg/bg_dim80.png) 0 0 repeat; color: #fdfcf0;
 }
 .wrap_theaterinfo .theater_info { position: relative; float: left; width: 608px; }
 .wrap_theaterinfo .theater_info .tit { padding-top: 10px; width: 400px; color: #fdfcf0; font-size: 13px; text-overflow: initial; white-space: initial; tab-size: 1px;  }
@@ -370,6 +370,24 @@ div[class^="sect_"] .contents_box li a {
 
 .tab-menu { clear: both; }
 .sect_theater .tab_menu { position: relative; margin: 30px 0 15px; }
+/* tab */
+.tab_type2:before,
+.tab_type2:after { content:""; display: inline-block; width: 19px; height: 39px; }
+.tab_type2:before { background: url(../images/sprite/sprite_corner.png) 0 -20px no-repeat; }
+.tab_type2:after { background: url(../images/ribon_right.png) no-repeat center / 100% auto;}
+.tab_type2 { display: flex; justify-content: center; }
+.tab_type2 ul { padding: 0 15px; background: #e71a0f }
+.tab_type2 li { float: left}
+.tab_type2 li ~ li a:before { content:""; display: inline-block; margin: 0 15px; height: 14px; width: 1px; background: #fff; vertical-align:-1px;}
+.tab_type2 li.on a{ padding-left: 15px; }
+.tab_type2 li.last a{ padding-right: 15px; }
+.tab_type2 li a { display: inline-block; position: relative; line-height: 39px; background: #e71a0f; color: #fff; font-size: 15px; font-weight: 700;}
+
+.tab_type2 li.on a::before {     content: '';
+  display: inline-block;
+  width: 26px;
+  height: 39px;
+  padding-right: 5px; background: url(/common/images/ico_finger.png) 0 50% no-repeat; vertical-align: top; }
 
 
 /* usj_theaters_index 끝 */
@@ -381,11 +399,8 @@ div[class^="sect_"] .contents_box li a {
 dl::after, ul::after, ol::after { content: ''; clear: both; display: block; }
 button, input[type='submit'], input[type='button'] { cursor: pointer; margin: 0; padding: 0; }
 body, input, textarea, select, button, table { font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', 'Dotum', 'sans-serif'; }
-
-
-
-  li { display: list-item; text-align: -webkit-match-parent;
-    vertical-align: middle; }
+li { display: list-item; text-align: -webkit-match-parent;
+vertical-align: middle; }
 
 /* usj_theaters_default 끝 */
 
