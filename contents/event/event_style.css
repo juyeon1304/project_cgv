@@ -1,0 +1,23 @@
+.event_title {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.event_navbar {
+    border-top: 3px solid black;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.event_tab_menu li {
+    display: inline-block;
+    padding: 10px 0;
+    margin-right: 80px;
+}
+
+.submenu {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
