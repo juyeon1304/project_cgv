@@ -1,0 +1,80 @@
+#nav_line {
+    border-bottom: 1px solid #cacac0;
+    height: 30px;
+    background-color: #f1f0e5;
+    position: relative;
+   
+  
+}
+#nav_content {
+    width: 1000px;
+    /* border : 1px solid red; */
+    height : 30px;
+    position :absolute;
+    left : 50%;
+    transform: translate(-50%,-5%);
+
+}
+#nav_content > ul {
+    box-sizing: border-box;
+    margin-left: 20px;
+    width: 300px;
+    /* border : 1px solid red; */
+   
+}
+#nav_content > ul > li {
+    display: inline-block;
+    font-size: 14px;
+    height: 20px;
+    /* border : 1px solid red; */
+    vertical-align: middle;
+}
+
+#nav_content > #nav_btn > li:nth-child(n+2){
+    padding-top: 4px;
+}
+
+
+#nav_content > #nav_btn > li:not(:last-child):after{
+    content : '>';
+    margin : 10px;
+}
+ 
+#nav_btn {
+    float : left;
+}
+
+#nav_btn2 {
+    float : right;
+    height: 100%;
+    text-align: center;
+    /* border: 1px solid #cacac0; */
+    box-sizing: border-box;
+}
+
+#nav_btn2 > div {
+    float : right;
+    width: 150px;
+    height: 100%;
+    border: 1px solid #cacac0;
+    border-top: none;
+    border-bottom: none;
+
+        
+}
+#nav_btn2 > div:first-child{
+    border-left: none;
+}
+#nav_btn2 > div:first-child > p::after{
+    content : url("../image/ico_club_service.png");
+    /* float : right; */
+}
+
+
+#nav_btn2 > div > p {
+    padding-top: 5px;
+}
+
+
+
+
