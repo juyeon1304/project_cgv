@@ -1,6 +1,5 @@
 .event_title {
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 36px;
 }
 
 .event_navbar {
@@ -21,3 +20,48 @@
     top: 8px;
     right: 0;
 }
+
+.submenu > a {
+    background-color: red;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.event_item_list img {
+    width: 100%;
+}
+
+
+.event_cf {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event_cf li {
+    flex-grow: 1;
+    width: 28%;
+    padding: 10px;
+    
+}
+
+.evt-desc {
+    background-color: white;
+    height: 90px;
+    border: 1px solid rgb(224, 221, 221);
+}
+
+.txt1 {
+    padding: 10px;
+    height: 35px;
+}
+
+.txt2 {
+    color: rgb(139, 139, 139);
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+
