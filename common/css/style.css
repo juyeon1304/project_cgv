@@ -199,7 +199,8 @@ padding: 0 10px; border-right: 1px solid #acaca3; height: 27px; }
 .line_wrap > .line_sect > .sect_side ul li a{ color: #666; font-weight: 500; font-size: 13px; text-align: center; }
 .line_wrap > .line_sect > .sect_side > ul li a.specialclub { padding-right: 25px; text-align: left; background: url(https://img.cgv.co.kr/r2014/images/common/ico/ico_club_service.png) no-repeat 100% 50%; }
 
-/* ===========================================
+/*=
+=============================================
           faverity CGV sector
 ==============================================*/
 
@@ -392,10 +393,65 @@ div[class^="sect_"] .contents_box li a {
   height: 39px;
   padding-right: 5px; background: url(/common/images/ico_finger.png) 0 50% no-repeat; vertical-align: top; }
 
+/* price_common */
+#contents { position: relative; width: 980px; margin: 0 auto; }
+input, select, img { vertical-align: middle; }
+select {
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  box-sizing: border-box;
+  align-items: center;
+  white-space: pre;
+  cursor: default;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  border-radius: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial; }
+table { border-collapse: separate; }
+tr { display: table-row; }
+caption, th, td { font-weight: 300; line-height: 1.5em; vertical-align: middle; }
+/* price_common */
 
+#contents { clear: both; padding-bottom: 50px; }
+.tit_price_info { position: relative; height: 51px; margin-top: 30px; border-bottom: 3px solid #241d1e; }
+.tit_price_info h3 { display: inline-block; position: relative; height: inherit; margin: 0; background-image: none; color: #222; font-weight: 550; font-size: 36px; text-align: left; vertical-align: middle; }
+.right_menu { position: absolute; right: 0; top: 15px; font-size: 20px; text-align: right; font-weight: normal; }
+.right_menu, .right_menu a  { color: #ac9c8f; }
+.right_menu a.on { color: #2f363f; }
+
+.mov_price { padding: 40px; text-align: center; }
+.mov_price .area_search { position: relative; display: inline-block; margin: 0 auto 20px; padding-bottom: 2px; overflow: hidden; border-bottom: 2px solid #ab9c8f; }
+.mov_price .area_search::before { display: block; content: ''; position: absolute; left: 210px; top: 0; bottom: 2px; width: 1px; border-left: 1px solid #ccc0b7; }
+.area_search .area_sell { width: 200px; margin-right: 21px; }
+.mov_price .area_search select { float: left; border: none; background-color: transparent; padding: 0; font-size: 24px; height: 40px; line-height: 40px; font-weight: 300; }
+.mov_price .area_search .area_sell2 { width: 380px; }
+.main_sect { text-align: left; }
+.main_sect #Price_box { padding-top: 15px; width: 1020px; height: 1480px; float: left; }
+.Price_box { overflow: hidden; margin: 40px -20px 0 -20px; }
+.main_tablebox .main_price_tab { float: left; width: 470px; margin: 0 20px; }
+.main_price_tab { float: left; width: 470px; margin: 0 20px; }
+.main_price_tab .tab_tit { display: block; margin: 0 0 5px; padding-left: 17px; font-size: 15px; color: #000; font-weight: 600; background: url(/common/images/bul_square.png) no-repeat 0 4px;  }
+.tab_class { position: relative; margin: 10px 0 20px; padding-bottom: 45px; }
+.tab_class table { width: 100%; border-bottom: 1px solid #ab9c8f; text-align: center; font-size: 13px; }
+table caption { font: 0/0 a; zoom: 1; }
+colgroup { display: table-column-group; }
+.main_price_tab table thead th { color: #857362; font-weight: 300; padding-bottom: 5px; }
+.main_price_tab table tr, .main_price_tab table td { padding: 3px 5px; text-align: center; color: #000;  }
+.main_price_tab table tr.fir th, .main_price_tab table tr.fir td { padding-top: 12px; border-top: 1px solid #ab9c8f; }
+.main_price_tab table tr.last th, .main_price_tab table tr.last td { padding-bottom: 12px; }
+.main_etc { display: inline-block; margin-top: 40px; text-align: left; border-bottom: 2px solid #ab9c8f; width: 980px; height: 173px; font-size: 13px; }
+.main_etc p { color: #857362; }
+p.tail_txt { margin-top: 20px; text-align: left; font-size: 13px; color: #857362; line-height: 1.3;}
 /* usj_theaters_index 끝 */
-
-
 
 
 /* usj_theaters_default 시작 */
