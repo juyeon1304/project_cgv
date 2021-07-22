@@ -1,0 +1,171 @@
+@charset "utf-8";
+ body,html { background-color:#fdfcf0 }
+
+.tab_special { position: relative; padding: 0 35px; border-bottom: 2px solid #d2cfc6; box-sizing: border-box; }
+.tab_special > div { height: 150px; overflow: hidden;}
+.tab_special .wrap_scroll > li a { box-sizing: border-box; display: block; height: 150px; width: 130px;  background-image:url(../images/sprite/sprite_special.jpg); background-repeat: no-repeat; }
+.tab_special .wrap_scroll > .fourdx a { background-position: 0 0}
+.tab_special .wrap_scroll > .scrx a { background-position: -1170px 0;}
+.tab_special .wrap_scroll > .fourdx_scr a { background-position: -2480px 0;}
+.tab_special .wrap_scroll > .imax a { background-position:-130px 0 ;}
+.tab_special .wrap_scroll > .chef a { background-position: -390px 0;}
+.tab_special .wrap_scroll > .gold a { background-position: -260px 0;}
+.tab_special .wrap_scroll > .foret a { background-position:-2075px 0 ;}
+.tab_special .wrap_scroll > .living a { background-position: -2340px 0;}
+.tab_special .wrap_scroll > .spherex a { background-position: -1690px 0;}
+.tab_special .wrap_scroll > .starium a { background-position: -520px 0;}
+.tab_special .wrap_scroll > .premium a { background-position: -1430px 0;}
+.tab_special .wrap_scroll > .sweet a { background-position: -910px 0;}
+.tab_special .wrap_scroll > .sky a { background-position: -2210px 0;}
+.tab_special .wrap_scroll > .private a { background-position: -650px 0;}
+.tab_special .wrap_scroll > .kids a { background-position: -1560px 0;}
+.tab_special .wrap_scroll > .soundx a { background-position: -1300px 0;}
+.tab_special .wrap_scroll > .suite a { background-position: -2620px 0;}
+/* hover */
+.tab_special .wrap_scroll > .fourdx a { background-position: 0 -150px}
+.tab_special .wrap_scroll > .scrx a:hover { background-position:-1170px -150px;}
+.tab_special .wrap_scroll > .fourdx_scr a:hover { background-position: -2480px -150px;}
+.tab_special .wrap_scroll > .imax a:hover { background-position:-130px -150px ;}
+.tab_special .wrap_scroll > .chef a:hover { background-position: -390px -150px}
+.tab_special .wrap_scroll > .gold a:hover { background-position: -260px 0;}
+.tab_special .wrap_scroll > .foret a:hover { background-position:-2075px -150px;}
+.tab_special .wrap_scroll > .living a:hover { background-position: -2340px -150px;}
+.tab_special .wrap_scroll > .spherex a:hover { background-position: -1690px -150px;}
+.tab_special .wrap_scroll > .starium a:hover { background-position: -520px -150px;}
+.tab_special .wrap_scroll > .premium a:hover { background-position:-1430px -150px;}
+.tab_special .wrap_scroll > .sweet a:hover { background-position: -910px -150px;}
+.tab_special .wrap_scroll > .sky a:hover { background-position: -2210px 0;}
+.tab_special .wrap_scroll > .private a:hover { background-position: -650px 0;}
+.tab_special .wrap_scroll > .kids a:hover { background-position: -1560px 0;}
+.tab_special .wrap_scroll > .soundx a:hover { background-position: -1300px 0;}
+.tab_special .wrap_scroll > .suite a:hover { background-position: -2620px 0;}
+.tab_special > button { position: absolute; top:50%; transform: translateY(-50%); width: 33px; height: 64px; z-index: 1;}
+.tab_special > .btn_prev { left: 0; background-position: -140px -70px}
+.tab_special > .btn_next { right: 0; background-position: -174px -70px}
+.wrap_special .wrap_title { display: flex; justify-content: space-between; align-items: flex-end; padding: 1.5rem 0 0.8rem;}
+.wrap_special .wrap_title .heading { font-size:#222; font-size: 36px; font-weight: 500}
+.wrap_special .wrap_title ul li { float: left; padding-left: 0.75rem; font-size: 16px; font-weight: 600}
+.wrap_special .wrap_title ul li a { display: block; padding: 0.2rem 0; padding-left: 0.75rem; color: #666}
+.wrap_special .wrap_title ul li a:hover { color:#e40000 }
+
+
+/*=======================================
+4dx.html
+======================================= */
+.sec_effects .item_effects { position:relative;}
+.sec_effects .item_effects .list_tab { position: absolute; right: 0; top: 50px; width: 290px;}
+.sec_effects .item_effects .list_tab > li { float: left; margin: 0 12px 10px 0;}
+.sec_effects .item_effects .list_tab > li button { width: 62px; height: 65px;
+background: url(../images/sprite/btn_fordx_effects.png) no-repeat }
+.sec_effects .item_effects .list_tab > .bubble button { background-position: -62px 0}
+.sec_effects .item_effects .list_tab > .light button { background-position:-124px 0 }
+.sec_effects .item_effects .list_tab > .fog button {  background-position: -186px 0}
+.sec_effects .item_effects .list_tab > .vibration button{ background-position:-248px 0 }
+.sec_effects .item_effects .list_tab > .scent button { background-position:-310px 0 }
+.sec_effects .item_effects .list_tab > .water button { background-position: -372px 0}
+.sec_effects .item_effects .list_tab > .air button { background-position: -434px 0}
+/* hover */
+.item_effects .list_tab > .wind button:hover,
+.item_effects .list_tab > .wind.on button  { background-position: 0 -65px}
+.item_effects .list_tab > .bubble button:hover,
+.item_effects .list_tab > .bubble.on button
+  { background-position: -62px -65px}
+.item_effects .list_tab > .light button:hover,
+.item_effects .list_tab > .light .onbutton
+  { background-position:-124px -65px}
+.item_effects .list_tab > .fog button:hover,
+.item_effects .list_tab > .fog bu.ontton
+  {  background-position: -186px -65px}
+.item_effects .list_tab > .vibration button:hover,
+.item_effects .list_tab > .vibrat.onion button
+ { background-position:-248px -65px }
+.item_effects .list_tab > .scent button:hover,
+.item_effects .list_tab > .scent .onbutton
+  { background-position:-310px -65px }
+.item_effects .list_tab > .water button:hover,
+.item_effects .list_tab > .water .onbutton
+  { background-position: -372px -65px}
+.item_effects .list_tab > .air button:hover,
+.item_effects .list_tab > .air bu.ontton
+  { background-position: -434px -65px}
+
+
+.wrap_special .sec_btm > div { border-top: 3px solid #333; border-bottom: 3px solid #333;}
+.wrap_special .sec_btm > div > * { display: block; position: relative; }
+.wrap_special .sec_btm > div > .right { width: 648px; height: 334px; background:url(../images/bg/bg_specialclub.jpg) no-repeat center / 100% auto }
+.wrap_special .sec_btm > div > .left { padding: 217px 0 0; margin:7px 0 0; width: 322px; height: 320px; background:url(../images/txt_timetable.png) 0 0 no-repeat #a9a9a5; box-sizing: border-box;}
+.wrap_special .sec_btm > div > .left > p { height: 70px;}
+.wrap_special .sec_btm > div > .left:after { content: ""; position: absolute; top: 172px; right:62px; width: 20px; height: 20px; background: url(../images/sprite/sprite_btn.png) -180px -179px no-repeat}
+.wrap_special .sec_btm > div > .right div { position: absolute; left: 50%; transform: translateX(-50%); bottom: 40px; width: 90px; height: 27px; border-radius: 3px; background:#222 ; color: #fff; text-align: center; line-height: 27px; font-size: 13px}
+.wrap_special .sec_btm > div > .right div:after { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); content: ""; width: 86px; height: 23px; box-sizing: border-box; border: 1px solid #5b5b58; border-radius: 3px;}
+
+/*=======================================
+scrx.html
+======================================= */
+.sec_scrx .wrap_list { padding: 50px 0 }
+.sec_scrx .list_link { float: right; }
+.sec_scrx .list_link:after { content:""; display: block; clear: both}
+.sec_scrx .list_link > li { float: left; padding-left: 10px}
+.sec_scrx .list_link > li > a { display: block; width: 165px; height: 30px;}
+
+
+/*=======================================
+schedue.html
+======================================= */
+
+.sec_schedule { border-top: 3px solid #241d1e; border-bottom: 2px solid #474746}
+
+.wrap_days { position:relative; padding: 12px 80px;}
+.wrap_days .wrap_scroll { overflow-x: auto;}
+.wrap_days ul li a { display:flex; justify-content: space-between; align-items: center;padding: 0 5px; width: 77px; height: 48px; box-sizing: border-box; border-radius: 5px; border: 2px solid #fff; font-size: 11px; color: #717171}
+.wrap_days ul li a > p { font-size:28px; font-weight: 500}
+.wrap_days ul li.on a { background: #fff; border: 2px solid #241d1e;  color: #000}
+.wrap_days > button { position: absolute; top: 50%; transform: translateY(-50%); width: 55px; height: 20px; background: url(../images/sprite/sprite_btn.png) no-repeat;}
+.wrap_days > .btn_prev { left: 0; background-position:-117px -174px }
+.wrap_days > .btn_next { right: 0; background-position: -117px -155px}
+
+.sec_schedule .wrap_info .left > * { float: left; line-height: 36px}
+.sec_schedule .wrap_info .left > p { padding: 0 0 0 20px; color: #794624}
+.sec_schedule .wrap_info { border-top: 2px solid #474746; border-bottom: 1px solid #474746; font-size: 0.8em; letter-spacing: -0.05em}
+.sec_schedule .wrap_info ul:after { display: block; clear: both; content: ""}
+.sec_schedule .wrap_info ul li { float: left; margin-left: 15px; line-height: 36px}
+.sec_schedule .wrap_info ul li:before { content: ""; display: inline-block; margin-right: 5px; width: 13px; height:13px ; background: url(../images/sprite/sprite_icon.png) no-repeat}
+.sec_schedule .wrap_info ul .early:before { background-position: 0 -176px}
+.sec_schedule .wrap_info ul .midnight:before { background-position:0 -195px}
+.sec_schedule .wrap_info .right ul li a { display:inline-block; }
+.sec_schedule .wrap_info .right ul li:before { background-position: 0 -158px}
+
+.outer_timetb > .list_movie > li { padding: 40px 0 20px 40px; border-bottom:1px solid #474746 }
+.list_movie .wrap_tit {display: flex; align-items: center; font-size: 12px}
+.list_movie .wrap_tit .list_info > li { float: left; font-size: 13px; color: #666}
+.list_movie .wrap_tit .list_info > li ~ li:before { content: "/"; display: inline-block;}
+.list_movie .wrap_tit .bx_info { margin: 0 5px 0 3px; padding: 0 5px; border: 2px solid #3e82a4; color: #3e82a4; box-sizing: border-box; text-align: center; border-radius: 3px; line-height: 18px;}
+.list_movie .wrap_tit .bx_info.yet { border-color:#a16423; color: #a16423;}
+.list_movie .wrap_tit .bx_info.dday { border-color:#e71a0f; color: #e71a0f;}
+.list_movie .wrap_tit .bg_grade { position: absolute; transform: translateX(-28px);width: 21px; height: 21px; }
+.list_movie .wrap_tit .tit {margin-right: 5px; font-size: 16px; font-weight: 600}
+
+/* 시간표 테이블 시작 */
+.list_movie > li > div { padding:20px 0 0 }
+.list_movie .list_hall .list_info:after { display: block; clear: both; content: ""}
+.list_movie .list_hall .list_info { padding: 0 0 0 16px; background: url(../images/theathers_special/ico_arr_right.png) no-repeat left 0 center}
+.list_movie .list_hall .list_info > li { float: left; font-size: 13px; line-height: 20px}
+.list_movie .list_hall .list_info > li ~ li:before { content: ""; display: inline-block; margin: 0 8px; width: 2px; height:  12px; background:#c9c7c4; vertical-align: -1px;}
+.list_movie .list_timetb { margin:8px 0 20px }
+.list_movie .list_timetb:after { display: block; clear: both; content: ""}
+.list_movie .list_timetb > li { float: left; display: table; margin-left: -1px; }
+.list_movie .list_timetb > li > a { display: table-cell; width: 72px; height: 44px; border:1px solid #cbcabe; box-sizing: border-box; font-size: 12px; vertical-align: middle; text-align: center; line-height: 1}
+.list_movie .list_timetb > li > a > p { padding: 0 0 5px; font-weight: 600; font-size: 14px}
+.list_movie .list_timetb > li > a > div { font-size:12px; color: #3e82a4 }
+
+
+.sec_choice { padding:80px 0 }
+.sec_choice > div { padding: 20px 0; border-top: 3px solid #2b2b2b; border-bottom: 2px solid #2b2b2b}
+.sec_choice > div > * { float: left; box-sizing: border-box; }
+.sec_choice > div .heading { font-size: 17px; width:10%; }
+.sec_choice > div > div { width: 90%; border-left: 2px solid #dfddd3; padding:0 0 0 10px; }
+.sec_choice ul { margin-top: -5px}
+.sec_choice ul li { float: left; padding:5px 0 0 5px}
+.sec_choice ul li a { display: block; padding: 0 0 0 7px; width:207px; line-height: 25px; border: 2px solid transparent; border-radius: 3px; box-sizing: border-box; font-size: 13px; color: #222; transition: all .2s}
+.sec_choice ul li.on a,
+.sec_choice ul li a:hover { border-color: #1d1d1b; background:#333230; color: #fff; }
