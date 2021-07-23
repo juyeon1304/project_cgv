@@ -1,7 +1,11 @@
+
+
+/* 공통 */
 .event_title {
     font-size: 36px;
 }
 
+/* */
 .event_navbar {
     border-top: 3px solid black;
     border-bottom: 1px solid black;
@@ -22,7 +26,7 @@
 }
 
 .submenu > a {
-    background-color: red;
+    background-color: #e71a0f;
     padding: 5px;
     border-radius: 5px;
     color: white;
@@ -50,7 +54,7 @@
     background-color: white;
     height: 90px;
     border: 1px solid rgb(224, 221, 221);
-    width: 250px;
+    width: 248px;
 }
 
 .txt1 {
@@ -63,6 +67,9 @@
     font-size: 14px;
     padding: 0 10px;
 }
+
+
+/* aside */
 
 .col-aside {
     float: right;
@@ -83,3 +90,42 @@
 }
 
 
+/* CgvTheater(영화/예매) 부분 */
+
+.local_search {
+    background-color: #e71a0f;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 60px;
+}
+
+.local_search > a { 
+    color: white; 
+}
+
+.evt-select-area { 
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* Member/Club 부분 여백 */
+.blank {
+    height: 150px;
+}
+
+/* 더보기 관련 */
+.more { display: none; }
+.more_btn { 
+    background-color: rgb(236, 236, 236);
+    width: 755px;
+    padding: 18px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    color:rgb(95, 95, 95)
+}
