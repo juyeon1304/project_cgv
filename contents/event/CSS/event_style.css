@@ -50,6 +50,7 @@
     padding: 10px;
 }
 
+
 .evt-desc {
     background-color: white;
     height: 90px;
@@ -92,17 +93,29 @@
 
 /* CgvTheater(영화/예매) 부분 */
 
+select {
+    box-sizing: border-box;
+    text-rendering: auto;
+    letter-spacing: normal;
+    height: 27px;
+    padding: 0 5px;
+    border: 1px solid #b4b3aa;
+    color: #666666;
+    background-color: #ffffff;
+
+}
+
 .local_search {
     background-color: #e71a0f;
-    padding: 5px;
+    padding: 5.5px;
     border-radius: 5px;
     font-size: 12px;
     font-weight: bold;
-    width: 60px;
+    width: 65px;
 }
 
 .local_search > a { 
-    color: white; 
+    color: #ffffff;; 
 }
 
 .evt-select-area { 
@@ -111,8 +124,7 @@
 }
 
 
-
-/* Member/Club 부분 여백 */
+/* 밑 부분 여백 */
 .blank {
     height: 150px;
 }
@@ -120,12 +132,76 @@
 /* 더보기 관련 */
 .more { display: none; }
 .more_btn { 
-    background-color: rgb(236, 236, 236);
-    width: 755px;
+    background-color: #f1f0e6;
+    width: 100%;
     padding: 18px;
     text-align: center;
     font-size: 13px;
     font-weight: bold;
     cursor: pointer;
-    color:rgb(95, 95, 95)
+    color:#666;
+}
+
+/* giftshop 메뉴*/
+.gift_store { background-color: #fff; }
+
+.bx_wrapper {
+    padding-bottom: 30px;
+}
+
+.category_wrap { 
+    width: 100%; 
+    box-sizing: border-box;
+}
+.category_content { 
+    display: flex;
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    width: 980px; margin: 0 auto; box-sizing: border-box;
+}
+.category_content li {
+    
+    margin-right: 20px;
+    padding: 15px 0;
+}
+.category_content li > a {
+    color: #6a6f77;
+    padding: 0 6px;
+    font-weight: bold;
+}
+
+.cart_content li {
+    display: flex;
+    float: right;
+    margin-right: 20px;
+    color: #6a6f77;
+}
+
+.category_product_wrap {
+    width: 980px; margin: 0 auto; box-sizing: border-box;
+}
+
+.category_product_title {
+    font-size: 30px;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+}
+
+.category_product_list {
+    position: relative;
+}
+
+.btn_category_product img {
+    float: right;
+    width: 24px;
+    position: 
+}
+
+.category_product_inner_list li {
+    display: inline-block;
+}
+
+.category_product_inner_list li img {
+    width: 100%;
 }
