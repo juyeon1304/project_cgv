@@ -67,6 +67,7 @@
 }
 #nav_btn2 > div:first-child > p::after{
     content : url("../image/ico_club_service.png");
+    vertical-align: middle;
     /* float : right; */
 }
 
