@@ -1,0 +1,252 @@
+
+#main_container{
+    width : 1000px;
+    height: 1000px;
+    border : 1px solid red;
+    box-sizing: border-box;
+}
+#btn_line{
+    width: 100%;
+    height: 80px;
+    border : 1px solid red;
+    
+}
+
+.btn_style {
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 30px;
+    overflow: hidden;
+    /* border : 1px solid red; */
+    white-space: nowrap;
+    cursor: pointer;
+    position: absolute;
+ 
+}
+.btn_style > span {
+    position: absolute;
+    left: 500px;
+}
+
+
+
+#btn_Eng {
+    background-image: url("../image/top_buttons.png") ;
+    background-position: 0 0;
+    left : 500px;
+    top : 30px;
+
+
+}
+#btn_book {
+    background-image: url("../image/top_buttons.png") ;
+    background-position: 0 -30px;
+    left : 590px;
+    top : 30px;
+
+}
+#btn_discount {
+    background-image: url("../image/top_buttons.png") ;
+    background-position: 0 -60px;
+    left : 680px;
+    top : 30px;
+
+}
+#btn_schedule {
+    background-image: url("../image/top_buttons.png") ;
+    background-position: 0 -90px;
+    left : 780px;
+    top : 30px;
+    width: 110px;
+
+}
+#btn_ReBook {
+    background-image: url("../image/top_buttons.png") ;
+    background-position: 0 -120px;
+    top : 30px;
+    left : 890px;
+    width: 115px;
+
+}
+
+.step {
+    position: relative;
+    width: 284px;
+    background-color: #F2F0E4;
+    height: 595px;
+    float: left;
+    border : 1px solid red;
+    
+}
+#sec_movie {
+    width: 284px;
+    /* border : 1px solid red; */
+    position: relative;
+
+}
+.sec_head {
+    background-color: #333;
+    color : white;
+    text-align: center;
+    height: 33px;
+    box-sizing: border-box;
+    padding-top: 3px;
+    font-size: 20px;
+    border-right: 1px solid white;
+}
+.sec_body {
+    
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+
+   
+}
+#mov_title {
+    box-sizing: border-box;
+    margin-left: 15px;
+    width: 244px;
+    height: 38px;
+}
+.sec_body > #mov_title > p {
+    float: left;
+}
+.side_bar {
+    background: url("../image/tabmenu_side_on.png") no-repeat;
+    height: 28px;
+    width: 2px;
+    float: left;
+    margin-top: 12px;
+}
+.btn1 {
+    box-sizing: border-box;
+    width: 62px;
+    text-align: center;
+    border-top: 2px solid #353535;
+    border-bottom: none;
+    line-height: 24px;
+    vertical-align: bottom;
+  
+    
+    
+}
+.btn2 {
+    box-sizing: border-box;
+    width: 90px;
+    border-bottom: 2px solid #353535;
+    border-top: 2px solid #acaba2;
+    border-right: 2px solid #acaba2;
+    text-align: left;
+    line-height: 24px;
+    vertical-align: bottom;
+    padding-left: 8px;
+}
+.btn3 {
+    width: 88px;
+    box-sizing: border-box;
+    text-align: left;
+    border-top: 2px solid #acaba2;
+    border-right: 2px solid #acaba2;
+    border-bottom: 2px solid #353535;
+    line-height: 24px;
+    vertical-align: bottom;
+    padding-left: 20px;
+   
+}
+.btn {
+    font-size: 12px;
+    
+}
+.arrow {
+   position: absolute;
+   content: "";
+    background: url("../image/tabmenu_arrow.png") no-repeat;
+    width: 7px;
+    height: 7px;
+    margin-top: 11px;
+    margin-left: 5px;
+    
+}
+
+.sort_title{
+    box-sizing: border-box;
+    margin-left: 15px;
+    width: 244px;
+    height: 32px;
+    border-bottom: 2px solid #acaba2;
+
+    margin-top: 10px;
+}
+
+p.move_sort {
+    
+    float: left;
+    
+    width: 60px;
+    font-size: 12px;
+    margin-top : 5px;
+    height: 23px;
+    
+  
+}
+.move_rank {
+  
+    background: url("../image/sortmenu_btn_on.png") repeat-x bottom;
+   
+}
+#mov_list{
+    position: relative;
+    margin-left: 15px;
+    width: 244px;
+    height: 80%;
+    
+}
+#mov_list > ul {
+    list-style : none;
+    padding : 0;
+    position: absolute;
+    overflow :scroll;
+
+    overflow-x: hidden;
+    top : -10px;
+    width: 244px;
+    height: 100%;
+    
+}
+#icon_list1 {
+    background : url("../image/icon_ratings2.png") no-repeat;
+    background-position: 2px -32px;
+    
+    /* border : 1px solid red; */
+}
+.icon_age {
+    float: left;
+    width: 29px;
+    height: 29px;
+    line-height: 29px;
+}
+.text_mov {
+    /* border : 1px solid blue; */
+    float: left;
+    padding-top: 3px;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Tahoma','돋움',dotum,Nanum Gothic,sans-serif;
+    white-space: nowrap;
+}
+
+.clear {
+    clear : both;
+}
+#icon_list2 {
+    background : url("../image/icon_ratings2.png") no-repeat;
+    background-position: 2px 3px;
+    
+    /* border : 1px solid red; */
+}
+#icon_list3 {
+    background : url("../image/icon_ratings2.png") no-repeat;
+    background-position: 2px -102px;;
+    
+    /* border : 1px solid red; */
+}
