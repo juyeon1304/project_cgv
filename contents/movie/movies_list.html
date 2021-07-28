@@ -207,7 +207,7 @@
                               </span>
                               <strong class="no1">1위</strong>
                           </a>
-                          <span class="screentype">
+                          <span class="screentype1">
                                   <a class="imax" href="#" title="IMAX 상세정보 바로가기" data-regioncode="07">IMAX</a>
                                   <a class="forDX" href="#" title="4DX 상세정보 바로가기" data-regioncode="4D14">4DX</a>
                                   <a class="screenx" href="#" title="SCREENX 상세정보 바로가기" data-regioncode="SCX">SCREENX</a>
@@ -523,49 +523,7 @@
           <!-- ///////////////// -->
           </div>
           <!-- .sect-moviechart -->
-          <script type="text/javascript">
-            //<![CDATA[
-                (function ($) {
-                    $(function () {
-            
-                        $('.sect-sorting button').click(function () {
-                            var val = $('#order_type').val();
-                            if (val) {
-                                location.href = "/movies/?lt=1&ot=" + val;
-                            }
-                        });
-                        //[2015-12-15] 무비 파인더 페이지 인 경우 정렬 버튼 처리. : add_mwpark
-                        $("#sect-finder button").click(function(){
-                            var val = $('#order_type').val();
-                            if (val) {
-                                location.href = "/movies/finder.aspx?lt=1&ot=" + val;
-                            }
-                        });
-            
-            
-                        $('#chk_nowshow').click(function () {
-                            if ($("input:checkbox[id='chk_nowshow']").is(":checked")) {
-                                location.href = "/movies/?lt=1&ft=1";
-                            }
-                            else{
-                                location.href = "/movies/?lt=1&ft=0";
-                            }
-                        });
-            
-                        //[2015-12-15] 무비 파인더 페이지 인 경우 현재 상영작만 보기 체크 박스 처리. : add_mwpark
-                        $("#chk_finder_nowshow").on("click" , function(){
-                            if ($("input:checkbox[id='chk_nowshow']").is(":checked")) {
-                                location.href = "/movies/finder.aspx?lt=1&ft=1";
-                            }else{
-                                location.href = "/movies/finder.aspx?lt=1&ft=0";
-                            }
-                        });
-            
-                    });
-            
-                })(jQuery);
-            //]]>
-            </script>
+          
             <!-- 광고 배너 -->
             <div class="chart-ad-bottom">
               <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@SponsorBar_980" width="980" height="90" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="SponsorBar_980" id="SponsorBar_980"></iframe>
