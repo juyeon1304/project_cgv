@@ -8,6 +8,7 @@ body, input, textarea, select, button, table {
 
 input, select, img { vertical-align: middle; }
 /*  */
+/*  */
 /* #contents { clear: both; display: block; padding-bottom: 1500px;} */
 #navigation_line { clear: both; width: auto; height: 28px; margin: 0 auto; box-sizing: border-box; border-bottom: 1px solid #cacac0; background-color: #F1F0E5; }
 
