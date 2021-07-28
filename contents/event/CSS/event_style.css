@@ -149,23 +149,29 @@ select {
     padding-bottom: 30px;
 }
 
-.category_wrap { 
-    width: 100%; 
-    box-sizing: border-box;
-}
-.category_content { 
-    display: flex;
+.category_wrap {
     border-top: solid 1px #ccc;
     border-bottom: solid 1px #ccc;
-    width: 100%; margin: 0 auto; box-sizing: border-box;
-    padding-left: 340px;
+}
+
+.category_contents_wrap {
+    width: 980px; margin: 0 auto; box-sizing: border-box;
+    height: 50px;
+}
+
+.category_content { 
+    display: flex;
+    float: left;
+    width: 980px; margin: 0 auto; box-sizing: border-box;
+    padding-left: 10px;
     position: relative;
 }
+
 .category_content li {
-    
     margin-right: 20px;
     padding: 15px 0;
 }
+
 .category_content li > a {
     color: #6a6f77;
     padding: 6px;
@@ -178,16 +184,17 @@ select {
     background-color: #ccc;
     display: inline-block;
     position: absolute;
-    right: 600px;
-    top: 12px;
+    right: 225px;
+    top: 14px;
 }
 
 .cart_content {
     color: #6a6f77;
-    position: absolute;
-    right: 370px;
-    top: 12px;
+    float: right;
+    right: 0px;
+    top: 15px;
     font-weight: bold;
+    position: absolute;
 }
 
 .red_round {
@@ -201,7 +208,7 @@ select {
 }
 
 .category_product_wrap {
-    width: 980px; margin: 0 auto;
+    width: 980px; margin: 0 auto; box-sizing: border-box;
     position: relative;
 }
 
@@ -218,18 +225,36 @@ select {
     top: 80px;
 }
 
-
 .btn_category_product img {
-   
     float: right;
     width: 24px;
 }
 
-.category_product_inner_list li {
-    display: inline-block;
-    width: 23%;
+.category_product_list {
+    width: 980px; margin: 0 auto; box-sizing: border-box;
 }
 
-.category_product_inner_list li img {
+.category_product_inner_list li {
+    display: inline-block;
+    width: 22%;
+    margin-right: 25px;
+}
+
+.best_product_img_wrap > img {
     width: 100%;
 }
+
+.best_product_text_name {
+    color: #6a6f77;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.best_product_price {
+    margin-top: 20px;
+    padding-left: 5px;
+    display: block;
+    font-size: 18px;
+    color: #000;
+}
+
