@@ -19,10 +19,6 @@
   <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
-<!--  -->
-<!--  -->
-<!--  -->
-<!--  -->
 
 <body class="body_idx">
   <nav class="nav_skip">
@@ -206,31 +202,21 @@
                 <dl>
                     <dt>감독 :&nbsp;</dt>
                     <dd>
-                        
-                            
                             <a href="/movies/persons/?pidx=11053">케이트 쇼트랜드</a>                    
-                            
                     </dd>
                     
                     <dd>
-                        
                     </dd>
 
                     <dt>&nbsp;/ 배우 :&nbsp;</dt>
                     <dd class="on">
-                        
-                            
                             <a href="/movies/persons/?pidx=5484">스칼렛 요한슨</a>                    
-                            
                             ,&nbsp;
                             <a href="/movies/persons/?pidx=116288">플로렌스 퓨</a>                    
-                            
                             ,&nbsp;
                             <a href="/movies/persons/?pidx=108442">레이첼 와이즈</a>                    
-                            
                             ,&nbsp;
                             <a href="/movies/persons/?pidx=119194">데이빗 하버</a>                    
-                            
                     </dd>
 
                     <dt>장르 :&nbsp;액션,&nbsp;어드벤처,&nbsp;SF</dt> 
@@ -241,185 +227,22 @@
                     <dd class="on">2021.07.07</dd>
 
 
-                
-
                 </dl>
             </div>
             <span class="screentype">
-            
                     <a href="#" class="imax" title="IMAX 상세정보 바로가기" data-regioncode="07">IMAX</a>
-                
             </span>
 
             <span class="like">
                 <!-- 2020.05.07 영화찜하기 -> 프리에그 선택 변경(조회하여 노출) -->
                 <a class="link-count" href="javascript:void (0);"><i class="sprite_preegg btn_md default"></i>프리에그</a>
-            
                 <a class="link-reservation" href="/ticket/?MOVIE_CD=20022180&amp;MOVIE_CD_GROUP=20022180">예매</a> 
-            
             </span>
 
         </div>
         </div><!-- .sect-base -->
 
-        <!-- 프리에그 팝업 -->
-        <div class="layer-wrap" id="movie-pre-select" style="top:100px;display:none">
-        <div class="popwrap" style="width:516px;margin-top:0px;margin-left:-268px">
-            <h1>프리에그 선택</h1>
-            <div class="pop-contents">
-                <!-- Contents Addon -->
-                <div class="movie-pre-select">
-                    <div class="header">
-                        <p class="main"></p>
-                    </div>
-                    <div class="box">
-                        <div class="desc">
-                            <div class="main">이 영화가 기대되시나요?</div>
-                            <div class="sub"><em>'기대돼요!'</em>를 선택하시면 <em>'기대되는 영화'에 추가</em>됩니다.</div>
-                        </div>
-                        <div class="wrap_btn">
-                            <a href="javascript:void(0);" class="btn good">
-                                <span class="sprite_preegg big favor"></span>
-                                <span>기대돼요!</span>
-                            </a>
-                            <a href="javascript:void(0);" class="btn bad">
-                                <span class="sprite_preegg big hate"></span>
-                                <span>글쎄요..</span>
-                            </a>
-                            <input type="hidden" id="preegg_useyn" value="">
-                        </div>
-                    </div>
-                </div>
-                <!-- //Contents Addon -->
-                <div class="set-btn fix-width">
-                    <button type="submit" id="btnSave" class="round inred"><span>확인</span></button>
-                </div>
-            </div>
-            <button type="button" class="btn-close">프리에그 팝업 닫기</button>
-        </div>
-        </div>
-        <!-- //프리에그 팝업 -->
-        <script>
-        // 기대돼요, 글쎄요 클릭시 css 변경
-        $('.movie-pre-select .wrap_btn .btn').on('click', function () {
-            if ($(this).hasClass("selected") == true) {
-                $(this).removeClass('selected');
-            }
-            else {
-                $(this).addClass('selected').siblings().removeClass('selected');
-            }
-        });
-
-        // 프리에그 투표팝업 열기
-        $(".link-count").on('click', function () {
-            var isLogin = app.config('isLogin');
-            if (isLogin) {
-
-                // 프리에그 팝업 노출시 선택된 프리에그 표시
-                if ($("#preegg_useyn").val() == "Y") 
-                    $(".wrap_btn .good").addClass("selected");
-                else if ($("#preegg_useyn").val() == "W") 
-                    $(".wrap_btn .bad").addClass("selected");
-
-                $("#movie-pre-select").css("display", "block");
-            }
-            else 
-                app.goLogin();
-        });
-
-        // 프리에그 투표팝업 닫기
-        $(".btn-close").on('click', function () {
-            $("#movie-pre-select").css("display", "none");
-        });
-
-        // 확인 버튼 클릭시
-        $("#btnSave").on('click', function () {
-            var movieIdx = "82986";
-            var selectvalue = "";                 // 이미 선택된 값(비교대상)
-          
-            if ($(".wrap_btn .good").hasClass("selected") == true) {
-                selectvalue = "Y";
-            }
-            if ($(".wrap_btn .bad").hasClass("selected") == true) {
-                selectvalue = "W";
-            }
-
-            if ($("#preegg_useyn").val() == selectvalue) {
-                if ($("#preegg_useyn").val() == "" && selectvalue == "") {
-                    alert("프리에그를 선택하지 않았습니다.\n'기대돼요!'를 선택하시면 '기대되는 영화'에 추가됩니다.");
-                }
-                else { 
-                    alert("수정된 내용이 없습니다.");
-                }
-                $("#movie-pre-select").css("display", "none");      // 기존값과 동일하면 저장하지 않고 팝업창 닫음
-            }
-            else {
-                $.ajax({
-                    type: "POST",
-                    url: '/common/ajax/movies.aspx/AddPreEggMovie',
-                    data: "{'movieIdx':'" + movieIdx + "', 'useYN':'" + selectvalue + "', 'title':'블랙 위도우'}",
-                    contentType: "application/json; charset=utf-8",
-                    async: false,
-                    dataType: 'json',
-                    success: function (result) {
-                        var JObject = JSON.parse(result.d.toString());
-
-                        switch (JObject["resultCode"]) {
-                            case "-1": // 로그인 필요
-                                app.goLogin();
-                                break;
-                            case "1":
-                                // 성공
-                                if ($("#preegg_useyn").val() == "Y" && (selectvalue == "W" || selectvalue == "")) {
-                                    alert("'기대되는 영화'에서 삭제되었습니다.");
-                                }
-                                else if (selectvalue == "Y") {
-                                    if (confirm("'기대되는 영화'에 등록되었습니다.\n'기대되는 영화'로 이동하시겠습니까?") == true) {
-                                        location.href = "/user/movielog/";
-                                    }
-                                }
-                                else if ($("#preegg_useyn").val() == "" && selectvalue == "W") {
-                                    alert("'글쎄요'로 등록되었습니다.");
-                                }
-                                else if ($("#preegg_useyn").val() == "W" && selectvalue == "") {
-                                    alert("프리에그를 선택하지 않았습니다.\n'기대돼요!'를 선택하시면 '기대되는 영화'에 추가됩니다.");
-                                }
-                                else if ($("#preegg_useyn").val() == "" && selectvalue == "") {
-                                    alert("프리에그를 선택하지 않았습니다.\n'기대돼요!'를 선택하시면 '기대되는 영화'에 추가됩니다.");
-                                }
-
-                                $("#preegg_useyn").val(selectvalue);
-                                $(".like .link-count").removeClass("favor").removeClass("hate");
-
-                                if(selectvalue == "Y")
-                                    $(".like .link-count").addClass("favor").html("<i class=\"sprite_preegg btn_md favor\"></i>프리에그");
-                                else if (selectvalue == "W")
-                                    $(".like .link-count").addClass("hate").html("<i class=\"sprite_preegg btn_md hate\"></i>프리에그");
-                                else 
-                                    $(".like .link-count").html("<i class=\"sprite_preegg btn_md default\"></i>프리에그");
-
-                                $("#movie-pre-select").css("display", "none");
-
-                                break;
-                            default:
-                                //   alert('Error result Value : ' + result);                    
-                                break;
-                        }
-                    }
-                });
-            }
-        });
-        </script>
-
-        <script type="text/javascript">
-        _TRK_PNC = "82986";
-        _TRK_PNC_NM = "블랙 위도우";
-        _TRK_PNG = "영화";
-        _TRK_PI = "PDV";
-        _TRK_CP = "/영화/영화상세/{0}/블랙 위도우";
-        </script>
-
-
+        
         <div class="cols-content" id="menu">
             <div class="col-detail">
                 <!-- 메뉴가 선택되면 a 에 title="선택" 이라고 넣는다 -->
@@ -1014,7 +837,19 @@
                                     
                     <div class="wrap-persongrade">
                         <!-- 평점 목록 -->
-                        <ul id="movie_point_list_container" class="point_col2"><li class="" id="liCommentFirst31496796" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="http://img.cgv.co.kr/R2014/images/common/default_profile.gif" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="judylee01" data-moreuseridnicname="ju**lee01" onclick="getPopList1('judylee01', 'ju**lee01')" ;="">             <span class=" egg-icon good "></span>ju**lee01</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="judylee0131496796" data-ismygood="false" data-commentidx="31496796">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496796" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496796" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>너무 재미있었어요:)</p>     </div>                              </li><li class="" id="liCommentFirst31496774" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2018/1122/shinkjyhwa3_042910_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="shinkjyhwa3" data-moreuseridnicname="러블리제이3" onclick="getPopList1('shinkjyhwa3', '러블리제이3')" ;="">             <span class=" egg-icon good "></span>러블리제이3</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="shinkjyhwa331496774" data-ismygood="false" data-commentidx="31496774">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496774" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496774" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>조끼.. 설마 그 조끼인가여..?! 아 ㅠㅠ 사랑해요 나타샤 로마노프 </p>     </div>                              </li><li class="" id="liCommentFirst31496727" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2014/0225/sar0914_073841_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="sar0914" data-moreuseridnicname="순수진지청년" onclick="getPopList1('sar0914', '순수진지청년')" ;="">             <span class=" egg-icon good "></span>순수진지청년</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="sar091431496727" data-ismygood="false" data-commentidx="31496727">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496727" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496727" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>기대가 전혀 없었는데 생각보다 재미있었어요</p>     </div>                              </li><li class="" id="liCommentFirst31496721" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2019/0322/et8138_015216_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="et8138" data-moreuseridnicname="벚꽃스토커" onclick="getPopList1('et8138', '벚꽃스토커')" ;="">             <span class=" egg-icon "></span>벚꽃스토커</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="et813831496721" data-ismygood="false" data-commentidx="31496721">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496721" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496721" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>우와 ~ 진심 보다가 잠들기를 몇 번 !
+                        <ul id="movie_point_list_container" class="point_col2"><li class="" id="liCommentFirst31496796" data-spoilercnt="0" data-reportcnt="0">
+                                <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>    
+                                 <div class="box-image">   
+                                  <span class="thumb-image">
+                                    <img src="http://img.cgv.co.kr/R2014/images/common/default_profile.gif" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">
+                                     <span class="profile-mask"></span><div class="theater-sticker">
+                                                                                                  </div>     
+                                                                                                </span>     </div>      <div class="box-contents">
+                                                                                                           <ul class="writerinfo">  
+                                                                                                                         <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="judylee01" data-moreuseridnicname="ju**lee01" onclick="getPopList1('judylee01', 'ju**lee01')" ;="">        
+                                                                                                                               <span class=" egg-icon good "></span>ju**lee01</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="judylee0131496796" data-ismygood="false" data-commentidx="31496796">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496796" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496796" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>너무 재미있었어요:)</p>     </div>                              </li><li class="" id="liCommentFirst31496774" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2018/1122/shinkjyhwa3_042910_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="shinkjyhwa3" data-moreuseridnicname="러블리제이3" onclick="getPopList1('shinkjyhwa3', '러블리제이3')" ;="">             <span class=" egg-icon good "></span>러블리제이3</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="shinkjyhwa331496774" data-ismygood="false" data-commentidx="31496774">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496774" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496774" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>조끼.. 설마 그 조끼인가여..?! 아 ㅠㅠ 사랑해요 나타샤 로마노프 </p>     </div>                              </li><li class="" id="liCommentFirst31496727" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2014/0225/sar0914_073841_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="sar0914" data-moreuseridnicname="순수진지청년" onclick="getPopList1('sar0914', '순수진지청년')" ;="">             <span class=" egg-icon good "></span>순수진지청년</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="sar091431496727" data-ismygood="false" data-commentidx="31496727">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496727" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496727" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>기대가 전혀 없었는데 생각보다 재미있었어요</p>     </div>                              </li><li class="" id="liCommentFirst31496721" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2019/0322/et8138_015216_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="et8138" data-moreuseridnicname="벚꽃스토커" onclick="getPopList1('et8138', '벚꽃스토커')" ;="">             <span class=" egg-icon "></span>벚꽃스토커</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="et813831496721" data-ismygood="false" data-commentidx="31496721">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496721" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496721" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>    
+                                     <div class="box-comment">         <p>우와 ~ 진심 보다가 잠들기를 몇 번 !
+                                       
         마블영화중 최악으로 노쟁 .
         무슨 연극도 아니고 대사치다가 볼 일 다 봄.
         중요한 내용도 아닌데 계속 블라블라  </p>     </div>                              </li><li class="" id="liCommentFirst31496710" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2021/0408/odry800_032022_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                                                           </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="odry800" data-moreuseridnicname="은수찡♡" onclick="getPopList1('odry800', '은수찡♡')" ;="">             <span class=" egg-icon good "></span>은수찡♡</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="odry80031496710" data-ismygood="false" data-commentidx="31496710">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496710" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496710" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>마블팬입니다시간가는줄모르고 푹빠져봤어요</p>     </div>                              </li><li class="" id="liCommentFirst31496706" data-spoilercnt="0" data-reportcnt="0">      <a href="javascript:return false;" class="screen_spoiler">&nbsp;</a>     <div class="box-image">         <span class="thumb-image">                    <img src="https://img.cgv.co.kr/MyCGV/Profile/2017/0706/qhgo2404_104233_M.jpg" alt="사용자 프로필" onerror="errorImage(this, {'type':'profile'})">                                                             <span class="profile-mask">                 </span>                 <div class="theater-sticker">                               <span class="fourdx">4DX</span>                              </div>                                                              </span>     </div>      <div class="box-contents">         <ul class="writerinfo">              <li class="writer-name"><a href="#select_main" class="commentMore" data-moreuserid="qhgo2404" data-moreuseridnicname="은이꽁" onclick="getPopList1('qhgo2404', '은이꽁')" ;="">             <span class=" egg-icon good "></span>은이꽁</a>         </li>         <li class="writer-etc">                    <span class="day">2021.07.28</span>     <span class="like point_like" id="qhgo240431496706" data-ismygood="false" data-commentidx="31496706">      <a href="javascript:return false;" class="btn_point_like"><span><img src="http://img.cgv.co.kr/R2014/images/point/ico_point_default.png" alt="like" class="like_red"></span><span id="idLikeValue">0</span></a>     </span>    </li>                                         <li class="point_notify">                 <a href="" class="btn_notify">스포일러, 욕설/비방 신고</a>                 <div class="notify_wrap">                     <ul>                         <li><a href="javascript:return false;" class="ico_spoiler" data-commentidx="31496706" data-ismyspoiler="false" data-spoilercnt="0"><span>스포일러 신고</span></a></li>                         <li><a href="javascript:return false;" class="ico_swearword" data-commentidx="31496706" data-ismyreport="false" data-reportcnt="0"><span>욕설/비방 신고</span></a></li>                     </ul>                 </div>             </li>                                   </ul>     </div>     <div class="box-comment">         <p>역쉬 액션은 인정합니당ㅎㅎ</p>     </div>                              </li></ul>
@@ -1121,7 +956,8 @@
                 <!-- 연관영화 -->
 
             </div><!-- .col-detail -->
-            <iframe class="layer-wrap review_pop" name="ifrm_movie_time_table1" id="ifrm_movie_time_table1" style="display:none" title="상세리스트" height="993px" width="849px" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe><!--회원 평점 모아보기 iframe. mwpark_RR2015-->
+            <iframe class="layer-wrap review_pop" name="ifrm_movie_time_table1" id="ifrm_movie_time_table1" style="display:none" title="상세리스트" height="993px" width="849px" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowtransparency="true"></iframe>
+            <!--회원 평점 모아보기 iframe. mwpark_RR2015-->
             <form method="post" id="frmPointPopup" action="/movies/point/default-irm.aspx" novalidate="novalidate">
                 <input type="hidden" name="userid" id="frmPointUserId">
                 <input type="hidden" name="nick" id="frmPointNick">
