@@ -212,24 +212,49 @@ select {
     position: relative;
 }
 
-
-
-.category_product_title {
+.category_product_title.big{
+    width: 100%;
     font-size: 30px;
     padding-top: 70px;
     padding-bottom: 10px;
     border-bottom: 1px solid #999;
+    position: relative;
 }
 
-.category_product_containor {
+.category_product_title.small{
+    width: 88%;
+    font-size: 30px;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+    position: relative;
+}
+
+.category_product_title {
+    width: 100%;
+    font-size: 30px;
+    padding-top: 70px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+    position: relative;
+}
+
+.category_product_title small > .btn_category_product > a > img {
     position: absolute;
-    right: 10px;
-    top: 80px;
+    right: 0px;
+    top: 100px;
+    
 }
 
-.btn_category_product img {
+.btn_category_product > img {
     float: right;
     width: 24px;
+}
+
+.btn_more_product {
+    position: absolute;
+    top: 85px;
+    right: 0px;
 }
 
 .category_product_list {
@@ -239,6 +264,7 @@ select {
 .category_product_list li {
     width: 49%;
     display: inline-block;
+
 }
 
 .category_product_list li:first-child {
@@ -300,12 +326,68 @@ select {
     color: #000;
 }
 
-
-
-.inline-block {
-    display: inline-block !important;
-}
-
 .product_img {
     width: 160px !important;
+}
+
+/* CGV 기프트샵 이용안내 */
+
+.info_use_wrap {
+    width: 980px; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+    border-top: 1px solid #6a6f77;
+    border-bottom: 1px solid #6a6f77;
+    padding: 20px;
+    position: relative;
+}
+.info_use_img {
+    position: absolute;
+    top: 40px;
+    left: 350px;
+}
+.info_giftshop {
+    width: 55%;
+    padding: 10px;
+    display: inline-block;
+    border-right: 1px solid #6a6f77;
+}
+.info_giftshop > .info_use_title {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.info_giftshop > .info_use_subtitle {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 11px;
+    font-size: 14px;
+    width: 250px;
+}
+
+/* CGV 고객센터 */
+
+.info_use {
+    float: right;
+    width: 38%;
+}
+.info_use_center {
+    font-size: 18px;
+}
+.info_use_telnum {
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 5px;
+}
+.info_use_telnum > img {
+    width: 35px;
+}
+.info_use_time {
+    display: block;
+    margin-top: 5px;
+}
+.info_use_response {
+    display: block;
 }
