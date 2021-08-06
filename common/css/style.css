@@ -29,24 +29,49 @@
 /* ========================
 sprite background
 ========================*/
+
 header .wrap_util a,
+header .list_sns > li a,
 header .wrap_gnb nav > ul > li > a,
 footer .sec_info .list_share > li > a,
-.sec_special ul li a
-{
+.sec_special ul li a {
   background-image:url(../images/sprite/sprite_common1.png);
   background-repeat: no-repeat;
 }
-
+.tab_special > button,
 .slide button {
   background-image: url(../images/sprite/sprite_btn.png);
   background-repeat: no-repeat;
   background-color: transparent
 }
-
 .bg_line {
   background: url(../images/bg/bg_line.jpg) repeat-x 0 50%;
 }
+.bg_txt_special {
+background-image: url(../images/sprite/text_specialtheater.png);
+background-repeat: no-repeat;
+}
+
+.bg_grade {
+background-image:url(../images/sprite/sprite_icon.png);
+background-repeat: no-repeat;
+}
+
+/* 관람등급안내 */
+.bg_grade.grade_12 { background-position: -51px 0}
+.bg_grade.grade_19 { background-position: -93px 0}
+.bg_grade.grade_all { background-position: -30px 0}
+
+
+
+
+
+
+/* layout */
+.wrap_tabbox > .bx_tab { display: none}
+.wrap_tabbox > .bx_tab.on { display:block;}
+.left { float: left;}
+.right { float: right;}
 
 
 /* ========================
@@ -141,7 +166,8 @@ layout
 ========================*/
 .wrap_com { width: 980px; margin: 0 auto; box-sizing: border-box;}
 .float_none { float: none}
-
+.wrap_scroll { overflow-x: scroll; overflow-y: hidden; white-space: nowrap; font-size: 0}
+.wrap_scroll > * { display: inline-block; }
 
 /* ========================
 common
@@ -150,6 +176,9 @@ common
 .nav_quick ul { padding: 0 4px; border: 3px solid #e71a0f; width: 116px; border-radius: 8px; overflow: hidden; background: #fdfcf0; box-sizing: border-box;}
 .nav_quick ul li a { display: block;  }
 .nav_quick .btn_top { width: 116px; height: 72px; background: url(../images/btn_top.png) no-repeat center }
+
+/* style */
+.line-height1 { line-height: 1}
 
 /* heading */
 .h_type1 { height: 41px; margin: 30px 0 15px; text-align: center;}
