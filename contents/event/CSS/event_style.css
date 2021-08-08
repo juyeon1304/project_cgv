@@ -262,10 +262,16 @@ select {
 }
 
 .category_product_list li {
+    position: relative;
     width: 49%;
     display: inline-block;
-
 }
+
+.category_left_list {
+    width: 47% !important;
+    margin-right: 3%;
+}
+
 
 .category_product_list li:first-child {
     width: 100%;
