@@ -113,7 +113,7 @@ scrx.html
 schedue.html
 ======================================= */
 
-.sec_schedule { border-top: 3px solid #241d1e; border-bottom: 2px solid #474746}
+.sec_schedule { border-top: 3px solid #241d1e; }
 
 .wrap_days { position:relative; padding: 12px 80px;}
 .wrap_days .wrap_scroll { overflow-x: auto;}
@@ -136,6 +136,9 @@ schedue.html
 .sec_schedule .wrap_info .right ul li:before { background-position: 0 -158px}
 
 .outer_timetb > .list_movie > li { padding: 40px 0 20px 40px; border-bottom:1px solid #474746 }
+
+.outer_timetb > .list_movie > li:last-child { margin-bottom: 30%; }
+
 .list_movie .wrap_tit {display: flex; align-items: center; font-size: 12px}
 .list_movie .wrap_tit .list_info > li { float: left; font-size: 13px; color: #666}
 .list_movie .wrap_tit .list_info > li ~ li:before { content: "/"; display: inline-block;}
