@@ -47,6 +47,39 @@ input, select, img { vertical-align: middle; }
            background: url(http://img.cgv.co.kr/R2014/images/common/ico/ico_photi.png) no-repeat 100% 50%;
            padding-right:25px; }
 
+/* movie finder 시작  usj */
+/*common*/
+.contents { position: relative; width: 980px; margin: 0 auto; }
+h3 { text-align: center; font-weight: 500; }
+h3 > img { padding: 0 8px; }
+input, select, img { vertical-align: middle; }
+body, input, textarea, select, button, table {  
+    font-size: 13px; line-height: 1.2; color: #666;
+    font-weight: 300;
+}
+table { width: 100%; }
+colgroup { display: table-column-group; }
+caption, th, td { font-weight: 300; line-height: 1.5em; text-align: center; vertical-align: middle; }
+    
+
+/* finder_box 시작  usj */
+
+.finder_box { background: url(../../../common/images/bg/bg_bricks.png) repeat-x 0 0;}
+.slide { position: relative; height: 450px; overflow: hidden;}
+.contents { clear: both; padding-bottom: 50px; }
+.contents::before { left: 0; background: url(../../../common/images/bg/bg_bricks_before.png); }
+.finder_inside_box { width: 980px; height: 450px; background: #29353d; }
+.finder_inside_box h3 { height: auto; margin: 0; padding: 15px 0 10px; background: none; line-height: 1.2;  }
+.finder_inside_box h3 img { background: none; }
+.finder_inside_box table { border-collapse: collapse; }
+table .finder_col01 { border-collapse: collapse; }
+.finder_inside_box th { display: inline-block; padding-left: 34px; text-align: left; }
+.finder_inside_box th, .finder_inside_box td { 
+    padding: 11px 0; border-top: 1px solid #3e484f; color: #fdfcf0; font-size: 13px; vertical-align: middle;
+}
+/* finder_box 끝  usj */
+
+/* movie finder 끝  usj */
 
 /* .sect-special  */
 
@@ -240,7 +273,6 @@ div { display: block;}
 .cols-content .graph li > .chart{ min-height:192px}
 .cols-content .graph li > div .point{ margin:20px 0 0 20px;}
 .cols-content .graph li > div .point + .chart{ min-height:158px;}
-.cols-content .graph .chart.jqplot-target canvas { /* Canvas */}
 
 .cols-content .col-detail{ position:relative; width:800px; float:left}
 .cols-content .col-aside{ width:160px; float:right;}

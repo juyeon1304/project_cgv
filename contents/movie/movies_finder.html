@@ -157,263 +157,352 @@
       <!--  navigation line -->
 
       <!-- Content Area -->
-      <!-- Movies Finder 시작 -->
-      <div>
-        <h3> <img src="" alt="종아하는 영화, 찾고싶은 영화를 CGV에서 찾아드립니다!"></h3>
-        <div title="영화검색">
-          <div class="finder_header">
-            <h4>영화검색</h4>
-          </div>
-          <select title="영화검색 선택" id="keyword-type">
-            <option value="0" selected>전체</option>
-            <option value="1">영화제목</option>
-            <option value="2">주연배우</option>
-            <option value="3">감독</option>
-          </select>
-          <input type="text" title="영화 키워드 검색" id="keyword" minlength="2" maxlength="20" style="width: 410px;" placeholder="키워드를 입력해 주세요">
+      <!-- Movies Finder 시작 --> 
+      <div class="finder_box slide">
+        <div class="contents">
+          <div class="finder_inside_box">
+            <h3> <img src="../../common/images/moviesfinder/h3_finder.png" alt="좋아하는 영화, 찾고싶은 영화를 CGV에서 찾아드립니다!"></h3>
+          <form>
+            <table>
+              <caption>무비파인더 검색 및 조건</caption>
+              <colgroup>
+                  <col class="find_col01">
+                  <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                    <th class="searchtype" scope="row">영화검색</th>
+                    <td>
+                        <label class="hidden" for="keyword_type">영화검색 목록</label>
+                        <select title="영화검색 목록" id="keyword_type">
+                            <option value="0" selected="">전체</option>
+                            <option value="1">영화제목</option>
+                            <option value="2">주연배우</option>
+                            <option value="3">감독</option>
+                        </select>
+                        <input type="text" title="영화검색 키워드입력" id="keyword" minlength="2" maxlength="20" style="width:410px;" placeholder="키워드를 입력해 주세요" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <th class="genretype" scope="row">장르</th>
+                    <td>
+                        <ul>
+                            <li>
+                              <input type="checkbox" id="all_genre" name="all-genre" value="all">
+                              <label for="all_genre">전체</label>
+                            </li>
+                            <li class="collage">
+                              <input type="checkbox" name="art_genre" value="1">
+                              <label>아트하우스</label>
+                            </li>
+
+                            <li><input type="checkbox" id="genre1" name="genre" value="1">
+                              <label for="genre1">가족</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre2" name="genre" value="2">
+                              <label for="genre2">공포/호러</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre3" name="genre" value="3">
+                              <label for="genre3">드라마</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre4" name="genre" value="4">
+                              <label for="genre4">SF</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre5" name="genre" value="5">
+                              <label for="genre5">멜로/로맨스</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre6" name="genre" value="6">
+                              <label for="genre6">코미디</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre7" name="genre" value="7">
+                              <label for="genre7">애니메이션</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre8" name="genre" value="8">
+                              <label for="genre8">느와르</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre9" name="genre" value="9">
+                              <label for="genre9">단편</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre10" name="genre" value="10">
+                              <label for="genre10">다큐멘터리</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre11" name="genre" value="11">
+                              <label for="genre11">로드무비</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre12" name="genre" value="12">
+                              <label for="genre12">무협</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre13" name="genre" value="13">
+                              <label for="genre13">뮤지컬</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre14" name="genre" value="14">
+                              <label for="genre14">뮤직</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre15" name="genre" value="15">
+                              <label for="genre15">미스터리</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre16" name="genre" value="16">
+                              <label for="genre16">범죄</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre17" name="genre" value="17">
+                              <label for="genre17">옴니버스</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre18" name="genre" value="18">
+                              <label for="genre18">서부</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre17" name="genre" value="17">
+                              <label for="genre17">스릴러</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre19" name="genre" value="19">
+                              <label for="genre19">스포츠</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre20" name="genre" value="20">
+                              <label for="genre20">시대극/사극</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre21" name="genre" value="21">
+                              <label for="genre21">아동</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre22" name="genre" value="22">
+                              <label for="genre22">액션</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre23" name="genre" value="723">
+                              <label for="genre723">어드벤처</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre24" name="genre" value="24">
+                              <label for="genre24">역사</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre25" name="genre" value="25">
+                              <label for="genre25">전기</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre26" name="genre" value="26">
+                              <label for="genre26">전쟁</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre27" name="genre" value="27">
+                              <label for="genre27">종교</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre28" name="genre" value="28">
+                              <label for="genre28">재난</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre29" name="genre" value="29">
+                              <label for="genre29">청춘영화</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre30" name="genre" value="30">
+                              <label for="genre30">퀴어</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre31" name="genre" value="31">
+                              <label for="genre31">환타지</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre32" name="genre" value="32">
+                              <label for="genre32">학원물</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre33" name="genre" value="33">
+                              <label for="genre33">에로</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="genre34" name="genre" value="34">
+                              <label for="genre34">없음</label>
+                            </li>
+                            
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="makenation" scope="row">제작국가</th>
+                    <td>
+                        <ul>
+                            <li>
+                              <input type="checkbox" name="all-national-code" id="all_national_code">
+                              <label for="all_national_code">전체</label>
+                            </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_101" name="national-code" value="101">
+                                  <label for="national_code_101">한국</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_102" name="national-code" value="102">
+                                  <label for="national_code_102">미국</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_103" name="national-code" value="103">
+                                  <label for="national_code_103">일본</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_104" name="national-code" value="104">
+                                  <label for="national_code_104">중국</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_105" name="national-code" value="105">
+                                  <label for="national_code_105">홍콩</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_106" name="national-code" value="106">
+                                  <label for="national_code_106">프랑스</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_107" name="national-code" value="107">
+                                  <label for="national_code_107">영국</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_108" name="national-code" value="108">
+                                  <label for="national_code_108">독일</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_109" name="national-code" value="109">
+                                  <label for="national_code_109">인도</label>
+                                </li>
+                            
+                                <li>
+                                  <input type="checkbox" id="national_code_110" name="national-code" value="110">
+                                  <label for="national_code_110">기타</label>
+                                </li>
+                            
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="gradetype" scope="row">관람등급</th>
+                    <td>
+                        <ul>
+                            <li>
+                              <input type="checkbox" id="all_grade" name="all-grade" value="201">
+                              <label for="all_grade">전체</label>
+                            </li>
+                            
+                            <li>
+                              <input type="checkbox" id="grade202" name="grade" value="202">
+                              <label for="grade202">전체관람가</label>
+                            </li>
+                        
+                            <li>
+                              <input type="checkbox" id="grade203" name="grade" value="203">
+                              <label for="grade203">12세 관람가</label>
+                            </li>
+                        
+                            <li>
+                              <input type="checkbox" id="grade204" name="grade" value="204">
+                              <label for="grade204">15세 관람가</label>
+                            </li>
+                        
+                            <li>
+                              <input type="checkbox" id="grade205" name="grade" value="205">
+                              <label for="grade205">청소년 관람불가</label>
+                            </li>
+                        
+                            <li>
+                              <input type="checkbox" id="grade206" name="grade" value="206">
+                              <label for="grade206">미정</label>
+                            </li>
+                            
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="yeartype" scope="row">
+                      <label for="">제작년도</label>
+                    </th>
+                    <td>
+                        <div class="slider-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider-range" aria-disabled="false">
+                            <ul>
+                                <li></li>
+                                <li>1960</li>
+                                <li>1970</li>
+                                <li>1980</li>
+                                <li>1990</li>
+                                <li>2000</li>
+                                <li>2010</li>
+                                <li>2020</li>
+                                <li></li>
+                            </ul>
+                        <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 12.5%; width: 75%;">
+                        </div>
+                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" title="좌,우 키보드 조절가능" style="left: 12.5%;">시작년도</a>
+                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" title="좌,우 키보드 조절가능" style="left: 87.5%;">종료년도</a></div>
+                        <input type="text" id="year_start" style="width:118px;" value="1960" maxlength="4" placeholder="시작년도 입력해주세요." title="시작년도 입력해주세요." number="number"> - 
+                        <input type="text" id="year_end" style="width:118px;" value="2020" maxlength="4" placeholder="시작년도 입력해주세요." title="시작년도 입력해주세요." number="number">  년
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
         </div>
-        <div title="영화 장르">
-          <div class="finder_header">
-            <h4>장르</h4>
-          </div>
-          <ul>
-            <li>
-              <input type="checkbox" name="allcheck" id="all-check" value="all">
-              <label for="all-check">전체</label>
-            </li>
-            <li>
-              <input type="checkbox" name="arthouse" id="art-House" value="1">
-              <label for="art-House">아트하우스</label></li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">가족</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">공포/호러</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">드라마</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">SF</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">멜로/로맨스</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">코미디</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">애니메이션</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">느와르</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">단편</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">다큐멘터리</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">로드무비</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">무협</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">뮤지컬</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">뮤직</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">미스터리</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">범죄</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">옵니버스</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">서부</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">스릴러</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">스포츠</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">시대극/사극</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">아동</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">액션</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">어드벤처</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">역사</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">전기</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">전쟁</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">종교</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">재난</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">청춘영화</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">퀴어</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">환타지</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">학원물</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">에로</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">없음</label>
-            </li>
-          </ul>
-        </div>
-        <div title="제작 국가">
-          <div class="finder_header">
-          <h4>제작국가</h4>
-          </div>
-          <ul>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">전체</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">한국</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">미국</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">일본</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">중국</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">홍콩</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">프랑스</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">영국</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">독일</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">인도</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">기타</label>
-            </li>
-          </ul>
-        </div>
-        <div title="관람등급">
-          <div class="finder_header">
-            <h4>관람등급</h4>
-          </div>
-          <ul>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">전체</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">전체관람가</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">12세 관람가</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">15세 관람가</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">청소년 관람불가</label>
-            </li>
-            <li>
-              <input type="checkbox" name="" id="">
-              <label for="">미정</label>
-            </li>
-          </ul>
-        </div>
-        <div title="제작년도">
-          <div class="finder_header">
-            <h4>제작년도</h4>
-          </div>
-          
-        </div>
+      </div>
+      <!-- Movies Finder 끝 -->
       </div>
         <div id="centents">
           <div class="wrap-movie-chart">
@@ -760,7 +849,7 @@
                   <li></li>
               </ol>
               <!-- 광고 AD -->
-              <div class="chart-ad">
+              <div class="">
                   <div class="box-com">                    
                       <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Movie_Chart" width="160" height="300" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" id="Movie_Chart" name="Movie_Chart" title="기업광고 -NICE지키미"></iframe>
                   </div>                
