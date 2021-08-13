@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="/common/css/style.css">
       <link rel="stylesheet" href="/common/css/index.css">
       <link rel="stylesheet" href="/common/css/sub.css">
+      <link rel="stylesheet" href="/common/css/login.css">
       <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
       <script src="/common/js/common.js" charset="utf-8"></script>
       <script src="/common/js/swiper.js" charset="utf-8"></script>
@@ -127,31 +128,37 @@
           <section class="clear">
               <h2 class="hide">로그인</h2>
               <div class="left">
-                  <ul>
-                      <li><a href="">로그인</a></li>
+                  <ul class="tab_menu_round">
+                      <li class="on"><a href="">로그인</a></li>
                       <li><a href="">비회원 예매</a></li>
                       <li><a href="">비회원 예매확인</a></li>
                   </ul>
                   <div class="wrap_login">
                       <form action="">
                           <fieldset>
-                          <legend>회원 로그인 입력 양식</legend>
-                          <p>아이디 비밀번호를 입력하신 후, 로그인 버튼을 클릭해 주세요.</p>
-                          <ul>
-                              <li><input type="text"></li>
-                              <li><input type="password"></li>
-                          </ul>
-                          <button class="">로그인</button>
-                          <div>
-                              <input type="checkbox" id="chk_login">
-                              <label for="chk_login">아이디 저장</label>
-                              <a href="">아이디 찾기</a>
-                              <a href="">비밀번호 찾기</a>
-                          </div>
-                          <a href="">
-                              네이버 로그인
-                          </a>
-                        </fieldset>
+                            <legend>회원 로그인 입력 양식</legend>
+                            <p>아이디 비밀번호를 입력하신 후, 로그인 버튼을 클릭해 주세요.</p>
+                            <div class="login">
+                                <input type="text" title="아이디" id="txtId"></li>
+                                <input type="password" title="비밀번호" id="txtPw"></li>
+                            </div>
+                            <button type="submit" id="submit" title="로그인">
+                              <span>로그인</span>
+                            </button>
+                            <div class="save_id">
+                              <input type="checkbox" id="chk_id">
+                              <label for="chk_id">아이디 저장</label>
+                            </div>
+                            <div class="login_option">
+                              <a href="">아이디 찾기<img src="/common/images/bg/bg_arrow03.png"></a>
+                              <a href="">비밀번호 찾기<img src="/common/images/bg/bg_arrow03.png"></a>
+                            </div>
+                            <div class="btn_naver">
+                              <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+                                <img src="/common/images/btn_loginNaver.jpg" alt="네이버버튼">
+                              </a>
+                            </div>
+                          </fieldset>
                       </form>
 
 
@@ -166,15 +173,34 @@
                   </a>
               </div>
           </section>
-          <div>
-              <h2 class="hide">회원가입</h2>
-              <div class="">
-                  <p><strong>CJ ONE 회원이 아니신가요?</strong>회원가입하시고 다양한 혜택을 누리세요! <a href="">CJ ONE 회원가입하기</a><a href="">CJ ONE 멤버십이란?</a></p>
+
+          <div class="sect_login_guide">
+              <div class="wrap_useguide">
+                  <strong>CJ ONE 회원이 아니신가요?</strong>
+                    <span>회원가입하시고 다양한 혜택을 누리세요!</span> 
+                  <strong class="round_red">
+                    <a href="">CJ ONE 회원가입하기</a>
+                  </strong>
+                  <em> 
+                    <a href=""> 
+                      <span class="round_black">
+                        CJ ONE 멤버십이란?
+                      </span>
+                    </a>
+                  </em>
               </div>
           </div>
       </div>
-  </main>
-  
+
+  <div class="banner_hori">
+    <a href="">
+      <div class="wrap_com">
+        <img src="/common/images/banner_hori.png" alt="">
+      </div>
+    </a>
+  </div>
+</main>
+
   <footer>
     <section class="sec_special">
       <div class="wrap_com">
