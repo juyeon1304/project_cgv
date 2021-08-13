@@ -1,15 +1,19 @@
 
 #main_container{
-    width : 1000px;
+    width : 100%;
     height: 1000px;
-    
     box-sizing: border-box;
+    
+    position: relative;
+
 }
 #btn_line{
-    width: 100%;
+    margin-left : 25%;
+    width: 1000px;
     height: 80px;
-   
+     
     
+
 }
 
 .btn_style {
@@ -20,11 +24,12 @@
     /* border : 1px solid red; */
     white-space: nowrap;
     cursor: pointer;
-    position: absolute;
+    margin-top: 3%;
+    float: right;
  
 }
 .btn_style > span {
-    position: absolute;
+   display: none;
     left: 500px;
 }
 
@@ -33,7 +38,7 @@
 #btn_Eng {
     background-image: url("../image/top_buttons.png") ;
     background-position: 0 0;
-    left : 500px;
+   
     top : 30px;
 
 
@@ -41,21 +46,21 @@
 #btn_book {
     background-image: url("../image/top_buttons.png") ;
     background-position: 0 -30px;
-    left : 590px;
+    
     top : 30px;
 
 }
 #btn_discount {
     background-image: url("../image/top_buttons.png") ;
     background-position: 0 -60px;
-    left : 680px;
+    
     top : 30px;
 
 }
 #btn_schedule {
     background-image: url("../image/top_buttons.png") ;
     background-position: 0 -90px;
-    left : 780px;
+   
     top : 30px;
     width: 110px;
 
@@ -64,7 +69,7 @@
     background-image: url("../image/top_buttons.png") ;
     background-position: 0 -120px;
     top : 30px;
-    left : 890px;
+    
     width: 115px;
 
 }
@@ -234,6 +239,7 @@ p.move_sort {
     height: 29px;
     line-height: 29px;
 }
+
 .text_mov {
     /* border : 1px solid blue; */
     float: left;
@@ -269,6 +275,7 @@ p.move_sort {
 
 .theater_ul {
     float: left;
+  
     
     
 }
@@ -299,6 +306,8 @@ p.move_sort {
  
     padding : 0 0 0 10px;
     text-align: left;
+    overflow :scroll;
+    overflow-x: hidden;
     
 }
 #theater_select{
@@ -321,28 +330,233 @@ p.move_sort {
     border-right: 1px solid white;
 }
 #date_month{
-    border : 1px solid blue;
+    /* border : 1px solid blue; */
     position: relative;
     box-sizing: border-box;
     
 }
 
+#date_month > ul {
+    margin : 0;
+    padding : 0;
+    overflow :scroll;
+    overflow-x: hidden;
+
+}
+
+
 .month_li, .date_li {
     list-style: none;
     margin : 0;
     padding : 0;
-    border : 1px solid red;
+    /* border : 1px solid red; */
+    width: 64px;
+    line-height: 35px;
     text-align: center;
 
     
 }
 
-.month_li > span {
-    display: inline-block;
+.month_li > .year {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    color: #666;
+    font-size: 11px;
+    font-family: Verdana;
+    font-weight: bold;
+    line-height: 11px;
+    
+    
+}
+.month_li > .month{
+    display: block;
+    margin-top: 3px;
+    text-align: center;
+    color: #666;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+.dayWeek {
+    float: left;
+    color: #333;
+    font-size: 12px;
+    padding-top: 2px;
+    cursor: pointer;
+    clear:both;
+    width: 32px;
+    
+}
+
+.day {
+    float: right;
+    color: #333;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 32px;
+}
+.step_time{
+    width: 330px;
+    position: relative;
+    float: left;
+    height: 595px;
+    background-color: #f2f0e5;
+    overflow: hidden;
+    
+}
+.time_head{
+    background-color: #333;
+    color : white;
+    text-align: center;
+    height: 33px;
+    box-sizing: border-box;
+    padding-top: 3px;
+    font-size: 20px;
+    border-right: 1px solid white;
+}
+.time_body{
+    width: 306px;
+    position: relative;
+    overflow: hidden;
+}
+#time_icon{
+    width: 306px;
+    height: 23px;
+    margin-left: 20px;
+    margin-top: 19px;
+    border-bottom: solid 2px #cfcdc3;
+}
+.morning{
+    float: left;
+    height: 14px;
+    padding-left: 18px;
+    background: url(../image/icon_morning_night.png) no-repeat left;
+    background-position: 0 0;
     color: #333;
     font-family: 'Tahoma','돋움',dotum,Nanum Gothic,sans-serif;
     font-size: 12px;
     font-weight: normal;
+}
+.night{
+    float: left;
+    height: 14px;
+    padding-left: 18px;
+    background: url(../image/icon_morning_night.png) no-repeat left;
+    background-position: 0 -20px;
+    color: #333;
+    font-family: 'Tahoma','돋움',dotum,Nanum Gothic,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.time_seat{
+    float: left;
+    width: 306px;
+   
+    margin-top: 10px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+.move_type{
+    color: #b54d15;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 6px;
+}
+.theater_room{
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.seat_count{
+    color: #666;
+    font-size: 12px;
+}
+.time_List{
+
+    float: left;
+    width: 306px;
+    margin-left: 20px;
+    overflow: hidden;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
     
+    
+}
+.time_seatList{
+    width: 100px;
+    float: left;
+    margin-top: 5px;
+    
+}
+.time_seatList:nth-child(3n+1){
+    clear:both;
+}
+
+
+.time_point{
+    float: left;
+    width: 45px;
+    height: 23px;
+    line-height: 23px;
+    border: 2px solid #d6d3ce;
+    background-image: none;
+    background-color: #f2f0e5;
+    color: #333;
+    font-family: 'Tahoma','돋움',dotum,Nanum Gothic,sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: center;
+}
+.seat_countG{
+    float: left;
+    width: 45px;
+    height: 20px;
+    line-height: 25px;
+    text-align: left;
+    color: #3d7c35;
+    font-size: 14px;
+    padding-left: 3px;
+    overflow: hidden;
+}
+
+.time_body:last-child{
+    border : none ;
+}
+.side_banner{
+    background : url("../image/side_banner.png") no-repeat;
+    width: 160px;
+    height: 300px;
+    float: left;
+    margin-left : 17%;
+    margin-right: 5px;
+}
+.side_banner1{
+    background : url("../image/side_banner.png") no-repeat;
+    width: 160px;
+    height: 300px;
+    float: left;
+    margin-left : 5px;
+    margin-right: 5px;
+}
+.select_line{
+    background-color: black;
+    width: 100%;
+    height: 150px;
+    display: inline-block;
+   
+}
+
+.movie_bottom{
+    background: url("../image/movie_bottom.jpg") no-repeat;
+    height: 130px;
+    width: 996px;
+    margin-top: 30px;
+    margin-left: 26%;
     
 }
