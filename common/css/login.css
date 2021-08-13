@@ -1,0 +1,217 @@
+/* 로그인, 비회원예매, 비회원 예매확인 */
+
+.clear > .left {
+    width: 600px;
+    border-bottom: 2px solid #666666;
+    height: 370px;
+}
+
+.clear > .left > ul {
+    display: flex;
+    margin-top: 35px;
+}
+
+.clear > .left > .tab_menu_round {
+    background: url('/common/images/bg_tabmenu_grade.gif') 0 bottom repeat-x;
+}
+
+.clear > .left > .tab_menu_round > li {
+    margin-right: 1px;
+    width: 100px;
+    background: #898987;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.clear > .left > .tab_menu_round > .on {
+    background-color: red;
+}
+
+
+.clear > .left > ul > li > a {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+legend {
+    position: absolute;
+    right: -9999em;
+    top: -999em;
+    zoom: 1;
+}
+
+/* 아이디/비밀번호 입력 설명*/
+.clear p {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 28px;
+    margin-left: 55px;
+    padding-bottom: 10px;
+    color: #666;
+}
+
+.wrap_login .login {
+    text-align: center;
+    margin-left: 150px;
+} 
+
+/* 로그인 입력란 */
+.wrap_login .login > input[type=text] {
+    background: url('/common/images/sprite_icon.png') 12px -230px no-repeat
+}
+
+.wrap_login .login > input[type=password] {
+    background: url('/common/images/sprite_icon.png') 12px -261px no-repeat
+}
+
+.wrap_login .login > input {
+    width: 264px;
+    display: block;
+    border: 2px solid #b5b5b5;
+    height: 35px;
+    margin: 5px;
+    background-color: #fdfcf0;
+    text-align: center;
+}
+
+
+/* 로그인 버튼 */
+.wrap_login button {
+    width: 268px;
+    display: block;
+    height: 42px;
+    line-height: 37px;
+    left: 0;
+    position: static;
+    margin-top: 5px;
+    padding: 2px;
+    background: #e71a0f;
+    text-align: center;
+    margin-left: 155px;
+}
+
+.wrap_login button > span {
+    display: block;
+    width: 262px;
+    height: 36px;
+    border: 1px solid #f07469;
+    color: #f2f0e5;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* 아이디 저장 */
+#chk_id {
+    margin-left: 155px;
+}
+
+.wrap_login fieldset {
+    position: relative;
+}
+
+.wrap_login fieldset > .save_id{
+    padding: 3px 0;
+}
+
+.wrap_login fieldset > .save_id > label {
+    font-size: 13px;
+    cursor: pointer;
+    color: #666;
+}
+
+/* 아이디 찾기 / 비밀번호 찾기 */
+.wrap_login fieldset > .login_option {
+    position: absolute;
+    left: 273px;
+    top: 195px;
+}
+
+.wrap_login fieldset > .login_option a {
+    background: url(../images/common/bg/bg_arrow03.png) right 1px no-repeat;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.wrap_login fieldset > .login_option img {
+    margin-left: 3px;
+}
+
+/* 네이버 로그인 버튼 */
+.wrap_login fieldset > .btn_naver a > img {
+    margin-left: 155px;
+    margin-top: 10px;
+    width: 270px;
+}
+
+/* CJ ONE 안내문구 */
+.sect_login_guide {
+    border: 1px solid #d5d4ca;
+    padding: 25px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    height: 20px;
+}
+
+.wrap_useguide {
+    font-size: 14px;
+    color: #222222;
+}
+
+.wrap_useguide > span {
+    margin-right: 10px;
+}
+
+.round_red {
+    display: inline-block;
+    width: 143px;
+    height: 23px;
+    border: 2px solid #e71a0f;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 15px;
+    line-height: 22px;
+}
+
+.round_red a {
+    box-sizing: border-box;
+    color: #e71a0f;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.round_black {
+    display: inline-block;
+    width: 143px;
+    height: 22px;
+    border: 2px solid #333333;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 5px;
+    line-height: 22px;
+}
+
+.wrap_useguide > em > a {
+    box-sizing: border-box;
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrap_useguide > em {
+    padding: 5px;
+    border-left: 1px solid #ccc;
+}
+
+.clear {
+    position: relative;
+}
+.clear > .right {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+}

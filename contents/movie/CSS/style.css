@@ -47,6 +47,39 @@ input, select, img { vertical-align: middle; }
            background: url(http://img.cgv.co.kr/R2014/images/common/ico/ico_photi.png) no-repeat 100% 50%;
            padding-right:25px; }
 
+/* movie finder 시작  usj */
+/*common*/
+.contents { position: relative; width: 980px; margin: 0 auto; }
+h3 { text-align: center; font-weight: 500; }
+h3 > img { padding: 0 8px; }
+input, select, img { vertical-align: middle; }
+body, input, textarea, select, button, table {  
+    font-size: 13px; line-height: 1.2; color: #666;
+    font-weight: 300;
+}
+table { width: 100%; }
+colgroup { display: table-column-group; }
+caption, th, td { font-weight: 300; line-height: 1.5em; text-align: center; vertical-align: middle; }
+    
+
+/* finder_box 시작  usj */
+
+.finder_box { background: url(../../../common/images/bg/bg_bricks.png) repeat-x 0 0;}
+.slide { position: relative; height: 450px; overflow: hidden;}
+.contents { clear: both; padding-bottom: 50px; }
+.contents::before { left: 0; background: url(../../../common/images/bg/bg_bricks_before.png); }
+.finder_inside_box { width: 980px; height: 450px; background: #29353d; }
+.finder_inside_box h3 { height: auto; margin: 0; padding: 15px 0 10px; background: none; line-height: 1.2;  }
+.finder_inside_box h3 img { background: none; }
+.finder_inside_box table { border-collapse: collapse; }
+table .finder_col01 { border-collapse: collapse; }
+.finder_inside_box th { display: inline-block; padding-left: 34px; text-align: left; }
+.finder_inside_box th, .finder_inside_box td { 
+    padding: 11px 0; border-top: 1px solid #3e484f; color: #fdfcf0; font-size: 13px; vertical-align: middle;
+}
+/* finder_box 끝  usj */
+
+/* movie finder 끝  usj */
 
 /* .sect-special  */
 
@@ -240,7 +273,6 @@ div { display: block;}
 .cols-content .graph li > .chart{ min-height:192px}
 .cols-content .graph li > div .point{ margin:20px 0 0 20px;}
 .cols-content .graph li > div .point + .chart{ min-height:158px;}
-.cols-content .graph .chart.jqplot-target canvas { /* Canvas */}
 
 .cols-content .col-detail{ position:relative; width:800px; float:left}
 .cols-content .col-aside{ width:160px; float:right;}
@@ -296,3 +328,70 @@ div { display: block;}
 .cols-content .sect-grade .wrap-persongrade { border: 1px solid #999999; color: #333333;}
 
 .cols-content .sect-grade .box-image .thumb-image img { display: block; position: relative; left: 0; top: 0; width: 62px; height: 62px; border-radius: 100px; }
+
+
+/* movies_HDtrailer.html */
+#contaniner { width: 100%; }
+.bg-bricks { background: url(../Image/bg_c_bricks.png) repeat-x 0 29px; }
+
+.sect-common::before { position: absolute; top: 0; z-index: 10; content: ''; width: 14px; height: 450px; }
+
+.sect-common .cols-player{height:390px;padding:30px 32px 30px 41px;background:#1d1b1c;zoom:1;}
+.sect-common .cols-player:after{ content:''; clear:both; display:block;}
+.sect-common .cols-player h3{height:auto;margin:0;background:none;line-height:1.2;text-align:left; color:#ffffff; font-size:15px; margin-bottom:10px;}
+.sect-common .col-player{ float:left;}
+
+/* .sect-common .warp-player { width:640px; height:360px;} */
+.sect-common .cols-player .ico-trailer { display: inline-block; height: 13px;  color: #2a6fb6; margin-right: 5px; padding: 0 3px; border: 1px solid #2a6fb6; font-size: 10px; font-family: 'Dotum', '돋움'; text-align: center; font-weight: bold; line-height: 13px; }
+
+.sect-common .cols-player iframe { border-style:  inset; border-color: initial; border-image: initial; }
+.sect-common .col-player { float: left;}
+/* .sect-common .cols-player { width: 640px; height: 360px; } */
+
+.sect-common .col-playerinfo { float: right; width: 248px;}
+.sect-common .col-playerinfo-preegg .box-contents { padding-top: 0;}
+.sect-common .col-playerinfo .box-image { float: left; width: 90px; margin-right: 10px; }
+.sect-common .col-playerinfo .box-contents { float: left; width: 148px; margin-bottom: 33px; }
+
+.sect-common .col-playerinfo .box-contents .txt-info { margin-top: 5px; display: block; color: #999999; font-size: 12px;} */
+.sect-common .col-playerinfo .box-contents .txt-info > em { display: block; }
+.sect-common .col-playerinfo .box-contents .txt-info i { font-style: normal; }
+.sect-common .col-playerinfo .box-contents .link-count .link-count_sm { background-color: #ffffff; width: 97px; height: 25px; border: 0 none; line-height: 25px; font-size: 12px;}
+
+.sect-common .col-playerinfo .title { display: block; color: #cccccc; font-size: 13px; zoom: 1;}
+
+.sect-common .col-playerinfo .descri-trailer { clear: both;}
+.sect-common .col-playerinfo .descri-trailer textarea { padding: 10px; line-height: 1.7; width: 228px; height: 158px; margin-top: 12px; border: 1px solid #161415; background: #161415; color: #999999 }
+.wrap-movie-hd { clear: both; }
+.wrap-movie-hd div {clear: both;}
+
+/* .wrap-movie-hd .sect-trailer { height: 300px; } */
+.wrap-movie-hd .sect-trailer h3 { margin-bottom: 30px; height: 41px; margin: 30px 0 30px; line-height: 41px; text-align:  center; font-weight: 500; background: url('../Image/bg_h3_line.jpg') repeat-x 0 50%;}
+.wrap-movie-hd .sect-trailer > ul { margin: -40px 0 0 -6px;}
+.wrap-movie-hd .sect-trailer > ul::after { height:30px; }
+.wrap-movie-hd .sect-trailer > ul > li { float: left; width: 240px; margin: 40px 0 -50px 6px;}
+.wrap-movie-hd .sect-trailer .box-image .thumb-image img { width: 240px; height: 135px;}
+.wrap-movie-hd .sect-trailer .box-image .thumb-image > .ico-play { clear: both; display: inline-block; position: relative; top: -65px; left: 190px; width:44px; height:44px; background: url(../Image/sprite_icon.png) -60px -21px no-repeat; font-size: 0; zoom:0; }
+.wrap-movie-hd .sect-trailer .box-contents { clear: both; display: inline-block; position: relative; top: -65px}
+.wrap-movie-hd .sect-trailer .ad-hdtrailer { padding: 40px 0 0 0; border-top: 3px solid #241d1e; }
+.wrap-movie-hd .sect-trailer .tab-menu { clear: both; text-align: center; width: auto; margin: 0 auto; padding-bottom: 0px; border-bottom:  2px solid #333333;}
+.wrap-movie-hd .sect-trailer .tab-menu li { float: none; width: auto; margin:  0 0 0 -4px; display: inline-block;}
+.wrap-movie-hd .sect-trailer .tab-menu li:first-child { padding-left: 20px; background: url(../Image/sprite_corner.png) 0 -20px no-repeat;}
+.wrap-movie-hd .sect-trailer .tab-menu li:first-child a::before { content: ''; display: inline-block; background: #e71a0f url(../Image/ico_finger.png) 0 50% no-repeat; width: 26px; height: 39px; padding-right: 5px; vertical-align: top;}
+.wrap-movie-hd .sect-trailer .tab-menu li a { background:  #e71a0f; display: inline-block; position: relative; height: 39px; padding: 0 15px; color: #ffffff; font-size: 15px; font-weight: 500; text-align: center; line-height: 39px;}
+.wrap-movie-hd .sect-trailer .tab-menu .last { padding-right: 19px; height: 39px; background: url(../Image/ribon_right.png) right 0 no-repeat;}
+
+.wrap-movie-hd .sect-trailer .hidden { font-size: 0; visibility: hidden; }
+.wrap-movie-hd .sect-trailer .srh-trailer { padding: 10px 0; text-align: right; }
+.wrap-movie-hd .sect-trailer .srh-trailer legend { font-size: 0; visibility: hidden; }
+.wrap-movie-hd .sect-trailer .srh-trailer select { line-height: 27px; height: 29px; padding: 3px 5px; border: 1px solid #b4b3aa;}
+.wrap-movie-hd .sect-trailer .srh-trailer input { display: inline-block; width: 147px; height: 25px; line-height: 22px; padding-left: 10px; border: 1px solid #b5b5b5; text-align: left; font-size: 13px;}
+/* 버튼 다시 만들기 - 임시 */
+.wrap-movie-hd .sect-trailer .srh-trailer .round.on.red { display: inline-block; position: relative; width: 55px; border: 2px solid #e71a0f; background-color: #e71a0f; color: #ffffff; margin-left: 3px; line-height: 23px; font-weight: 500; font-size: 12px; text-align: center; vertical-align: middle; }
+.wrap-movie-hd .sect-trailer .title { margin-top: 13px; font-size: 12px; line-height: 16px; }
+
+.wrap-movie-hd .paging { border-top: 2px solid #1d1b1c; text-align: center; margin-top: 25px; }
+.wrap-movie-hd .paging li { margin-top: 25px; display: inline-block; padding: 0 8px; color: #333333; font-size: 14px; font-weight: bold; line-height: 28px;}
+.wrap-movie-hd .paging li + a { color: inherit; text-decoration: none; }
+.wrap-movie-hd .paging .btn-paging { display: inline-block; min-width: 56px; padding: 0 24px 0 10px; height: 28px; margin: 0 2px; border: 1px solid #cacac1; background-color: #faf9ed; color: #333333; font-size: 11px; font-weight: 500; line-height: 28px; vertical-align: middle;}
+.wrap-movie-hd .paging .btn-paging .end { margin: 0 2px 0 2px; min-width: 27px; padding: 0;}
