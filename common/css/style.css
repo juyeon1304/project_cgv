@@ -528,3 +528,4 @@ vertical-align: middle; }
 .theater_minimap .mini_container .mini_seat {position: absolute;left: 0;right: 0;display: block;width: 4px;height: 4px;}
 .theater_minimap .mini_container .mini_seat span {display: block;width: 3px;height: 3px;background-color: #8e8e8e;}
 .theater_minimap .mini_container .mini_seat.reserved span {background-color: #dadada;}
+/* 미니맵추가 */

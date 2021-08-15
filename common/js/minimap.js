@@ -8,3 +8,5 @@ $(window).load(function(){
         });
     });
 });
+
+// 미니맵 ㄴ
