@@ -6,7 +6,6 @@
 #main_container{
     width : 996px;
     margin: 0 auto;
-    height: 1000px;
     box-sizing: border-box;
     position: relative;
 }
@@ -77,7 +76,7 @@
 .wrap_step { 
     background-color: #d4d3c9;
 }
-.wrap_step > div { margin-left: 2px;}
+.wrap_step > div { margin-left: 2px; min-height: 700px;}
 
 .step {
     position: relative;
@@ -122,9 +121,9 @@
 }
 #mov_title {
     box-sizing: border-box;
-    margin-left: 15px;
+    margin-left: 20px;
+    margin-top: 20px;
     width: 244px;
-    height: 38px;
 }
 .sec_body > #mov_title > p {
     float: left;
@@ -134,7 +133,6 @@
     height: 28px;
     width: 2px;
     float: left;
-    margin-top: 12px;
 }
 .btn1 {
     box-sizing: border-box;
@@ -187,50 +185,63 @@
 }
 
 .sort_title{
+    margin-bottom: 10px;
     box-sizing: border-box;
-    margin-left: 15px;
+    margin-left: 20px;
     width: 244px;
-    height: 32px;
     border-bottom: 2px solid #acaba2;
-
-    margin-top: 10px;
 }
 
 p.move_sort {
-    
+    position: relative;
     float: left;
-    
     width: 60px;
     font-size: 12px;
     margin-top : 5px;
-    height: 23px;
-    
-  
+    height: 32px;
+    line-height: 32px;
+    transform: translateY(2px);
 }
 .move_rank {
   
     background: url("../image/sortmenu_btn_on.png") repeat-x bottom;
    
 }
+
+.scroll::webkit-scrollbar {
+    background-color: transparent;
+
+}
+.scroll::webkit-scrollbar-thumb { 
+    background-color: #000;
+
+}
+
+
+
+#theather_content { margin-left: 20px;}
+
 #mov_list{
     position: relative;
-    margin-left: 15px;
-    width: 244px;
+    margin-left: 20px;
+    width: 80%;
     height: 80%;
     
 }
+
 #mov_list > ul {
     list-style : none;
     padding : 0;
-    position: absolute;
+    /* position: absolute; */
     overflow :scroll;
-
     overflow-x: hidden;
-    top : -10px;
+    /* top : -10px; */
     width: 244px;
     height: 100%;
     
 }
+
+
 #icon_list1 {
     background : url("../image/icon_ratings2.png") no-repeat;
     background-position: 2px -32px;
