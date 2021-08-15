@@ -70,8 +70,32 @@ caption, th, td { font-weight: 300; line-height: 1.5em; text-align: center; vert
 .finder_inside_box h3 img { background: none; }
 .finder_inside_box table { border-collapse: collapse; }
 table .finder_col01 { border-collapse: collapse; }
+.finder_inside_box tr { border-top: 1px solid #3e484f;}
 .finder_inside_box th { display: inline-block; padding-left: 34px; text-align: left; }
-.finder_inside_box th, .finder_inside_box td {padding: 11px 0; border-top: 1px solid #3e484f; color: #fdfcf0; font-size: 13px; vertical-align: middle; }
+.finder_inside_box th, .finder_inside_box td { padding: 11px 0;  color: #fdfcf0; font-size: 13px; vertical-align: middle; box-sizing: border-box;}
+.finder_inside_box th {padding-left:34px; width: 107px;}
+.finder_inside_box .list_sel > li { float: left; width: 14%;}
+.finder_inside_box .list_sel > li.collage { width: 86%;}
+.finder_inside_box .makenation + td .list_sel li ~ li{ width: auto; margin-right: 28px;}
+.finder_inside_box .wrap_selMovie > select, 
+.finder_inside_box .wrap_selMovie > input { height:display: inline-block; height: 25px; box-sizing:border-box; line-height: 22px; padding-left: 10px; border: 1px solid #b5b5b5; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* finder_box 끝  usj */
 /* movie finder 끝  usj */
