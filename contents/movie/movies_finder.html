@@ -172,8 +172,7 @@
               <tbody>
                 <tr>
                     <th class="searchtype" scope="row">영화검색</th>
-                    <td>
-                        <label class="hidden" for="keyword_type">영화검색 목록</label>
+                    <td class="wrap_selMovie">
                         <select title="영화검색 목록" id="keyword_type">
                             <option value="0" selected="">전체</option>
                             <option value="1">영화제목</option>
@@ -186,14 +185,14 @@
                 <tr>
                     <th class="genretype" scope="row">장르</th>
                     <td>
-                        <ul>
+                        <ul class="list_sel clear">
                             <li>
                               <input type="checkbox" id="all_genre" name="all-genre" value="all">
                               <label for="all_genre">전체</label>
                             </li>
                             <li class="collage">
-                              <input type="checkbox" name="art_genre" value="1">
-                              <label>아트하우스</label>
+                              <input type="checkbox" name="art_genre" id="art_genre" value="1">
+                              <label for="art_genre">아트하우스</label>
                             </li>
 
                             <li><input type="checkbox" id="genre1" name="genre" value="1">
@@ -376,7 +375,7 @@
                 <tr>
                     <th class="makenation" scope="row">제작국가</th>
                     <td>
-                        <ul>
+                        <ul class="list_sel">
                             <li>
                               <input type="checkbox" name="all-national-code" id="all_national_code">
                               <label for="all_national_code">전체</label>
@@ -438,7 +437,7 @@
                 <tr>
                     <th class="gradetype" scope="row">관람등급</th>
                     <td>
-                        <ul>
+                        <ul class="list_sel">
                             <li>
                               <input type="checkbox" id="all_grade" name="all-grade" value="201">
                               <label for="all_grade">전체</label>
