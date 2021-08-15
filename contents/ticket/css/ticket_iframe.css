@@ -208,13 +208,19 @@ p.move_sort {
    
 }
 
-.scroll::webkit-scrollbar {
-    background-color: transparent;
-
+.scrl::-webkit-scrollbar {
+    background-color: red;
 }
-.scroll::webkit-scrollbar-thumb { 
-    background-color: #000;
 
+.scrl::-webkit-scrollbar-track  {
+    background-color: red;
+}
+
+.scrl::-webkit-scrollbar {
+    background-color: red;
+}
+.scrl::-webkit-scrollbar-thumb { 
+    background-color: #000;
 }
 
 
@@ -224,8 +230,10 @@ p.move_sort {
 #mov_list{
     position: relative;
     margin-left: 20px;
-    width: 80%;
+    width: 85%;
     height: 80%;
+    overflow-y :scroll;
+    overflow-x: hidden;
     
 }
 
@@ -233,8 +241,8 @@ p.move_sort {
     list-style : none;
     padding : 0;
     /* position: absolute; */
-    overflow :scroll;
-    overflow-x: hidden;
+    /* overflow :scroll;
+    overflow-x: hidden; */
     /* top : -10px; */
     width: 244px;
     height: 100%;
