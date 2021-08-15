@@ -513,9 +513,7 @@ vertical-align: middle; }
 
 /* git git git */
 
-/* tgeater_minimap */
-.list_timetb
-
+/* ticket_minimap */
 .theater_minimap {position:absolute;background:#fcfbf0;border:3px solid #000;z-index:4000}        
 .theater_minimap span.arr {position:absolute;left:50%;margin-left:-7px;bottom:-13px;width:15px;height:13px;background:url(http://img.cgv.co.kr/r2014/images/common/bg/bg_arrow04.png) no-repeat 0 0}
 .theater_minimap .data_txt {padding:5px 10px;border-bottom:1px solid #ddd;text-align:center;}

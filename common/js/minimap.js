@@ -1,10 +1,10 @@
 $(window).load(function(){
     $(function() {
-        $('div.showImage').hide();
+        $('div.showview').hide();
         $('.imgMouseover').hover(function() {
-            $('div.showImage').fadeIn();
+            $('div.showview').fadeIn();
         }, function() {
-            $('div.showImage').fadeOut();
+            $('div.showview').fadeOut();
         });
     });
 });
