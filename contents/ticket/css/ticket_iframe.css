@@ -1,19 +1,19 @@
 
+
+
+
+
 #main_container{
-    width : 100%;
+    width : 996px;
+    margin: 0 auto;
     height: 1000px;
     box-sizing: border-box;
-    
     position: relative;
-
 }
 #btn_line{
-    margin-left : 25%;
-    width: 1000px;
+    margin: 0 auto;
+    width: 996px;
     height: 80px;
-     
-    
-
 }
 
 .btn_style {
@@ -74,18 +74,23 @@
 
 }
 
+.wrap_step { 
+    background-color: #d4d3c9;
+}
+.wrap_step > div { margin-left: 2px;}
+
 .step {
     position: relative;
-    width: 284px;
+    width: 283px;
     background-color: #F2F0E4;
     height: 595px;
     float: left;
     
-    
 }
+
 .step_date {
     position: relative;
-    width: 91px;
+    width: 90px;
     background-color: #F2F0E4;
     height: 595px;
     float: left;
@@ -106,7 +111,6 @@
     box-sizing: border-box;
     padding-top: 3px;
     font-size: 20px;
-    border-right: 1px solid white;
 }
 .sec_body {
     
@@ -327,7 +331,6 @@ p.move_sort {
     box-sizing: border-box;
     padding-top: 3px;
     font-size: 20px;
-    border-right: 1px solid white;
 }
 #date_month{
     /* border : 1px solid blue; */
@@ -529,6 +532,7 @@ p.move_sort {
     border : none ;
 }
 .side_banner{
+    display: none;
     background : url("../image/side_banner.png") no-repeat;
     width: 160px;
     height: 300px;
@@ -537,6 +541,7 @@ p.move_sort {
     margin-right: 5px;
 }
 .side_banner1{
+    display: none;
     background : url("../image/side_banner.png") no-repeat;
     width: 160px;
     height: 300px;
@@ -555,8 +560,5 @@ p.move_sort {
 .movie_bottom{
     background: url("../image/movie_bottom.jpg") no-repeat;
     height: 130px;
-    width: 996px;
     margin-top: 30px;
-    margin-left: 26%;
-    
 }
