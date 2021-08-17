@@ -1,0 +1,347 @@
+#contents {
+    clear: both;
+    position: relative;
+}
+.cols_content {
+    margin-top: 20px;
+}
+
+/* aside */
+.cols_aside {
+    float: left;
+    width: 160px;
+}
+.snb ul {
+    display: block;
+    margin-bottom: 10px;
+    width: 160px;
+}
+.snb {
+    width: 160px;
+}
+.snb li.on {
+    background-color: #e71a0f;
+}
+.snb li.on > a {
+    color: #fdfcf0;
+    text-align: center;
+    vertical-align:-webkit-baseline-middle;
+}
+.snb li {
+    width: 155px;
+    height: 34px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid #ccc;
+}
+.snb li > a {
+    color: #222;
+    font-size: 14.5px;
+    font-weight: bold;
+    height: 34px;
+    position: relative;
+    text-align: center;
+    vertical-align:-webkit-baseline-middle;
+}
+.snb > ul > li:hover {
+    background-color: #e71a0f;
+}
+.snb > ul > li:hover > a {
+    color: #fdfcf0;
+}
+.snb > ul > li:hover > a > i {
+    display: block;
+    position: absolute;
+    top: 3;
+    left: -18px;
+    width: 18px;
+    height: 34px;
+    background: url(../images/ribon_left.png) no-repeat 0 0;
+}
+
+/* 옆 컨텐츠 */
+.cols_content .col_detail {
+    float: right;
+    width: 800px;
+}
+
+.check_wrap .c_box.qna_search {
+    width: 200px;
+    background: #e71a0f url(../images/ico_search.png) center 50px scroll no-repeat;
+    background-size: 50px;
+    border-right: none;
+}
+
+.check_wrap .c_box {
+    float: left;
+    display: block;
+    width: 199px;
+    height: 260px;
+    text-align: center;
+    border-right: 1px solid #dedace;
+}
+
+.check_wrap .qna_search .c_title {
+    color: #fff;
+    display: block;
+    padding-top: 135px;
+    font-size: 16px;
+    letter-spacing: -0.059em;
+}
+
+.check_wrap .qna_search .search_box input {
+    float: left;
+    width: 170px;
+    height: 12px;
+    padding: 8px 0;
+    margin-left: 18px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 12px;
+    text-indent: 7px;
+    vertical-align: middle;
+    border: none;
+    background-color: #fff;
+    position: relative;
+    margin-bottom: 5px;
+}
+.check_wrap .qna_search .search_box .btn_search {
+    position: absolute;
+    top: 173px;
+    left: 335px;
+    width: 34px;
+    height: 15px;
+    font-weight: 500;
+    font-size: 0;
+    line-height: 30px;
+    background: transparent url(/common/images/btn_search.png) center scroll no-repeat;
+    background-size: 16px;
+}
+.check_wrap .qna_search .c_qu a {
+    padding: 2px;
+    font-size: 11px;
+    color: #fff;
+    vertical-align: top;
+}
+.check_wrap .talk_inquiry {
+    background: #ede9dd url(/common/images/ico_talk.png) center 50px scroll no-repeat;
+    background-size: 50px;
+}
+.check_wrap .c_title {
+    display: block;
+    padding-top: 135px;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: -0.059em;
+}
+
+.check_wrap .c_txt {
+    display: block;
+    margin: 11px 0px 17px;
+    font-size: 12px;
+    color: #958772;
+    letter-spacing: -0.042em;
+}
+.check_wrap .c_txt + a {
+    overflow: hidden;
+    display: block;
+    width: 80px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: -0.042em;
+    line-height: 23px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #9a8d79;
+    border-radius: 4px;
+}
+.check_wrap .email_inquiry {
+    background: #ede9dd url(/common/images/ico_email.png) center 50px scroll no-repeat;
+    background-size: 50px;
+}
+.check_wrap .my_advice {
+    background: #ede9dd url(/common/images/ico_email.png) center 50px scroll no-repeat;
+    background-size: 50px;
+}
+
+/* 자주찾는 서비스 */
+.service_area {
+    margin-top: 30px;
+    float: left;
+    width: 267px;
+    height: 287px;
+}
+
+.service_area .tit, .notice_area .tit {
+    color: #222;
+    font-size: 16px;
+    font-weight: bold;
+}
+.service_area .list {
+    padding-top: 15px;
+    margin: -5px 0px 0px -5px;
+}
+.service_area .list li {
+    margin: 5px 0px 0px 5px;
+    float: left;
+}
+.service_area .list li a {
+    padding: 24px 20px 25px 17px;
+    display: block;
+    width: 94px;
+    height: 32px;
+    color: #222;
+    line-height: 20px;
+    font-weight: bold;
+    font-size: 13px;
+    background: url(/common/images/bg_c_main.png) no-repeat 0 -287px;
+}
+
+/* 공지/뉴스 */
+.notice_area {
+    margin-top: 28px;
+    float: left;
+    width: 267px;
+    height: 287px;
+    position: relative;
+    float: right;
+    width: 473px;
+    height: 287px;
+    line-height: 1.7;
+}
+.notice_area .tit {
+    color: #222;
+    font-size: 16px;
+    font-weight: bold;
+}
+.notice_area .txt {
+    margin-top: 15px;
+}
+.notice_area .txt li a {
+    float: left;
+    overflow: hidden;
+    display: block;
+    width: 400px;
+    color: #222;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    font-size: 12px;
+}
+.notice_area .txt .day {
+    color: #222;
+    font-size: 11px;
+}
+
+.notice_area .c_btn_more {
+    position: absolute;
+    top: 0;
+    left: 75px;
+    display: inline-block;
+    width: 20px;
+    height: 19px;
+    background: url(/common/images/bg_c_main.png) no-repeat -159px -287px;
+    text-indent: -999px;
+}
+.notice_ban_area .ban_preview {
+    float: left;
+    display: block;
+    width: 231px;
+    height: 95px;
+    background: url(/common/images/bg_c_main.png) no-repeat 0 -163px;
+    text-indent: -9999px;
+}
+.notice_ban_area .ban_discount {
+    float: right;
+    display: block;
+    width: 232px;
+    height: 95px;
+    background: url(/common/images/bg_c_main.png) no-repeat -241px -163px;
+    text-indent: -9999px;
+}
+
+/* 분실문주의~고객센터 */
+.c_under_area {
+    clear: both;
+    margin-top: 60px;
+    padding: 30px 0px 35px 0px;
+    color: #222;
+    border-top: solid 1px #cacac1;
+    border-bottom: solid 1px #cacac1;
+}
+.c_under_area li {
+    float: left;
+    width: 25%;
+}
+.c_under_area .ico_lost {
+    padding-left: 48px;
+    background-position: -3px -88px;
+}
+.c_under_area .ico_general {
+    padding-left: 53px;
+    background-position: -158px -88px;
+}
+.c_under_area .ico_vipinfo {
+    padding-left: 49px;
+    background-position: -361px -88px;
+}
+.c_under_area .ico_vipcustomer {
+    padding-left: 38px;
+    background-position: -513px -88px;
+}
+.c_under_area .tit_shortcut {
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    font-size: 16px;
+    background: url(/common/images/bg_c_main.png) no-repeat;
+}
+.c_under_area .txt {
+    display: block;
+    margin: 10px 30px 13px 0px;
+    font-size: 12px;
+}
+.c_under_area .round.on.gray {
+    height: 20px;
+}
+.round.on.gray {
+    width: 55px;
+    border: 2px solid #7b7b7b;
+    background-color: #7b7b7b;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 1px;
+}
+
+.round > * {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 5px 0;
+}
+
+.tel_inquiry {
+    overflow: hidden;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #222;
+}
+.tel_inquiry li:first-child {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: 0;
+}
+.tel_inquiry .time {
+    font-size: 12px;
+}
+
+.sect_theater .round:before, .round:after, .round > *:before, .round > *:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: none;
+}
