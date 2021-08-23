@@ -172,3 +172,18 @@ schedue.html
 .sec_choice ul li a { display: block; padding: 0 0 0 7px; width:207px; line-height: 25px; border: 2px solid transparent; border-radius: 3px; box-sizing: border-box; font-size: 13px; color: #222; transition: all .2s}
 .sec_choice ul li.on a,
 .sec_choice ul li a:hover { border-color: #1d1d1b; background:#333230; color: #fff; }
+
+
+
+
+/* util/discount */
+.wrap_dc { padding: 25px 0 0;}
+.wrap_dc > aside { width: 160px;}
+.wrap_dc > aside ul li a { display: block; line-height: 34px; }
+.wrap_dc > aside ul li a:hover, 
+.wrap_dc > aside ul li.on a { background-color:#e71a0f; color: #fff;}
+.wrap_dc > .right { width: 800px; text-align: center;}
+.sec_card .list_sort > li { float:left; margin-right:2%; margin-bottom: 15px; width:32%; height:240px;border:2px solid #cecabd; background: #e5e3d7; border-radius: 10px; box-sizing: border-box;
+}
+.sec_card .list_sort > li.on { background-color: #c62424; border-color: #c62424;}
+.sec_card .list_sort > li:nth-child(3n) { margin-right: 0;}
