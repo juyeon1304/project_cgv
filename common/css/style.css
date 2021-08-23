@@ -24,8 +24,6 @@
     font-display: swap;
 }
 
-
-
 /* ========================
 sprite background
 ========================*/
@@ -172,6 +170,39 @@ layout
 /* ========================
 common
 ========================*/
+#navigation_line { clear: both; width: auto; height: 28px; margin: 0 auto; box-sizing: border-box; border-bottom: 1px solid #cacac0; background-color: #F1F0E5; }
+
+.linemap-wrap .sect-linemap { clear: both; position: relative; width: 980px; height: 28px; margin: 0 auto; }
+.linemap-wrap .sect-linemap > .sect-bcrumb > ul > li:first-child > a > img { margin-top: 5px;}
+.linemap-wrap .sect-linemap > .sect-bcrumb > ul > li { float: left;}
+.linemap-wrap .sect-linemap > ul > li:first-child { border-left:  1px solid #acaca3;}
+.linemap-wrap .sect-linemap > ul > li { padding: 0 10px; border-style: 1px solid #acaca3;}
+
+.linemap-wrap {clear: both;  width:100%; background-color:#f1f0e5; border-bottom:1px solid #cacac0;}
+.linemap-wrap .sect-linemap { position:relative; width:980px; height:28px; margin:0 auto;}
+.linemap-wrap .sect-linemap > .sect-bcrumb {position:relative;}
+.linemap-wrap .sect-linemap > .sect-bcrumb ul > li,
+.linemap-wrap .sect-linemap li { float:left; }
+.linemap-wrap .sect-linemap > .sect-bcrumb ul > li {margin-left:12px; padding-left:20px; background:url(https://img.cgv.co.kr/r2014/images/common/ico/ico_arrow.png) no-repeat 0 50%; font-size:12px;}
+.linemap-wrap .sect-linemap > .sect-bcrumb ul > li:first-child {margin-left:0; padding-left:0; background:none;}
+.linemap-wrap .sect-linemap > .sect-bcrumb ul > li:first-child > a > img {margin-top:5px;}
+
+.linemap-wrap .sect-linemap > .sect-special ul > li > a {display:block; color:#222; font-size:12px; line-height:28px}
+.linemap-wrap .sect-linemap > .sect-bcrumb ul > li strong{color:#222; text-decoration:underline; line-height:28px;font-weight:500;}
+.linemap-wrap .sect-linemap > .sect-bcrumb ul > li.last{color:#222; font-size:12px; text-decoration:underline; line-height:28px;font-weight:500;}
+.linemap-wrap .sect-linemap > .sect-special { overflow:hidden; position:absolute; top:0; right:0;}
+.linemap-wrap .sect-linemap > .sect-special ul > li {padding:0 10px; border-right:1px solid #acaca3;}
+.linemap-wrap .sect-linemap > .sect-special ul > li:first-child {border-left:1px solid #acaca3;}
+.linemap-wrap .sect-linemap > .sect-special ul > li > a {color:#666; font-weight:500; font-size:11px; text-align:center;}
+.linemap-wrap .sect-linemap > .sect-special ul li a.specialclub {
+    background: url(https://img.cgv.co.kr/r2014/images/common/ico/ico_club_service.png) no-repeat 100% 50%;
+    padding-right:25px; text-align: left; }
+
+.linemap-wrap .sect-linemap > .sect-special ul li.dsr_btn +li a {color:#666;background:none;padding: 0 20px; width: auto; text-align: center;}
+.linemap-wrap .sect-linemap > .sect-special ul > li a.photi {
+          background: url(http://img.cgv.co.kr/R2014/images/common/ico/ico_photi.png) no-repeat 100% 50%;
+          padding-right:25px; }
+
 .nav_quick { position: fixed; left: 1461.5px; top: 240px;}
 .nav_quick ul { padding: 0 4px; border: 3px solid #e71a0f; width: 116px; border-radius: 8px; overflow: hidden; background: #fdfcf0; box-sizing: border-box;}
 .nav_quick ul li a { display: block;  }
@@ -228,8 +259,7 @@ padding: 0 10px; border-right: 1px solid #acaca3; height: 27px; }
 .line_wrap > .line_sect > .sect_side ul li a{ color: #666; font-weight: 500; font-size: 13px; text-align: center; }
 .line_wrap > .line_sect > .sect_side > ul li a.specialclub { padding-right: 25px; text-align: left; background: url(https://img.cgv.co.kr/r2014/images/common/ico/ico_club_service.png) no-repeat 100% 50%; }
 
-/*=
-=============================================
+/*==============================================
           faverity CGV sector
 ==============================================*/
 
@@ -529,3 +559,23 @@ vertical-align: middle; }
 .theater_minimap .mini_container .mini_seat span {display: block;width: 3px;height: 3px;background-color: #8e8e8e;}
 .theater_minimap .mini_container .mini_seat.reserved span {background-color: #dadada;}
 /* 미니맵추가 */
+
+/*==============================================
+                  Clubservice
+==============================================*/
+
+.contents { clear: both; padding-bottom: 50px; position: relative; width: 980px; margin: 0 auto; }
+.tit { position: relative; height: 51px; margin-top: 30px; border-bottom: 3px solid #241d1e; }
+.tit h3 { display: inline-block; position: relative; height: inherit; margin: 0; background-image: none; color: #222; font-weight: 800; font-size: 36px; text-align: left; vertical-align: middle; }
+.sub_tit #p1 { display: block;margin-bottom: 7px;font-size: 20px;color: #2c2c2c;line-height: 1.3; }
+.sub_tit #p2 { font-size: 13px;color: #2c2c2c;line-height: 150%; }
+.fir_block { position: relative; padding-top: 387px; margin: 0 0 0 -14px; }
+.fir_block .area_1 {  left: 0; top: 0; }
+.fir_block .com_area { border: 1px solid #edeae0; width: 482px; background: #fff; box-shadow: #e5e4da 0 0 3px; position: absolute; margin: 20px 0 0 13px;}
+.fir_block .area_1 .com_box { position: relative; height: 290px; }
+.fir_block .area_1 .com_box::before { overflow: hidden; position: absolute; left: 12px; top: 15px; display: block; content: ''; width: 100px; height: 80px; }
+.fir_block .area_1 .com_box a { color: #000; text-decoration: none; }
+.fir_block .area_1 .com_box img { display: block; width: 100%; height: 100%; vertical-align: middle;}
+
+.fir_block .area_1 .com_box.on .Appear { display: block; }
+.Appear { display: none; position: absolute; left: 0; right: 0; top: 0; bottom: 0; color: #fff; text-align: center; background-color: rgba(0,0,0,.8); }
