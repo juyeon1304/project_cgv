@@ -176,6 +176,7 @@
     color: #222;
     font-size: 16px;
     font-weight: bold;
+    border-bottom: none;
 }
 .service_area .list {
     padding-top: 15px;
@@ -213,6 +214,7 @@
     color: #222;
     font-size: 16px;
     font-weight: bold;
+    border-bottom: none;
 }
 .notice_area .txt {
     margin-top: 15px;
@@ -297,6 +299,22 @@
     line-height: 33px;
     font-size: 16px;
     background: url(/common/images/bg_c_main.png) no-repeat;
+}
+.c_under_area .ico_lost {
+    padding-left: 48px;
+    background-position: -3px -88px;
+}
+.c_under_area .ico_general {
+    padding-left: 53px;
+    background-position: -158px -88px;
+}
+.c_under_area .ico_vipinfo {
+    padding-left: 49px;
+    background-position: -361px -88px;
+}
+.c_under_area .ico_vipcustomer {
+    padding-left: 38px;
+    background-position: -513px -88px;
 }
 .c_under_area .txt {
     display: block;
