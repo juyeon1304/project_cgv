@@ -10,11 +10,49 @@
   <link rel="stylesheet" href="/common/css/style.css">
   <link rel="stylesheet" href="/common/css/index.css">
   <link rel="stylesheet" href="/common/css/sub.css">
-  <link rel="stylesheet" href="/common/css/support.css">
+  <link rel="stylesheet" href="/common/css/user.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
-  <!-- <script src="/common/js/common.js" charset="utf-8"></script>
-  <script src="/common/js/slide.js" charset="utf-8"></script> -->
+  <script src="/common/js/common.js" charset="utf-8"></script>
+  <script src="/common/js/swiper.js" charset="utf-8"></script>
+  <script src="/common/js/slide.js" charset="utf-8"></script>
   <script src="/common/js/script.js" charset="utf-8" defer></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    
+            (function ($) {
+                $(function () {
+    
+                    $('#searchtext').on('keypress', function (e) {
+                        if (e.keyCode == 13) {
+                            Search();
+                            return false;
+                        }
+                    });
+    
+                    $('#btn_search').on('click', function () {
+                        Search();
+                    });
+    
+                    function Search() {
+                        location.href = "" + escape($("#searchtext").val());
+                    }
+    
+                    $('.question').on('click', function () {
+                        $('.answer').hide();
+                        $(this).parent().parent().find('.answer').show();
+                        return false;
+                    });
+    
+                    $('.sect_unfold button').on('click', function () {
+                        $(this).parent().parent('div.answer').hide();
+                        return false;
+                    });
+    
+                });
+            })(jQuery);
+    
+    //]]>
+    </script>
 </head>
 
 <body class="body_idx">
@@ -31,7 +69,7 @@
         <div class="wrap_gnb">
           <h1 class="logo_cgv.png">
             <a href="">
-              <img src="/common/images/logo_cgv.png" alt="CGV">
+              <img src="../../common/images/logo_cgv.png" alt="CGV">
             </a>
           </h1>
           <h2 class="hide">대메뉴</h2>
@@ -147,163 +185,144 @@
           </div>
         </div>
       </div>
-    <!-- </main> -->
-  
 
-<!-- Content start -->
-<div id="contents">
-  <div class="cols_content">
-    <div class="cols_aside">
-      <div class="snb">
-        <ul>
-          <li class="on"><a href=""><i></i>고객센터 메인</a></li>
-          <li><a href=""><i></i>자주찾는 질문</a></li>
-          <li><a href=""><i></i>공지/뉴스</a></li>
-          <li><a href=""><i></i>이메일 문의</a></li>
-          <li><a href=""><i></i>분실물 문의</a></li>
-          <li><a href=""><i></i>단체/ 대관 문의</a></li>
-          <li><a href=""><i></i>대학로 옥탑 예약</a></li>
-        </ul>
-      </div>
-      <div class="ad_area">
-        <div class="ad-partner01">
-          <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@C_Rectangle" width="160" height="300" title="기업광고-CGV" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="C_Rectangle" id="C_Rectangle"></iframe>
-        </div>
-      </div>
-    </div>
+<div class="cols_content vip_help">
     <div class="col_detail">
-      <div class="check_wrap">
-        <div class="c_box qna_search">
-          <strong class="c_title">자주찾는 질문 빠른검색</strong>
-          <div class="search_box">
-            <input id="searchtext" type="text" title="검색어 입력" placeholder="검색어를 입력해 주세요.">
-            <button type="button" class="btn_search" title="검색하기" id="btn_search">검색</button>
-          </div><br>
-          <div class="c_qu">
-            <a href="">현금영수증</a>                               
-            <a href="">관람권</a>                       
-            <a href="">홈페이지</a>                       
-            <a href="">예매</a>                            
-            <a href="">환불</a>                       
-            <a href=""></a>                       
-          </div>
-        </div>
-        <div class="c_box talk_inquiry">
-          <strong class="c_title">상담톡 문의</strong>
-          <span class="c_txt">상담톡을 이용해보세요.</span>
-          <a href="">문의하기</a>
-        </div>
-        <div class="c_box email_inquiry">
-          <strong class="c_title">이메일 문의</strong>
-          <span class="c_txt">24시간 365일 언제든지 문의해주세요.</span>
-          <a href="">문의하기</a>
-        </div>
-        <div class="c_box my_advice">
-          <strong class="c_title">내 상담 내역 확인</strong>
-          <span class="c_txt">문의하신 내용을 확인하실 수 있습니다.</span>
-          <a href="" target="_blank" title="새창열기">문의내역 조회</a>
-        </div>
-      </div>
-      <div class="customer_notice_area">
-        <div class="service_area">
-          <span class="tit">자주찾는 서비스</span>
-          <ul class="list">
-            <li>
-              <a href="">신용카드<br>
-              영수증 출력
-              </a>
-            </li>
-            <li>
-              <a href="">아이디/<br>
-              비밀번호 찾기
-              </a>
-            </li>
-            <li>
-              <a href="">예매/<br>
-              취소내역 확인
-              </a>
-            </li>
-            <li>
-              <a href="">비회원<br>
-              예매/취소
-              </a>
-            </li>
-            <li>
-              <a href="">멤버십포인트<br>
-              사용안내
-              </a>
-            </li>
-            <li>
-              <a href="">관람권<br>
-              할인쿠폰 등록
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="notice_area">
-          <a href="">
-            <span class="tit">공지/뉴스</span>
-          </a>
-          <ul class="txt">
-            <li>
-              <a href="">[기타] 2021 SVIP 스페셜 기프트 신청 안내</a>
-              <span class="day">2021.06.29</span>
-            </li>
-            <li>
-              <a href="">[극장] 연말연시 특별 방역 조치에 따른 극장 운영 시간 조정 안내</a>
-              <span class="day">2020.12.04</span>
-            </li>
-            <li>
-              <a href="">[기타] 포토플레이 서비스 개선 안내</a>
-              <span class="day">2020.09.15</span>
-            </li>
-            <li>
-              <a href="">[기타] 영진위 지원사업-"모든요일 6천원 할인"이벤트 조기 종료 안내(8/16 종료)</a>
-              <span class="day">2020.08.16</span>
-            </li>
-            <li>
-              <a href="">[기타] 영화<국제수사> 개봉연기에 따른 예매취소 안내 건</a>
-              <span class="day">2021.06.29</span>
-            </li>
-          </ul>
-          <a href="" class="c_btn_more"></a>
-          <div class="notice_ban_area">
-            <a href="" class="ban_preview">CGV PREVIEW 시사회/무대인사</a>
-            <a href="" class="ban_discount">DISCOUNT INFO</a>
-          </div>
-        </div>
-      </div>
-      <div class="c_under_area">
-        <ul>
-          <li>
-            <strong class="tit_shortcut ico_lost">분실물 문의</strong>
-            <span class="txt">CGV에서 잃어버리신 물건을 신속하게 찾아 드리는 서비스</span>
-            <a href="" class="round gray on" title="">바로가기</a>
-          </li>
-          <li>
-            <strong class="tit_shortcut ico_general">대관/단체 서비스</strong>
-            <span class="txt">CGV에서 진행하는 우리만의 특별한 이벤트 색다른 문화행사</span>
-            <a href="" class="round gray on" title="">바로가기</a>
-          </li>
-          <li>
-            <strong class="tit_shortcut ico_vipinfo">VIP 안내</strong>
-            <span class="txt">영화를 사랑하는 당신에게 드리는 특별한 CGV만의 VIP혜택</span>
-            <a href="" target="_blank" class="round gray on" title="새창열기">바로가기</a>
-          </li>
-          <li>
-            <strong class="tit_shortcut ico_vipcustomer">VIP 고객센터</strong>
-            <span class="txt">VIP 고객님들께 알려드리는<br>VIP 혜택 제대로 활용하는 방법</span>
-            <a href="" target="_blank" class="round gray on" title="새창열기">바로가기</a>
-          </li>
-        </ul>
-      </div>
-      <ul class="tel_inquiry">
-        <li>CGV 고객센터 : 1544-1122<span class="time">(상담가능 시간, 월~금 09:00~18:00) *이 외 시간은 자동 응답 안내 가능</span></li>
-      </ul>
+        <h3>VIP FAQ</h3>
+        <p>고객님께서 궁금하신 내용을 먼저 확인해 주세요.</p>
+    <div class="srh_vip">
+        <form novalidate="novalidate">
+            <fieldset>
+                <legend>검색어를 입력하는 영역입니다.</legend>
+                <p>
+                    <input type="text" class="medium" id="searchtext" name="searchtext" minlength="2" maxlength="20" value="" placeholder="궁금하신 내용을 입력해주세요">
+                    <button type="button" class="round inblack" id="btn_search"><span>검색하기</span></button>
+                </p>
+            </fieldset>
+        </form>
     </div>
-  </div>
+        <div class="tbl_data">
+            <ul>
+                <li>
+                    <p>
+                        <em>7</em>
+                        <a href="#" class="question">VIP 선정과 관련된 선정 적립 포인트는 어디서 확인할 수 있나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>CGV 홈페이지 또는 모바일앱 > MY CGV > VIP라운지에서 확인 가능합니다</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>6</em>
+                        <a href="#" class="question">VIP의 정확한 혜택을 알고 싶어요</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>VIP의 정확한 혜택은 CGV홈페이지/모바일앱 > MY CGV > VIP 라운지의 해당 혜택의 온라인 페이지에서<br>
+                            확인하실 수 있습니다</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>5</em>
+                        <a href="#" class="question">VIP 선정 이후에 VIP 혜택은 언제 받게 되나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>VIP 선정 이후 VIP 온라인 쿠폰북, 반값할인, 더블적립 등 다양한 VIP 혜택은 바로 이용이 가능합니다</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>4</em>
+                        <a href="#" class="question">VIP가 되고 나서 1년을 채우기 전에 RVIP 되면 제가 가지고 있는 VIP혜택은 사라지고 새로운 RVIP 혜택만 받게 되나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>기존에 받으신 VIP 쿠폰은 유효기간 내 사용 가능하며 새롭게 받은 RVIP 쿠폰도 유효기간 내 동일하게 사용 가능합니다.</p>
+                        <p>다만 일부 혜택의 경우 RVIP 승급 시점에서 VIP 보다 나은 RVIP 혜택 기준으로 일괄 적용됩니다.</p>
+                        <p>(VIP반값할인의 경우 VIP의 잔여 반값할인 제외 및 RVIP 반값할인 10회로 변경되며 스페셜데이, 더블적립 등 <br>
+                        그 외 혜택은 모두 RVIP로 혜택으로 일괄 변경됩니다)</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>3</em>
+                        <a href="#" class="question">VIP 온라인 쿠폰북은 어떻게 사용할 수 있나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>VIP 선정 후 VIP 쿠폰북 온라인 페이지에서 다운로드 가능하며 등급 유효기간 내 사용 가능합니다<br>
+                            (홈페이지,모바일앱 예매 : 좌석 선택 후 쿠폰 사용 가능 / 극장 매표소 예매 : VIP 인증 후 사용 가능)</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>2</em>
+                        <a href="#" class="question">CGV VIP 와 CJ ONE VIP는 어떻게 다른가요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>
+                            CGV VIP는 고객님께서 CGV에서 구매 적립한 CJ ONE 포인트 기준으로 선정되고,<br>
+                            CJ ONE VIP는 CJ ONE 제휴 브랜드 구매 실적 기준으로 선정됩니다.<br>
+                            CJ ONE VIP 선정 여부는 CJ ONE 홈페이지에서 로그인 후 확인 가능합니다.<br>
+                            (CJ ONE 홈페이지 www.cjone.com)
+                        </p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>1</em>
+                        <a href="#" class="question">CJ ONE 카드 등록을 안했는데 CGV VIP가 될 수 있나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>
+                           기존에 미등록한 CJ ONE 카드를 사용하고 계시면 고객님의 포인트 정보를 알 수 없으므로 CGV VIP 선정 기준에 포인트가 반영되지 않습니다. 미등록 카드를 이용하신 고객님은 CJ ONE 카드를 등록해 주셔야 합니다. 다만 3개월 이내 카드 미등록시, 적립 포인트는 자동 소멸됩니다.<br>
+                           ※CJ ONE 카드 등록 방법 : CJ ONE 홈페이지 (www.cjone.com) > 로그인 > 나의 CJ ONE > 나의 카드
+                        </p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="paging">
+            <ul>
+                <li>
+                    <a title="1 페이지 선택" href="/contents/support/vip_faq_page1.html">1</a>
+                </li>
+                <li class="on">
+                    <a href="/contents/support/vip_faq_page2.html">2</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>
 
+   
 <div class="banner_hori">
   <a href="https://www.credit.co.kr/ib20/mnu/BZW000000000001?NaPm=ct%3Dksa7x28t%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D73b8e3487f01934833aa6f19e89df2ece76f0e54" target="_blank">
     <div class="wrap_com">
@@ -442,6 +461,5 @@
   </button>
 </div>
 </body>
-
 
 </html>

@@ -16,6 +16,43 @@
   <script src="/common/js/swiper.js" charset="utf-8"></script>
   <script src="/common/js/slide.js" charset="utf-8"></script>
   <script src="/common/js/script.js" charset="utf-8" defer></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    
+            (function ($) {
+                $(function () {
+    
+                    $('#searchtext').on('keypress', function (e) {
+                        if (e.keyCode == 13) {
+                            Search();
+                            return false;
+                        }
+                    });
+    
+                    $('#btn_search').on('click', function () {
+                        Search();
+                    });
+    
+                    function Search() {
+                        location.href = "" + escape($("#searchtext").val());
+                    }
+    
+                    $('.question').on('click', function () {
+                        $('.answer').hide();
+                        $(this).parent().parent().find('.answer').show();
+                        return false;
+                    });
+    
+                    $('.sect_unfold button').on('click', function () {
+                        $(this).parent().parent('div.answer').hide();
+                        return false;
+                    });
+    
+                });
+            })(jQuery);
+    
+    //]]>
+    </script>
 </head>
 
 <body class="body_idx">
@@ -148,7 +185,7 @@
           </div>
         </div>
       </div>
-    </main>
+
 <div class="cols_content vip_help">
     <div class="col_detail">
         <h3>VIP FAQ</h3>
@@ -174,7 +211,7 @@
                     <div class="answer">
                         <strong>답변내용</strong>
                         <p>CGV에서 구매한 누적포인트를 기준으로 유료 결제 금액에 한하여 적립됩니다.<br>추가적으로 일반적인 이벤트 등을 통해서 적립한 포인트는 제외됩니다</p>
-                        <p class="sect-unfold">
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -189,7 +226,7 @@
                         <p>아닙니다 선정 시점이 매월로 변경될 뿐 선정이 되고 나서 VIP 유지 기간은 1년으로 동일합니다<br>
                             일반등급의 고객님에 한해 매월 구매 누적 포인트를 집계하고 VIP 고객님에 대해서는 VIP 등급을 획득하신 시점부터</p>
                         <p>다시 선정 포인트를 집계하게 됩니다</p>
-                        <p class="sect-unfold">
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -203,7 +240,7 @@
                         <strong>답변내용</strong>
                         <p>일반고객의 선정 시점은 최근 1년 월별 선정이며 만약 17년 4월 VIP 이면</p>
                         <p>16년 4월 1일~17년 3월 31일까지의 선정 포인트 기준으로 집계합니다</p>
-                        <p class="sect-unfold">
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -220,7 +257,7 @@
                         <p><br>&nbsp;- 이벤트 누적 포인트(VIP 선정 제외)</p>
                         <p>&nbsp;&nbsp;: 구매 누적 포인트 이외의 모든 누적포인트는 이벤트 누적 포인트입니다<br>&nbsp;&nbsp;&nbsp; (예 : CGV 이벤트 참여 후 받은 포인트, VIP 추가 포인트, 설문 완료 후 지급 포인트 등) </p>
                         <p></p>
-                        <p class="sect-unfold">
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -237,7 +274,7 @@
                         <p><strong>■ 매점&amp;씨네샵 구매 누적 포인트</strong><br>&nbsp;- CGV매점 또는 씨네샵에서 구매 후, 고객이 직접 적립 진행 시 제공되는 포인트로 적립 당일일자(24시간 기준)로 누적 적립되며 실제 온라인 누적포인트 반영까지 적립일로부터 최대 3일 소요됩니다</p>
                         <p><strong>■ VIP 선정 포함되는 이벤트 포인트</strong><br>&nbsp;- CGV에서 진행되는 이벤트 중 VIP선정에 포함되는 이벤트 포인트이며, 특정 이벤트에 한하여 지급되며 지급 일자(24시간 기준)로 누적 적립되며 VIP선정 포인트에 포함됩니다.</p>
                         <p>■ 그외 포인트 (이벤트 포인트 등)<br>&nbsp;- 구매 누적 및 VIP선정에 포함되는 이벤트 포인트 외 지급되는 모든 포인트이며, VIP선정 포인트에 포함되지 않습니다</p>
-                        <p class="sect-unfold">
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -252,7 +289,22 @@
                         <p>
                             포인트 사용여부와 관계없이 고객님께서 적립하신 CJ ONE 구매 누적 포인트로만 산정 됩니다
                         </p>
-                        <p class="sect-unfold">
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>11</em>
+                        <a href="#" class="question">VIP 선정 포인트는 VIP가 되고 나서 유지 되나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>
+                            VIP가 선정된 이후 선정 포인트는 0으로 리셋되며 선정된 달부터 다시 선정 포인트가 누적 됩니다
+                        </p>
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -260,14 +312,13 @@
                 <li>
                     <p>
                         <em>10</em>
-                        <a href="#" class="question">VIP 선정 포인트는 VIP가 되고 나서 유지 되나요?</a>
+                        <a href="#" class="question">일반 고객이 RVIP나 VVIP(SVIP)로 바로 승급될 수 있는 방법은 없나요?</a>
                     </p>
-                    <div class="answer" style="display: none;">
+                    <div class="answer">
                         <strong>답변내용</strong>
-                        <p>
-                            VIP가 선정된 이후 선정 포인트는 0으로 리셋되며 선정된 달부터 다시 선정 포인트가 누적 됩니다
-                        </p>
-                        <p class="sect-unfold">
+                        <p>일반 고객님은 최근 1년 누적 포인트 14,000점을 달성하시어 VIP로 먼저 승급하신 이후</p>
+                        <p>순차적으로 높은 등급으로 승급하실 수 있습니다. </p>
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -275,28 +326,14 @@
                 <li>
                     <p>
                         <em>9</em>
-                        <a href="#" class="question">일반 고객이 RVIP나 VVIP(SVIP)로 바로 승급될 수 있는 방법은 없나요?</a>
-                    </p>
-                    <div class="answer" style="display: none;">
-                        <strong>답변내용</strong>
-                        <p>일반 고객님은 최근 1년 누적 포인트 14,000점을 달성하시어 VIP로 먼저 승급하신 이후</p>
-                        <p>순차적으로 높은 등급으로 승급하실 수 있습니다. </p>
-                        <p class="sect-unfold">
-                            <button class="round black"><span>닫기</span></button>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <p>
-                        <em>8</em>
                         <a href="#" class="question">VVIP 조기 승급 기준인 영화 관람 횟수 상위 구매 0.1% 정확한 기준이 어떻게 되나요? </a>
                     </p>
-                    <div class="answer" style="display: none;">
+                    <div class="answer">
                         <strong>답변내용</strong>
                         <p>
                             영화 관람 횟수 상위 구매 0.1%는 매해 기준이 달라지므로, 공개하지 않고 있습니다
                         </p>
-                        <p class="sect-unfold">
+                        <p class="sect_unfold">
                             <button class="round black"><span>닫기</span></button>
                         </p>
                     </div>
@@ -309,11 +346,11 @@
                     <a title="1 페이지 선택" href=" #pg">1</a>
                 </li>
                 <li>
-                    <a href="/user/vip-lounge/faq.aspx?page=2">2</a>
+                    <a href="/contents/support/vip_faq_page2.html">2</a>
                 </li>
             </ul>
-            <button class="btn-paging next" type="button">다음</button>
-            <button class="btn-paging end" type="button">끝</button>
+            <a href="/contents/support/vip_faq_page2.html"><button class="btn_paging next" type="button">다음</button></a>
+            <a href="/contents/support/vip_faq_page2.html"><button class="btn_paging end" type="button">끝</button></a>
         </div>
     </div>
 </div>
