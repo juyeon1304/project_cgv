@@ -1,0 +1,133 @@
+.col_detail {
+    width: 980px; margin: 0 auto; box-sizing: border-box;
+}
+.cols_detail > h3 {
+        height: 32px;
+        margin: 0;
+        color: #222222;
+        font-size: 16px;
+        text-align: left;
+        line-height: 37px;
+    }
+
+
+.cols_content.vip_help .col_detail > h3 + p {
+        font-size: 14px;
+        color: #333333;
+    }
+legend {
+        font: 0/0 a;
+        position: absolute;
+        right: -999em;
+        top: -999em;
+        zoom: 1;
+    }
+.cols_content.vip_help .col_detail .srh_vip .medium {
+        width: 275px;
+        margin-right: 10px;
+    }
+input[type='text'], input[type='password'] {
+        display: inline-block;
+        height: 25px;
+        line-height: 22px;
+        padding-left: 10px;
+        border: 1px solid #b5b5b5;
+    }
+.cols_content.vip_help .col_detail .srh_vip .round {
+        min-width: 79px;
+    }
+    .round.inblack {
+        background: #222222;
+        border: 2px solid #222222;
+        color: #ffffff;
+        line-height: 21px;
+    }
+    .round.inblack > * {
+        border: 1px solid #5b5b58;
+    }
+    .round > * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 0 5px 0;
+    }
+    .round, .round > * {
+        display: inline-block;
+        position: relative;
+    }
+.cols_content.vip_help .col_detail .srh_vip p {
+        margin: 14px 0 13px -2px;
+    }
+    .round {
+        line-height: 23px;
+        font-weight: bold;
+        font-size: 12px;
+        text-align: center;
+        vertical-align: middle;
+    }
+.sect_theater .round:before, .round:after, .round > *:before, .round > *:after {
+        background: none;
+    }
+body, input, textarea, select, button, table {
+        font-size: 13px;
+        line-height: 1.2;
+        color: #666;
+        font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+        font-weight: 300;
+    }
+.cols_content.vip_help .tbl_data > ul li, .cols_content.vip_help .tbl_data > ul li p + div {
+        border-top: 1px solid #D6D4CA;
+    }
+    .tbl_data > ul {
+        position: relative;
+        padding-top: 32px;
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: #b8b6aa;
+    }
+.tbl_data > ul:before {
+        content: '번호';
+        padding-left: 10px;
+        width: 44px;
+    }
+.tbl_data > ul:before, .tbl_data ul:after {
+        position: absolute;
+        top: 0;
+        display: block;
+        background: #E2E2E0;
+        height: 34px;
+        font-size: 13px;
+        color: #666666;
+        line-height: 34px;
+    }
+    .tbl_data > ul:after {
+        content: '제목';
+        left: 54px;
+        width: 745px;
+    }
+    .tbl_data > ul:before, .tbl_data ul:after {
+        position: absolute;
+        top: 0;
+        display: block;
+        background: #E2E2E0;
+        height: 34px;
+        font-size: 13px;
+        color: #666666;
+        line-height: 34px;
+    }
+    .cols_content.vip_help .tbl_data > ul:after {
+        width: 926px;
+    }
+    .cols_content.vip_help .tbl_data > ul li > p {
+        height: 43px;
+        line-height: 43px;
+    }
+    .cols_content.vip_help .tbl_data > ul li > p em {
+        padding-left: 10px;
+        color: #333333;
+        font-family: verdana, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        vertical-align: middle;
+    }

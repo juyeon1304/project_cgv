@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/common/css/style.css">
   <link rel="stylesheet" href="/common/css/index.css">
   <link rel="stylesheet" href="/common/css/sub.css">
+  <link rel="stylesheet" href="/common/css/user.css">
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
   <script src="/common/js/common.js" charset="utf-8"></script>
   <script src="/common/js/swiper.js" charset="utf-8"></script>
@@ -152,12 +153,11 @@
     <div class="col_detail">
         <h3>VIP FAQ</h3>
         <p>고객님께서 궁금하신 내용을 먼저 확인해 주세요.</p>
-    <div class="srh-vip">
+    <div class="srh_vip">
         <form novalidate="novalidate">
             <fieldset>
                 <legend>검색어를 입력하는 영역입니다.</legend>
                 <p>
-                    <label class="hidden" for="searchtext">VIP 문의사항</label>
                     <input type="text" class="medium" id="searchtext" name="searchtext" minlength="2" maxlength="20" value="" placeholder="궁금하신 내용을 입력해주세요">
                     <button type="button" class="round inblack" id="btn_search"><span>검색하기</span></button>
                 </p>
@@ -168,20 +168,16 @@
             <ul>
                 <li>
                     <p>
-                        <li>
-                            <p>
-                                <em>17</em>
-                                <a href="#" class="question">VIP 선정 포인트 기준을 알고 싶어요</a>
-                            </p>
-                            <div class="answer">
-                                <strong>답변내용</strong>
-                                <p>CGV에서 구매한 누적포인트를 기준으로 유료 결제 금액에 한하여 적립됩니다.<br>추가적으로 일반적인 이벤트 등을 통해서 적립한 포인트는 제외됩니다</p>
-                                <p class="sect-unfold">
-                                    <button class="round black"><span>닫기</span></button>
-                                </p>
-                            </div>
-                        </li>
+                        <em>17</em>
+                        <a href="#" class="question">VIP 선정 포인트 기준을 알고 싶어요</a>
                     </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>CGV에서 구매한 누적포인트를 기준으로 유료 결제 금액에 한하여 적립됩니다.<br>추가적으로 일반적인 이벤트 등을 통해서 적립한 포인트는 제외됩니다</p>
+                        <p class="sect-unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
                 </li>
                 <li>
                     <p>
@@ -323,108 +319,143 @@
 </div>
 
    
-
-    <div class="banner_hori">
-      <a href="">
-        <div class="wrap_com">
-          <img src="/common/images/banner_hori.png" alt="">
-        </div>
-      </a>
+<div class="banner_hori">
+  <a href="https://www.credit.co.kr/ib20/mnu/BZW000000000001?NaPm=ct%3Dksa7x28t%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D73b8e3487f01934833aa6f19e89df2ece76f0e54" target="_blank">
+    <div class="wrap_com">
+      <img src="/common/images/banner_hori.png" alt="">
     </div>
-  <footer>
-    <section class="sec_special">
-      <div class="wrap_com">
-        <h2 class="hide">특별관 리스트</h2>
-        <ul class="">
-          <li class="dx"><a href=""><span class="hide">4DX</span></a></li>
-          <li class="imax"><a href=""><span class="hide">IMAX</span></a></li>
-          <li class="screenx"><a href=""><span class="hide">SCREENX</span></a></li>
-          <li class="spherex"><a href=""><span class="hide">SphereX</span></a></li>
-          <li class="gold"><a href=""><span class="hide">GOLDCLASS</span></a></li>
-          <li class="cine"><a href=""><span class="hide">CINE de CHEF</span></a></li>
-          <li class="cinema"><a href=""><span class="hide">THE PRIVATE CINEMA</span></a></li>
-          <li class="kids"><a href=""><span class="hide">Cine kids</span></a></li>
-          <li class="cinenforet"><a href=""><span class="hide">CINE&amp;FORET</span></a></li>
-        </ul>
-      </div>
-    </section>
-    <section class="sec_info wrap_com">
-      <h2 class="hide">CJ CGV 회사소개 및 정책</h2>
-      <ul class="list1 clear">
-        <li><a href="" target="_blank">회사소개</a></li>
-        <li><a href="" target="_blank">IR</a></li>
-        <li><a href="" target="_blank">채용정보</a></li>
-        <li><a href="" target="_blank">광고/프로모션문의</a></li>
-        <li><a href="" target="_blank">제휴문의</a></li>
-        <li><a href="" target="_blank">출점문의</a></li>
-        <li><a href="">이용약관</a></li>
-        <li><a href="">편성기준</a></li>
-        <li><a href="" class="color_org">개인정보처리방침</a></li>
-        <li><a href="">법적고지</a></li>
-        <li><a href="">이메일주소무단수집거부</a></li>
-        <li><a href="" target="_blank">윤리경영</a></li>
-        <li><a href="" class="color_org">사이버감사실</a></li>
-        <li><a href="">사이트맵</a></li>
+  </a>
+</div>
+</main>
+
+<footer>
+  <section class="sec_special">
+    <div class="wrap_com">
+      <h2 class="hide">특별관 리스트</h2>
+      <ul class="">
+        <li class="dx"><a href="/contents/theaters/special/fourdx.html"><span class="hide">4DX</span></a></li>
+        <li class="imax"><a href="/contents/theaters/special/imax.html"><span class="hide">IMAX</span></a></li>
+        <li class="screenx"><a href="/contents/theaters/special/scrx.html"><span class="hide">SCREENX</span></a></li>
+        <li class="spherex"><a href=""><span class="hide">SphereX</span></a></li>
+        <li class="gold"><a href="/contents/theaters/special/gold.html"><span class="hide">GOLDCLASS</span></a></li>
+        <li class="cine"><a href="/contents/theaters/special/chef.html"><span class="hide">CINE de CHEF</span></a></li>
+        <li class="cinema"><a href=""><span class="hide">THE PRIVATE CINEMA</span></a></li>
+        <li class="kids"><a href=""><span class="hide">Cine kids</span></a></li>
+        <li class="cinenforet"><a href="/contents/theaters/special/foret.html"><span class="hide">CINE&amp;FORET</span></a></li>
       </ul>
-      <div class="btm">
-        <ul class="list2 clear">
-          <li class="">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
-          <li class="clear"><span>대표이사 : </span>허민회</li>
-          <li><span>사업자등록번호 : </span>104-81-45690</li>
-          <li><span>통신판매업신고번호 : </span>2017-서울용산-0662<a href="#" class="link_ftc">사업자정보확인</a></li>
-          <li class="clear"><span>호스팅사업자 : </span>CJ올리브네트웍스</li>
-          <li><span>개인정보보호 책임자 : </span>심준범</li>
-          <li><span>대표이메일 : </span>cjcgvmaster@cj.net</li>
-          <li><span>CGV고객센터 : </span>1544-1122</li>
-          <li class="copy">&copy;CJ CGV. All Rights Reserved</li>
+    </div>
+  </section>
+  <section class="sec_info wrap_com">
+    <h2 class="hide">CJ CGV 회사소개 및 정책</h2>
+    <ul class="list1 clear">
+      <li><a href="" target="_blank">회사소개</a></li>
+      <li><a href="" target="_blank">IR</a></li>
+      <li><a href="" target="_blank">채용정보</a></li>
+      <li><a href="" target="_blank">광고/프로모션문의</a></li>
+      <li><a href="" target="_blank">제휴문의</a></li>
+      <li><a href="" target="_blank">출점문의</a></li>
+      <li><a href="">이용약관</a></li>
+      <li><a href="">편성기준</a></li>
+      <li><a href="" class="color_org">개인정보처리방침</a></li>
+      <li><a href="">법적고지</a></li>
+      <li><a href="">이메일주소무단수집거부</a></li>
+      <li><a href="" target="_blank">윤리경영</a></li>
+      <li><a href="" class="color_org">사이버감사실</a></li>
+      <li><a href="">사이트맵</a></li>
+    </ul>
+    <div class="btm">
+      <ul class="list2 clear">
+        <li class="">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+        <li class="clear"><span>대표이사 : </span>허민회</li>
+        <li><span>사업자등록번호 : </span>104-81-45690</li>
+        <li><span>통신판매업신고번호 : </span>2017-서울용산-0662<a href="#" class="link_ftc">사업자정보확인</a></li>
+        <li class="clear"><span>호스팅사업자 : </span>CJ올리브네트웍스</li>
+        <li><span>개인정보보호 책임자 : </span>심준범</li>
+        <li><span>대표이메일 : </span>cjcgvmaster@cj.net</li>
+        <li><span>CGV고객센터 : </span>1544-1122</li>
+        <li class="copy">&copy;CJ CGV. All Rights Reserved</li>
+      </ul>
+      <div class="bx_float clear">
+        <ul class="list_share clear">
+          <li>
+            <a href="https://www.facebook.com/CJCGV" target="_blank" class="facebook" style="background-position:-509px -429px"><span class="hide">페이스북</span></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/cj_cgv" target="_blank" class="twitter" style="background-position:-551px -429px"><span class="hide">트위터</span></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/cgv_korea/" target="_blank" class="instagram" style="background-position:-593px -429px"><span class="hide">인스타그램</span></a>
+          </li>
         </ul>
-        <div class="bx_float clear">
-          <ul class="list_share clear">
-            <li>
-              <a href="https://www.facebook.com/CJCGV" target="_blank" class="facebook" style="background-position:-509px -429px"><span class="hide">페이스북</span></a>
-            </li>
-            <li>
-              <a href="https://twitter.com/cj_cgv" target="_blank" class="twitter" style="background-position:-551px -429px"><span class="hide">트위터</span></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/cgv_korea/" target="_blank" class="instagram" style="background-position:-593px -429px"><span class="hide">인스타그램</span></a>
-            </li>
-          </ul>
-          <div class="sel_family">
-            <select class="" name="">
-              <option>계열사 바로가기</option>
-              <optgroup label="CJ그룹">
-                <option value="http://www.cj.net/">CJ주식회사</option>
-              </optgroup>
-              <optgroup label="식품 &amp; 식품서비스">
-                <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
-                <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
-                <option value="http://www.cjfreshway.com/index.jsp">CJ프레시웨이</option>
-              </optgroup>
-              <optgroup label="생명공학">
-                <option value="https://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
-                <option value="https://www.cj.co.kr/kr/about/business/bio">CJ Feed&amp;Card</option>
-              </optgroup>
-              <optgroup label="물류 &amp; 신유통">
-                <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
-                <option value="http://www.cjenc.co.kr/kr/Default.asp">CJ대한통운 건설부문</option>
-                <option value="https://www.oliveyoung.co.kr/store/company/brandStory.do">CJ올리브영</option>
-                <option value="https://www.cjolivenetworks.co.kr:449/">CJ올리브네트웍스</option>
-                <option value="https://www.cjoshopping.com:9002/index.asp">CJ ENM 커머스부문</option>
-              </optgroup>
-              <optgroup label="엔터테인먼트 &amp; 미디어">
-                <option value="https://www.cjem.net:433/main/?locale=ko">CJ ENM 엔터테인먼트부문</option>
-                <option value="http://corp.cgv.co.kr/company/ir/manage/manage_list.aspx ">CJ CGV</option>
-                <option value="http://www.cjpowercast.com/">CJ파워캐스트</option>
-              </optgroup>
-            </select>
-            <button>GO</button>
-          </div>
+        <div class="sel_family">
+          <select class="" name="">
+            <option>계열사 바로가기</option>
+            <optgroup label="CJ그룹">
+              <option value="http://www.cj.net/">CJ주식회사</option>
+            </optgroup>
+            <optgroup label="식품 &amp; 식품서비스">
+              <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
+              <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
+              <option value="http://www.cjfreshway.com/index.jsp">CJ프레시웨이</option>
+            </optgroup>
+            <optgroup label="생명공학">
+              <option value="https://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
+              <option value="https://www.cj.co.kr/kr/about/business/bio">CJ Feed&amp;Card</option>
+            </optgroup>
+            <optgroup label="물류 &amp; 신유통">
+              <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
+              <option value="http://www.cjenc.co.kr/kr/Default.asp">CJ대한통운 건설부문</option>
+              <option value="https://www.oliveyoung.co.kr/store/company/brandStory.do">CJ올리브영</option>
+              <option value="https://www.cjolivenetworks.co.kr:449/">CJ올리브네트웍스</option>
+              <option value="https://www.cjoshopping.com:9002/index.asp">CJ ENM 커머스부문</option>
+            </optgroup>
+            <optgroup label="엔터테인먼트 &amp; 미디어">
+              <option value="https://www.cjem.net:433/main/?locale=ko">CJ ENM 엔터테인먼트부문</option>
+              <option value="http://corp.cgv.co.kr/company/ir/manage/manage_list.aspx ">CJ CGV</option>
+              <option value="http://www.cjpowercast.com/">CJ파워캐스트</option>
+            </optgroup>
+          </select>
+          <button>GO</button>
         </div>
       </div>
-    </section>
-  </footer>
-  
+    </div>
+  </section>
+</footer>
+<div class="nav_quick" id="nav_quick">
+  <h2 class="hide">빠른 메뉴</h2>
+  <ul>
+    <li class="theater">
+      <a href="">
+        <img src="/common/images/btn_theater.gif" alt="CGV극장">
+      </a>
+    </li>
+    <li class="artHouse">
+      <a href="">
+        <img src="/common/images/btn_artHouse.gif" alt="CGV아트하우스">
+      </a>
+    </li>
+    <li class="special">
+      <a href="">
+        <img src="/common/images/btn_special.gif" alt="CGV특별관">
+      </a>
+    </li>
+    <li class="myTicket">
+      <a href="">
+        <img src="/common/images/btn_myTicket.gif" alt="CGV예매내역">
+      </a>
+    </li>
+    <li class="dcInfo">
+      <a href="">
+        <img src="/common/images/btn_dcInfo.gif" alt="CGV할인정보">
+      </a>
+    </li>
+  </ul>
+  <button class="btn_top" id="btn_top" onclick="scrollToTop()">
+    <span class="hide">
+      최상단으로 이동
+    </span>
+  </button>
+</div>
 </body>
 
 </html>
