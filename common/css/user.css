@@ -1,10 +1,11 @@
-.col_detail {
+/* vip FAQ */
+.cols_content {
     width: 980px; margin: 0 auto; box-sizing: border-box;
 }
-.cols_detail > h3 {
+.cols_content.vip_help .col_detail > h3 {
+        margin-top: 10px;
         height: 32px;
-        margin: 0;
-        color: #222222;
+        color: #333333;
         font-size: 16px;
         text-align: left;
         line-height: 37px;
@@ -130,4 +131,100 @@ body, input, textarea, select, button, table {
         font-size: 11px;
         font-weight: bold;
         vertical-align: middle;
+    }
+
+    .cols_content.vip-help .tbl_data > ul li, .cols_content.vip_help .tbl_data > ul li p + div {
+        border-top: 1px solid #D6D4CA;
+    }
+    .cols_content.vip_help .tbl_data > ul li > p {
+        height: 43px;
+        line-height: 43px;
+    }
+    .cols_content.vip_help .tbl_data > ul li > p em {
+        padding-left: 10px;
+        color: #333333;
+        font-family: verdana, sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+    .cols_content.vip_help .tbl_data > ul li > p a {
+        margin-left: 25px;
+    }
+    .cols_content.vip_help .tbl_data .answer {
+        padding: 30px 36px 15px 55px;
+    }
+    .cols_content.vip_help .tbl_data .answer {
+        background-color: #f1f0e6;
+        display: none;
+    }
+    .cols_content.vip_help .tbl_data .answer strong {
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+    .cols_content.vip_help .tbl_data .answer .sect_unfold {
+        position: relative;
+        height: 30px;
+    }
+    .cols_content.vip_help .tbl_data .answer .sect_unfold button {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+    }
+    .round.black {
+        border: 2px solid #333333;
+        color: #333333;
+        border-radius: 4px;
+    }
+
+    .tbl_data + .paging, .sect_evt_entlist + .paging {
+        margin-top: 25px;
+    }
+    .paging {
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 100px;
+    }
+    .paging > ul {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .paging li.on, .paging li a:hover, .paging li a:focus {
+        color: #993333;
+        text-decoration: underline;
+    }
+    .paging li {
+        display: inline-block;
+        padding: 0 8px;
+        color: #333333;
+        font-family: Verdana, Geneva, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 28px;
+    }
+    .btn_paging.next {
+        padding: 0 24px 0 10px;
+        background-position: right -52px;
+    }
+    .btn_paging {
+        display: inline-block;
+        min-width: 56px;
+        height: 28px;
+        margin: 0 2px;
+        border: 1px solid #cacac1;
+        background: url(/common/images/btn_paging.gif) no-repeat;
+        background-color: #faf9ed;
+        color: #333333;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 28px;
+        vertical-align: middle;
+    }
+    .btn_paging.end {
+        min-width: 27px;
+        padding: 0;
+        background-position: 5px -156px;
+        font: 0/0 a;
+        zoom: 1;
     }
