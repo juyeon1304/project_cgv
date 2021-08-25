@@ -17,6 +17,7 @@
     <script src="/common/js/slide.js" charset="utf-8"></script>
     <script src="/common/js/script.js" charset="utf-8" defer></script>
 </head>
+
 <body>
     <header>
         <div class="wrap_com">
@@ -120,8 +121,8 @@
         <div class="wrap_dc wrap_com clear">
             <aside class="left">
                 <ul>
-                    <li class="on"><a href="">할인카드</a></li>
-                    <li><a href="">상품권 안내</a></li>
+                    <li class="on"><a href=""><span>할인카드</span></a></li>
+                    <li><a href=""><span>상품권 안내</span></a></li>
                 </ul>
                 <a href="" class="img_ad"><img src="" alt=""></a>
                 <a href="" class="img_ad"><img src="" alt=""></a>
@@ -129,75 +130,123 @@
             <div class="right">
                 <section class="sec_card">
                     <h3 class="hide">할인카드 검색</h3>
-                    <div>
+                    <div class="wrap_txt">
                         <img src="/common/images/tit_discountcard.gif" alt="">
                         <p>아래에서 카드를 검색하시거나 종류를 선택하시면 할인카드 정보를 바로 보실 수 있습니다.</p>
                     </div>
                     <form action="">
                         <ul class="list_sort clear">
-                            <li class="on">
-                                <strong>카드명 검색 - 아래 카드명을 입력하여빠르게 검색하세요.</strong>
-                                <div>
-                                    <input type="text">
+                            <li class="search on">
+                                <strong><span class="hide"> 카드명 검색 - 아래 카드명을 입력하여빠르게 검색하세요.</span></strong>
+                                <div class="wrap_search">
+                                    <input type="text" placeholder="카드명 입력">
                                     <button><span class="hide">검색</span></button>
                                 </div>
-                                <a href="">전체보기 &gt;</a>
+                                <a href="" class="link_all">전체보기 &gt;</a>
                             </li>
-                            <li>
-                                <strong>CJONE 제휴신용카드</strong>
-                                <div>
-                                    <select name="" id=""></select>
+                            <li class="cjone">
+                                <strong><span class="hide">CJONE 제휴신용카드</span></strong>
+                                <div class="wrap_search">
+                                    <select id="" name="type" title="할인 신용카드">
+                                        <option value="0">카드사 선택</option>
+                                        <option value="">KB카드</option>
+                                        <option value="">The CJ카드</option>
+                                        <option value="">기업은행</option>
+                                        <option value="">농협카드</option>
+                                        <option value="">롯데카드</option>
+                                        <option value="">비씨카드</option>
+                                        <option value="">삼성카드</option>
+                                        <option value="">신한카드</option>
+                                        <option value="">씨티카드</option>
+                                        <option value="">우리카드</option>
+                                        <option value="">하나카드</option>
+                                    </select>
                                     <button>이동</button>
                                 </div>
-                                <a href="">전체보기 &gt;</a>
+                                <a href="" class="link_all">전체보기 &gt;</a>
                             </li>
-                            <li>
-                                <strong>할인 신용카드</strong>
-                                <div>
-                                    <select name="" id=""></select>
+                            <li class="creditcard">
+                                <strong><span class="hide">할인 신용카드</span></strong>
+                                <div class="wrap_search">
+                                    <select id="" name="type" title="할인 신용카드">
+                                        <option value="0">카드사 선택</option>
+                                        <option value="">KB카드</option>
+                                        <option value="">The CJ카드</option>
+                                        <option value="">기업은행</option>
+                                        <option value="">농협카드</option>
+                                        <option value="">롯데카드</option>
+                                        <option value="">비씨카드</option>
+                                        <option value="">삼성카드</option>
+                                        <option value="">신한카드</option>
+                                        <option value="">씨티카드</option>
+                                        <option value="">우리카드</option>
+                                        <option value="">하나카드</option>
+                                    </select>
                                     <button>이동</button>
                                 </div>
-                                <a href="">전체보기 &gt;</a>
+                                <a href="" class="link_all">전체보기 &gt;</a>
                             </li>
-                            <li>
-                                <strong>할인 체크카드</strong>
-                                <div>
-                                    <select name="" id=""></select>
+                            <li class="chkcard">
+                                <strong><span class="hide">할인 체크카드</span></strong>
+                                <div class="wrap_search">
+                                    <select id="" name="type" title="할인 신용카드">
+                                        <option value="0">카드사 선택</option>
+                                        <option value="">KB카드</option>
+                                        <option value="">The CJ카드</option>
+                                        <option value="">기업은행</option>
+                                        <option value="">농협카드</option>
+                                        <option value="">롯데카드</option>
+                                        <option value="">비씨카드</option>
+                                        <option value="">삼성카드</option>
+                                        <option value="">신한카드</option>
+                                        <option value="">씨티카드</option>
+                                        <option value="">우리카드</option>
+                                        <option value="">하나카드</option>
+                                    </select>
                                     <button>이동</button>
                                 </div>
-                                <a href="">전체보기 &gt;</a>
+                                <a href="" class="link_all">전체보기 &gt;</a>
                             </li>
-                            <li>
-                                <strong>신용카드 포인트</strong>
-                                <div>
-                                    <select name="" id=""></select>
+                            <li class="creditpoint">
+                                <strong><span class="hide">신용카드 포인트</span></strong>
+                                <div class="wrap_search">
+                                    <select id="" name="type" title="할인 신용카드">
+                                        <option value="0">카드사 선택</option>
+                                        <option value="">KB카드</option>
+                                        <option value="">The CJ카드</option>
+                                        <option value="">기업은행</option>
+                                        <option value="">농협카드</option>
+                                        <option value="">롯데카드</option>
+                                        <option value="">비씨카드</option>
+                                        <option value="">삼성카드</option>
+                                        <option value="">신한카드</option>
+                                        <option value="">씨티카드</option>
+                                        <option value="">우리카드</option>
+                                        <option value="">하나카드</option>
+                                    </select>
                                     <button>이동</button>
                                 </div>
-                                <a href="">전체보기 &gt;</a>
+                                <a href="" class="link_all">전체보기 &gt;</a>
                             </li>
-                            <li>
-                                <strong>기타 제휴및 포인트 카드</strong>
-                                <div>
-                                    <select name="" id=""></select>
-                                    <button>이동</button>
-                                </div>
-                                <a href="">전체보기 &gt;</a>
+                            <li class="others">
+                                <strong><span class="hide">기타 제휴및 포인트 카드</span></strong>
+                                <a href="" class="link_all">전체보기 &gt;</a>
                             </li>
                         </ul>
                     </form>
-                    <ul>
+                    <ul class="list_card clear">
                         <li><a href="">
-                            <img src="" alt="">
-                        </a></li>
+                                <img src="/common/images/popularcard01.jpg" alt="">
+                            </a></li>
                         <li><a href="">
-                            <img src="" alt="">
-                        </a></li>
+                                <img src="/common/images/popularcard02.jpg" alt="">
+                            </a></li>
                         <li><a href="">
-                            <img src="" alt="">
-                        </a></li>
+                                <img src="/common/images/popularcard03.jpg" alt="">
+                            </a></li>
                         <li><a href="">
-                            <img src="" alt="">
-                        </a></li>
+                                <img src="/common/images/popularcard04.jpg" alt="">
+                            </a></li>
                     </ul>
                 </section>
             </div>
