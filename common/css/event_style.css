@@ -496,3 +496,55 @@ li {
     display: list-item;
     text-align: -webkit-match-parent;
 }
+
+.sect-magazine-list ul li dl {
+    padding: 23px 20px 0;
+}
+
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.sect-magazine-list ul li .tit_em {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #e71a0f;
+    text-decoration: underline;
+}
+
+.sect-magazine-list ul li .tit_txt {
+    margin-bottom: 7px;
+    font-size: 18px;
+    color: #222;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.sect-magazine-list ul li dd .desc {
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.sect-magazine-list ul li dd > p {
+    height: 67px;
+}
+
+.sect-magazine-list ul li dd .btn_detail {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    float: right;
+    padding-right: 8px;
+    text-decoration: none;
+    color: #898987;
+    letter-spacing: 0;
+    background: url(../images/sub/magazine/bul_link_arrow.png) no-repeat 100% 1px;
+}
