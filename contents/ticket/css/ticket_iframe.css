@@ -207,23 +207,19 @@ p.move_sort {
     background: url("../image/sortmenu_btn_on.png") repeat-x bottom;
    
 }
-
 .scrl::-webkit-scrollbar {
-    background-color: red;
+    background-color: transparent;
+    width: 10px;
+    border-radius: 10px;
 }
 
 .scrl::-webkit-scrollbar-track  {
-    background-color: red;
-}
-
-.scrl::-webkit-scrollbar {
-    background-color: red;
+    background-color: transparent; 
 }
 .scrl::-webkit-scrollbar-thumb { 
-    background-color: #000;
+    background-color: #797872;
+    border-radius: 10px;
 }
-
-
 
 #theather_content { margin-left: 20px;}
 
