@@ -175,8 +175,9 @@ schedue.html
 
 
 
-
-/* util/discount */
+/* ======================================================
+util/discount 
+======================================================*/
 .wrap_dc { padding: 25px 0 50px;}
 .wrap_dc > aside { width: 160px;}
 .wrap_dc > aside ul li { margin-bottom: 1px;}
@@ -208,7 +209,25 @@ schedue.html
 .sec_card .list_sort .wrap_search select { padding:0 0 0 5px; width:78%; background-color: #fff;box-sizing: border-box;}
 .sec_card .list_sort .wrap_search select { border:1px solid #b4b3aa}
 .sec_card .list_sort .wrap_search button { width:20%; border: 2px solid #7b7b7b; background-color: #7b7b7b; color: #fff; border-radius: 3px;}
+
 /* 카드명 검색 */
 .sec_card .list_sort > li.search .wrap_search input { flex:1}
 .sec_card .list_sort > li.search .wrap_search button { width:30px; background-color: #fff; background: url(/common/images/sprite/btn_search.png) no-repeat 0 -29px #fff; 
 border:none; border-radius: 0;}
+
+
+
+
+/* ======================================================
+util/discount/giftcard (상품권 안내)
+======================================================*/
+.list_giftcard { border-bottom: 2px dotted #ccc; padding-bottom: 25px;}
+.list_giftcard > li { float: left; font-size: 14px; width: 177px; min-height: 120px;
+  margin: 20px 0 0 20px; color: #222; line-height: 1;}  
+.list_giftcard > li > p { margin:5px 0; font-weight: 600;}
+.list_giftcard > li > span { font-size: 12px;}
+.wrap_dc > .right.wrap_giftcard  { text-align: left;}
+.wrap_dc > .right.wrap_giftcard .sec_others { padding: 25px 0 0}
+.wrap_dc > .right.wrap_giftcard .txt_notice { padding: 25px 10px 25px 10px; color:#e71a0f ; font-size: 11px;}
+
+

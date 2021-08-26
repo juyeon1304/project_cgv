@@ -256,8 +256,11 @@ border-bottom: 1px solid #cacac0; }
 .line_wrap > .line_sect > .sect_side ul > li {
 padding: 0 10px; border-right: 1px solid #acaca3; height: 27px; }
 .line_wrap > .line_sect > .sect_side ul > li{ float: left; }
-.line_wrap > .line_sect > .sect_side ul li a{ color: #666; font-weight: 500; font-size: 13px; text-align: center; }
+.line_wrap > .line_sect > .sect_side ul li a{ color: #666; font-weight: 500; font-size: 13px; text-align: center; line-height: 27px;}
 .line_wrap > .line_sect > .sect_side > ul li a.specialclub { padding-right: 25px; text-align: left; background: url(https://img.cgv.co.kr/r2014/images/common/ico/ico_club_service.png) no-repeat 100% 50%; }
+.line_wrap .list_location { position: absolute; left:0}
+.line_wrap .list_location > li > a { line-height: 27px;}
+
 
 /*==============================================
           faverity CGV sector
