@@ -358,3 +358,61 @@
     height: 5px;
     background: none;
 }
+
+/*                       */
+/*  support_lease.html   */
+/*                       */
+ 
+.cols_content { clear: both; margin-top: 25px; color: #666; font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', 'Dotum', 'sans-serif'; font-size: 13px; bottom: 50px; height: 1500px; }
+.cols_content .email_list_area { display: block; margin-left: 170px; margin-bottom: 50px; }
+.cols_content .email_list_area .customer_top { margin-bottom: 23px; }
+.cols_content .email_list_area .customer_top .tit { border-bottom: 0; font-size: 16px; font-weight: 500; height: auto; font-weight: bold;} 
+.cols_content .email_list_area .customer_top .stil { margin-top: 5px; font-size: 14px; line-height: 22pxs;}
+.cols_content .email_list_area .tbl_area { padding-top: 10px; overflow: visible;}
+.cols_content .email_list_area legend { visibility: hidden; font-size: 0;}
+.cols_content .email_list_area .tbl_area .tbl_info_txt { padding: 0 10px; line-height: 30px; border-top: 1px solid #b8b6aa; background-color: #edebe1; text-align: right; }
+.cols_content .email_list_area .tbl_area .tbl_notice_list { border-top: solid 1px #d6d4ca; border-bottom: 1px solid #b8b6aa ;}
+.cols_content .email_list_area .tbl_area .tbl_notice_list.tbl_left th { padding: 15px 0px 15px 13px; text-align: left; border-top: 1px solid #d6d4ca;  }
+.cols_content .email_list_area .tbl_area .tbl_notice_list.tbl_left tbody th { line-height: 27px; vertical-align: top; }
+.cols_content .email_list_area .tbl_area .tbl_notice_list.tbl_left tbody td { padding: 15px 5px; border-top: 1px solid #d6d4ca; }
+.cols_content .email_list_area .tbl_area .tbl_notice_list .hidden { font-size: 0; visibility: hidden; }
+.cols_content .email_list_area .tbl_area .tbl_notice_list .sel01 { margin-right: 5px; padding-right: 0; height: 27px; color: #666; line-height: 27px; font-weight: 300; border: 1px solid #b5b5b5; vertical-align: middle; background-color: #fdfcf0; padding: 3px 5px;} 
+.cols_content .email_list_area .tbl_area .tbl_notice_list .inp01 { padding: 0 10px; height: 25px; line-height: 25px; border: 1px solid #b5b5b5; background-color: #fdfcf0; }
+.cols_content .email_list_area .tbl_area .tbl_notice_list .ui-datepicker-trigger { width: 28px; height: 28px; margin-left: 3px !important; background: url(../../contents/support/image/ico_datapicker.gif) no-repeat 0 0; font: 0/0 a; zoom: 1; }
+.cols_content .email_list_area .tbl_area .tbl_notice_list .inp_txtbox01 { padding: 10px; width: 672px; height: 40px; border: 1px solid #b5b5b5; background-color: #fdfcf0; resize: vertical; }
+.cols_content .email_list_area .tbl_area .tbl_notice_list .byte_info { margin-top: 5px; color: #333333; font-weight: bold; font-family: 'Verdana'; text-align: right; }
+.cols_content .email_list_area .tbl-breakdown-re { padding: 0 0 20px 0; border-bottom: 1px solid #b8b6aa;}
+.cols_content .email_list_area .tbl-breakdown-re h4 { font-size: 14px; font-style: normal; font-weight: bold; margin: 36px 0 12px 0; color: #333; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re { overflow: hidden; margin-top: 41px; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaL { float: left; width: 386px; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaL h5 { font-weight: bold; font-size: 13px; color: #333; line-height: 16px; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaL .lease_dlList { overflow: hidden; margin-top: 20px !important; font-size: 13px; color: #666; line-height: 20px;}
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaL .lease_dlList dt { clear: both; float: left;}
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaL .lease_dlList dd { float: left; padding-left: 4px; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR { float: left; width: 414px;}
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR h4 { font-weight: bold; font-size: 13px; color: #333; line-height: 16px; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR .lease_tbl_style { margin-top: 10px !important; font-size: 10px; color: #333; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR table { margin: 0 0 10px 0; border-bottom: none; border-top: 1px solid #b8b6aa; border-bottom: 1px solid #b8b6aa ;}
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR table thead th:first-child { border-left: none !important; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR table thead th { font-weight: 500; padding: 0; height: 34px; color: #666; background-color: #e2e2e0; font-size: 11px; line-height: 34px; border-bottom: 1px detted #b8b6aa; text-align: center; border-left: 1px solid #b9b6aa;}
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR table td { border-left:  1px solid #b9b6aa; border-bottom: 1px solid #b8b6aa;}
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR table tbody { text-align: center; }
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR table tbody th { border-bottom: 1px solid #b9b6aa;}
+.cols_content .email_list_area .tbl-breakdown-re .tbl-breakdown-inner-re_areaR table tbody td { padding: 8px; font-weight: 400; font-size: 10px; color: #333; line-height: 13px; vertical-align: middle; border-left: 1px solid #b8b6aa !important;}
+.cols_content .email_list_area .tbl-breakdown-re1 table { margin: 0 0 10px 0; border-bottom: none; border-top: 1px solid #b8b6aa; border-bottom: 1px solid #b8b6aa ;}
+.cols_content .email_list_area .tbl-breakdown-re1 table thead th:first-child { border-left: none !important; }
+.cols_content .email_list_area .tbl-breakdown-re1 table thead th { font-weight: 500; padding: 0; height: 34px; color: #666; background-color: #e2e2e0; font-size: 13px; line-height: 34px; border-bottom: 1px detted #b8b6aa; text-align: center; border-left: 1px solid #b9b6aa;}
+.cols_content .email_list_area .tbl-breakdown-re1 table td { border-left:  1px solid #b9b6aa; border-bottom: 1px solid #b8b6aa;}
+.cols_content .email_list_area .tbl-breakdown-re1 table tbody { text-align: center; }
+.cols_content .email_list_area .tbl-breakdown-re1 table tbody th { border-bottom: 1px solid #b9b6aa;}
+.cols_content .email_list_area .tbl-breakdown-re1 table tbody td:first-child { border-left: none !important; }
+.cols_content .email_list_area .tbl-breakdown-re1 table tbody td { padding: 10px; font-weight: 400; font-size: 12px; color: #333; line-height: 13px; vertical-align: middle; border-left: 1px solid #b8b6aa !important;}
+.cols_content .email_list_area .tbl-breakdown-re1 h4 { font-weight: bold; font-size: 14px; color: #333; line-height: 16px; font-style: normal; margin: 36px 0 12px 0; }
+.cols_content .email_list_area .tbl-breakdown-re1 .agreeAlign { text-align: left; padding-left: 38px; }
+.cols_content .email_list_area .tbl-breakdown-re1 .desc { background: url(../../contents/support/image/ico_bullet1.png) no-repeat 14px 2px; padding: 0 0 0 23px; margin: 0 0 10px 0; font-size: 12px; font-style: normal; font-weight: 500;  }
+.cols_content .email_list_area .tbl-breakdown-re1 { padding: 0 0 20px 0; border-bottom: 1px solid #b8b6aa; }
+.cols_content .email_list_area .box-btn { margin-top: 30px; text-align: right; }
+.cols_content .email_list_area .box-btn .round { display: inline-block; position: relative; border: 1px solid #333; border-radius: 3px; }
+.cols_content .email_list_area .box-btn .round > * { box-sizing: border-box; width: 100%; height: 100%; padding: 0 5px 0; font-size: 12px; }
+.cols_content .email_list_area .box-btn .round.inred > * { border: 1px solid #ea5b50;}
+.cols_content .banner_area { margin-left: 170px;}
