@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>영화 그 이상의 감동. CGV</title>
+  <link rel="stylesheet" href="/common/css/default.css">
+  <link rel="stylesheet" href="/common/css/swiper.css">
+  <link rel="stylesheet" href="/common/css/style.css">
+  <link rel="stylesheet" href="/common/css/index.css">
+  <link rel="stylesheet" href="/common/css/sub.css">
+  <link rel="stylesheet" href="/common/css/user.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
+  <script src="/common/js/common.js" charset="utf-8"></script>
+  <script src="/common/js/swiper.js" charset="utf-8"></script>
+  <script src="/common/js/slide.js" charset="utf-8"></script>
+  <script src="/common/js/script.js" charset="utf-8" defer></script>
+  <script type="text/javascript">
+    //<![CDATA[
+    
+            (function ($) {
+                $(function () {
+    
+                    $('#searchtext').on('keypress', function (e) {
+                        if (e.keyCode == 13) {
+                            Search();
+                            return false;
+                        }
+                    });
+    
+                    $('#btn_search').on('click', function () {
+                        Search();
+                    });
+    
+                    function Search() {
+                        location.href = "" + escape($("#searchtext").val());
+                    }
+    
+                    $('.question').on('click', function () {
+                        $('.answer').hide();
+                        $(this).parent().parent().find('.answer').show();
+                        return false;
+                    });
+    
+                    $('.sect_unfold button').on('click', function () {
+                        $(this).parent().parent('div.answer').hide();
+                        return false;
+                    });
+    
+                });
+            })(jQuery);
+    
+    //]]>
+    </script>
+</head>
+
+<body class="body_idx">
+  <nav class="nav_skip">
+    <ul>
+      <li><a href="#gnb">대메뉴 바로가기</a></li>
+      <li><a href="#main">본문 바로가기</a></li>
+      <li><a href="#nav_quick">빠른메뉴 바로가기</a></li>
+    </ul>
+  </nav>
+  <!-- header 시작 -->
+  <header>
+    <div class="wrap_com">
+      <div class="wrap_gnb">
+        <h1 class="logo_cgv.png">
+          <a href="/index.html">
+            <img src="/common/images/logo_cgv.png" alt="CGV">
+          </a>
+        </h1>
+        <h2 class="hide">대메뉴</h2>
+        <nav>
+          <ul class="clear">
+            <li class="movie">
+              <a href="/contents/movie/movies_list.html"><span class="hide">영화</span></a>
+              <div class="wrap_snb">
+                <div>
+                  <ul>
+                    <li><a href="/contents/movie/movies_list.html">무비차트</a></li>
+                    <li><a href="/contents/movie/movies_HDtrailer.html">HD 트레일러</a></li>
+                    <li><a href="/contents/movie/movies_finder.html">무비파인더</a></li>
+                    <li><a href="">CGV아트하우스</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="booking">
+              <a href="/contents/ticket/ticket.html"><span class="hide">예매</span></a>
+              <div class="wrap_snb">
+                <div>
+                  <ul>
+                    <li><a href="/contents/ticket/ticket.html">빠른예매</a></li>
+                    <li><a href="/contents/ticket/timetable.html">상영시간표</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="theaters">
+              <a href="/contents/theaters/cgv theaters/index.html"><span class="hide">극장</span></a>
+              <div class="wrap_snb">
+                <div>
+                  <ul>
+                    <li><a href="/contents/theaters/cgv theaters/index.html">CGV 극장</a></li>
+                    <li><a href="/contents/theaters/special/fourdx.html">특별관</a></li>
+                    <li><a href="/contents/util/Clubservice.html">CLUB 서비스</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="event">
+              <a href="/contents/event/event_event/event_special.html"><span class="hide">이벤트&amp;컬처</span></a>
+              <div class="wrap_snb">
+                <div>
+                  <ul>
+                    <li><a href="/contents/event/event_event/event_special.html">이벤트</a></li>
+                    <li><a href="/contents/event/event_giftshop/evt_giftstop_index.html">기프트샵</a></li>
+                    <li><a href="/contents/event/event_magazine/event_magazine.html">매거진</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <div class="ad">
+            <a href="">
+              <img src="/common/images/banner_card.png" alt="현대오일뱅크 보너스 카드 혜택!">
+            </a>
+          </div>
+          <div class="search">
+            <input type="search">
+            <button>검색</button>
+          </div>
+        </div>
+      </div>
+      <div class="wrap_util">
+        <h2 class="hide">유틸리티 메뉴</h2>
+        <ul class="list_util right clear">
+          <li class="login"><a href="/contents/util/login.html"><span class="hide">로그인</span></a></li>
+          <li class="join"><a href="#"><span class="hide">회원가입</span></a></li>
+          <li class="my"><a href="#"><span class="hide">MY CGV</span></a></li>
+          <li class="vip"><a href="#"><span class="hide">VIP LOUNGE</span></a></li>
+          <li class="club"><a href="#"><span class="hide">Club서비스</span></a></li>
+          <li class="cs"><a href="/contents/support/default.html"><span class="hide">고객센터</span></a></li>
+          <li class="en"><a href="#"><span class="hide">ENGLISH TICKETING</span></a></li>
+        </ul>
+        <div class="left">
+          <h2 class="hide">CGV 소셜 네트워크</h2>
+          <ul class="list_sns clear">
+            <li class="app"><a href=""><span class="hide">CGV앱 설치</span></a></li>
+            <li class="facebook"><a href="https://www.facebook.com/CJCGV" target="_blank"><span class="hide">Facebook 좋아요!</span></a></li>
+            <li class="insta"><a href="https://www.instagram.com/cgv_korea/" target="_blank"><span class="hide">Instagram Follow</span></a></li>
+          </ul>
+          <a href="/contents/util/dc/index.html" class="frugal"><span class="hide">알뜰한 영화관람법</span></a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <main id="main">
+    <div id="nav_line" class="line_wrap">
+      <div class="line_sect">
+        <div class="sect">
+          <ul class="list_location">
+            <li>
+              <a href="/index.html">
+              <img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sect_side">
+          <ul>
+            <li>
+              <a href="#">VIP LOUNGE</a>
+            </li>
+            <li>
+              <a href="/contents/util/Clubservice.html" title="새 창" class="specialclub">Club서비스</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- </main> -->
+
+<div class="cols_content vip_help">
+    <div class="col_detail">
+        <h3>VIP FAQ</h3>
+        <p>고객님께서 궁금하신 내용을 먼저 확인해 주세요.</p>
+    <div class="srh_vip">
+        <form novalidate="novalidate">
+            <fieldset>
+                <legend>검색어를 입력하는 영역입니다.</legend>
+                <p>
+                    <input type="text" class="medium" id="searchtext" name="searchtext" minlength="2" maxlength="20" value="" placeholder="궁금하신 내용을 입력해주세요">
+                    <button type="button" class="round inblack" id="btn_search"><span>검색하기</span></button>
+                </p>
+            </fieldset>
+        </form>
+    </div>
+        <div class="tbl_data">
+            <ul>
+                <li>
+                    <p>
+                        <em>17</em>
+                        <a href="#" class="question">VIP 선정 포인트 기준을 알고 싶어요</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>CGV에서 구매한 누적포인트를 기준으로 유료 결제 금액에 한하여 적립됩니다.<br>추가적으로 일반적인 이벤트 등을 통해서 적립한 포인트는 제외됩니다</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>16</em>
+                        <a href="#" class="question">VIP 선정이 월별로 진행되면 매월 VIP가 되는 건가요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>아닙니다 선정 시점이 매월로 변경될 뿐 선정이 되고 나서 VIP 유지 기간은 1년으로 동일합니다<br>
+                            일반등급의 고객님에 한해 매월 구매 누적 포인트를 집계하고 VIP 고객님에 대해서는 VIP 등급을 획득하신 시점부터</p>
+                        <p>다시 선정 포인트를 집계하게 됩니다</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>15</em>
+                        <a href="#" class="question">일반 고객의 VIP 선정 최근 1년의 정확한 날짜 기준이 궁금합니다</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>일반고객의 선정 시점은 최근 1년 월별 선정이며 만약 17년 4월 VIP 이면</p>
+                        <p>16년 4월 1일~17년 3월 31일까지의 선정 포인트 기준으로 집계합니다</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>14</em>
+                        <a href="#" class="question">구매 누적 포인트와 이벤트 포인트의 차이점이 뭔가요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>&nbsp;- 구매 누적 포인트</p>
+                        <p>&nbsp; : &nbsp;고객님께서 CGV에서 유료로 영화 티켓 구매 또는 매점/씨네샵 구매 시 적립하신 CJ ONE 포인트 총합입니다</p>
+                        <p><br>&nbsp;- 이벤트 누적 포인트(VIP 선정 제외)</p>
+                        <p>&nbsp;&nbsp;: 구매 누적 포인트 이외의 모든 누적포인트는 이벤트 누적 포인트입니다<br>&nbsp;&nbsp;&nbsp; (예 : CGV 이벤트 참여 후 받은 포인트, VIP 추가 포인트, 설문 완료 후 지급 포인트 등) </p>
+                        <p></p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>13</em>
+                        <a href="#" class="question">영화관람/매점이용/씨네샵이용의 정확한 VIP 적립 기준을 알고 싶어요</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>VIP 선정 반영되는 적립 포인트 기준은 VIP선정 기준 적립일이며, CJ ONE 가용일자와 상이할 수 있습니다<br>자세한 포인트 적립조회는 MY CGV &gt; CJ ONE포인트 이력조회를 통해 확인하시기 바랍니다</p>
+                        <p><strong>■ 매표 구매 누적 포인트</strong><br>&nbsp;- CGV영화 관람을 통해 적립되는 포인트로 상영일 기준으로 누적 적립되며 온라인 상에서 실제 누적포인트 반영까지 최대 3일 소요됩니다 (30시간 기준)</p>
+                        <p><strong>■ 매점&amp;씨네샵 구매 누적 포인트</strong><br>&nbsp;- CGV매점 또는 씨네샵에서 구매 후, 고객이 직접 적립 진행 시 제공되는 포인트로 적립 당일일자(24시간 기준)로 누적 적립되며 실제 온라인 누적포인트 반영까지 적립일로부터 최대 3일 소요됩니다</p>
+                        <p><strong>■ VIP 선정 포함되는 이벤트 포인트</strong><br>&nbsp;- CGV에서 진행되는 이벤트 중 VIP선정에 포함되는 이벤트 포인트이며, 특정 이벤트에 한하여 지급되며 지급 일자(24시간 기준)로 누적 적립되며 VIP선정 포인트에 포함됩니다.</p>
+                        <p>■ 그외 포인트 (이벤트 포인트 등)<br>&nbsp;- 구매 누적 및 VIP선정에 포함되는 이벤트 포인트 외 지급되는 모든 포인트이며, VIP선정 포인트에 포함되지 않습니다</p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>12</em>
+                        <a href="#" class="question">CGV에서 쌓은 CJ ONE 포인트 다 썼는데, CGV VIP가 될 수 있나요? </a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>
+                            포인트 사용여부와 관계없이 고객님께서 적립하신 CJ ONE 구매 누적 포인트로만 산정 됩니다
+                        </p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>11</em>
+                        <a href="#" class="question">VIP 선정 포인트는 VIP가 되고 나서 유지 되나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>
+                            VIP가 선정된 이후 선정 포인트는 0으로 리셋되며 선정된 달부터 다시 선정 포인트가 누적 됩니다
+                        </p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>10</em>
+                        <a href="#" class="question">일반 고객이 RVIP나 VVIP(SVIP)로 바로 승급될 수 있는 방법은 없나요?</a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>일반 고객님은 최근 1년 누적 포인트 14,000점을 달성하시어 VIP로 먼저 승급하신 이후</p>
+                        <p>순차적으로 높은 등급으로 승급하실 수 있습니다. </p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p>
+                        <em>9</em>
+                        <a href="#" class="question">VVIP 조기 승급 기준인 영화 관람 횟수 상위 구매 0.1% 정확한 기준이 어떻게 되나요? </a>
+                    </p>
+                    <div class="answer">
+                        <strong>답변내용</strong>
+                        <p>
+                            영화 관람 횟수 상위 구매 0.1%는 매해 기준이 달라지므로, 공개하지 않고 있습니다
+                        </p>
+                        <p class="sect_unfold">
+                            <button class="round black"><span>닫기</span></button>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="paging">
+            <ul>
+                <li class="on">
+                    <a title="1 페이지 선택" href=" #pg">1</a>
+                </li>
+                <li>
+                    <a href="/contents/support/vip_faq_page2.html">2</a>
+                </li>
+            </ul>
+            <a href="/contents/support/vip_faq_page2.html"><button class="btn_paging next" type="button">다음</button></a>
+            <a href="/contents/support/vip_faq_page2.html"><button class="btn_paging end" type="button">끝</button></a>
+        </div>
+    </div>
+</div>
+
+   
+<div class="banner_hori">
+  <a href="https://www.credit.co.kr/ib20/mnu/BZW000000000001?NaPm=ct%3Dksa7x28t%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D73b8e3487f01934833aa6f19e89df2ece76f0e54" target="_blank">
+    <div class="wrap_com">
+      <img src="/common/images/banner_hori.png" alt="">
+    </div>
+  </a>
+</div>
+</main>
+
+<footer>
+  <section class="sec_special">
+    <div class="wrap_com">
+      <h2 class="hide">특별관 리스트</h2>
+      <ul class="">
+        <li class="dx"><a href="/contents/theaters/special/fourdx.html"><span class="hide">4DX</span></a></li>
+        <li class="imax"><a href="/contents/theaters/special/imax.html"><span class="hide">IMAX</span></a></li>
+        <li class="screenx"><a href="/contents/theaters/special/scrx.html"><span class="hide">SCREENX</span></a></li>
+        <li class="spherex"><a href=""><span class="hide">SphereX</span></a></li>
+        <li class="gold"><a href="/contents/theaters/special/gold.html"><span class="hide">GOLDCLASS</span></a></li>
+        <li class="cine"><a href="/contents/theaters/special/chef.html"><span class="hide">CINE de CHEF</span></a></li>
+        <li class="cinema"><a href=""><span class="hide">THE PRIVATE CINEMA</span></a></li>
+        <li class="kids"><a href=""><span class="hide">Cine kids</span></a></li>
+        <li class="cinenforet"><a href="/contents/theaters/special/foret.html"><span class="hide">CINE&amp;FORET</span></a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="sec_info wrap_com">
+    <h2 class="hide">CJ CGV 회사소개 및 정책</h2>
+    <ul class="list1 clear">
+      <li><a href="" target="_blank">회사소개</a></li>
+      <li><a href="" target="_blank">IR</a></li>
+      <li><a href="" target="_blank">채용정보</a></li>
+      <li><a href="" target="_blank">광고/프로모션문의</a></li>
+      <li><a href="" target="_blank">제휴문의</a></li>
+      <li><a href="" target="_blank">출점문의</a></li>
+      <li><a href="">이용약관</a></li>
+      <li><a href="">편성기준</a></li>
+      <li><a href="" class="color_org">개인정보처리방침</a></li>
+      <li><a href="">법적고지</a></li>
+      <li><a href="">이메일주소무단수집거부</a></li>
+      <li><a href="" target="_blank">윤리경영</a></li>
+      <li><a href="" class="color_org">사이버감사실</a></li>
+      <li><a href="">사이트맵</a></li>
+    </ul>
+    <div class="btm">
+      <ul class="list2 clear">
+        <li class="">(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</li>
+        <li class="clear"><span>대표이사 : </span>허민회</li>
+        <li><span>사업자등록번호 : </span>104-81-45690</li>
+        <li><span>통신판매업신고번호 : </span>2017-서울용산-0662<a href="#" class="link_ftc">사업자정보확인</a></li>
+        <li class="clear"><span>호스팅사업자 : </span>CJ올리브네트웍스</li>
+        <li><span>개인정보보호 책임자 : </span>심준범</li>
+        <li><span>대표이메일 : </span>cjcgvmaster@cj.net</li>
+        <li><span>CGV고객센터 : </span>1544-1122</li>
+        <li class="copy">&copy;CJ CGV. All Rights Reserved</li>
+      </ul>
+      <div class="bx_float clear">
+        <ul class="list_share clear">
+          <li>
+            <a href="https://www.facebook.com/CJCGV" target="_blank" class="facebook" style="background-position:-509px -429px"><span class="hide">페이스북</span></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/cj_cgv" target="_blank" class="twitter" style="background-position:-551px -429px"><span class="hide">트위터</span></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/cgv_korea/" target="_blank" class="instagram" style="background-position:-593px -429px"><span class="hide">인스타그램</span></a>
+          </li>
+        </ul>
+        <div class="sel_family">
+          <select class="" name="">
+            <option>계열사 바로가기</option>
+            <optgroup label="CJ그룹">
+              <option value="http://www.cj.net/">CJ주식회사</option>
+            </optgroup>
+            <optgroup label="식품 &amp; 식품서비스">
+              <option value="https://www.cj.co.kr/kr/index">CJ제일제당</option>
+              <option value="https://www.cjfoodville.co.kr/main.asp">CJ푸드빌</option>
+              <option value="http://www.cjfreshway.com/index.jsp">CJ프레시웨이</option>
+            </optgroup>
+            <optgroup label="생명공학">
+              <option value="https://www.cj.co.kr/kr/about/business/bio">CJ제일제당 BIO사업부문</option>
+              <option value="https://www.cj.co.kr/kr/about/business/bio">CJ Feed&amp;Card</option>
+            </optgroup>
+            <optgroup label="물류 &amp; 신유통">
+              <option value="https://www.cjlogistics.com/ko/main">CJ대한통운</option>
+              <option value="http://www.cjenc.co.kr/kr/Default.asp">CJ대한통운 건설부문</option>
+              <option value="https://www.oliveyoung.co.kr/store/company/brandStory.do">CJ올리브영</option>
+              <option value="https://www.cjolivenetworks.co.kr:449/">CJ올리브네트웍스</option>
+              <option value="https://www.cjoshopping.com:9002/index.asp">CJ ENM 커머스부문</option>
+            </optgroup>
+            <optgroup label="엔터테인먼트 &amp; 미디어">
+              <option value="https://www.cjem.net:433/main/?locale=ko">CJ ENM 엔터테인먼트부문</option>
+              <option value="http://corp.cgv.co.kr/company/ir/manage/manage_list.aspx ">CJ CGV</option>
+              <option value="http://www.cjpowercast.com/">CJ파워캐스트</option>
+            </optgroup>
+          </select>
+          <button>GO</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+<div class="nav_quick" id="nav_quick">
+  <h2 class="hide">빠른 메뉴</h2>
+  <ul>
+    <li class="theater">
+      <a href="/contents/theaters/cgv theaters/index.html">
+        <img src="/common/images/btn_theater.gif" alt="CGV극장">
+      </a>
+    </li>
+    <li class="artHouse">
+      <a href="">
+        <img src="/common/images/btn_artHouse.gif" alt="CGV아트하우스">
+      </a>
+    </li>
+    <li class="special">
+      <a href="/contents/theaters/special/fourdx.html">
+        <img src="/common/images/btn_special.gif" alt="CGV특별관">
+      </a>
+    </li>
+    <li class="myTicket">
+      <a href="">
+        <img src="/common/images/btn_myTicket.gif" alt="CGV예매내역">
+      </a>
+    </li>
+    <li class="dcInfo">
+      <a href="/contents/event/event_event/event_Discount.html">
+        <img src="/common/images/btn_dcInfo.gif" alt="CGV할인정보">
+      </a>
+    </li>
+  </ul>
+  <button class="btn_top" id="btn_top" onclick="scrollToTop()">
+    <span class="hide">
+      최상단으로 이동
+    </span>
+  </button>
+</div>
+</body>
+
+</html>
