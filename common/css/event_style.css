@@ -397,3 +397,34 @@ select {
 .info_use_response {
     display: block;
 }
+
+
+
+/* CGV 매거진 css start */
+
+
+.linemap-wrap .sect-linemap {
+    position: relative;
+    width: 980px;
+    height: 28px;
+    margin: 0 auto;
+}
+
+.linemap-wrap .sect-linemap > .sect-special ul > li > a {
+    color: #666;
+    font-weight: 500;
+    font-size: 11px;
+    text-align: center;
+}
+
+.linemap-wrap .sect-linemap > .sect-bcrumb ul > li > a, .linemap-wrap .sect-linemap > .sect-special ul > li > a {
+    display: block;
+    color: #222;
+    font-size: 12px;
+    line-height: 28px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
