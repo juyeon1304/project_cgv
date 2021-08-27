@@ -594,7 +594,7 @@ vertical-align: middle; }
               club service popup (koic)
 ==================================================*/
 .club_popup{
-  display: block;
+  display: none;
   position: relative;
   z-index: 2;
   clear: both;
