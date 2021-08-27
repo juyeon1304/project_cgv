@@ -588,3 +588,329 @@ vertical-align: middle; }
 .CS_titbox .CS_ind_tit { display: block; margin-right: 100px; font-size: 24px; color: #000; font-weight: 300; }
 
 .sect_wrap { width: auto; height: 240px; }
+
+
+/* =============================================
+              club service popup (koic)
+==================================================*/
+.club_popup{
+  display: block;
+  position: relative;
+  z-index: 2;
+  clear: both;
+  margin: 20px 0 0 13px;
+
+  padding-top: 20px;
+  width: 980px;
+
+  background: #222222;
+}
+.club_popup_in{
+  /* border : 1px solid blue; */
+  height: 70px;
+  background: #222222;
+  
+}
+
+.club_popup_in::before{
+  display: block;
+    content: '';
+    position: absolute;
+    left: 222px;
+    top: -18px;
+    width: 33px;
+    height: 18px;
+  background : url('https://img.cgv.co.kr/R2014/images/club/bg_club_benefit_arrow.png') no-repeat 0 0;
+}
+
+.club_title{
+    display: block;
+
+    margin-left: 40px;
+    font-size: 34px;
+    font-weight: 500;
+    color: #edf3f6;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    
+}
+.club_QR{
+  width: 900px;
+  background : black;
+  height: 140px;
+  position: relative;
+  margin: 0 auto;
+  
+}
+.qr_txt{
+  /* border : 1px solid red; */
+  position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #edf3f6;
+    
+}
+.qr_code{
+  width: 100px;
+    height: 100px;
+    background: #fff;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    margin-top: -50px;
+}
+.qr_code > img{
+  width: 100px;
+    height: 100px;
+}
+.txt1 {
+  font-size: 20px;
+    color: #fff;
+    margin: 0 0 12px 0;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+.txt2 {
+  font-size: 13px;
+  color: #999;
+  line-height: 18px;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+}
+.benefit_title{
+  /* border : 1px solid red; */
+  color : #fff;
+  width: 900px;
+  margin : 40px auto;
+  
+}
+.club_popup em{
+  
+    font-size: 20px;
+    font-weight: 500;
+    margin : 0 0 4px 0;
+    color: #fff;
+    line-height: 1.2;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+
+}
+.club_popup span{
+  
+  font-size: 13px;
+  color: #999;
+    line-height: 1.2;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+
+}
+.benefit_list{
+  list-style: none;
+  color : white;
+  width: 900px;
+  margin : 0 auto;
+  box-sizing: border-box;
+}
+.benefit_sem1::before{
+    height: 40px;
+    content: '';
+    display: inline-block;
+    width: 55px;
+    background-position: 0 0;
+    vertical-align: middle;
+    background: url(https://img.cgv.co.kr/r2014/images/club/ico_benefit_1318.png) no-repeat 0 0;
+    margin-bottom: 40px;
+    
+}
+
+
+.benefit_sem2::before{
+    height: 40px;
+    margin-left: 30px;
+    content: '';
+    display: inline-block;
+    width: 55px;
+    background-position: 0 0;
+    vertical-align: middle;
+    background: url(https://img.cgv.co.kr/r2014/images/club/ico_benefit_1318.png) no-repeat 0 -115px;
+    margin-bottom: 40px;
+    
+}
+.benefit_sem1{
+  float: left;
+  width: 440px;
+  display: block;
+  
+  
+}
+.sem1_title{
+  display: inline-block;
+  vertical-align: middle;
+
+  
+}
+.sem2_title{
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+.benefit_sem2{
+  
+  float: right;
+  width: 440px;
+
+}
+.benefit_sem1 > ul {
+  float: right;
+  margin-right: 30px;
+  
+}
+.benefit_sem2 > ul {
+  float: right;
+}
+.benefit_list em{
+  font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+.benefit_list span{
+  display: block;
+  margin-top: 10px;
+  line-height: 1.5em;
+}
+.benefit_list > li {
+  display: inline-block;
+}
+
+.benefit_sem1 > ul > li{
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+    color: #666;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-weight: 300;
+}
+.benefit_sem2 > ul > li{
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+    color: #666;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    font-weight: 300;
+}
+.benefit_sem_line{
+  
+  width: 2px;
+  height: 150px;
+  background-color: #757575;
+  margin : 0 auto;
+
+}
+
+.popup_benifit:after{
+    content: '';
+    margin: 38px auto;
+    display: block;
+    width: 90%;
+    height: 1px;
+    background: #2f2f2f;
+    border-top: 1px solid #000;
+}
+.sp_benefit{
+  width: 900px;
+  margin : 0 auto;
+}
+.sp_benefit_info{
+  width: 100%;
+
+  box-sizing: border-box;
+  margin-top: 20px;
+}
+
+.sp_benefit_info  div {
+  display: inline-block;
+}
+
+
+.sp_info1_img{
+  height: 42px;
+    content: '';
+    display: inline-block;
+    width: 55px;
+    margin-top: 5px;
+  vertical-align: top;
+  background: url(https://img.cgv.co.kr/r2014/images/club/ico_benefit_1318.png) no-repeat 0 -343px;
+
+}
+.sp_info2_img{
+  height: 42px;
+    content: '';
+    display: inline-block;
+    width: 70px;
+    margin-top: 5px;
+    margin-left: 20px;
+  vertical-align: top;
+  background: url(https://img.cgv.co.kr/r2014/images/club/ico_benefit_1318.png) no-repeat 0 -572px;
+
+}
+.sp_info3_img{
+  height: 42px;
+    content: '';
+    display: inline-block;
+    width: 60px;
+    margin-top: 5px;
+    margin-left: 20px;
+  vertical-align: top;
+  background: url(https://img.cgv.co.kr/r2014/images/club/ico_benefit_1318.png) no-repeat 0 -686px;
+}
+.sp_benefit:after{
+  content: '';
+    margin: 38px auto;
+    display: block;
+    width: 95%;
+    height: 1px;
+    background: #2f2f2f;
+    border-top: 1px solid #000;
+}
+.benefit_note_list{
+  margin : 0 auto;
+  width: 900px;
+}
+.txt_gray{
+  font-size: 12px;
+  color: #999;
+    line-height: 1.2;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    list-style: inside;
+}
+.txt_gray1{
+  font-size: 16px;
+  color: #999;
+    line-height: 1.2;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    list-style: inside;
+}
+
+.txt_white{
+  font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    width: 200px;
+    padding-top: 10px;
+    height: 30px;
+    color: #fff;
+    line-height: 1.2;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    /* border : 1px solid red; */
+}
+
+.txt_line1 {
+  margin-right: 10px;
+}
+.txt_line2{
+  margin-left: 80px;
+}
+.benefit_note:after{
+  content: '';
+  margin: 38px auto;
+  display: block;
+  width: 90%;
+  height: 1px;
+  
+}

@@ -15,8 +15,23 @@
   <script src="../../common/js/swiper.js" charset="utf-8"></script>
   <script src="../../common/js/slide.js" charset="utf-8"></script>
   <script src="../../common/js/script.js" charset="utf-8" defer></script>
-  
   <link rel="stylesheet" href="../CSS/style.css">
+  <!-- popup test javascript -->
+  <script>
+     function popupview(num1){
+       num1 = num1 -1;
+      const club_popup = document.getElementsByClassName('club_popup');
+      console.log(club_popup);
+      if(club_popup[num1].style.display == 'block'){
+        club_popup[num1].style.display = 'none';
+      }else{
+        club_popup[num1].style.display = 'block';
+      }
+     
+      
+     }
+    
+  </script>
 </head>
 
 <body class="body_idx">
@@ -168,7 +183,7 @@
   <div class="fir_block">
     <div class="com_area area_1">
       <div class="com_box">
-        <a href="#"><img src="../../common/images/img_club_thumb4_2020.jpg" alt=""></a>
+        <a href="#"><img src="../../common/images/img_club_thumb4_2020.jpg" onclick="popupview(1)" alt=""></a>
       </div>
       <span class="Appear" style="display: none;">
         <img src="../../common/images/img_club_thumb4_over.png" alt="1318클럽 - 만 13세에서 18세까지의 중ㆍ고등학교 청소년 회원을 위한 무료 클럽 서비스로 영화/ 매점 할인 및 포인트 혜택 등 1318 클럽 회원만을 위한 특별한 혜택이 제공됩니다.">
@@ -177,6 +192,256 @@
         <strong class="CS_ind_tit">1318 Club</strong>
       </div>
     </div>
+
+         <!-- pop up 첫번째 -->
+    <div class="club_popup">
+        <div class="club_popup_in">
+            <strong class="club_title">1318 CLUB 혜택</strong>
+        </div>
+        <div class="club_QR">
+            <div class="qr_txt">
+              <p class="txt1 txt">
+                <strong>1318 club이란?</strong>
+              </p>
+              <p class="txt2 txt">1318 CLUB은 만 13세~18세 청소년이라면 누구나 가입 가능한 무료 멤버십 서비스입니다.
+                <br>
+                신규가입은 <span>QR</span> 코드 또는 <span>CGV APP</span>
+                을 확인해주세요. 
+              </p>
+            </div>
+            <div class="qr_code">
+              <img src="http://img.cgv.co.kr/r2014/images/club/qr_1318.png" alt="1318 QR CODE">
+            </div>
+        </div>
+        <div class="popup_benifit">
+          <div class="benefit_title">
+            <em>가입 혜택</em><br>
+            <span>학기별 쿠폰 선물</span>
+          </div>
+          <ul class="benefit_list">
+            <li class="benefit_sem1">
+              <div class="sem1_title">
+                  <em>1학기</em>
+                  <span>
+                    가입시 ~<br>
+                    2021.08.31 까지 사용
+                  </span>
+              </div>
+              <ul>
+                <li>2D 영화 7천원 관람쿠폰 2매</li>
+                <li>4DX 8천원 관람쿠폰 1매</li>
+                <li>SCREENX 8천원 관람쿠폰 1매</li>
+                <li>ICECON 3천원 할인쿠폰 1매</li>
+                <li>포토플레이 무료쿠폰 1매</li>
+                <li>팝콘 50% 할인쿠폰 1매</li>
+                <li>스몰세트 3천원 할인쿠폰 1매</li>
+              </ul>
+            </li>
+            <li class="benefit_sem_line">
+                
+            </li>
+            <li class="benefit_sem2">
+              <div class="sem2_title">
+                <em>2학기</em>
+                <span>
+                  가입시 ~<br>
+                  2021.08.31 까지 사용
+                </span>
+            </div>
+            <ul>
+              <li>2D 영화 7천원 관람쿠폰 2매</li>
+              <li>4DX 8천원 관람쿠폰 1매</li>
+              <li>SCREENX 8천원 관람쿠폰 1매</li>
+              <li>ICECON 3천원 할인쿠폰 1매</li>
+              <li>포토플레이 무료쿠폰 1매</li>
+              <li>팝콘 50% 할인쿠폰 1매</li>
+              <li>스몰세트 3천원 할인쿠폰 1매</li>
+            </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="sp_benefit">
+          <div class="sp_benefit_title">
+              <em>스페셜혜택</em><br>
+              <span>회원 전용 이벤트 & 시사회 참여</span>
+          </div>
+          <div class="sp_benefit_info">
+             <div class="sp_benefit_info1">
+               <div class="sp_info1_img">
+
+               </div>
+               <div class="sp_info1_txt">
+                    <em>청소년 브랜드 <br> 
+                        패스티벌
+                    </em><br>
+                    <span>
+                      *학습,쇼핑등 다양한<br>
+                      브랜드혜택 제공
+                    </span>
+               </div>
+               <div class="sp_info2_img">
+
+               </div>
+               <div class="sp_info2_txt">
+                    <em>청소년 브랜드 <br> 
+                        패스티벌
+                    </em><br>
+                    <span>
+                      *학습,쇼핑등 다양한<br>
+                      브랜드혜택 제공
+                    </span>
+               </div>
+               <div class="sp_info3_img">
+
+               </div>
+               <div class="sp_info3_txt">
+                    <em>청소년 브랜드 <br> 
+                        패스티벌
+                    </em><br>
+                    <span>
+                      *학습,쇼핑등 다양한<br>
+                      브랜드혜택 제공
+                    </span>
+               </div>
+             </div>
+          </div>
+
+        </div>
+        <div class="benefit_note">
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_gray1 txt_line1">유의사항</strong>
+              <strong class="txt_white txt_line1">[1318 CLUB]</strong>
+              <ul>
+                <li class="txt_gray txt_line2">
+                  1318 CLUB은 만 13세(2008년생)부터 만 18세(2003년생)까지의 청소년 회원을 위한 무료 멤버십 서비스입니다.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_white txt_line2">[가입 혜택 안내]</strong>
+         
+              <ul>
+                <li class="txt_gray txt_line2">
+                  신규 가입 고객은 가입 후 다음날 쿠폰이 지급됩니다. 쿠폰은 MY CGV > 쿠폰함에서 확인 가능합니다.
+                </li>
+                <li class="txt_gray txt_line2">
+                  학기별 쿠폰 혜택은 1학기 2021년 8월 30일, 2학기 2022년 2월 27일까지 가입한 고객에게 제공됩니다.
+                </li>
+                <li class="txt_gray txt_line2">
+                  쿠폰별 사용기간이 상이하므로 반드시 확인 후 사용하시기 바랍니다.
+                </li>
+                <li class="txt_gray txt_line2">
+                  학기별 쿠폰은 1인 1회에 한해 지급되며, 탈퇴 후 재 가입하여도 재 지급되지 않습니다.
+                </li>
+                <li class="txt_gray txt_line2">
+                  모든 쿠폰은 타 쿠폰 및 할인과 중복 사용이 불가합니다.
+                </li>
+                <li class="txt_gray txt_line2">
+                  모든 쿠폰은 극장(신규오픈, 폐점 등) 및 배급사의 사정에 따라 일부 극장 및 일부 영화 사용이 불가할 수 있습니다.
+                </li>
+                <li class="txt_gray txt_line2">
+                  모든 쿠폰은 이벤트 상품으로 이용기간 연장 및 환불 불가합니다.
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_white txt_line2">[2D 영화 7천원 관람쿠폰]</strong>
+         
+              <ul>
+                <li class="txt_gray txt_line2">
+                  온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+                </li>
+                <li class="txt_gray txt_line2">
+                  2D 영화에 한하여 사용 가능 (3D 및 특별관, 특별좌석, 특별 프로그램 제외)
+                </li>
+                <li class="txt_gray txt_line2">
+                  사용 극장: 전국 CGV (단, CGV고성, 인제 제외)
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_white txt_line2">[4DX 8천원 관람쿠폰]</strong>
+         
+              <ul>
+                <li class="txt_gray txt_line2">
+                  온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+                </li>
+                <li class="txt_gray txt_line2">
+                  2D 영화에 한하여 사용 가능 (3D 및 특별관, 특별좌석, 특별 프로그램 제외)
+                </li>
+               
+              </ul>
+            </li>
+          </ul>
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_white txt_line2">[4DX or IMAX 무료쿠폰]</strong>
+         
+              <ul>
+                <li class="txt_gray txt_line2">
+                  온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+                </li>
+                <li class="txt_gray txt_line2">
+                  4DX, 4DX SCREEN, IMAX 영화에 한하여 사용 가능 (단, 포맷에 관계없이 1회에 한함)
+                </li>
+                
+              </ul>
+            </li>
+          </ul>
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_white txt_line2">[SCREENX 8천원 관람쿠폰]</strong>
+         
+              <ul>
+                <li class="txt_gray txt_line2">
+                  온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+                </li>
+                <li class="txt_gray txt_line2">
+                  SCREENX 영화에 한하여 사용 가능
+                </li>
+                
+              </ul>
+            </li>
+          </ul>
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_white txt_line2">[ICECON 3천원 할인쿠폰]</strong>
+         
+              <ul>
+                <li class="txt_gray txt_line2">
+                  ICECON 콘텐츠 중 굿즈 패키지, 라이브 중계 형식으로 진행되는 콘텐츠는 제외됩니다.
+                </li>                
+              </ul>
+            </li>
+          </ul>
+          <ul class="benefit_note_list">
+            <li>
+              <strong class="txt_white txt_line2">[매점 쿠폰]</strong>
+         
+              <ul>
+                <li class="txt_gray txt_line2">
+                  사용 방법 <br>
+                  &nbsp;&nbsp;&nbsp; <span>- 모바일 APP - 패스트오더/통합결제 > 결제 단계 > CGV 할인쿠폰 > 쿠폰 선택</span><br>
+                  &nbsp;&nbsp;&nbsp; <span>- 오프라인 - 키오스크 > 할인받고 결제 > 쿠폰 선택</span><br>
+                  &nbsp;&nbsp;&nbsp; <span>* 키오스크 이용 불가 시 현장 매점에서 CJ ONE 카드 제시</span>
+                </li>     
+                <li class="txt_gray txt_line2  ">
+                  사용 극장: 전국 CGV (단, CGV경기광주, 고성, 남주안, 보령, 불광, 성남모란, 안동, 오산중앙, 용인, 이천, 정읍, 주안역, 청라, 청주성안길, 화정 제외)
+                </li>           
+              </ul>
+            </li>
+          </ul>
+        </div>
+        
+    </div>
+     <!-- pop up 첫번째 끝 -->
 
     <div class="com_area area_2">
       <div class="com_box">
