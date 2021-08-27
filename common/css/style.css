@@ -914,3 +914,21 @@ vertical-align: middle; }
   height: 1px;
   
 }
+.couple_img{
+    display: inline-block;
+    /* border : 1px solid red; */
+    vertical-align: top;
+    width: 130px;
+}
+.club_QR .txt{
+  display: inline-block;
+
+}
+.couple_clup{
+  border : 1px solid red; 
+  width: 900px;
+  margin : 20px auto;
+}
+/* =============================================
+              club service popup (koic) 끝
+==================================================*/
