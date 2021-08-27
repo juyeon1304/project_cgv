@@ -397,3 +397,154 @@ select {
 .info_use_response {
     display: block;
 }
+
+
+
+/* CGV 매거진 css start */
+
+
+/* Contaniner Area */
+
+#contaniner {width:100%;}
+#contaniner.bg-bricks.main {background-position:0 0;}
+#contents {clear:both; padding-bottom:50px;}
+.linemap-wrap {width:100%; background-color:#f1f0e5; border-bottom:1px solid #cacac0;}
+
+h3 {height:45px; margin:30px 0 15px;  
+    repeat-x 0 50%; line-height:41px; text-align:center; font-weight:500;}
+
+h3 > img { padding:0 8px; background-color:#fdfcf0;}
+h3.sub{ height:auto; background-position:0 17px;}
+h3.sub > span{ display:block; margin-top:3px; 
+    background-position:0 17px; font-size:17px; color:#333333; }
+h3.sub > span > strong{ color:#c62422;}
+
+.tit-heading-wrap {
+    position: relative;
+    height: 51px;
+    margin-top: 30px;
+    border-bottom: 3px solid #241d1e;
+}
+.tit-heading-wrap > h3 {
+    display: inline-block;
+    position: relative;
+    height: inherit;
+    margin: 0;
+    background-image: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 36px;
+    text-align: left;
+    vertical-align: middle;
+}
+.tit-heading-wrap > h3 + a {display:inline-block;}
+.tit-heading-wrap > .submenu {position:absolute; top:18px; right:0;}
+.tit-heading-wrap > .submenu > ul {overflow:hidden;}
+.tit-heading-wrap > .submenu > ul:after {content:''; clear:both; display:block;}
+.tit-heading-wrap > .submenu > ul > li {float:left; margin-left:15px;}
+.tit-heading-wrap > .submenu > ul > li:first-child {margin-left:0;}
+.tit-heading-wrap > .submenu > ul > li > a {display:inline-block; padding-left:13px; font-weight:500; font-size:14px;}
+.tit-heading-wrap > .submenu > ul > li.on > a,
+.tit-heading-wrap > .submenu > ul > li > a:hover,
+.tit-heading-wrap > .submenu > ul > li > a:focus {
+    background:url(https://img.cgv.co.kr/r2014/images/common/ico/ico_arrow07.png) 
+    no-repeat 0 3px; color:#e40000;}
+
+.tit-heading-wrap > .submenu {
+    position: absolute;
+    top: 18px;
+    right: 0;
+}
+
+.submenu {
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+.sect-magazine-list > .sect_desc {
+    font-size: 12px;
+    margin: 20px 0 25px 0;
+    padding-left: 15px;
+    background: url(../images/sub/magazine/bul_billiard_11px.png) no-repeat 0 2px;
+}
+#contents {
+    clear: both;
+    padding-bottom: 50px;
+}
+
+#cgvwrap .cgv-ad-wrap .sect-head-ad, .head, .im-wrap, #contents, .foot, .sect-smuse, .sect-cinfo {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.sect-magazine-list ul {
+    margin: -14px 0 0 -14px;
+}
+
+.sect-magazine-list ul li {
+    float: left;
+    margin: 14px 0 0 13px;
+    border: 1px solid #edeae0;
+    width: 316px;
+    background: #fff;
+    box-shadow: #e5e4da 0 0 3px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.sect-magazine-list ul li dl {
+    padding: 23px 20px 0;
+}
+
+dl {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.sect-magazine-list ul li .tit_em {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #e71a0f;
+    text-decoration: underline;
+}
+
+.sect-magazine-list ul li .tit_txt {
+    margin-bottom: 7px;
+    font-size: 18px;
+    color: #222;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+
+.sect-magazine-list ul li dd .desc {
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.sect-magazine-list ul li dd > p {
+    height: 67px;
+}
+
+.sect-magazine-list ul li dd .btn_detail {
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 300;
+    float: right;
+    padding-right: 8px;
+    text-decoration: none;
+    color: #898987;
+    letter-spacing: 0;
+    background: url(../images/sub/magazine/bul_link_arrow.png) no-repeat 100% 1px;
+}
