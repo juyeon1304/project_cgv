@@ -328,7 +328,7 @@ height: 49px; padding-left: 198px; }
   background: #e71a0f; border: 2px solid #e71a0f;
   color: #ffffff; line-height: 24px;
 }
-.sect_theater
+/* .sect_theater */
 .round:before, .round:after, .round > *:before, .round > *:after {
   content: '';
   display: block;
