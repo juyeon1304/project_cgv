@@ -18,23 +18,39 @@
   <link rel="stylesheet" href="../CSS/style.css">
   <!-- popup test javascript -->
   <script>
-     function popupview(num1){
-       num1 = num1 -1;
-      const club_popup = document.getElementsByClassName('club_popup');
-      const club_length = club_popup.length 
-      console.log(club_popup.length );
-      if(club_popup[num1].style.display == 'block'){
-        club_popup[num1].style.display = 'none';
-      }else{
-        for(let i=0; i < club_length; i++){
-          club_popup[i].style.display = 'none';
-        }
-        club_popup[num1].style.display = 'block';
-      }
-     
-      
-     }
+    'use strict'
+
+    const club_popup = document.getElementsByClassName('club_popup');
+    const close_btn = document.getElementsByClassName('close_btn');
+    console.log(club_popup.length );
+
     
+    function popupview(num1){
+      num1 = num1 -1;
+
+      const club_length = club_popup.length 
+      
+      console.log(close_btn.length );
+      console.log(close_btn);
+        if(club_popup[num1].style.display == 'block'){
+          club_popup[num1].style.display = 'none';
+        }else{
+          for(let i=0; i < club_length; i++){
+            club_popup[i].style.display = 'none';
+          }
+          club_popup[num1].style.display = 'block';
+        }
+
+        for(let i = 0; i < close_btn.length; i++){
+          close_btn[i].addEventListener('click',() =>{
+          club_popup[i].style.display = 'none';
+          });
+        }
+
+        
+    }
+    
+
   </script>
 </head>
 
@@ -199,8 +215,9 @@
 
          <!-- pop up 첫번째 -->
     <div class="club_popup">
-        <div class="club_popup_in">
+        <div class="club_popup_in1">
             <strong class="club_title">1318 CLUB 혜택</strong>
+            <div class="close_btn"></div>
         </div>
         <div class="club_QR">
             <div class="qr_txt">
@@ -463,8 +480,9 @@
 
   <!-- pop up 두번째 -->
   <div class="club_popup">
-    <div class="club_popup_in">
+    <div class="club_popup_in2">
         <strong class="club_title">커플링 CLUB혜택</strong>
+        <div class="close_btn"></div>
     </div>
     <div class="club_QR">
         <div class="qr_txt">
@@ -488,187 +506,130 @@
     </div>
     <div class="popup_benifit">
       <div class="couple_clup">
-           <em calss="">주중(월-목)엔 언제나 스윗박스 할인</em> 
-           <em>웰컴 쿠폰팩 & 기념일 혜택</em>
-           <em>매월 쏟아 지는 데이트 쿠폰</em>
+        <div class="couple_img1"></div>
+        <div class="couple_box1">         
+          <em>주중(월-목)엔 언제나 스윗박스 할인</em> <br/>
+          <span>*월-목 스윗박스 1만원관람</span>
+        </div>
+        <div class="couple_img2"></div>
+        <div class="couple_box2">
+          <em>웰컴 쿠폰팩 & 기념일 혜택</em><br/>
+          <span>*영화 2천원할인부터 콤보할인,씨네쉐프 50%할인까지</span>
+        </div>
+        <div class="couple_img3"></div>
+        <div class="couple_box3">
+          <em>매월 쏟아 지는 데이트 쿠폰</em><br/>
+          <span>*커플 회원에게만 제공되는 본격데이트 지원쿠폰</span>
+        </div>
       </div>        
-    </div>
-    <div class="sp_benefit">
-      <div class="sp_benefit_title">
-          <em>스페셜혜택</em><br>
-          <span>회원 전용 이벤트 & 시사회 참여</span>
-      </div>
-      <div class="sp_benefit_info">
-         <div class="sp_benefit_info1">
-           <div class="sp_info1_img">
-
-           </div>
-           <div class="sp_info1_txt">
-                <em>청소년 브랜드 <br> 
-                    패스티벌
-                </em><br>
-                <span>
-                  *학습,쇼핑등 다양한<br>
-                  브랜드혜택 제공
-                </span>
-           </div>
-           <div class="sp_info2_img">
-
-           </div>
-           <div class="sp_info2_txt">
-                <em>청소년 브랜드 <br> 
-                    패스티벌
-                </em><br>
-                <span>
-                  *학습,쇼핑등 다양한<br>
-                  브랜드혜택 제공
-                </span>
-           </div>
-           <div class="sp_info3_img">
-
-           </div>
-           <div class="sp_info3_txt">
-                <em>청소년 브랜드 <br> 
-                    패스티벌
-                </em><br>
-                <span>
-                  *학습,쇼핑등 다양한<br>
-                  브랜드혜택 제공
-                </span>
-           </div>
-         </div>
-      </div>
-
     </div>
     <div class="benefit_note">
       <ul class="benefit_note_list">
         <li>
           <strong class="txt_gray1 txt_line1">유의사항</strong>
-          <strong class="txt_white txt_line1">[1318 CLUB]</strong>
+          <strong class="txt_white txt_line1">1. 상시 스윗박스 1만원 관람</strong>
           <ul>
             <li class="txt_gray txt_line2">
-              1318 CLUB은 만 13세(2008년생)부터 만 18세(2003년생)까지의 청소년 회원을 위한 무료 멤버십 서비스입니다.
+              온라인 예매 적용 방법<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;- 결제 단계에서 멤버십 > 커플링 클럽 스윗박스 할인 > 할인 적용
+            </li>
+            <li class="txt_gray txt_line2">
+              일 1회 최대 2매까지 가능
+            </li>
+            <li class="txt_gray txt_line2">
+              영화별 1회 적용 (중복 관람 시 할인 불가)
+            </li>
+            <li class="txt_gray txt_line2">
+              성인/청소년 권종만 적용 (우대불가)
+            </li>
+            <li class="txt_gray txt_line2">
+              조조/공휴일/컬처데이 및 타 할인 혜택 중복 적용 불가
+            </li>
+            <li class="txt_gray txt_line2">
+              일반 2D 영화/일반관에 한해 적용
+            </li>
+            <li class="txt_gray txt_line2">
+              할인 제외 극장: CGV청담, 이천, 익산, 서산
             </li>
           </ul>
         </li>
       </ul>
       <ul class="benefit_note_list">
         <li>
-          <strong class="txt_white txt_line2">[가입 혜택 안내]</strong>
+          <strong class="txt_white txt_line2">2. 웰컴 쿠폰팩 & 커플 기념일 쿠폰 팩</strong><br>
+          <strong class="txt_white txt_line2">1) 웰컴 쿠폰팩</strong>
      
           <ul>
-            <li class="txt_gray txt_line2">
-              신규 가입 고객은 가입 후 다음날 쿠폰이 지급됩니다. 쿠폰은 MY CGV > 쿠폰함에서 확인 가능합니다.
+            <li class="txt_white1 txt_line2">
+              2D영화 2천원 할인 2매 / 콤보 2천원 할인1매 / 포토플레이 무료 2매
+
+
             </li>
             <li class="txt_gray txt_line2">
-              학기별 쿠폰 혜택은 1학기 2021년 8월 30일, 2학기 2022년 2월 27일까지 가입한 고객에게 제공됩니다.
+              월컴쿠폰팩은 최초 가입 익일 CJ ONE ID로 지급됩니다. (커플 등록/해지에 관계없이 아이디당 1회 제공)
             </li>
             <li class="txt_gray txt_line2">
-              쿠폰별 사용기간이 상이하므로 반드시 확인 후 사용하시기 바랍니다.
+              웰컴 쿠폰의 유효기간은 발급일로부터 1개월(31일)입니다.
             </li>
-            <li class="txt_gray txt_line2">
-              학기별 쿠폰은 1인 1회에 한해 지급되며, 탈퇴 후 재 가입하여도 재 지급되지 않습니다.
-            </li>
-            <li class="txt_gray txt_line2">
-              모든 쿠폰은 타 쿠폰 및 할인과 중복 사용이 불가합니다.
-            </li>
-            <li class="txt_gray txt_line2">
-              모든 쿠폰은 극장(신규오픈, 폐점 등) 및 배급사의 사정에 따라 일부 극장 및 일부 영화 사용이 불가할 수 있습니다.
-            </li>
-            <li class="txt_gray txt_line2">
-              모든 쿠폰은 이벤트 상품으로 이용기간 연장 및 환불 불가합니다.
-            </li>
+            
           </ul>
         </li>
       </ul>
-      <ul class="benefit_note_list">
+      <ul class="benefit_note_list dotte_line">
         <li>
-          <strong class="txt_white txt_line2">[2D 영화 7천원 관람쿠폰]</strong>
+          <strong class="txt_white txt_line2">2) 기념일 쿠폰팩</strong>
      
           <ul>
-            <li class="txt_gray txt_line2">
-              온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+            <li class="txt_white1 txt_line2">
+              100일 기념일 마다<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;-2D영화 3천원 할인 2매 / 콤보 2천원 할인 1매 / 포토플레이 무료 1매
             </li>
-            <li class="txt_gray txt_line2">
-              2D 영화에 한하여 사용 가능 (3D 및 특별관, 특별좌석, 특별 프로그램 제외)
+            <li class="txt_white1 txt_line2_1">
+              1년 기념일 마다<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;-주중 스윗박스 50% 할인 2매 / 주중 씨네드쉐프 영화 50%할인 2매 / 더블, 라지콤보 50%할인 1매 / 포토플레이 무료 1매
             </li>
-            <li class="txt_gray txt_line2">
-              사용 극장: 전국 CGV (단, CGV고성, 인제 제외)
+            <li class="txt_gray txt_line2_1">
+              웰컴 쿠폰 및 기념일 쿠폰 혜택 제외 극장<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;-영화 : CGV청담, 서산, 익산, 인제, 고성<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;-매점 : CGV청담, 고성, 남주안, 대구이시아, 불광, 서산, 성남모란, 안동, 용인, 이천, 익산, 인제, 정읍, 주안역, 청주성안길, 화정
             </li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="benefit_note_list">
-        <li>
-          <strong class="txt_white txt_line2">[4DX 8천원 관람쿠폰]</strong>
-     
-          <ul>
-            <li class="txt_gray txt_line2">
-              온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+            <li class="txt_white1 txt_line2_1">
+              1년 기념일 마다<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;-주중 스윗박스 50% 할인 2매 / 주중 씨네드쉐프 영화 50%할인 2매 / 더블, 라지콤보 50%할인 1매 / 포토플레이 무료 1매
             </li>
-            <li class="txt_gray txt_line2">
-              2D 영화에 한하여 사용 가능 (3D 및 특별관, 특별좌석, 특별 프로그램 제외)
+            <li class="txt_gray txt_line2_1">
+              기념일을 등록한 커플 기준으로 쿠폰 혜택 제공 (쿠폰 유효기간 기념일로부터 1개월)
             </li>
            
           </ul>
         </li>
       </ul>
       <ul class="benefit_note_list">
-        <li>
-          <strong class="txt_white txt_line2">[4DX or IMAX 무료쿠폰]</strong>
-     
-          <ul>
-            <li class="txt_gray txt_line2">
-              온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
-            </li>
-            <li class="txt_gray txt_line2">
-              4DX, 4DX SCREEN, IMAX 영화에 한하여 사용 가능 (단, 포맷에 관계없이 1회에 한함)
-            </li>
-            
-          </ul>
+        <li class="txt_gray txt_line2">
+          모든 쿠폰은 극장 (신규 오픈, 폐점 등) 및 배급사 사정에 따라 사용 불가할 수 있으며 영화 쿠폰은 온라인 예매 전용 입니다
         </li>
-      </ul>
-      <ul class="benefit_note_list">
-        <li>
-          <strong class="txt_white txt_line2">[SCREENX 8천원 관람쿠폰]</strong>
-     
-          <ul>
-            <li class="txt_gray txt_line2">
-              온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
-            </li>
-            <li class="txt_gray txt_line2">
-              SCREENX 영화에 한하여 사용 가능
-            </li>
-            
-          </ul>
+        <li class="txt_gray txt_line2">
+          모든 쿠폰은 이벤트 상품으로 이용기간 연장 및 환불 불가하며 포토플레이 쿠폰은 설치 극장에 한해 사용 가능합니다
         </li>
-      </ul>
-      <ul class="benefit_note_list">
-        <li>
-          <strong class="txt_white txt_line2">[ICECON 3천원 할인쿠폰]</strong>
-     
-          <ul>
-            <li class="txt_gray txt_line2">
-              ICECON 콘텐츠 중 굿즈 패키지, 라이브 중계 형식으로 진행되는 콘텐츠는 제외됩니다.
-            </li>                
-          </ul>
+        <li class="txt_gray txt_line2">
+          콤보 할인 쿠폰은 매점키오스크, 모바일APP에서 사용 가능합니다<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;-오프라인) 매점키오스크 > 할인받고 결제 > 쿠폰 선택 or 매점에서 CJ ONE 카드 제시<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;-모바일 APP) 패스트오더 > 결제 단계 > CGV 할인쿠폰 > 쿠폰 적용<br><br>
         </li>
-      </ul>
-      <ul class="benefit_note_list">
-        <li>
-          <strong class="txt_white txt_line2">[매점 쿠폰]</strong>
-     
-          <ul>
-            <li class="txt_gray txt_line2">
-              사용 방법 <br>
-              &nbsp;&nbsp;&nbsp; <span>- 모바일 APP - 패스트오더/통합결제 > 결제 단계 > CGV 할인쿠폰 > 쿠폰 선택</span><br>
-              &nbsp;&nbsp;&nbsp; <span>- 오프라인 - 키오스크 > 할인받고 결제 > 쿠폰 선택</span><br>
-              &nbsp;&nbsp;&nbsp; <span>* 키오스크 이용 불가 시 현장 매점에서 CJ ONE 카드 제시</span>
-            </li>     
-            <li class="txt_gray txt_line2  ">
-              사용 극장: 전국 CGV (단, CGV경기광주, 고성, 남주안, 보령, 불광, 성남모란, 안동, 오산중앙, 용인, 이천, 정읍, 주안역, 청라, 청주성안길, 화정 제외)
-            </li>           
-          </ul>
+        <li class="txt_gray txt_line2">
+          포토플레이 무료쿠폰은 설치 극장에 한해 사용 가능합니다
+        </li>
+        <li class="txt_gray txt_line2">
+          모든 쿠폰은 타쿠폰 및 할인 중복이 불가능하며 영화쿠폰은 컬처데이 적용이 불가능합니다
+        </li>
+        <li class="txt_gray txt_line2">
+          특정 특별관 적용을 제외한 모든 영화 쿠폰은 특별관/특별좌석/특별프로그램 적용이 불가능하며 주중 쿠폰의 경우 월~목요일에 사용 가능하며 주말 및 공휴일은 사용이 불가능합니다<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;[모닝(조조)/A,B열 할인 제외/ 3천원 할인쿠폰은 청소년 적용 제외]
+        </li>
+        <li class="txt_gray txt_line2">
+          가입쿠폰, 기념일 쿠폰 이외의 커플링 클럽 이벤트로 진행되는 쿠폰의 경우<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;유효기간 및 제외극장 등 유의사항이 상이하니 해당 쿠폰의 할인 설명을 반드시 확인해주세요<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;(할인 설명 확인방법 > MY CGV > 쿠폰함 > 해당 쿠폰 클릭 > 할인 설명)
         </li>
       </ul>
     </div>

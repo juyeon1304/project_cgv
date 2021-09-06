@@ -598,21 +598,33 @@ vertical-align: middle; }
   position: relative;
   z-index: 2;
   clear: both;
-  margin: 20px 0 0 13px;
-
+  margin: 20px auto;
   padding-top: 20px;
   width: 980px;
-
+  /* border : 1px solid red; */
   background: #222222;
 }
-.club_popup_in{
-  /* border : 1px solid blue; */
-  height: 70px;
-  background: #222222;
+.close_btn{
+  background : url('https://img.cgv.co.kr/R2014/images/sprite/sprite_btn.png') no-repeat -72px -241px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: top;
+  margin-top: 5px;
+  margin-left: 630px;
   
 }
 
-.club_popup_in::before{
+.club_popup_in1{
+  /* border : 1px solid blue; */
+  height: 70px;
+  background: #222222;
+  width: 100%;
+  /* border : 1px solid red; */
+  
+}
+
+.club_popup_in1::before{
   display: block;
     content: '';
     position: absolute;
@@ -623,9 +635,20 @@ vertical-align: middle; }
   background : url('https://img.cgv.co.kr/R2014/images/club/bg_club_benefit_arrow.png') no-repeat 0 0;
 }
 
-.club_title{
-    display: block;
+.club_popup_in2::before{
+  display: block;
+    content: '';
+    position: absolute;
+    left: 722px;
+    top: -18px;
+    width: 33px;
+    height: 18px;
+  background : url('https://img.cgv.co.kr/R2014/images/club/bg_club_benefit_arrow.png') no-repeat 0 0;
+}
 
+.club_title{
+    display: inline-block;
+    margin-bottom: 20px;
     margin-left: 40px;
     font-size: 34px;
     font-weight: 500;
@@ -891,7 +914,7 @@ vertical-align: middle; }
   font-size: 16px;
     font-weight: 500;
     display: inline-block;
-    width: 200px;
+    width: 600px;
     padding-top: 10px;
     height: 30px;
     color: #fff;
@@ -899,12 +922,25 @@ vertical-align: middle; }
     font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
     /* border : 1px solid red; */
 }
+.txt_white1{
+  font-size: 14px;
+    font-weight: 500;
+    width: 800px;
+    color: #fff;
+    font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
+    /* border : 1px solid red; */
+    list-style: inside;
+}
 
 .txt_line1 {
   margin-right: 10px;
 }
 .txt_line2{
   margin-left: 80px;
+}
+.txt_line2_1{
+  margin-left: 80px;
+  margin-top : 10px;
 }
 .benefit_note:after{
   content: '';
@@ -925,10 +961,62 @@ vertical-align: middle; }
 
 }
 .couple_clup{
-  border : 1px solid red; 
-  width: 900px;
-  margin : 20px auto;
+  width: 800px;
+  height: 100px;
+  margin : 40px auto;
 }
+.couple_clup > .couple_box1{
+  float: left;
+  margin-right: 30px;
+ 
+}
+.couple_clup > .couple_box2{
+  float: left;
+  /* border : 1px solid red; */
+}
+.couple_clup > .couple_box3{
+ float: left;
+ margin-top: 10px;
+}
+.couple_clup > .couple_img1{
+  height: 42px;
+  content: '';
+  float : left;
+  width: 55px;
+  margin-top: 5px;
+vertical-align: top;
+background: url('../images/bg_benefit_list_icon7_01.png') no-repeat 0;
+}
+.couple_clup > .couple_img2{
+  height: 42px;
+  content: '';
+  float : left;
+  width: 55px;
+  margin-top: 5px;
+vertical-align: top;
+background: url('../images/bg_benefit_list_icon7_02.png') no-repeat 0;
+}
+.couple_clup > .couple_img3{
+  height: 42px;
+  content: '';
+  clear: both;
+  float: left;
+  width: 55px;
+  margin-top: 10px;
+vertical-align: top;
+background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
+}
+
+.dotte_line:after{
+  content: '';
+  margin: 38px auto;
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #2f2f2f;
+  border-top: 2px dashed #ffffff;
+}
+
 /* =============================================
               club service popup (koic) 끝
 ==================================================*/
