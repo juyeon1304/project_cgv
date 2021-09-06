@@ -78,9 +78,19 @@ table .finder_col01 { border-collapse: collapse; }
 .finder_inside_box .list_sel > li.collage { width: 86%;}
 .finder_inside_box .makenation + td .list_sel li ~ li{ width: auto; margin-right: 28px;}
 .finder_inside_box .wrap_selMovie > select, 
-.finder_inside_box .wrap_selMovie > input { height:display: inline-block; height: 25px; box-sizing:border-box; line-height: 22px; padding-left: 10px; border: 1px solid #b5b5b5; }
+.finder_inside_box .wrap_selMovie > input,
+.finder_inside_box .yeartype + td input
+ { height:display: inline-block; height: 25px; box-sizing:border-box; line-height: 22px; padding-left: 10px; border: 1px solid #b5b5b5; }
 
 
+/* 제작년도 ui*/
+.wrap_range { position:relative; display: inline-block; width:328px; height: 1px; margin: 10px 0; margin-right: 30px; background: #101518 !important; vertical-align: top; border:1px solid #aaa;}
+.wrap_range ul { display: flex; align-items: center; justify-content: space-between; padding: 10px 0 0;}
+.wrap_range ul:after { display: none;}
+.wrap_range ul li { text-align: center;}
+.wrap_range .btn_handle { position: absolute; top: 0; transform: translateY(-50%); width: 22px; height: 22px; background-color: red; background: url(/common/images/sprite/sprite_btn.png) no-repeat 0 -37px ; border-radius: 100%;}
+.yeartype + td .wrap_btn { padding:25px 0 0}
+.yeartype + td .wrap_btn button { background-color:transparent}
 
 
 

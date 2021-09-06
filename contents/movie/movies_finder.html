@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +16,7 @@
   <script src="../../common/js/swiper.js" charset="utf-8"></script>
   <script src="../../common/js/slide.js" charset="utf-8"></script>
   <script src="../../common/js/script.js" charset="utf-8" defer></script>
-  
+
   <link rel="stylesheet" href="./CSS/style.css">
 </head>
 
@@ -127,374 +128,385 @@
   </header>
   <main id="#">
     <!-- <section class="sec_visual"> -->
-      <!-- <div class="wrap_com"> -->
-      <!--  navigation line -->
-      <section class="navigation_li">
-        <div id="navigation_line" class="linemap-wrap">
-          <div class="sect-linemap">
-            <div class="sect-bcrumb">
-              <ul>
-                <li>
-                  <a href="../../index.html"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png" alt="home"></a>
-                </li>
-              </ul>
-            </div>
-            <div class="sect-special">
-              <ul class="clear">
-                <li>
-                  <a href="#" class="viplounge">VIP LOUNGE</a>
-                </li>
-                <li>
-                  <a href="#" title="새창" class="specialclub">Club서비스</a>
-                </li>
-              </ul>
-            </div>
+    <!-- <div class="wrap_com"> -->
+    <!--  navigation line -->
+    <section class="navigation_li">
+      <div id="navigation_line" class="linemap-wrap">
+        <div class="sect-linemap">
+          <div class="sect-bcrumb">
+            <ul>
+              <li>
+                <a href="../../index.html"><img src="https://img.cgv.co.kr/R2014/images/common/btn/btn_home.png"
+                    alt="home"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="sect-special">
+            <ul class="clear">
+              <li>
+                <a href="#" class="viplounge">VIP LOUNGE</a>
+              </li>
+              <li>
+                <a href="#" title="새창" class="specialclub">Club서비스</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </section>
-      <!-- </div> -->
-      
-      <!--  navigation line -->
+      </div>
+    </section>
+    <!-- </div> -->
 
-      <!-- Content Area -->
-      <!-- Movies Finder 시작 --> 
-      <div class="finder_box slide">
-        <div class="contents">
-          <div class="finder_inside_box">
-            <h3> <img src="../../common/images/moviesfinder/h3_finder.png" alt="좋아하는 영화, 찾고싶은 영화를 CGV에서 찾아드립니다!"></h3>
+    <!--  navigation line -->
+
+    <!-- Content Area -->
+    <!-- Movies Finder 시작 -->
+    <div class="finder_box">
+      <div class="contents">
+        <div class="finder_inside_box">
+          <h3> <img src="../../common/images/moviesfinder/h3_finder.png" alt="좋아하는 영화, 찾고싶은 영화를 CGV에서 찾아드립니다!"></h3>
           <form>
             <table>
               <caption>무비파인더 검색 및 조건</caption>
               <colgroup>
-                  <col class="find_col01">
-                  <col>
+                <col class="find_col01">
+                <col>
               </colgroup>
               <tbody>
                 <tr>
-                    <th class="searchtype" scope="row">영화검색</th>
-                    <td class="wrap_selMovie">
-                        <select title="영화검색 목록" id="keyword_type">
-                            <option value="0" selected="">전체</option>
-                            <option value="1">영화제목</option>
-                            <option value="2">주연배우</option>
-                            <option value="3">감독</option>
-                        </select>
-                        <input type="text" title="영화검색 키워드입력" id="keyword" minlength="2" maxlength="20" style="width:410px;" placeholder="키워드를 입력해 주세요" value="">
-                    </td>
+                  <th class="searchtype" scope="row">영화검색</th>
+                  <td class="wrap_selMovie">
+                    <select title="영화검색 목록" id="keyword_type">
+                      <option value="0" selected="">전체</option>
+                      <option value="1">영화제목</option>
+                      <option value="2">주연배우</option>
+                      <option value="3">감독</option>
+                    </select>
+                    <input type="text" title="영화검색 키워드입력" id="keyword" minlength="2" maxlength="20" style="width:410px;"
+                      placeholder="키워드를 입력해 주세요" value="">
+                  </td>
                 </tr>
                 <tr>
-                    <th class="genretype" scope="row">장르</th>
-                    <td>
-                        <ul class="list_sel clear">
-                            <li>
-                              <input type="checkbox" id="all_genre" name="all-genre" value="all">
-                              <label for="all_genre">전체</label>
-                            </li>
-                            <li class="collage">
-                              <input type="checkbox" name="art_genre" id="art_genre" value="1">
-                              <label for="art_genre">아트하우스</label>
-                            </li>
+                  <th class="genretype" scope="row">장르</th>
+                  <td>
+                    <ul class="list_sel clear">
+                      <li>
+                        <input type="checkbox" id="all_genre" name="all-genre" value="all">
+                        <label for="all_genre">전체</label>
+                      </li>
+                      <li class="collage">
+                        <input type="checkbox" name="art_genre" id="art_genre" value="1">
+                        <label for="art_genre">아트하우스</label>
+                      </li>
 
-                            <li><input type="checkbox" id="genre1" name="genre" value="1">
-                              <label for="genre1">가족</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre2" name="genre" value="2">
-                              <label for="genre2">공포/호러</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre3" name="genre" value="3">
-                              <label for="genre3">드라마</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre4" name="genre" value="4">
-                              <label for="genre4">SF</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre5" name="genre" value="5">
-                              <label for="genre5">멜로/로맨스</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre6" name="genre" value="6">
-                              <label for="genre6">코미디</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre7" name="genre" value="7">
-                              <label for="genre7">애니메이션</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre8" name="genre" value="8">
-                              <label for="genre8">느와르</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre9" name="genre" value="9">
-                              <label for="genre9">단편</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre10" name="genre" value="10">
-                              <label for="genre10">다큐멘터리</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre11" name="genre" value="11">
-                              <label for="genre11">로드무비</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre12" name="genre" value="12">
-                              <label for="genre12">무협</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre13" name="genre" value="13">
-                              <label for="genre13">뮤지컬</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre14" name="genre" value="14">
-                              <label for="genre14">뮤직</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre15" name="genre" value="15">
-                              <label for="genre15">미스터리</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre16" name="genre" value="16">
-                              <label for="genre16">범죄</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre17" name="genre" value="17">
-                              <label for="genre17">옴니버스</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre18" name="genre" value="18">
-                              <label for="genre18">서부</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre17" name="genre" value="17">
-                              <label for="genre17">스릴러</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre19" name="genre" value="19">
-                              <label for="genre19">스포츠</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre20" name="genre" value="20">
-                              <label for="genre20">시대극/사극</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre21" name="genre" value="21">
-                              <label for="genre21">아동</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre22" name="genre" value="22">
-                              <label for="genre22">액션</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre23" name="genre" value="723">
-                              <label for="genre723">어드벤처</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre24" name="genre" value="24">
-                              <label for="genre24">역사</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre25" name="genre" value="25">
-                              <label for="genre25">전기</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre26" name="genre" value="26">
-                              <label for="genre26">전쟁</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre27" name="genre" value="27">
-                              <label for="genre27">종교</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre28" name="genre" value="28">
-                              <label for="genre28">재난</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre29" name="genre" value="29">
-                              <label for="genre29">청춘영화</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre30" name="genre" value="30">
-                              <label for="genre30">퀴어</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre31" name="genre" value="31">
-                              <label for="genre31">환타지</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre32" name="genre" value="32">
-                              <label for="genre32">학원물</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre33" name="genre" value="33">
-                              <label for="genre33">에로</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="genre34" name="genre" value="34">
-                              <label for="genre34">없음</label>
-                            </li>
-                            
-                        </ul>
-                    </td>
+                      <li><input type="checkbox" id="genre1" name="genre" value="1">
+                        <label for="genre1">가족</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre2" name="genre" value="2">
+                        <label for="genre2">공포/호러</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre3" name="genre" value="3">
+                        <label for="genre3">드라마</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre4" name="genre" value="4">
+                        <label for="genre4">SF</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre5" name="genre" value="5">
+                        <label for="genre5">멜로/로맨스</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre6" name="genre" value="6">
+                        <label for="genre6">코미디</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre7" name="genre" value="7">
+                        <label for="genre7">애니메이션</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre8" name="genre" value="8">
+                        <label for="genre8">느와르</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre9" name="genre" value="9">
+                        <label for="genre9">단편</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre10" name="genre" value="10">
+                        <label for="genre10">다큐멘터리</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre11" name="genre" value="11">
+                        <label for="genre11">로드무비</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre12" name="genre" value="12">
+                        <label for="genre12">무협</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre13" name="genre" value="13">
+                        <label for="genre13">뮤지컬</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre14" name="genre" value="14">
+                        <label for="genre14">뮤직</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre15" name="genre" value="15">
+                        <label for="genre15">미스터리</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre16" name="genre" value="16">
+                        <label for="genre16">범죄</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre17" name="genre" value="17">
+                        <label for="genre17">옴니버스</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre18" name="genre" value="18">
+                        <label for="genre18">서부</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre17" name="genre" value="17">
+                        <label for="genre17">스릴러</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre19" name="genre" value="19">
+                        <label for="genre19">스포츠</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre20" name="genre" value="20">
+                        <label for="genre20">시대극/사극</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre21" name="genre" value="21">
+                        <label for="genre21">아동</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre22" name="genre" value="22">
+                        <label for="genre22">액션</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre23" name="genre" value="723">
+                        <label for="genre723">어드벤처</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre24" name="genre" value="24">
+                        <label for="genre24">역사</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre25" name="genre" value="25">
+                        <label for="genre25">전기</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre26" name="genre" value="26">
+                        <label for="genre26">전쟁</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre27" name="genre" value="27">
+                        <label for="genre27">종교</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre28" name="genre" value="28">
+                        <label for="genre28">재난</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre29" name="genre" value="29">
+                        <label for="genre29">청춘영화</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre30" name="genre" value="30">
+                        <label for="genre30">퀴어</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre31" name="genre" value="31">
+                        <label for="genre31">환타지</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre32" name="genre" value="32">
+                        <label for="genre32">학원물</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre33" name="genre" value="33">
+                        <label for="genre33">에로</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="genre34" name="genre" value="34">
+                        <label for="genre34">없음</label>
+                      </li>
+
+                    </ul>
+                  </td>
                 </tr>
                 <tr>
-                    <th class="makenation" scope="row">제작국가</th>
-                    <td>
-                        <ul class="list_sel">
-                            <li>
-                              <input type="checkbox" name="all-national-code" id="all_national_code">
-                              <label for="all_national_code">전체</label>
-                            </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_101" name="national-code" value="101">
-                                  <label for="national_code_101">한국</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_102" name="national-code" value="102">
-                                  <label for="national_code_102">미국</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_103" name="national-code" value="103">
-                                  <label for="national_code_103">일본</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_104" name="national-code" value="104">
-                                  <label for="national_code_104">중국</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_105" name="national-code" value="105">
-                                  <label for="national_code_105">홍콩</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_106" name="national-code" value="106">
-                                  <label for="national_code_106">프랑스</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_107" name="national-code" value="107">
-                                  <label for="national_code_107">영국</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_108" name="national-code" value="108">
-                                  <label for="national_code_108">독일</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_109" name="national-code" value="109">
-                                  <label for="national_code_109">인도</label>
-                                </li>
-                            
-                                <li>
-                                  <input type="checkbox" id="national_code_110" name="national-code" value="110">
-                                  <label for="national_code_110">기타</label>
-                                </li>
-                            
-                        </ul>
-                    </td>
+                  <th class="makenation" scope="row">제작국가</th>
+                  <td>
+                    <ul class="list_sel">
+                      <li>
+                        <input type="checkbox" name="all-national-code" id="all_national_code">
+                        <label for="all_national_code">전체</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_101" name="national-code" value="101">
+                        <label for="national_code_101">한국</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_102" name="national-code" value="102">
+                        <label for="national_code_102">미국</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_103" name="national-code" value="103">
+                        <label for="national_code_103">일본</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_104" name="national-code" value="104">
+                        <label for="national_code_104">중국</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_105" name="national-code" value="105">
+                        <label for="national_code_105">홍콩</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_106" name="national-code" value="106">
+                        <label for="national_code_106">프랑스</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_107" name="national-code" value="107">
+                        <label for="national_code_107">영국</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_108" name="national-code" value="108">
+                        <label for="national_code_108">독일</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_109" name="national-code" value="109">
+                        <label for="national_code_109">인도</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="national_code_110" name="national-code" value="110">
+                        <label for="national_code_110">기타</label>
+                      </li>
+
+                    </ul>
+                  </td>
                 </tr>
                 <tr>
-                    <th class="gradetype" scope="row">관람등급</th>
-                    <td>
-                        <ul class="list_sel">
-                            <li>
-                              <input type="checkbox" id="all_grade" name="all-grade" value="201">
-                              <label for="all_grade">전체</label>
-                            </li>
-                            
-                            <li>
-                              <input type="checkbox" id="grade202" name="grade" value="202">
-                              <label for="grade202">전체관람가</label>
-                            </li>
-                        
-                            <li>
-                              <input type="checkbox" id="grade203" name="grade" value="203">
-                              <label for="grade203">12세 관람가</label>
-                            </li>
-                        
-                            <li>
-                              <input type="checkbox" id="grade204" name="grade" value="204">
-                              <label for="grade204">15세 관람가</label>
-                            </li>
-                        
-                            <li>
-                              <input type="checkbox" id="grade205" name="grade" value="205">
-                              <label for="grade205">청소년 관람불가</label>
-                            </li>
-                        
-                            <li>
-                              <input type="checkbox" id="grade206" name="grade" value="206">
-                              <label for="grade206">미정</label>
-                            </li>
-                            
-                        </ul>
-                    </td>
+                  <th class="gradetype" scope="row">관람등급</th>
+                  <td>
+                    <ul class="list_sel">
+                      <li>
+                        <input type="checkbox" id="all_grade" name="all-grade" value="201">
+                        <label for="all_grade">전체</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="grade202" name="grade" value="202">
+                        <label for="grade202">전체관람가</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="grade203" name="grade" value="203">
+                        <label for="grade203">12세 관람가</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="grade204" name="grade" value="204">
+                        <label for="grade204">15세 관람가</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="grade205" name="grade" value="205">
+                        <label for="grade205">청소년 관람불가</label>
+                      </li>
+
+                      <li>
+                        <input type="checkbox" id="grade206" name="grade" value="206">
+                        <label for="grade206">미정</label>
+                      </li>
+
+                    </ul>
+                  </td>
                 </tr>
                 <tr>
-                    <th class="yeartype" scope="row">
-                      <label for="">제작년도</label>
-                    </th>
-                    <td>
-                        <div class="slider-range ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="slider-range" aria-disabled="false">
-                            <ul>
-                                <li></li>
-                                <li>1960</li>
-                                <li>1970</li>
-                                <li>1980</li>
-                                <li>1990</li>
-                                <li>2000</li>
-                                <li>2010</li>
-                                <li>2020</li>
-                                <li></li>
-                            </ul>
-                        <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 12.5%; width: 75%;">
-                        </div>
-                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" title="좌,우 키보드 조절가능" style="left: 12.5%;">시작년도</a>
-                        <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" title="좌,우 키보드 조절가능" style="left: 87.5%;">종료년도</a></div>
-                        <input type="text" id="year_start" style="width:118px;" value="1960" maxlength="4" placeholder="시작년도 입력해주세요." title="시작년도 입력해주세요." number="number"> - 
-                        <input type="text" id="year_end" style="width:118px;" value="2020" maxlength="4" placeholder="시작년도 입력해주세요." title="시작년도 입력해주세요." number="number">  년
-                    </td>
+                  <th class="yeartype" scope="row">
+                    <label for="">제작년도</label>
+                  </th>
+                  <td>
+                  <div class="wrap_range">
+                      <ul class="">
+                        <li></li>
+                        <li>1960</li>
+                        <li>1970</li>
+                        <li>1980</li>
+                        <li>1990</li>
+                        <li>2000</li>
+                        <li>2010</li>
+                        <li>2020</li>
+                        <li></li>
+                      </ul>
+                      <div class="" style="left: 12.5%; width: 75%;">
+                      </div>
+                      <a class="btn_handle" href="#" title="좌,우 키보드 조절가능"
+                        style="left: 12.5%;"><span class="hide">시작년도</span></a>
+                      <a class="btn_handle" href="#" title="좌,우 키보드 조절가능"
+                        style="left: 87.5%;"><span class="hide">종료년도</span></a>
+                    </div>
+                    <input type="text" id="year_start" style="width:118px;" value="1960" maxlength="4"
+                      placeholder="시작년도 입력해주세요." title="시작년도 입력해주세요." number="number"> -
+                    <input type="text" id="year_end" style="width:118px;" value="2020" maxlength="4"
+                      placeholder="시작년도 입력해주세요." title="시작년도 입력해주세요." number="number"> 년
+                      <div class="wrap_btn">
+                        <button class="round inred"><span>검색</span></button>
+                        <button class="round red"><span>초기화</span></button>
+                      </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -502,649 +514,680 @@
         </div>
       </div>
       <!-- Movies Finder 끝 -->
-      </div>
-        <div id="centents">
-          <div class="wrap-movie-chart">
-            <!-- Heading Map -->
-            <div class="tit-heading-wrap">
-              <h3>무비차트</h3>
-              <div class="submenu">
-                <ul>
-                  <li class="on">
-                    <a href="#" title="선택">무비차트</a>
-                  </li>
-                  <li>
-                    <a href="./pre-movies.html">상영예정작</a>
-                  </li>
-                  <li>
-                    <a href="./movies.html">CGV아트하우스</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- // Heading Map -->
-            <!-- sorting -->
-              <div class="sect-sorting">
-                <div class="nowshow">
-                  <input type="checkbox" id="chk_nowshow" title="현재 선택됨" checked=""><label for="chk_nowshow">현재 상영작만 보기</label>
-                </div>
-                <label for="order_type" class="hidden">정렬</label>
-                <select id="order_type" name="order-type">
-                  <option title="현재 선택됨" selected="" value="1">예매율순</option>
-                  <option value="2">평점순</option>
-                  <option value="3">관람객순</option>
-                </select>
-                <button type="button" class="round gray"><span>GO</span></button>
-              </div>
-            <!-- // sorting -->
-            <!-- //////////////////// -->
-            <div class="sect-movie-chart">
-              <h4 class="hidden">
-                  무비차트 - 예매율순
-              </h4>
-              <ol>
-                  <li>
-                      <div class="box-image">
-                          <strong class="rank">No.1</strong>	
-                          <a href="/movies/detail-view/?midx=82986">
-                              <span class="thumb-image">
-                                  <img src="./Poster/82986_320.jpg" alt="블랙 위도우 포스터" onerror="errorImage(this)">
-                                  <span class="ico-grade grade-12">12세 이상</span>
-                              </span>
-                              <strong class="no1">1위</strong>
-                          </a>
-                          <span class="screentype">
-                                  <a class="imax" href="#" title="IMAX 상세정보 바로가기" data-regioncode="07">IMAX</a>
-                                  <a class="forDX" href="#" title="4DX 상세정보 바로가기" data-regioncode="4D14">4DX</a>
-                                  <a class="screenx" href="#" title="SCREENX 상세정보 바로가기" data-regioncode="SCX">SCREENX</a>
-                          </span>
-                      </div>
-                      
-                      <div class="box-contents">
-                          <a href="/movies/detail-view/?midx=82986">
-                              <strong class="title">블랙 위도우</strong>
-                          </a>
-  
-                          <div class="score">
-                              <strong class="percent">예매율<span>81.7%</span></strong>
-                              <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
-                              <div class="egg-gage small">
-                                              <span class="egg great"></span>
-                                              <span class="percent">96%</span>
-                                          </div>
-                          </div>
-  
-                          <span class="txt-info">
-                              <strong>
-                                  2021.07.07 
-                                  <span>개봉</span>
-                                  
-                              </strong>
-                          </span>
-                          <span class="like"> 
-                              <a class="link-reservation" href="/ticket/?MOVIE_CD=20022180&amp;MOVIE_CD_GROUP=20022180"><p>예매</p></a>
-                          </span>
-                      </div>    
-                  </li>
-              
-                  <li>
-                      <div class="box-image">
-                          <strong class="rank">No.2</strong>	
-                          <a href="/movies/detail-view/?midx=84643">
-                              <span class="thumb-image">
-                                  <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84643/84643_320.jpg" alt="크루엘라 포스터" onerror="errorImage(this)">
-                                  <span class="ico-grade grade-12">12세 이상</span>
-                              </span>
-                              
-                          </a>
-                          <span class="screentype">
-                              
-                          </span>
-                      </div>
-                      
-                      <div class="box-contents">
-                          <a href="/movies/detail-view/?midx=84643">
-                              <strong class="title">크루엘라</strong>
-                          </a>
-  
-                          <div class="score">
-                              <strong class="percent">예매율<span>2.4%</span></strong>
-                              <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
-                              <div class="egg-gage small">
-                                              <span class="egg great"></span>
-                                              <span class="percent">98%</span>
-                                          </div>
-                          </div>
-  
-                          <span class="txt-info">
-                              <strong>
-                                  2021.05.26 
-                                  <span>개봉</span>
-                                  
-                              </strong>
-                          </span>
-                          <span class="like"> 
-                              <a class="link-reservation" href="/ticket/?MOVIE_CD=20026808&amp;MOVIE_CD_GROUP=20026808"><p>예매</p></a>
-                          </span>
-                      </div>    
-                  </li>
-              
-                  <li>
-                      <div class="box-image">
-                          <strong class="rank">No.3</strong>	
-                          <a href="/movies/detail-view/?midx=84686">
-                              <span class="thumb-image">
-                                  <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84686/84686_320.jpg" alt="발신제한 포스터" onerror="errorImage(this)">
-                                  <span class="ico-grade grade-15">15세 이상</span>
-                              </span>
-                              
-                          </a>
-                          <span class="screentype">
-                              
-                          </span>
-                      </div>
-                      
-                      <div class="box-contents">
-                          <a href="/movies/detail-view/?midx=84686">
-                              <strong class="title">발신제한</strong>
-                          </a>
-  
-                          <div class="score">
-                              <strong class="percent">예매율<span>1.3%</span></strong>
-                              <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
-                              <div class="egg-gage small">
-                                              <span class="egg great"></span>
-                                              <span class="percent">88%</span>
-                                          </div>
-                          </div>
-  
-                          <span class="txt-info">
-                              <strong>
-                                  2021.06.23 
-                                  <span>개봉</span>
-                                  
-                              </strong>
-                          </span>
-                          <span class="like"> 
-                              <a class="link-reservation" href="/ticket/?MOVIE_CD=20026922&amp;MOVIE_CD_GROUP=20026922"><p>예매</p></a>
-                          </span>
-                      </div>    
-                  </li>
-              
-              </ol>
-  
-              <ol>
-              
-                  <li>
-                      <div class="box-image">
-                          <strong class="rank">No.4</strong>	
-                          <a href="/movies/detail-view/?midx=84727">
-                              <span class="thumb-image">
-                                  <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84727/84727_320.jpg" alt="괴기맨숀 포스터" onerror="errorImage(this)">
-                                  <span class="ico-grade grade-15">15세 이상</span>
-                              </span>
-                          </a>
-                          <span class="screentype">
-                              
-                          </span>
-                      </div>
-                      
-                      <div class="box-contents">
-                          <a href="/movies/detail-view/?midx=84727">
-                              <strong class="title">괴기맨숀</strong>
-                          </a>
-  
-                          <div class="score">
-                              <strong class="percent">예매율<span>0.7%</span></strong>
-                              <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
-                              <div class="egg-gage small">
-                                              <span class="egg good"></span>
-                                              <span class="percent">83%</span>
-                                          </div>
-                          </div>
-  
-                          <span class="txt-info">
-                              <strong>
-                                  2021.06.30 
-                                  <span>개봉</span>
-                                  
-                              </strong>
-                          </span>
-                          <span class="like"> 
-                              <a class="link-reservation" href="/ticket/?MOVIE_CD=20027037&amp;MOVIE_CD_GROUP=20027037"><p>예매</p></a>
-                          </span>
-                      </div>    
-                  </li>
-              
-                  <li>
-                      <div class="box-image">
-                          <strong class="rank">No.5</strong>	
-                          <a href="/movies/detail-view/?midx=84644">
-                              <span class="thumb-image">
-                                  <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84644/84644_320.jpg" alt="루카 포스터" onerror="errorImage(this)">
-                                  <span class="ico-grade grade-all">전체</span>
-                              </span>
-                          </a>
-                          <span class="screentype">
-                              
-                          </span>
-                      </div>
-                      
-                      <div class="box-contents">
-                          <a href="/movies/detail-view/?midx=84644">
-                              <strong class="title">루카</strong>
-                          </a>
-  
-                          <div class="score">
-                              <strong class="percent">예매율<span>0.6%</span></strong>
-                              <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
-                              <div class="egg-gage small">
-                                              <span class="egg great"></span>
-                                              <span class="percent">97%</span>
-                                          </div>
-                          </div>
-  
-                          <span class="txt-info">
-                              <strong>
-                                  2021.06.17 
-                                  <span>개봉</span>
-                                  
-                              </strong>
-                          </span>
-                          <span class="like"> 
-                              <a class="link-reservation" href="/ticket/?MOVIE_CD=20026810&amp;MOVIE_CD_GROUP=20026810"><p>예매</p></a>
-                          </span>
-                      </div>    
-                  </li>
-              
-                  <li>
-                      <div class="box-image">
-                          <strong class="rank">No.6</strong>	
-                          <a href="/movies/detail-view/?midx=83078">
-                              <span class="thumb-image">
-                                  <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83078/83078_320.jpg" alt="콰이어트 플레이스 2 포스터" onerror="errorImage(this)">
-                                  <span class="ico-grade grade-15">15세 이상</span>
-                              </span>
-                          </a>
-                          <span class="screentype">
-                              
-                          </span>
-                      </div>
-                      
-                      <div class="box-contents">
-                          <a href="/movies/detail-view/?midx=83078">
-                              <strong class="title">콰이어트 플레이스 2</strong>
-                          </a>
-  
-                          <div class="score">
-                              <strong class="percent">예매율<span>0.6%</span></strong>
-                              <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
-                              <div class="egg-gage small">
-                                              <span class="egg great"></span>
-                                              <span class="percent">95%</span>
-                                          </div>
-                          </div>
-  
-                          <span class="txt-info">
-                              <strong>
-                                  2021.06.16 
-                                  <span>개봉</span>
-                                  
-                              </strong>
-                          </span>
-                          <span class="like"> 
-                              <a class="link-reservation" href="/ticket/?MOVIE_CD=20022487&amp;MOVIE_CD_GROUP=20022487"><p>예매</p></a>
-                          </span>
-                      </div>    
-                  </li>
-              
-                  <li>
-                      <div class="box-image">
-                          <strong class="rank">No.7</strong>	
-                          <a href="/movies/detail-view/?midx=84647">
-                              <span class="thumb-image">
-                                  <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84647/84647_320.jpg" alt="킬러의 보디가드2 포스터" onerror="errorImage(this)">
-                                  <span class="ico-grade grade-19">청소년 관람불가</span>
-                              </span>
-                          </a>
-                          <span class="screentype">
-                              
-                          </span>
-                      </div>
-                      
-                      <div class="box-contents">
-                          <a href="/movies/detail-view/?midx=84647">
-                              <strong class="title">킬러의 보디가드2</strong>
-                          </a>
-  
-                          <div class="score">
-                              <strong class="percent">예매율<span>0.2%</span></strong>
-                              <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
-                              <div class="egg-gage small">
-                                              <span class="egg great"></span>
-                                              <span class="percent">87%</span>
-                                          </div>
-                          </div>
-  
-                          <span class="txt-info">
-                              <strong>
-                                  2021.06.23 
-                                  <span>개봉</span>
-                                  
-                              </strong>
-                          </span>
-                          <span class="like"> 
-                              <a class="link-reservation" href="/ticket/?MOVIE_CD=20026813&amp;MOVIE_CD_GROUP=20026813"><p>예매</p></a>
-                          </span>
-                      </div>    
-                  </li>
-              
-              </ol>
-              
-              <button class="btn-more-fontbold">더보기 <i class="link-more">더보기</i></button>
-              
-  
-              <ol id="movie_more_container" style="display:none" class="list-more">
-                  <li></li>
-              </ol>
-              <!-- 광고 AD -->
-              <div class="">
-                  <div class="box-com">                    
-                      <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Movie_Chart" width="160" height="300" frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0" id="Movie_Chart" name="Movie_Chart" title="기업광고 -NICE지키미"></iframe>
-                  </div>                
-                  <div class="chart_ad_desc">
-                      <dl>
-                          <dt>
-                              <img src="http://img.cgv.co.kr/R2014/images/ad/ico_ad1.png" alt="ad">
-                              <span id="ad_txt1">NICE지키미</span>
-                          </dt>
-                          <dd>
-                              <span id="ad_txt2">재테크의 시작은 신용관리!</span>
-                          </dd>
-                      </dl>
-                  </div>
-              </div>
-              
+    </div>
+    <div id="centents">
+      <div class="wrap-movie-chart">
+        <!-- Heading Map -->
+        <div class="tit-heading-wrap">
+          <h3>무비차트</h3>
+          <div class="submenu">
+            <ul>
+              <li class="on">
+                <a href="#" title="선택">무비차트</a>
+              </li>
+              <li>
+                <a href="./pre-movies.html">상영예정작</a>
+              </li>
+              <li>
+                <a href="./movies.html">CGV아트하우스</a>
+              </li>
+            </ul>
           </div>
-          <!-- ///////////////// -->
-          </div>
-          <!-- .sect-moviechart -->
-          <script type="text/javascript">
-            //<![CDATA[
-                (function ($) {
-                    $(function () {
-            
-                        $('.sect-sorting button').click(function () {
-                            var val = $('#order_type').val();
-                            if (val) {
-                                location.href = "/movies/?lt=1&ot=" + val;
-                            }
-                        });
-                        //[2015-12-15] 무비 파인더 페이지 인 경우 정렬 버튼 처리. : add_mwpark
-                        $("#sect-finder button").click(function(){
-                            var val = $('#order_type').val();
-                            if (val) {
-                                location.href = "/movies/finder.aspx?lt=1&ot=" + val;
-                            }
-                        });
-            
-            
-                        $('#chk_nowshow').click(function () {
-                            if ($("input:checkbox[id='chk_nowshow']").is(":checked")) {
-                                location.href = "/movies/?lt=1&ft=1";
-                            }
-                            else{
-                                location.href = "/movies/?lt=1&ft=0";
-                            }
-                        });
-            
-                        //[2015-12-15] 무비 파인더 페이지 인 경우 현재 상영작만 보기 체크 박스 처리. : add_mwpark
-                        $("#chk_finder_nowshow").on("click" , function(){
-                            if ($("input:checkbox[id='chk_nowshow']").is(":checked")) {
-                                location.href = "/movies/finder.aspx?lt=1&ft=1";
-                            }else{
-                                location.href = "/movies/finder.aspx?lt=1&ft=0";
-                            }
-                        });
-            
-                    });
-            
-                })(jQuery);
-            //]]>
-            </script>
-            <!-- 광고 배너 -->
-            <div class="chart-ad-bottom">
-              <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@SponsorBar_980" width="980" height="90" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="SponsorBar_980" id="SponsorBar_980"></iframe>
-            </div>
-             <!-- // 광고 배너 -->
-          <div class="cols-rank">
-            <div class="col-rank-trailer">
-                <h3>인기 트레일러</h3>
-                <div class="sect-popular-trailer">
-                    <div id="ctl00_PlaceHolderContent_ucListFooter_wrap_info_trailer" class="wrap-info-trailer">
-                        <!-- 트레일러 이미지 -->
-                        <div class="box-image trailer">
-                            <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174953">
-                                <span class="thumb-image">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82175/82175174953_1024.jpg" alt="[캣츠]No.1 퍼포먼스 영상">
-                                    <span class="ico-play">영상보기</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="box-image">
-                            <a href="/movies/detail-view/?midx=82175">
-                                <span class="thumb-image">
-                                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000082/82175/82175_185.jpg" alt="[캣츠]No.1 퍼포먼스 영상">
-                                    <span class="ico-grade grade-12">12세 이상</span>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="box-contents">
-                            <a href="/movies/detail-view/?midx=82175">
-                                <strong class="title">캣츠</strong>
-                            </a>
-                            <span class="txt-info">
-                                <em class="genre">뮤지컬,&nbsp;드라마</em>
-                                <span>
-                                    <i>2019.12.24</i>
-                                    <strong>개봉</strong>
-                                </span>
-                            </span>
-                            <span class="screentype">
-                            </span>
-                        </div>
-                    </div>
-                    <ul>             
-                        <li>
-                            <div class="box-image">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175009">
-                                    <span class="thumb-image">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82866/82866175009_1024.jpg" alt="[카운트다운]장르파괴 영상" style="width:126px;height:71px;">
-                                        <span class="ico-play">영상보기</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="box-contents">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175009">
-                                    <strong class="title">카운트다운</strong>
-                                </a>
-                                <span class="txt-info">
-                                <em class="genre">호러,&nbsp;스릴러</em>
-                                <span>
-                                    <i>2019.12.12</i>
-                                    <strong>개봉</strong>
-                                    
-                                </span>
-                            </span>
-                            </div>
-                        </li>
-                    
-                        <li>
-                            <div class="box-image">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175008">
-                                    <span class="thumb-image">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82962/82962175008_1024.jpg" alt="[영화로운 나날]30초 예고편" style="width:126px;height:71px;">
-                                        <span class="ico-play">영상보기</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="box-contents">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175008">
-                                    <strong class="title">영화로운 나날</strong>
-                                </a>
-                                <span class="txt-info">
-                                <em class="genre">로맨스,&nbsp;환타지,&nbsp;드라마,&nbsp;멜로</em>
-                                <span>
-                                    <i>2019.12.12</i>
-                                    <strong>개봉</strong>
-                                    
-                                </span>
-                            </span>
-                            </div>
-                        </li>
-                    
-                        <li>
-                            <div class="box-image">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174984">
-                                    <span class="thumb-image">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82640/82640174984_1024.jpg" alt="[러브 앳]홍쓴 부부 GV 현장 메이킹 영상" style="width:126px;height:71px;">
-                                        <span class="ico-play">영상보기</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="box-contents">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174984">
-                                    <strong class="title">러브 앳</strong>
-                                </a>
-                                <span class="txt-info">
-                                <em class="genre">로맨스,&nbsp;코미디,&nbsp;멜로</em>
-                                <span>
-                                    <i>2019.11.27</i>
-                                    <strong>개봉</strong>
-
-                                </span>
-                            </span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="box-image">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174983">
-                                    <span class="thumb-image">
-                                        <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82961/82961174983_1024.jpg" alt="[월성]메인 예고편" style="width:126px;height:71px;">
-                                        <span class="ico-play">영상보기</span>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="box-contents">
-                                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174983">
-                                    <strong class="title">월성</strong>
-                                </a>
-                                <span class="txt-info">
-                                <em class="genre">다큐멘터리</em>
-                                <span>
-                                    <i>2019.12.12</i>
-                                    <strong>개봉</strong>
-                                    
-                                </span>
-                            </span>
-                            </div>
-                        </li>
-                    
-                    </ul>
-                </div><!-- .sect-popular-trailer -->
-            </div><!-- .col-rank-trailer -->
-            <div class="col-rank-search">
-                <div class="searchrank">
-                    <h3>실시간 인기 검색어</h3>
-                    <ol>
-                    
-                        <li>
-                            <a href="/search/?query=%eb%b6%80%ed%99%9c">1. <strong>부활</strong></a>
-                            <em>
-                                
-                                <span class="new">NEW</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%ea%b0%95%ec%b2%a0%eb%b9%842+%ec%a0%95%ec%83%81%ed%9a%8c%eb%8b%b4">2. <strong>강철비2 정상회담</strong></a>
-                            <em>
-                                
-                                <span class="new">NEW</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%eb%b0%98%eb%8f%84">3. <strong>반도</strong></a>
-                            <em>
-                                
-                                <span class="new">NEW</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%ec%82%b4%ec%95%84%ec%9e%88%eb%8b%a4">4. <strong>살아있다</strong></a>
-                            <em>
-                                
-                                <span class="new">NEW</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%ec%bd%94%eb%82%9c">5. <strong>코난</strong></a>
-                            <em>
-                                3
-                                <span class="up">상승</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%ec%95%8c%eb%9d%bc%eb%94%98">6. <strong>알라딘</strong></a>
-                            <em>
-                                1
-                                <span class="down">하락</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%ed%8c%ac%eb%8d%b0%eb%af%b9">7. <strong>팬데믹</strong></a>
-                            <em>
-                                
-                                <span class="new">NEW</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%ed%95%b4%eb%a6%ac%ed%8f%ac%ed%84%b0">8. <strong>해리포터</strong></a>
-                            <em>
-                                2
-                                <span class="down">하락</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%eb%b1%85%eb%93%9c%eb%a6%bc">9. <strong>뱅드림</strong></a>
-                            <em>
-                                
-                                <span class="new">NEW</span>
-                            </em>
-                        </li>
-                    
-                        <li>
-                            <a href="/search/?query=%eb%aa%85%ed%83%90%ec%a0%95%ec%bd%94%eb%82%9c">10. <strong>명탐정코난</strong></a>
-                            <em>
-                                302
-                                <span class="up">상승</span>
-                            </em>
-                        </li>
-                    
-                    </ol>
-                    <p class="date">2020.07.26기준</p>
-                </div>
-            </div>
         </div>
-        <script id="temp_movie" type="text/x-jquery-tmpl">
-          <li>
+        <!-- // Heading Map -->
+        <!-- sorting -->
+        <div class="sect-sorting">
+          <div class="nowshow">
+            <input type="checkbox" id="chk_nowshow" title="현재 선택됨" checked=""><label for="chk_nowshow">현재 상영작만
+              보기</label>
+          </div>
+          <label for="order_type" class="hidden">정렬</label>
+          <select id="order_type" name="order-type">
+            <option title="현재 선택됨" selected="" value="1">예매율순</option>
+            <option value="2">평점순</option>
+            <option value="3">관람객순</option>
+          </select>
+          <button type="button" class="round gray"><span>GO</span></button>
+        </div>
+        <!-- // sorting -->
+        <!-- //////////////////// -->
+        <div class="sect-movie-chart">
+          <h4 class="hidden">
+            무비차트 - 예매율순
+          </h4>
+          <ol>
+            <li>
+              <div class="box-image">
+                <strong class="rank">No.1</strong>
+                <a href="/movies/detail-view/?midx=82986">
+                  <span class="thumb-image">
+                    <img src="./Poster/82986_320.jpg" alt="블랙 위도우 포스터" onerror="errorImage(this)">
+                    <span class="ico-grade grade-12">12세 이상</span>
+                  </span>
+                  <strong class="no1">1위</strong>
+                </a>
+                <span class="screentype">
+                  <a class="imax" href="#" title="IMAX 상세정보 바로가기" data-regioncode="07">IMAX</a>
+                  <a class="forDX" href="#" title="4DX 상세정보 바로가기" data-regioncode="4D14">4DX</a>
+                  <a class="screenx" href="#" title="SCREENX 상세정보 바로가기" data-regioncode="SCX">SCREENX</a>
+                </span>
+              </div>
+
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=82986">
+                  <strong class="title">블랙 위도우</strong>
+                </a>
+
+                <div class="score">
+                  <strong class="percent">예매율<span>81.7%</span></strong>
+                  <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
+                  <div class="egg-gage small">
+                    <span class="egg great"></span>
+                    <span class="percent">96%</span>
+                  </div>
+                </div>
+
+                <span class="txt-info">
+                  <strong>
+                    2021.07.07
+                    <span>개봉</span>
+
+                  </strong>
+                </span>
+                <span class="like">
+                  <a class="link-reservation" href="/ticket/?MOVIE_CD=20022180&amp;MOVIE_CD_GROUP=20022180">
+                    <p>예매</p>
+                  </a>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="box-image">
+                <strong class="rank">No.2</strong>
+                <a href="/movies/detail-view/?midx=84643">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84643/84643_320.jpg" alt="크루엘라 포스터"
+                      onerror="errorImage(this)">
+                    <span class="ico-grade grade-12">12세 이상</span>
+                  </span>
+
+                </a>
+                <span class="screentype">
+
+                </span>
+              </div>
+
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=84643">
+                  <strong class="title">크루엘라</strong>
+                </a>
+
+                <div class="score">
+                  <strong class="percent">예매율<span>2.4%</span></strong>
+                  <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
+                  <div class="egg-gage small">
+                    <span class="egg great"></span>
+                    <span class="percent">98%</span>
+                  </div>
+                </div>
+
+                <span class="txt-info">
+                  <strong>
+                    2021.05.26
+                    <span>개봉</span>
+
+                  </strong>
+                </span>
+                <span class="like">
+                  <a class="link-reservation" href="/ticket/?MOVIE_CD=20026808&amp;MOVIE_CD_GROUP=20026808">
+                    <p>예매</p>
+                  </a>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="box-image">
+                <strong class="rank">No.3</strong>
+                <a href="/movies/detail-view/?midx=84686">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84686/84686_320.jpg" alt="발신제한 포스터"
+                      onerror="errorImage(this)">
+                    <span class="ico-grade grade-15">15세 이상</span>
+                  </span>
+
+                </a>
+                <span class="screentype">
+
+                </span>
+              </div>
+
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=84686">
+                  <strong class="title">발신제한</strong>
+                </a>
+
+                <div class="score">
+                  <strong class="percent">예매율<span>1.3%</span></strong>
+                  <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위1~ 3위)-->
+                  <div class="egg-gage small">
+                    <span class="egg great"></span>
+                    <span class="percent">88%</span>
+                  </div>
+                </div>
+
+                <span class="txt-info">
+                  <strong>
+                    2021.06.23
+                    <span>개봉</span>
+
+                  </strong>
+                </span>
+                <span class="like">
+                  <a class="link-reservation" href="/ticket/?MOVIE_CD=20026922&amp;MOVIE_CD_GROUP=20026922">
+                    <p>예매</p>
+                  </a>
+                </span>
+              </div>
+            </li>
+
+          </ol>
+
+          <ol>
+
+            <li>
+              <div class="box-image">
+                <strong class="rank">No.4</strong>
+                <a href="/movies/detail-view/?midx=84727">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84727/84727_320.jpg" alt="괴기맨숀 포스터"
+                      onerror="errorImage(this)">
+                    <span class="ico-grade grade-15">15세 이상</span>
+                  </span>
+                </a>
+                <span class="screentype">
+
+                </span>
+              </div>
+
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=84727">
+                  <strong class="title">괴기맨숀</strong>
+                </a>
+
+                <div class="score">
+                  <strong class="percent">예매율<span>0.7%</span></strong>
+                  <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                  <div class="egg-gage small">
+                    <span class="egg good"></span>
+                    <span class="percent">83%</span>
+                  </div>
+                </div>
+
+                <span class="txt-info">
+                  <strong>
+                    2021.06.30
+                    <span>개봉</span>
+
+                  </strong>
+                </span>
+                <span class="like">
+                  <a class="link-reservation" href="/ticket/?MOVIE_CD=20027037&amp;MOVIE_CD_GROUP=20027037">
+                    <p>예매</p>
+                  </a>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="box-image">
+                <strong class="rank">No.5</strong>
+                <a href="/movies/detail-view/?midx=84644">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84644/84644_320.jpg" alt="루카 포스터"
+                      onerror="errorImage(this)">
+                    <span class="ico-grade grade-all">전체</span>
+                  </span>
+                </a>
+                <span class="screentype">
+
+                </span>
+              </div>
+
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=84644">
+                  <strong class="title">루카</strong>
+                </a>
+
+                <div class="score">
+                  <strong class="percent">예매율<span>0.6%</span></strong>
+                  <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                  <div class="egg-gage small">
+                    <span class="egg great"></span>
+                    <span class="percent">97%</span>
+                  </div>
+                </div>
+
+                <span class="txt-info">
+                  <strong>
+                    2021.06.17
+                    <span>개봉</span>
+
+                  </strong>
+                </span>
+                <span class="like">
+                  <a class="link-reservation" href="/ticket/?MOVIE_CD=20026810&amp;MOVIE_CD_GROUP=20026810">
+                    <p>예매</p>
+                  </a>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="box-image">
+                <strong class="rank">No.6</strong>
+                <a href="/movies/detail-view/?midx=83078">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000083/83078/83078_320.jpg"
+                      alt="콰이어트 플레이스 2 포스터" onerror="errorImage(this)">
+                    <span class="ico-grade grade-15">15세 이상</span>
+                  </span>
+                </a>
+                <span class="screentype">
+
+                </span>
+              </div>
+
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=83078">
+                  <strong class="title">콰이어트 플레이스 2</strong>
+                </a>
+
+                <div class="score">
+                  <strong class="percent">예매율<span>0.6%</span></strong>
+                  <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                  <div class="egg-gage small">
+                    <span class="egg great"></span>
+                    <span class="percent">95%</span>
+                  </div>
+                </div>
+
+                <span class="txt-info">
+                  <strong>
+                    2021.06.16
+                    <span>개봉</span>
+
+                  </strong>
+                </span>
+                <span class="like">
+                  <a class="link-reservation" href="/ticket/?MOVIE_CD=20022487&amp;MOVIE_CD_GROUP=20022487">
+                    <p>예매</p>
+                  </a>
+                </span>
+              </div>
+            </li>
+
+            <li>
+              <div class="box-image">
+                <strong class="rank">No.7</strong>
+                <a href="/movies/detail-view/?midx=84647">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000084/84647/84647_320.jpg"
+                      alt="킬러의 보디가드2 포스터" onerror="errorImage(this)">
+                    <span class="ico-grade grade-19">청소년 관람불가</span>
+                  </span>
+                </a>
+                <span class="screentype">
+
+                </span>
+              </div>
+
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=84647">
+                  <strong class="title">킬러의 보디가드2</strong>
+                </a>
+
+                <div class="score">
+                  <strong class="percent">예매율<span>0.2%</span></strong>
+                  <!-- 2020.05.07 개봉전 프리에그 노출, 개봉후 골든에그지수 노출변경 (적용 범위4~ 7위)-->
+                  <div class="egg-gage small">
+                    <span class="egg great"></span>
+                    <span class="percent">87%</span>
+                  </div>
+                </div>
+
+                <span class="txt-info">
+                  <strong>
+                    2021.06.23
+                    <span>개봉</span>
+
+                  </strong>
+                </span>
+                <span class="like">
+                  <a class="link-reservation" href="/ticket/?MOVIE_CD=20026813&amp;MOVIE_CD_GROUP=20026813">
+                    <p>예매</p>
+                  </a>
+                </span>
+              </div>
+            </li>
+
+          </ol>
+
+          <button class="btn-more-fontbold">더보기 <i class="link-more">더보기</i></button>
+
+
+          <ol id="movie_more_container" style="display:none" class="list-more">
+            <li></li>
+          </ol>
+          <!-- 광고 AD -->
+          <div class="">
+            <div class="box-com">
+              <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@Movie_Chart" width="160" height="300"
+                frameborder="0" scrolling="no" topmargin="0" leftmargin="0" marginwidth="0" marginheight="0"
+                id="Movie_Chart" name="Movie_Chart" title="기업광고 -NICE지키미"></iframe>
+            </div>
+            <div class="chart_ad_desc">
+              <dl>
+                <dt>
+                  <img src="http://img.cgv.co.kr/R2014/images/ad/ico_ad1.png" alt="ad">
+                  <span id="ad_txt1">NICE지키미</span>
+                </dt>
+                <dd>
+                  <span id="ad_txt2">재테크의 시작은 신용관리!</span>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+        </div>
+        <!-- ///////////////// -->
+      </div>
+      <!-- .sect-moviechart -->
+      <script type="text/javascript">
+        //<![CDATA[
+        (function ($) {
+          $(function () {
+
+            $('.sect-sorting button').click(function () {
+              var val = $('#order_type').val();
+              if (val) {
+                location.href = "/movies/?lt=1&ot=" + val;
+              }
+            });
+            //[2015-12-15] 무비 파인더 페이지 인 경우 정렬 버튼 처리. : add_mwpark
+            $("#sect-finder button").click(function () {
+              var val = $('#order_type').val();
+              if (val) {
+                location.href = "/movies/finder.aspx?lt=1&ot=" + val;
+              }
+            });
+
+
+            $('#chk_nowshow').click(function () {
+              if ($("input:checkbox[id='chk_nowshow']").is(":checked")) {
+                location.href = "/movies/?lt=1&ft=1";
+              } else {
+                location.href = "/movies/?lt=1&ft=0";
+              }
+            });
+
+            //[2015-12-15] 무비 파인더 페이지 인 경우 현재 상영작만 보기 체크 박스 처리. : add_mwpark
+            $("#chk_finder_nowshow").on("click", function () {
+              if ($("input:checkbox[id='chk_nowshow']").is(":checked")) {
+                location.href = "/movies/finder.aspx?lt=1&ft=1";
+              } else {
+                location.href = "/movies/finder.aspx?lt=1&ft=0";
+              }
+            });
+
+          });
+
+        })(jQuery);
+        //]]>
+      </script>
+      <!-- 광고 배너 -->
+      <div class="chart-ad-bottom">
+        <iframe src="http://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/sub@SponsorBar_980" width="980" height="90"
+          title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="SponsorBar_980"
+          id="SponsorBar_980"></iframe>
+      </div>
+      <!-- // 광고 배너 -->
+      <div class="cols-rank">
+        <div class="col-rank-trailer">
+          <h3>인기 트레일러</h3>
+          <div class="sect-popular-trailer">
+            <div id="ctl00_PlaceHolderContent_ucListFooter_wrap_info_trailer" class="wrap-info-trailer">
+              <!-- 트레일러 이미지 -->
+              <div class="box-image trailer">
+                <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174953">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82175/82175174953_1024.jpg"
+                      alt="[캣츠]No.1 퍼포먼스 영상">
+                    <span class="ico-play">영상보기</span>
+                  </span>
+                </a>
+              </div>
+              <div class="box-image">
+                <a href="/movies/detail-view/?midx=82175">
+                  <span class="thumb-image">
+                    <img src="https://img.cgv.co.kr/Movie/Thumbnail/Poster/000082/82175/82175_185.jpg"
+                      alt="[캣츠]No.1 퍼포먼스 영상">
+                    <span class="ico-grade grade-12">12세 이상</span>
+                  </span>
+                </a>
+              </div>
+              <div class="box-contents">
+                <a href="/movies/detail-view/?midx=82175">
+                  <strong class="title">캣츠</strong>
+                </a>
+                <span class="txt-info">
+                  <em class="genre">뮤지컬,&nbsp;드라마</em>
+                  <span>
+                    <i>2019.12.24</i>
+                    <strong>개봉</strong>
+                  </span>
+                </span>
+                <span class="screentype">
+                </span>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <div class="box-image">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175009">
+                    <span class="thumb-image">
+                      <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82866/82866175009_1024.jpg"
+                        alt="[카운트다운]장르파괴 영상" style="width:126px;height:71px;">
+                      <span class="ico-play">영상보기</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="box-contents">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175009">
+                    <strong class="title">카운트다운</strong>
+                  </a>
+                  <span class="txt-info">
+                    <em class="genre">호러,&nbsp;스릴러</em>
+                    <span>
+                      <i>2019.12.12</i>
+                      <strong>개봉</strong>
+
+                    </span>
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <div class="box-image">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175008">
+                    <span class="thumb-image">
+                      <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82962/82962175008_1024.jpg"
+                        alt="[영화로운 나날]30초 예고편" style="width:126px;height:71px;">
+                      <span class="ico-play">영상보기</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="box-contents">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="175008">
+                    <strong class="title">영화로운 나날</strong>
+                  </a>
+                  <span class="txt-info">
+                    <em class="genre">로맨스,&nbsp;환타지,&nbsp;드라마,&nbsp;멜로</em>
+                    <span>
+                      <i>2019.12.12</i>
+                      <strong>개봉</strong>
+
+                    </span>
+                  </span>
+                </div>
+              </li>
+
+              <li>
+                <div class="box-image">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174984">
+                    <span class="thumb-image">
+                      <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82640/82640174984_1024.jpg"
+                        alt="[러브 앳]홍쓴 부부 GV 현장 메이킹 영상" style="width:126px;height:71px;">
+                      <span class="ico-play">영상보기</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="box-contents">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174984">
+                    <strong class="title">러브 앳</strong>
+                  </a>
+                  <span class="txt-info">
+                    <em class="genre">로맨스,&nbsp;코미디,&nbsp;멜로</em>
+                    <span>
+                      <i>2019.11.27</i>
+                      <strong>개봉</strong>
+
+                    </span>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="box-image">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174983">
+                    <span class="thumb-image">
+                      <img src="https://img.cgv.co.kr/Movie/Thumbnail/Trailer/82961/82961174983_1024.jpg"
+                        alt="[월성]메인 예고편" style="width:126px;height:71px;">
+                      <span class="ico-play">영상보기</span>
+                    </span>
+                  </a>
+                </div>
+                <div class="box-contents">
+                  <a href="#" title="새창" class="movie_player_popup" data-gallery-idx="174983">
+                    <strong class="title">월성</strong>
+                  </a>
+                  <span class="txt-info">
+                    <em class="genre">다큐멘터리</em>
+                    <span>
+                      <i>2019.12.12</i>
+                      <strong>개봉</strong>
+
+                    </span>
+                  </span>
+                </div>
+              </li>
+
+            </ul>
+          </div><!-- .sect-popular-trailer -->
+        </div><!-- .col-rank-trailer -->
+        <div class="col-rank-search">
+          <div class="searchrank">
+            <h3>실시간 인기 검색어</h3>
+            <ol>
+
+              <li>
+                <a href="/search/?query=%eb%b6%80%ed%99%9c">1. <strong>부활</strong></a>
+                <em>
+
+                  <span class="new">NEW</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%ea%b0%95%ec%b2%a0%eb%b9%842+%ec%a0%95%ec%83%81%ed%9a%8c%eb%8b%b4">2.
+                  <strong>강철비2 정상회담</strong></a>
+                <em>
+
+                  <span class="new">NEW</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%eb%b0%98%eb%8f%84">3. <strong>반도</strong></a>
+                <em>
+
+                  <span class="new">NEW</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%ec%82%b4%ec%95%84%ec%9e%88%eb%8b%a4">4. <strong>살아있다</strong></a>
+                <em>
+
+                  <span class="new">NEW</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%ec%bd%94%eb%82%9c">5. <strong>코난</strong></a>
+                <em>
+                  3
+                  <span class="up">상승</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%ec%95%8c%eb%9d%bc%eb%94%98">6. <strong>알라딘</strong></a>
+                <em>
+                  1
+                  <span class="down">하락</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%ed%8c%ac%eb%8d%b0%eb%af%b9">7. <strong>팬데믹</strong></a>
+                <em>
+
+                  <span class="new">NEW</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%ed%95%b4%eb%a6%ac%ed%8f%ac%ed%84%b0">8. <strong>해리포터</strong></a>
+                <em>
+                  2
+                  <span class="down">하락</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%eb%b1%85%eb%93%9c%eb%a6%bc">9. <strong>뱅드림</strong></a>
+                <em>
+
+                  <span class="new">NEW</span>
+                </em>
+              </li>
+
+              <li>
+                <a href="/search/?query=%eb%aa%85%ed%83%90%ec%a0%95%ec%bd%94%eb%82%9c">10. <strong>명탐정코난</strong></a>
+                <em>
+                  302
+                  <span class="up">상승</span>
+                </em>
+              </li>
+
+            </ol>
+            <p class="date">2020.07.26기준</p>
+          </div>
+        </div>
+      </div>
+      <script id="temp_movie" type="text/x-jquery-tmpl">
+        <li>
               <div class="box-image" >
                   <a href="/movies/detail-view/?midx=${MovieIdx}">
                       <span class="thumb-image">
@@ -1188,41 +1231,45 @@
               </div>    
           </li>
       </script>
-        <script type="text/javascript">
-          //<![CDATA[
-          
-              (function ($) {
-                  $(function () {
-          
-                      $(".btn-more-fontbold").click(function () {
-                          $(this).remove();
-                          app.movie().getList({ listType: '1', orderType: '1', filterType: '1' }, setMovieListBuild);
-                      });
-          
-                      function setMovieListBuild(result) {
-          
-                          $("#movie_more_container").empty();
-                          $("#movie_more_container").show();
-          
-                          for (var i = 0; i < result.List.length; i++) {
-                              var str = result.List[i].JointCount;
-                              result.List[i].JointCount = str.split(",").join("");
-                          }
-          
-                          $("#temp_movie").tmpl(result.List).appendTo("#movie_more_container");
-          
-                          //$('.point').point();        //평점 별 표시
-                          $('.btn-like').like();      //wish list동작 처리
-                          $('span.screentype a').specialTheater();    //특별관 링크
-                      }
-                  });
-              })(jQuery);
-          //]]>
-          </script>
-        </div>
-      <!-- // Content Area -->
-     </div>
-        <!-- 
+      <script type="text/javascript">
+        //<![CDATA[
+
+        (function ($) {
+          $(function () {
+
+            $(".btn-more-fontbold").click(function () {
+              $(this).remove();
+              app.movie().getList({
+                listType: '1',
+                orderType: '1',
+                filterType: '1'
+              }, setMovieListBuild);
+            });
+
+            function setMovieListBuild(result) {
+
+              $("#movie_more_container").empty();
+              $("#movie_more_container").show();
+
+              for (var i = 0; i < result.List.length; i++) {
+                var str = result.List[i].JointCount;
+                result.List[i].JointCount = str.split(",").join("");
+              }
+
+              $("#temp_movie").tmpl(result.List).appendTo("#movie_more_container");
+
+              //$('.point').point();        //평점 별 표시
+              $('.btn-like').like(); //wish list동작 처리
+              $('span.screentype a').specialTheater(); //특별관 링크
+            }
+          });
+        })(jQuery);
+        //]]>
+      </script>
+    </div>
+    <!-- // Content Area -->
+    </div>
+    <!-- 
         <
           <div class="slide swiper-container">
           <div class="nav_controls">
@@ -1419,13 +1466,16 @@
         <div class="bx_float clear">
           <ul class="list_share clear">
             <li>
-              <a href="https://www.facebook.com/CJCGV" target="_blank" class="facebook" style="background-position:-509px -429px"><span class="hide">페이스북</span></a>
+              <a href="https://www.facebook.com/CJCGV" target="_blank" class="facebook"
+                style="background-position:-509px -429px"><span class="hide">페이스북</span></a>
             </li>
             <li>
-              <a href="https://twitter.com/cj_cgv" target="_blank" class="twitter" style="background-position:-551px -429px"><span class="hide">트위터</span></a>
+              <a href="https://twitter.com/cj_cgv" target="_blank" class="twitter"
+                style="background-position:-551px -429px"><span class="hide">트위터</span></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/cgv_korea/" target="_blank" class="instagram" style="background-position:-593px -429px"><span class="hide">인스타그램</span></a>
+              <a href="https://www.instagram.com/cgv_korea/" target="_blank" class="instagram"
+                style="background-position:-593px -429px"><span class="hide">인스타그램</span></a>
             </li>
           </ul>
           <div class="sel_family">
