@@ -616,7 +616,7 @@ vertical-align: middle; }
   
 }
 
-.club_popup_in1{
+.club_popup_in1{  
   /* border : 1px solid blue; */
   height: 70px;
   background: #222222;
@@ -1125,6 +1125,7 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   border : 1px solid gray;
   color : #FFFFFF;
   text-align: center;
+  background-color: #5b5f68;
   
 }
 #art_benefit_btn1>p{

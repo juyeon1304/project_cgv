@@ -85,12 +85,15 @@
               c_name = art_display2[i].className.replace('art_mission_on','art_mission_off');
               art_display2[i].className = c_name;
               
+              
             }
             for(let i=0; i < art_display1.length;i++){
               c_name = art_display1[i].className.replace('art_mission_off','art_mission_on');
               art_display1[i].className = c_name;
               
             }
+            art_h_btn1.style.backgroundColor = '#5b5f68'
+            art_h_btn2.style.backgroundColor = '#222222'
             // console.log(e.target.id);
           }
           if(b_name == 'art_benefit_btn2'){
@@ -104,6 +107,8 @@
               art_display2[i].className = c_name;
               
             }
+            art_h_btn2.style.backgroundColor = '#5b5f68'
+            art_h_btn1.style.backgroundColor = '#222222'
             // console.log(e.target.id);
           }
           
