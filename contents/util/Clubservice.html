@@ -19,19 +19,29 @@
   <!-- popup test javascript -->
   <script>
     'use strict'
-
+    // popup view
     const club_popup = document.getElementsByClassName('club_popup');
     const close_btn = document.getElementsByClassName('close_btn');
-    console.log(club_popup.length );
+    const art_mission_on = document
+    // console.log(club_popup.length );
+    //art house popup btn
 
     
+
+
     function popupview(num1){
       num1 = num1 -1;
 
       const club_length = club_popup.length 
       
-      console.log(close_btn.length );
-      console.log(close_btn);
+      // console.log(close_btn.length );
+      // console.log(close_btn);
+      if(num1 == 2){
+        alert('더 새로운 모습으로 찾아올 키즈패밀리 클럽을 기대해 주세요.')
+        for(let i=0; i < club_length; i++){
+            club_popup[i].style.display = 'none';
+          }
+      }else{
         if(club_popup[num1].style.display == 'block'){
           club_popup[num1].style.display = 'none';
         }else{
@@ -40,16 +50,73 @@
           }
           club_popup[num1].style.display = 'block';
         }
+      }
+        
 
         for(let i = 0; i < close_btn.length; i++){
           close_btn[i].addEventListener('click',() =>{
           club_popup[i].style.display = 'none';
           });
         }
-
-        
     }
     
+   
+
+    window.onload =function(){
+      const art_h_btn1 = document.getElementById('art_benefit_btn1');
+      const art_h_btn2 = document.getElementById('art_benefit_btn2');
+      const art_display1 = document.getElementsByClassName('art_display1')
+      const art_display2 = document.getElementsByClassName('art_display2')
+      art_h_btn2.addEventListener('click',(e)=>{
+        const b_name = 'art_benefit_btn2'
+        art_title_on(b_name);
+      });
+      art_h_btn1.addEventListener('click',(e)=>{
+        const b_name = 'art_benefit_btn1'
+        art_title_on(b_name);
+      });
+
+      const art_title_on = function(b_name){
+          let c_name = '';
+  
+          console.log(b_name);
+          if(b_name == 'art_benefit_btn1'){
+            for(let i=0; i < art_display2.length ;i++){
+              c_name = art_display2[i].className.replace('art_mission_on','art_mission_off');
+              art_display2[i].className = c_name;
+              
+            }
+            for(let i=0; i < art_display1.length;i++){
+              c_name = art_display1[i].className.replace('art_mission_off','art_mission_on');
+              art_display1[i].className = c_name;
+              
+            }
+            // console.log(e.target.id);
+          }
+          if(b_name == 'art_benefit_btn2'){
+            for(let i=0; i < art_display1.length ;i++){
+              c_name = art_display1[i].className.replace('art_mission_on','art_mission_off');
+              art_display1[i].className = c_name;
+              
+            }
+            for(let i=0; i < art_display2.length;i++){
+              c_name = art_display2[i].className.replace('art_mission_off','art_mission_on');
+              art_display2[i].className = c_name;
+              
+            }
+            // console.log(e.target.id);
+          }
+          
+      }
+      
+    }
+    
+   
+    
+
+        
+       
+        
 
   </script>
 </head>
@@ -640,7 +707,7 @@
   <div class="fir_block">
     <div class="com_area area_1">
       <div class="com_box">
-        <a href="#"><img src="../../common/images/img_club_thumb5_re.png" alt=""></a>
+        <a href="#" onclick="popupview(3)"><img src="../../common/images/img_club_thumb5_re.png" alt=""></a>
       </div>
       <span class="Appear" style="display: none;">
         <img src="">
@@ -649,10 +716,11 @@
         <strong class="CS_ind_tit">키즈 패밀리 Club</strong>
       </div>
     </div>
+    <div class="club_popup"></div>
 
     <div class="com_area area_2">
       <div class="com_box">
-        <a href="#"><img src="../../common/images/img_club_thumb_cheers.jpg" alt=""></a>
+        <a href="#" onclick="popupview(4)"><img src="../../common/images/img_club_thumb_cheers.jpg" alt=""></a>
       </div>
       <span class="Appear" style="display: none;">
         <img src="" alt="">
@@ -662,11 +730,225 @@
       </div>
     </div>
   </div>
+  <!-- pop up 네번째 -->
+  <div class="club_popup">
+    <div class="club_popup_in2">
+        <strong class="club_title">치어스 클럽(CHEERS CLUB) 혜택</strong>
+        
+        <div class="close_btn"></div>
+    </div>
+    <div class="club_QR">
+        <div class="qr_txt">
+          
+          <div class="txt">
+            <p class="txt1">
+              
+              <strong>치어스 클럽이란?</strong>
+            </p>
+            <p class="txt2">무비 & 컬처라이프를 즐기는 50세 이상 CJ ONE 회원 누구나 가입할 수 있는 무료 멤버십 서비스 입니다. <br>
+              신규 가입은 QR코드 또는 CGV APP을 확인해주세요!
+              
+            </p>
+          </div>
+        </div>
+        <div class="qr_code">
+          <img src="http://img.cgv.co.kr/r2014/images/club/qr_1318.png" alt="1318 QR CODE">
+        </div>
+    </div>
+    <div class="popup_benifit">
+      <div class="cheers_club_title">
+        <strong>치어스 클럽 회원을 위한 웰컴 쿠폰팩</strong>
+      </div>
+      <div class="cheers_clup">
+        <div class="cheers_img1 cheers_img"></div>
+        <div class="cheers_box1 cheers_box">         
+          <em>주중 8천원 관람<br>
+            (2매)</em> <br/>
+          <span>•2D 일반 영화, 주중 사용 가능,<br>
+            &nbsp;특별관 제외</span>
+        </div>
+        <div class="cheers_img2 cheers_img"></div>
+        <div class="cheers_box2  cheers_box">
+          <em>주말 9천원 관람<br>
+            (2매)</em> <br/>
+          <span>• 2D 일반 영화, 주말 사용 가능,<br>
+            &nbsp;&nbsp;특별관 제외</span>
+        </div>
+        <div class="cheers_img3  cheers_img"></div>
+        <div class="cheers_box3  cheers_box">
+          <em>주중 13시 이전<br>
+            2천원 할인 (2매)</em><br/>
+            <span>• 2D 일반 영화, 주중 사용 가능,<br>
+              &nbsp;&nbsp;조조 제외</span>
+        </div>
+        <div class="cheers_img4 cheers_img" ></div>
+        <div class="cheers_box4  cheers_box">         
+          <em>콤보 3천원 할인<br>
+            (2매)</em> <br/>
+          <span>• 이벤트 콤보 및 타 할인 중복 적용 불가</span>
+        </div>
+        <div class="cheers_img5 cheers_img"></div>
+        <div class="cheers_box5  cheers_box">
+          <em>팝콘 50% 할인<br>(1매)</em>
+          
+        </div>
+        <div class="cheers_img6 cheers_img"></div>
+        <div class="cheers_box6  cheers_box">
+          <em>커피/아이스티<br>
+            50% 할인 (1매)</em><br/>
+          
+        </div>
+      </div>        
+    </div>
+    <div class="sp_benefit">
+      <div class="sp_benefit_title">
+          <em>치어스 클럽 회원 전용 스페셜 이벤트</em><br>
+          
+      </div>
+      <div class="sp_benefit_info">
+         <div class="sp_benefit_info1">
+           <div class="cheers_info1_img">
+
+           </div>
+           <div class="sp_info1_txt">
+                <em>치어스 시사회</em><br>
+                <span>
+                  • 가족, 친구와 함께<br>
+                  &nbsp;&nbsp;최신 영화 시사회 초대
+                </span>
+           </div>
+           <div class="cheers_info2_img">
+
+           </div>
+           <div class="sp_info2_txt">
+            <em>컬처 이벤트</em><br>
+            <span>
+              • 오직 CGV에서만 만나는<br>
+              &nbsp;&nbsp;컬처 이벤트 초대
+            </span>
+           </div>
+           
+         </div>
+      </div>
+
+    </div>
+    <div class="benefit_note">
+      <ul class="benefit_note_list">
+        <li>
+          <strong class="txt_gray1 txt_line1">유의사항</strong>
+          <strong class="txt_white txt_line1">[치어스 CLUB]</strong>
+          <ul>
+            <li class="txt_gray txt_line2">
+              치어스 클럽은 50세 이상 CJ ONE 회원을 위한 무료 멤버십 서비스 입니다.
+            </li>
+            <li class="txt_gray txt_line2">
+              치어스 클럽 혜택은 2021년 12월 31일까지 제공되는 혜택으로 서비스 및 혜택 내용은 변경/종료될 수 있습니다.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="benefit_note_list">
+        <li>
+          
+          <strong class="txt_white txt_line2">[가입 혜택 (웰컴 쿠폰팩) 안내]</strong>
+          <ul>
+            <li class="txt_gray txt_line2">
+              신규 가입 고객은 2021년 12월 30일까지 클럽에 가입한 고객에 한해 가입일 다음날 쿠폰 지급됩니다.
+            </li>
+            <li class="txt_gray txt_line2">
+              20년 12월 30일까지 노블레스 클럽/치어스 클럽 가입 고객은 재가입하지 않으셔도 됩니다. <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;(※ 노블레스 클럽 : 50세 이상 회원 전용 유무료 멤버십 서비스/ '20년 6월 가입 종료)
+            </li>
+            <li class="txt_gray txt_line2">
+              쿠폰은 MY CGV > 쿠폰함에서 확인 가능합니다.
+            </li>
+            <li class="txt_gray txt_line2">
+              쿠폰별 사용 기간이 상이하므로 반드시 확인 후, 사용하시기 바랍니다.
+            </li>
+            <li class="txt_gray txt_line2">
+              모든 쿠폰은 타 쿠폰 및 할인과 중복 사용 불가합니다.
+            </li>
+            <li class="txt_gray txt_line2">
+              모든 쿠폰은 이벤트 상품으로 이용 기간 연장 및 환불이 불가합니다.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="benefit_note_list">
+        <li>
+          
+          <strong class="txt_white txt_line2"><매표 쿠폰></strong>
+          <ul>
+            <li class="txt_gray txt_line2">
+              주중 8천원 관람 쿠폰 2매 (2D 일반 영화, 주중 사용 가능, 특별관 제외)
+            </li>
+            <li class="txt_gray txt_line2">
+              주말 9천원 관람 쿠폰 2매 (2D 일반 영화, 주말 사용 가능, 특별관 제외)
+            </li>
+            <li class="txt_gray txt_line2">
+              주중 13시 이전 2천원 할인쿠폰 2매 (2D 일반 영화, 주중 사용 가능, 특별관 제외)
+            </li>
+            <li class="txt_gray txt_line2">
+              사용 제외 극장 : CGV청담씨네시티, 청라 <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;* 2D 일반 영화에 한해 적용 가능합니다. <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;* 3D 및 특별관/특별 좌석/특별 프로그램은 적용 불가합니다. <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;* 일부 상영 시간대 (조조&심야 & 컬처데이) 및 지점에서는 사용 제한될 수 있습니다.
+
+            </li>
+            <li class="txt_gray txt_line2">
+              모든 쿠폰은 극장 (신규오픈, 폐점 등) 및 배급사의 사정에 따라 사용이 불가할 수 있습니다.
+            </li>
+            <li class="txt_gray txt_line2">
+              모든 쿠폰은 이벤트 상품으로 이용기간 연장 및 환불 불가합니다.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="benefit_note_list">
+        <li>
+          
+          <strong class="txt_white txt_line2"><매점 쿠폰></strong>
+          <ul>
+            
+            <li class="txt_gray txt_line2">
+              사용방법 <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;- 모바일 APP - 패스트오더/통합결제 > 결제 단계 > CGV 할인쿠폰 > 쿠폰 선택 <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;- 오프라인 - 키오스크 > 할인받고 결제 > 쿠폰 선택 <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;*키오스크 이용 불가 시 현장 매점에서 CJ ONE 카드 제시
+              &nbsp;&nbsp;&nbsp;&nbsp;- 이벤트 콤보 구매 시 사용 불가합니다.
+
+            </li>
+            <li class="txt_gray txt_line2">
+              사용 제외 극장 : CGV나주, 동백, 보령, 성남모란, 안동, 양산물금, 오산중앙, 용인, 이천, 주안역 <br> 청담씨네시티, 청라, 청주성안길, 청주터미널, 화성봉담, 화정
+            </li>
+           
+          </ul>
+        </li>
+      </ul>
+      <ul class="benefit_note_list">
+        <li>
+          
+          <strong class="txt_white txt_line2"><스페셜 혜택></strong>
+          <ul>
+            
+            <li class="txt_gray txt_line2">
+              회원 전용 시사회 초대 및 이벤트는 CGV 홈페이지/모바일 앱의 이벤트 게시판을 통해 별도 고지됩니다.
+
+            </li>
+           
+           
+          </ul>
+        </li>
+      </ul>
+    </div>
+    
+</div>
+ <!-- pop up 네번째 끝 -->
 
   <div class="fir_block">
     <div class="com_area area_1">
       <div class="com_box">
-        <a href="#"><img src="../../common/images/img_club_thumb1_2020.jpg" alt=""></a>
+        <a href="#" onclick="popupview(5)"><img src="../../common/images/img_club_thumb1_2020.jpg" alt=""></a>
       </div>
       <span class="Appear" style="display: none;">
         <img src="">
@@ -675,6 +957,220 @@
         <strong class="CS_ind_tit">아트하우스 Club</strong>
       </div>
     </div>
+     <!-- pop up 다섯번째 -->
+     <div class="club_popup">
+      <div class="club_popup_in1">
+          <strong class="club_title">아트하우스 Club 혜택</strong>
+          <div class="close_btn"></div>
+          <div class="art_regist_btn">아트하우스 클럽 <p class="b_line">가입하기</p></div>
+      </div>
+      <div class="art_benefit_btn">
+        <div id="art_benefit_btn1"><p>공통혜택</p></div>
+        <div id="art_benefit_btn2"><p>아티스트 추가 혜택</p></div>
+      </div>
+      <div class="art_mission art_display1 art_mission_on">
+         <p class="art_mission1">관람 리워드 미션</p>
+         <p  class="art_mission2">클럽 회원들에게만 주어지는 특별한 미션!</p>
+         <p class="art_mission3">아트하우스 영화를 <span> 4회,8회</span> 관람시마다 다양한 혜택을 드립니다.</p>
+         <p class="art_mission4">* 미션 관람 횟수는 2021년 1/1부터 시작되며 미션 완료 시 1회부터 다시 참여가능(최대 5회)</p>
+      </div>
+      <div class="art_mission_content art_display1 art_mission_on">
+          <div class="art_mission_text">
+            <p class="art_text_y">(공동혜택)</p>
+            <p class="art_text_g art_text_bottom">아트하우스관 주중무료쿠폰 1매 : <span>0회</span></p>
+            <p class="art_text_y">(아티스트 전용 혜택)</p>
+            <p class="art_text_g">이동진의 라이브톡 중계관 1천원 할인쿠폰 1매 <span>0회</span></p>
+            <p class="art_text_g">아메리카노 50% 할인쿠폰 1매 <span>0회</span></p>
+          </div>
+          <div class="art_text_btn"><button><span>다운로드</span></button></div>
+          <div class="art_arrow_img"></div>
+          <div class="art_clapper_img"></div>
+          <div class="art_mission_text_b">
+            <p class="art_text_y">(공동혜택)</p>
+            <p class="art_text_g art_text_bottom">아트하우스관 무료쿠폰 1매 : <span>0회</span></p>
+            <p class="art_text_y">(아티스트 전용 혜택)</p>
+            <p class="art_text_g">아트하우스관 주중무료쿠폰 1매 <span>0회</span></p>
+            <p class="art_text_g">CGV/더블/라지 콤보 5천원 할인쿠폰 1매 <span>0회</span></p>
+          </div>
+          <div class="art_text_btn_b"><button><span>다운로드</span></button></div>
+     </div>
+      <div class="artist_mission art_display2 art_mission_off">
+       <div class="artist_img"></div>
+       <div class="artist_text">
+         <p class="atist_text_w">
+          ‘아티스트란’? 아트하우스 영화를 진정 사랑하는 아트하우스 Club 회원님을 위한 스페셜 등급
+         </p>
+         <ul>
+           <li>
+            <span>조건</span><br>
+            <span>- 2021년 상반기(1월~6월) : 아트하우스 Club 회원 중 2020년 하반기 아트하우스 전용관에서 4회 이상 관람한 회원</span><br>
+            <span>- 2021년 하반기(7월~12월) : 아트하우스 Club 회원 중 2021년 상반기 아트하우스 전용관에서 4회 이상 관람한 회원</span>
+           </li>
+           <li><span>서로 다른 영화, 유료 관람 기준(CJ ONE 포인트 적립)</span></li>
+           <li><span>신규 가입 회원의 경우 2021년 관람조건 충족 시 가입 2일 후 자동 등급 부여</span></li>
+         </ul>
+       </div>
+     </div>
+      <div class="popup_benifit">
+        <div class="popup_benifit_all">
+            <div class="coupon_benefit">
+                <div class="coupon_img"></div>
+                <div class="coupon_text">
+                  <em>전자쿠폰 혜택</em><br>
+                  
+                </div>
+            </div>
+            <div class="pointEvent_benefit">
+              <div class="point_benefit">
+                <div class="point_img"></div>
+                <div class="point_text">
+
+                </div>
+              </div>
+              <div class="event_benefit">
+                <div class="event_img"></div>
+                <div class="event_text">
+
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+      <div class="benefit_note">
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_gray1 txt_line1">유의사항</strong>
+            <strong class="txt_white txt_line1">[1318 CLUB]</strong>
+            <ul>
+              <li class="txt_gray txt_line2">
+                1318 CLUB은 만 13세(2008년생)부터 만 18세(2003년생)까지의 청소년 회원을 위한 무료 멤버십 서비스입니다.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_white txt_line2">[가입 혜택 안내]</strong>
+       
+            <ul>
+              <li class="txt_gray txt_line2">
+                신규 가입 고객은 가입 후 다음날 쿠폰이 지급됩니다. 쿠폰은 MY CGV > 쿠폰함에서 확인 가능합니다.
+              </li>
+              <li class="txt_gray txt_line2">
+                학기별 쿠폰 혜택은 1학기 2021년 8월 30일, 2학기 2022년 2월 27일까지 가입한 고객에게 제공됩니다.
+              </li>
+              <li class="txt_gray txt_line2">
+                쿠폰별 사용기간이 상이하므로 반드시 확인 후 사용하시기 바랍니다.
+              </li>
+              <li class="txt_gray txt_line2">
+                학기별 쿠폰은 1인 1회에 한해 지급되며, 탈퇴 후 재 가입하여도 재 지급되지 않습니다.
+              </li>
+              <li class="txt_gray txt_line2">
+                모든 쿠폰은 타 쿠폰 및 할인과 중복 사용이 불가합니다.
+              </li>
+              <li class="txt_gray txt_line2">
+                모든 쿠폰은 극장(신규오픈, 폐점 등) 및 배급사의 사정에 따라 일부 극장 및 일부 영화 사용이 불가할 수 있습니다.
+              </li>
+              <li class="txt_gray txt_line2">
+                모든 쿠폰은 이벤트 상품으로 이용기간 연장 및 환불 불가합니다.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_white txt_line2">[2D 영화 7천원 관람쿠폰]</strong>
+       
+            <ul>
+              <li class="txt_gray txt_line2">
+                온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+              </li>
+              <li class="txt_gray txt_line2">
+                2D 영화에 한하여 사용 가능 (3D 및 특별관, 특별좌석, 특별 프로그램 제외)
+              </li>
+              <li class="txt_gray txt_line2">
+                사용 극장: 전국 CGV (단, CGV고성, 인제 제외)
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_white txt_line2">[4DX 8천원 관람쿠폰]</strong>
+       
+            <ul>
+              <li class="txt_gray txt_line2">
+                온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+              </li>
+              <li class="txt_gray txt_line2">
+                2D 영화에 한하여 사용 가능 (3D 및 특별관, 특별좌석, 특별 프로그램 제외)
+              </li>
+             
+            </ul>
+          </li>
+        </ul>
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_white txt_line2">[4DX or IMAX 무료쿠폰]</strong>
+       
+            <ul>
+              <li class="txt_gray txt_line2">
+                온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+              </li>
+              <li class="txt_gray txt_line2">
+                4DX, 4DX SCREEN, IMAX 영화에 한하여 사용 가능 (단, 포맷에 관계없이 1회에 한함)
+              </li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_white txt_line2">[SCREENX 8천원 관람쿠폰]</strong>
+       
+            <ul>
+              <li class="txt_gray txt_line2">
+                온라인(모바일 APP/홈페이지) 예매 및 청소년 권종 전용
+              </li>
+              <li class="txt_gray txt_line2">
+                SCREENX 영화에 한하여 사용 가능
+              </li>
+              
+            </ul>
+          </li>
+        </ul>
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_white txt_line2">[ICECON 3천원 할인쿠폰]</strong>
+       
+            <ul>
+              <li class="txt_gray txt_line2">
+                ICECON 콘텐츠 중 굿즈 패키지, 라이브 중계 형식으로 진행되는 콘텐츠는 제외됩니다.
+              </li>                
+            </ul>
+          </li>
+        </ul>
+        <ul class="benefit_note_list">
+          <li>
+            <strong class="txt_white txt_line2">[매점 쿠폰]</strong>
+       
+            <ul>
+              <li class="txt_gray txt_line2">
+                사용 방법 <br>
+                &nbsp;&nbsp;&nbsp; <span>- 모바일 APP - 패스트오더/통합결제 > 결제 단계 > CGV 할인쿠폰 > 쿠폰 선택</span><br>
+                &nbsp;&nbsp;&nbsp; <span>- 오프라인 - 키오스크 > 할인받고 결제 > 쿠폰 선택</span><br>
+                &nbsp;&nbsp;&nbsp; <span>* 키오스크 이용 불가 시 현장 매점에서 CJ ONE 카드 제시</span>
+              </li>     
+              <li class="txt_gray txt_line2  ">
+                사용 극장: 전국 CGV (단, CGV경기광주, 고성, 남주안, 보령, 불광, 성남모란, 안동, 오산중앙, 용인, 이천, 정읍, 주안역, 청라, 청주성안길, 화정 제외)
+              </li>           
+            </ul>
+          </li>
+        </ul>
+      </div>
+      
+  </div>
+   <!-- pop up 다섯번째 끝 -->
 
     <div class="com_area area_2">
       <div class="com_box">

@@ -606,16 +606,25 @@ vertical-align: middle; }
 }
 .close_btn{
   background : url('https://img.cgv.co.kr/R2014/images/sprite/sprite_btn.png') no-repeat -72px -241px;
-  display: inline-block;
+ 
   width: 18px;
   height: 18px;
   vertical-align: top;
   margin-top: 5px;
-  margin-left: 630px;
+  float : right;
+  margin-right: 20px;
   
 }
 
 .club_popup_in1{
+  /* border : 1px solid blue; */
+  height: 70px;
+  background: #222222;
+  width: 100%;
+  /* border : 1px solid red; */
+  
+}
+.club_popup_in2{
   /* border : 1px solid blue; */
   height: 70px;
   background: #222222;
@@ -718,7 +727,7 @@ vertical-align: middle; }
 .club_popup span{
   
   font-size: 13px;
-  color: #999;
+  color:#999; 
     line-height: 1.2;
     font-family: 'CJONLYONENEW', '맑은 고딕', '돋움', Dotum, sans-serif;
 
@@ -1015,6 +1024,319 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   height: 1px;
   background: #2f2f2f;
   border-top: 2px dashed #ffffff;
+}
+
+.cheers_club_title{
+  margin : 30px auto;
+  width: 900px;
+  color: #FFFFFF;
+  font-size: 16px;
+
+}
+
+.cheers_clup{
+  width: 900px;
+  height: 200px;
+  margin : 40px auto;
+  /* border : 1px solid red; */
+  box-sizing: border-box;
+}
+
+
+.cheers_img{
+  float: left;
+  height: 45px;
+  content: '';
+  width: 60px;
+  /* border : 1px solid blue; */
+  
+}
+.cheers_box{
+  float: left;
+  height: 100px;
+  content: '';
+  width: 220px;
+  margin-left: 10px;
+}
+.cheers_box4 > span{
+  letter-spacing: -1.5px;
+}
+.cheers_img1,.cheers_img2,.cheers_img3 {
+  background : url('https://img.cgv.co.kr/r2014/images/club/ico_benefit_cheers.png') no-repeat 0 0;
+}
+.cheers_img4 {
+  background : url('https://img.cgv.co.kr/r2014/images/club/ico_benefit_cheers.png') no-repeat 0 -100px;
+}
+.cheers_img5 {
+  background : url('https://img.cgv.co.kr/r2014/images/club/ico_benefit_cheers.png') no-repeat 0 -200px;
+}
+.cheers_img6 {
+  background : url('https://img.cgv.co.kr/r2014/images/club/ico_benefit_cheers.png') no-repeat 0 -300px;
+}
+
+.cheers_info1_img {
+  height: 42px;
+    content: '';
+    display: inline-block;
+    width: 60px;
+    margin : 5px 20px 0;
+   vertical-align: top;
+  background: url('https://img.cgv.co.kr/r2014/images/club/ico_benefit_cheers.png') no-repeat 0 -400px;
+}
+.cheers_info2_img {
+  height: 42px;
+    content: '';
+    display: inline-block;
+    width: 60px;
+    margin : 5px 20px 0 80px;
+   vertical-align: top;
+  background: url('https://img.cgv.co.kr/r2014/images/club/ico_benefit_cheers.png') no-repeat 0 -500px;
+}
+
+.art_regist_btn {
+  float : right;
+  color : white;
+  font-size: 14px;
+  background-color: #303030;
+  width: 200px;
+  text-align: center;
+  padding-top: 8px;
+  height: 25px;
+  margin : 8px 200px 0 0;
+}
+.art_regist_btn > p {
+  display: inline-block;
+  color : orange;
+  text-decoration: underline;
+
+}
+.art_benefit_btn{
+  width: 800px;
+  height: 50px;
+  margin : 0 auto;
+  /* border : 1px solid red; */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+#art_benefit_btn1{
+  float: left;
+  width: 395px;
+  height: 100%;
+  border : 1px solid gray;
+  color : #FFFFFF;
+  text-align: center;
+  
+}
+#art_benefit_btn1>p{
+  margin-top: 15px;
+}
+#art_benefit_btn2{
+  float: left;
+  width: 395px;
+  height: 100%;
+  border : 1px solid gray;
+  color : #FFFFFF;
+  text-align: center;
+}
+#art_benefit_btn2>p{
+  margin-top: 15px;
+}
+.art_mission{
+  width: 900px;
+  background : black;
+  height: 140px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  color : #FFFFFF;
+  padding-top: 40px;
+
+}
+.art_mission1{
+  font-size: 22px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  
+}
+.art_mission2,.art_mission3,.art_mission4{
+  color : #999;
+  letter-spacing: -2px;
+  margin-bottom: 5px;
+}
+.art_mission3 > span{
+    color : #d4b542;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.art_mission_off{
+  display: none;
+}
+.art_mission_on{
+  display: block;
+}
+
+.artist_mission{
+  width: 900px;
+  background : black;
+  height: 140px;
+  position: relative;
+  margin: 0 auto;
+  text-align: left;
+  color : #FFFFFF;
+  padding-top: 20px;
+
+}
+.artist_img{
+  width : 120px;
+  height: 100px;
+  background: url("../images/img_artist_badge.png") 0 0 no-repeat;
+  /* border : 1px solid red; */
+  float : left;
+  margin-left: 60px;
+  
+}
+.artist_text{
+  /* border : 1px solid red; */
+  width: 690px;
+  height: 130px;
+  float: left;
+  margin-top: 10px;
+  margin-left: 20px;
+  
+
+}
+.atist_text_w{
+  font-size: 17px;
+  letter-spacing: -1px;
+ 
+}
+.artist_text > ul > li{
+  list-style : inside;
+  color: #999;
+  line-height: 10px;
+}
+.art_mission_content{
+  margin : 30px auto;
+  text-align: center;
+  /* border : 1px solid red; */
+  height: 440px;
+  color : #ffffff;
+  position: relative;
+
+
+}
+.art_text_y{
+  color : #d4b542; 
+}
+.art_text_bottom{
+  margin-bottom: 20px;
+}
+.art_mission_text{
+  font-size: 14px;
+  color: #999;
+}
+.art_mission_text > p > span{
+  color : #d4b542; 
+}
+.art_mission_text_b > p > span{
+  color : #d4b542; 
+}
+.art_text_btn{
+  background-color: #5D201c;
+  display: block;
+  width : 100px;
+  height : 30px; 
+  margin : 10px auto;
+  border-radius: 6px;
+}
+.art_text_btn > button{
+  background-color: #5D201c;
+  border : 1px solid #5e3330;
+  width: 96px;
+  height: 26px;
+  margin-top: 2px;
+  border-radius: 6px;
+}
+.art_arrow_img{
+  z-index: 10;
+  margin-top: 20px;
+  width: 100%;
+  height: 70px;
+  /* border : 1px solid red; */
+  background : url("../images/bg_board_mission_2020.png") 50px -200px no-repeat;
+}
+.art_clapper_img{
+  width: 45px;
+  height: 45px;
+  /* border : 1px solid red; */
+  background : url("../images/sprite_img_mission_2020.png") 0 0 no-repeat;
+  position : absolute;
+  z-index: 1;
+  top : 170px;
+  left : 78px;
+}
+.art_mission_text_b{
+  /* border : 1px solid red; */
+  width: 250px;
+  margin-left: 700px;
+  font-size: 14px;
+  color: #999;
+  letter-spacing: -2px;
+}
+.art_text_btn_b{
+  background-color: #5D201c;
+  display: block;
+  width : 100px;
+  height : 30px; 
+ 
+  border-radius: 6px;
+  margin-left: 790px;
+  margin-top: 10px;
+}
+.art_text_btn_b > button{
+  background-color: #5D201c;
+  border : 1px solid #5e3330;
+  width: 96px;
+  height: 26px;
+  margin-top: 2px;
+  border-radius: 6px;
+  
+}
+.art_mission_content:after{
+  content: '';
+  margin: 20px auto;
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #2f2f2f;
+  border-top: 1px solid #000;
+}
+
+.popup_benifit_all{
+  width: 900px;
+  height: 200px;
+  margin : 0 auto;
+  border : 1px solid red;
+}
+.coupon_benefit{
+  border : 1px solid red;
+  width: 450px;
+  height: 200px;
+  box-sizing: border-box;
+}
+.coupon_img{
+  background : url("../images/bg_benefit_list_icon.png") 0 0 no-repeat;
+  width: 80px;
+  height: 50px;
+  border : 1px solid red;
+  float : left ;
+
+}
+.coupon_text{
+  float: left;
+  width: 360px;
+  height: 100%;
+  border : 1px solid red;
 }
 
 /* =============================================
