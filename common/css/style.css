@@ -1111,33 +1111,41 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
 
 }
 .art_benefit_btn{
-  width: 800px;
+  width: 900px;
   height: 50px;
   margin : 0 auto;
   /* border : 1px solid red; */
   margin-bottom: 20px;
   box-sizing: border-box;
+  vertical-align: middle;
+  
 }
 #art_benefit_btn1{
   float: left;
-  width: 395px;
-  height: 100%;
+  width: 445px;
+  height: 50px;
   border : 1px solid gray;
   color : #FFFFFF;
   text-align: center;
   background-color: #5b5f68;
+  cursor: pointer;
+  box-sizing: border-box;
   
 }
+
+  
 #art_benefit_btn1>p{
   margin-top: 15px;
 }
 #art_benefit_btn2{
   float: left;
-  width: 395px;
-  height: 100%;
+  width: 445px;
+  height: 50px;
   border : 1px solid gray;
   color : #FFFFFF;
   text-align: center;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 #art_benefit_btn2>p{
   margin-top: 15px;
@@ -1187,6 +1195,8 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   padding-top: 20px;
 
 }
+
+
 .artist_img{
   width : 120px;
   height: 100px;
@@ -1212,18 +1222,22 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
  
 }
 .artist_text > ul > li{
-  list-style : inside;
+  list-style : none;
   color: #999;
   line-height: 10px;
+}
+.artist_text > ul > li::before{
+  width:3px;
+  height:3px; 
+  border-radius:100%;
 }
 .art_mission_content{
   margin : 30px auto;
   text-align: center;
   /* border : 1px solid red; */
-  height: 440px;
+  height: 400px;
   color : #ffffff;
   position: relative;
-
 
 }
 .art_text_y{
@@ -1303,7 +1317,7 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   border-radius: 6px;
   
 }
-.art_mission_content:after{
+.popup_benifit::before{
   content: '';
   margin: 20px auto;
   display: block;
@@ -1313,14 +1327,15 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   border-top: 1px solid #000;
 }
 
+
 .popup_benifit_all{
   width: 900px;
   height: 200px;
   margin : 0 auto;
-  border : 1px solid red;
+  /* border : 1px solid red; */
 }
 .coupon_benefit{
-  border : 1px solid red;
+  /* border : 1px solid red; */
   width: 450px;
   height: 200px;
   box-sizing: border-box;
@@ -1329,16 +1344,31 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   background : url("../images/bg_benefit_list_icon.png") 0 0 no-repeat;
   width: 80px;
   height: 50px;
-  border : 1px solid red;
+  /* border : 1px solid red; */
   float : left ;
 
 }
 .coupon_text{
   float: left;
-  width: 360px;
+  width: 330px;
   height: 100%;
-  border : 1px solid red;
+  /* border : 1px solid red; */
+  margin-left: 20px;
 }
+.coupon_text > ul > li{
+  color: #999;
+  font-size: 12px;
+  letter-spacing: -2px;
+  line-height: 20px;
+}
+.coupon_text > ul > li:before{
+
+  width:3px;
+  height:3px; 
+  border-radius:100%;
+ 
+}
+
 
 /* =============================================
               club service popup (koic) 끝
