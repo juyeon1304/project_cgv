@@ -947,6 +947,9 @@ vertical-align: middle; }
 .txt_line2{
   margin-left: 80px;
 }
+.txt_line3 {
+  margin-left: 600px;
+}
 .txt_line2_1{
   margin-left: 80px;
   margin-top : 10px;
@@ -1118,6 +1121,7 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   margin-bottom: 20px;
   box-sizing: border-box;
   vertical-align: middle;
+  clear: both;
   
 }
 #art_benefit_btn1{
@@ -1339,6 +1343,7 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   width: 450px;
   height: 200px;
   box-sizing: border-box;
+  float: left;
 }
 .coupon_img{
   background : url("../images/bg_benefit_list_icon.png") 0 0 no-repeat;
@@ -1368,8 +1373,423 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   border-radius:100%;
  
 }
+.pointEvent_benefit{
+  width: 450px;
+  height: 200px;
+  box-sizing: border-box;
+  /* border : 1px solid red; */
+  float: left;
+  box-sizing: border-box;
+}
+.point_benefit{
+  width: 100%;
+  height: 130px;
+  /* border : 1px solid red; */
+}
+.event_benefit{
+  width: 100%;
+  height: 70px;
+  /* border : 1px solid red; */
+}
+.point_img{
+  background : url("../images/bg_benefit_list_icon.png") -15px -195px no-repeat;
+  width: 70px;
+  height: 100px;
+  float: left;
+  /* border : 1px solid red; */
+}
+.point_text {
+  letter-spacing: -1px;
+}
+.point_text > span::before{
+  width:3px;
+   height:3px;
+   border-radius:100% ;
+   background-color: gray;
+  
+}
+.event_img{
+  background : url("../images/bg_benefit_list_icon.png") -10px -395px no-repeat;
+  width: 70px;
+  height: 70px;
+  float: left;
+  /* border : 1px solid red; */
+}
+.event_text {
+  letter-spacing: -1px;
+}
+.event_text > span::before{
+  width:3px;
+   height:3px;
+   border-radius:100% ;
+   background-color: gray;
+  
+}
+.pointEvent_note {
+  width: 900px;
+  margin : 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border : 1px solid transparent;
+  /* border : 1px solid red; */
+
+}
+.pointEvent_note1{
+  width: 700px;
+  display: inline-block;
+   box-sizing: border-box;
+}
+.pointEvent_note_list {
+  width: 700px;
+  margin-bottom: 20px;
+  
+}
+
+.txt_position1{
+  float: left;
+ 
+  width: 90px;
+  color : #999;
+  text-align: center;
+}
+.txt_position2 {
+  float: right;
+  color : #999;
+  width: 600px;
+  font-size: 0.8rem;
+  letter-spacing: -1px;
+  
+}
+.coupon_regist{
+  width: 190px;
+  height: 800px;
+
+  float: right;
+  line-height: 10px;
+}
+.coupon_reg_btn{
+  background-color: #e91400;
+  display: block;
+  width : 180px;
+  height : 40px; 
+  text-align: center;
+  margin : 680px auto;
+  
+  
+}
+.coupon_reg_btn::before{
+  margin-bottom: 700px;
+}
+.coupon_regist > span {
+    letter-spacing: -1px;
+    font-size: 12px;
+}
+.coupon_reg_btn > button{
+  background-color: #e91400;
+  border : 1px solid #f27365;
+  width: 176px;
+  height: 36px;
+  margin-top: 2px;
+}
 
 
+.coupon_reg_btn > button > span {
+  color : white;
+  font-size: 1rem;
+  font-weight: 700;
+  
+
+}
+.club_popup_in2_fdx{
+ height: 330px;
+  background: #222222;
+  width: 100%;
+  /* border : 1px solid red; */
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  
+}
+
+
+.fdx_movie {
+  width: 880px;
+  margin : 0 auto ;
+  box-sizing: border-box;
+
+  height: 330px;
+  
+  border-bottom: 1px solid #000;
+  
+
+}
+.fdx_title_movie {
+  width : 420px;
+  height: 300px;
+  /* border : 1px solid red; */
+}
+.now_movie{
+  float: left;
+}
+.fdx_center_line{
+  float: left;
+  width: 1px;
+  height:290px;
+  margin-top: 35px;
+  background: #2f2f2f;
+  border-left: 1px solid #000;
+}
+.com_movie {
+  float : right;
+}
+.n_mov_img{
+  width: 200px;
+  height: 275px;
+  /* border : 1px solid red; */
+  background : url('../images/84834_320.jpg') 0 0 no-repeat;
+  background-size: cover;
+  position:relative;
+}
+.c_mov_img{
+  width: 200px;
+  height: 275px;
+  background : url('../images/default_320_370.gif') -20px 0 no-repeat ;
+  background-size: cover;
+  position:relative;
+}
+.c_mov_img_line{
+  position: absolute;
+  width: 200px;
+  height: 175px;
+  top : 100px;
+  background: linear-gradient(to bottom, transparent, gray ,black );
+}
+.c_mov_img_text1{
+  position: absolute;
+  width: 150px;
+  top : 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* border : 1px solid red; */
+  color : #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  left : 20px;
+
+  
+
+}
+.c_mov_img_text2{
+  position: absolute;
+  width: 150px;
+  top : 225px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* border : 1px solid red; */
+  color : #a5a5a5;
+  font-size: 12px;
+  font-weight: 700;
+  left : 20px;
+}
+.fdx_btn{
+  width: 900px;
+  height: 40px;
+  margin : 10px auto;
+  box-sizing: border-box;
+
+}
+#fdx_btn1{
+  box-sizing: border-box;
+  width: 300px;
+  height: 100%;
+  float: left;
+  font-size: 12px;
+  padding-top: 10px;
+  border : 1px solid gray;
+  color : #FFFFFF;
+  text-align: center;
+  background-color: #5b5f68;
+}
+
+#fdx_btn2{
+  box-sizing: border-box;
+  width: 300px;
+  height: 100%;
+  float: left;
+  font-size: 12px;
+  padding-top: 10px;
+  border : 1px solid gray;
+  color : #FFFFFF;
+  text-align: center;
+  /* background-color: #5b5f68; */
+}
+#fdx_btn3{
+  box-sizing: border-box;
+  width: 300px;
+  height: 100%;
+  float: left;
+  font-size: 12px;
+  padding-top: 10px;
+  border : 1px solid gray;
+  color : #FFFFFF;
+  text-align: center;
+  /* background-color: #5b5f68; */
+}
+.fdx_card_title{
+  width: 900px;
+  margin-left: 40px;
+  height: 70px;
+}
+.fdx_card_title > em{
+  color : #FFFFFF;
+  font-size: 36px;
+  font-weight: 500;
+
+}
+.fdx_card_benefit{
+  width: 900px;
+  margin : 0 auto ;
+  height: 300px;
+  /* border : 1px solid red; */
+  box-sizing: border-box;
+  position: relative;
+
+
+}
+.fdx_card_text {
+  width: 400px;
+  height: 100%;
+  /* border : 1px solid red; */
+  float: left;
+  padding-left: 30px;
+  padding-top: 40px;
+  box-sizing: border-box;
+
+
+}
+.fdx_card_img {
+  background:  url("../images/img_benefit_redcard_4dx.jpg") 0 0 no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 220px;
+  float: left;
+  border-radius: 5%;
+  position: absolute;
+  left : 500px;
+  top : 30px;
+}
+.fdx_card_text :nth-child(1) {
+  color : white;
+  font-size: 18px;
+  
+}
+.fdx_card_text :nth-child(2) {
+  color : white;
+  font-size: 12px;
+  line-height: 2;
+  margin-bottom: 20px;
+
+}
+.fdx_card_text :nth-child(3) {
+  color : #999999;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+
+}
+.fdx_card_text :nth-child(4) {
+  color : #0880f1;
+  font-size: 15px;
+  line-height: 1.5;
+
+}
+.fdx_card_text :nth-child(5) {
+  color : #0880f1;
+  font-size: 15px;
+  line-height: 1.5;
+
+}
+.fdx_card_list {
+  color : red;
+  width: 900px;
+  height: 200px;
+  margin : 0 auto;
+  box-sizing: border-box;
+  /* border : 1px solid red; */
+
+}
+.fdx_card_info{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.fdx_card_info > li {
+  display: inline-block;
+  width: 280px;
+  height: 100%;
+  /* border : 1px solid red; */
+  text-align: center;
+  margin-left: 10px;
+
+}
+.fdx_card_info .card_info_img1 {
+  background: url(https://img.cgv.co.kr/r2014/images/club/bg_redcard_benefit_icons.png) no-repeat 0 0;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  
+
+}
+.fdx_card_info .card_info_img2 {
+  background: url(https://img.cgv.co.kr/r2014/images/club/bg_redcard_benefit_icons.png) no-repeat 0 0;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+
+}
+.fdx_card_info .card_info_img3 {
+  background: url(https://img.cgv.co.kr/r2014/images/club/bg_redcard_benefit_icons.png) no-repeat 0 0;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+
+}
+.fdx_card_list::after{
+  content: '';
+  margin: 0 auto;
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #2f2f2f;
+  border-top: 1px solid #000;
+}
+.list_point {
+  width: 3px;
+  height: 3px;
+  border : 1px solid #999999;
+  background-color: #999999;
+  border-radius: 100%;
+  display: inline-block;
+}
+.list_point1{
+  width: 8px;
+  height: 3px;
+  
+ 
+  display: inline-block;
+}
+.txt_position3 {
+  float: left;
+  color : #999;
+  width: 800px;
+  font-size: 0.8rem;
+  letter-spacing: -1px;
+
+}
+.line_bottom{
+  margin-bottom: 20px;
+}
 /* =============================================
               club service popup (koic) 끝
 ==================================================*/
