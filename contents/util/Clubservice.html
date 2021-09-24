@@ -16,118 +16,9 @@
   <script src="../../common/js/slide.js" charset="utf-8"></script>
   <script src="../../common/js/script.js" charset="utf-8" defer></script>
   <link rel="stylesheet" href="../CSS/style.css">
-  <!-- popup test javascript -->
-  <script>
-    'use strict'
-    // popup view
-    const club_popup = document.getElementsByClassName('club_popup');
-    const close_btn = document.getElementsByClassName('close_btn');
-    const art_mission_on = document
-    // console.log(club_popup.length );
-    //art house popup btn
-
-    
-
-
-    function popupview(num1){
-      num1 = num1 -1;
-
-      const club_length = club_popup.length 
-      
-      // console.log(close_btn.length );
-      // console.log(close_btn);
-      if(num1 == 2){
-        alert('더 새로운 모습으로 찾아올 키즈패밀리 클럽을 기대해 주세요.')
-        for(let i=0; i < club_length; i++){
-            club_popup[i].style.display = 'none';
-          }
-      }else{
-        if(club_popup[num1].style.display == 'block'){
-          club_popup[num1].style.display = 'none';
-        }else{
-          for(let i=0; i < club_length; i++){
-            club_popup[i].style.display = 'none';
-          }
-          club_popup[num1].style.display = 'block';
-        }
-      }
-        
-
-        for(let i = 0; i < close_btn.length; i++){
-          close_btn[i].addEventListener('click',() =>{
-          club_popup[i].style.display = 'none';
-          });
-        }
-    }
-    
-   
-
-    window.onload =function(){
-      const art_h_btn1 = document.getElementById('art_benefit_btn1');
-      const art_h_btn2 = document.getElementById('art_benefit_btn2');
-      const art_display1 = document.getElementsByClassName('art_display1')
-      const art_display2 = document.getElementsByClassName('art_display2')
-      art_h_btn2.addEventListener('click',(e)=>{
-        const b_name = 'art_benefit_btn2'
-        art_title_on(b_name);
-      });
-      art_h_btn1.addEventListener('click',(e)=>{
-        const b_name = 'art_benefit_btn1'
-        art_title_on(b_name);
-      });
-
-      const art_title_on = function(b_name){
-          let c_name = '';
+  <script src="../../common/js/club_popup.js"></script>
+ 
   
-          console.log(b_name);
-          if(b_name == 'art_benefit_btn1'){
-            for(let i=0; i < art_display2.length ;i++){
-              c_name = art_display2[i].className.replace('art_mission_on','art_mission_off');
-              art_display2[i].className = c_name;
-              
-              
-            }
-            for(let i=0; i < art_display1.length;i++){
-              c_name = art_display1[i].className.replace('art_mission_off','art_mission_on');
-              art_display1[i].className = c_name;
-              
-            }
-            art_h_btn1.style.backgroundColor = '#5b5f68'
-            art_h_btn1.style.border="3px solid #ead3d7"
-            art_h_btn2.style.border="1px solid gray"
-            art_h_btn2.style.backgroundColor = '#222222'
-            // console.log(e.target.id);
-          }
-          if(b_name == 'art_benefit_btn2'){
-            for(let i=0; i < art_display1.length ;i++){
-              c_name = art_display1[i].className.replace('art_mission_on','art_mission_off');
-              art_display1[i].className = c_name;
-              
-            }
-            for(let i=0; i < art_display2.length;i++){
-              c_name = art_display2[i].className.replace('art_mission_off','art_mission_on');
-              art_display2[i].className = c_name;
-              
-            }
-            art_h_btn2.style.backgroundColor = '#5b5f68'
-            art_h_btn2.style.border="3px solid #ead3d7"
-            art_h_btn1.style.border="1px solid gray"
-            art_h_btn1.style.backgroundColor = '#222222'
-            // console.log(e.target.id);
-          }
-          
-      }
-      
-    }
-    
-   
-    
-
-        
-       
-        
-
-  </script>
 </head>
 
 <body class="body_idx">
@@ -1196,7 +1087,7 @@
       <div id="fdx_btn3"><p>멤버십 이벤트</p></div>
     </div>
    
-    <div class="fdx_card_benefit">
+    <div class="fdx_card_benefit height_300 art_mission_on">
       <div class="fdx_card_text">
         <p>4DX RED CARD란?</p>
         <p>DAILY AND CASUAL MOVIE ATTRACTION CARD</p>
@@ -1206,7 +1097,7 @@
       </div>
       <div class="fdx_card_img"></div>
   </div>
-  <div class="fdx_card_list">
+  <div class="fdx_card_benefit   art_mission_on">
     <ul class="fdx_card_info">
        <li><div class="card_info_img1"></div>
          4DX 무료 관람 쿠폰 1매</li>
@@ -1220,7 +1111,19 @@
           </li>
     </ul>
   </div>
-  <div class="benefit_note">
+  <div class="fdx_pre_benefit art_mission_off">
+    <div class="fdx_pre_text">지금 극장에서 4DX RED CARD를 구매하고, 관람 횟수별 혜택까지 누리세요!</div>
+    <div class="fdx_pre_img"></div>
+    <div class="fdx_clapper_img"></div>
+    <div class="fdx_pre_tex1">2019년 1월 1일자로 7회 관람 시 증정되는 스페셜 기프트 혜택이 4DX 무료관람 쿠폰(1매)으로 변경됩니다.</div>
+  </div>
+  <div class="fdx_mem_benefit art_mission_off">
+   
+        <p>현재 진행중인 이벤트가 없습니다.</p>
+
+  </div>
+  <div class="fdx_b_line"></div>
+  <div class="fdx_card_benefit_text">
         <ul class="benefit_note_list">
           <li>
             <strong class="txt_color_g txt_position1">카드안내</strong>

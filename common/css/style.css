@@ -892,10 +892,10 @@ vertical-align: middle; }
   background: url(https://img.cgv.co.kr/r2014/images/club/ico_benefit_1318.png) no-repeat 0 -686px;
 }
 .sp_benefit:after{
-  content: '';
+    content: '';
     margin: 38px auto;
     display: block;
-    width: 95%;
+    width: 95%;   
     height: 1px;
     background: #2f2f2f;
     border-top: 1px solid #000;
@@ -1650,13 +1650,15 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
 .fdx_card_benefit{
   width: 900px;
   margin : 0 auto ;
-  height: 300px;
+
   /* border : 1px solid red; */
   box-sizing: border-box;
   position: relative;
-
-
 }
+.height_300{
+  height: 300px;
+}
+
 .fdx_card_text {
   width: 400px;
   height: 100%;
@@ -1731,6 +1733,7 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   /* border : 1px solid red; */
   text-align: center;
   margin-left: 10px;
+  color : red;
 
 }
 .fdx_card_info .card_info_img1 {
@@ -1738,6 +1741,7 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
   width: 100px;
   height: 100px;
   margin: 0 auto;
+
   
 
 }
@@ -1790,6 +1794,72 @@ background: url('../images/bg_benefit_list_icon7_03.png') no-repeat 0;
 .line_bottom{
   margin-bottom: 20px;
 }
+.fdx_pre_benefit {
+  margin : 0 auto;
+  width: 900px;
+  height: 300px;
+  position : relative;
+}
+.fdx_pre_text {
+  color : #999999;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 900px;
+  text-align: center;
+
+
+}
+.fdx_pre_tex1 {
+  color : #ffffff;
+  font-size: 16px;
+  letter-spacing: -1;
+  margin-top: 30px;
+  width: 900px;
+  text-align: center;
+
+
+}
+.fdx_pre_img{
+
+  margin : 20px auto;
+  width: 600px;
+  height : 100px;
+  background: url("../images/bg_board_mission357.png") 0 -50px no-repeat;
+  background-size: cover;
+  z-index: 30;
+}
+.fdx_clapper_img{
+  width: 45px;
+  height: 45px;
+  /* border : 1px solid red; */
+  background : url("../images/sprite_img_mission_2020.png") 0 0 no-repeat;
+  position : absolute;
+  z-index: 1;
+  top : 70px;
+  left : 200px;
+}
+.fdx_mem_benefit{
+
+  margin : 0 auto;
+  width: 900px;
+  height: 200px;
+  position : relative;
+  box-sizing: border-box;
+  color : #999999;
+  font-size: 24px;
+  padding-top: 50px;
+  padding-left: 25%;
+}
+.fdx_b_line{
+  content: '';
+  margin: 38px auto;
+  display: block;
+  width: 95%;   
+  height: 1px;
+  background: #2f2f2f;
+  border-top: 1px solid #000;
+}
+
 /* =============================================
               club service popup (koic) 끝
 ==================================================*/
