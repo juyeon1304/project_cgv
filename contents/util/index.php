@@ -1,23 +1,29 @@
+<?php
+
+  include '../../admin/user_info/include/sessioncheck.php';
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>로그인 < CGV</title>
-      <link rel="stylesheet" href="/common/css/default.css">
-      <link rel="stylesheet" href="/common/css/swiper.css">
-      <link rel="stylesheet" href="/common/css/style.css">
-      <link rel="stylesheet" href="/common/css/index.css">
-      <link rel="stylesheet" href="/common/css/sub.css">
-      <link rel="stylesheet" href="/common/css/login.css">
-      <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
-      <script src="/common/js/common.js" charset="utf-8"></script>
-      <script src="/common/js/swiper.js" charset="utf-8"></script>
-      <script src="/common/js/slide.js" charset="utf-8"></script>
-      <script src="/common/js/script.js" charset="utf-8" defer></script>
+  <title>영화 그 이상의 감동. CGV</title>
+  <link rel="stylesheet" href="../../common/css/default.css">
+  <link rel="stylesheet" href="../../common/css/swiper.css">
+  <link rel="stylesheet" href="../../common/css/style.css">
+  <link rel="stylesheet" href="../../common/css/index.css">
+  <link rel="stylesheet" href="../../common/css/sub.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" charset="utf-8"></script>
+  <script src="../../common/js/common.js" charset="utf-8"></script>
+  <script src="../../common/js/swiper.js" charset="utf-8"></script>
+  <script src="../../common/js/slide.js" charset="utf-8"></script>
+  <script src="../../common/js/script.js" charset="utf-8" defer></script>
+
 </head>
+
 <body class="body_idx">
   <nav class="nav_skip">
     <ul>
@@ -26,12 +32,13 @@
       <li><a href="#nav_quick">빠른메뉴 바로가기</a></li>
     </ul>
   </nav>
+  <!-- header 시작 -->
   <header>
     <div class="wrap_com">
       <div class="wrap_gnb">
         <h1 class="logo_cgv.png">
           <a href="">
-            <img src="/common/images/logo_cgv.png" alt="CGV">
+            <img src="common/images/logo_cgv.png" alt="CGV">
           </a>
         </h1>
         <h2 class="hide">대메뉴</h2>
@@ -42,9 +49,9 @@
               <div class="wrap_snb">
                 <div>
                   <ul>
-                    <li><a href="/contents/movie/movies_list.html">무비차트</a></li>
-                    <li><a href="/contents/movie/movies_HDtrailer.html">HD 트레일러</a></li>
-                    <li><a href="/contents/movie/movies_finder.html">무비파인더</a></li>
+                    <li><a href="">무비차트</a></li>
+                    <li><a href="">HD 트레일러</a></li>
+                    <li><a href="">무비파인더</a></li>
                     <li><a href="">CGV아트하우스</a></li>
                   </ul>
                 </div>
@@ -56,7 +63,7 @@
                 <div>
                   <ul>
                     <li><a href="">빠른예매</a></li>
-                    <li><a href="/contents/ticket/timetable.html">상영시간표</a></li>
+                    <li><a href="">상영시간표</a></li>
                   </ul>
                 </div>
               </div>
@@ -66,21 +73,21 @@
               <div class="wrap_snb">
                 <div>
                   <ul>
-                    <li><a href="/contents/theaters/cgv theaters/index.html">CGV 극장</a></li>
-                    <li><a href="/contents/theaters/special/fourdx.html">특별관</a></li>
+                    <li><a href="">CGV 극장</a></li>
+                    <li><a href="">특별관</a></li>
                     <li><a href="">CLUB 서비스</a></li>
                   </ul>
                 </div>
               </div>
             </li>
             <li class="event">
-              <a href="/contents/event/event_event/event_special.html"><span class="hide">이벤트&amp;컬처</span></a>
+              <a href=""><span class="hide">이벤트&amp;컬처</span></a>
               <div class="wrap_snb">
                 <div>
                   <ul>
-                    <li><a href="/contents/event/event_event/event_special.html">이벤트</a></li>
-                    <li><a href="/contents/event/event_giftshop/evt_giftstop_index.html">기프트샵</a></li>
-                    <li><a href="/contents/event/event_magazine/event_magazine.html">매거진</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">기프트샵</a></li>
+                    <li><a href="">매거진</a></li>
                   </ul>
                 </div>
               </div>
@@ -102,7 +109,14 @@
       <div class="wrap_util">
         <h2 class="hide">유틸리티 메뉴</h2>
         <ul class="list_util right clear">
-          <li class="login"><a href="/contents/util/login.html"><span class="hide">로그인</span></a></li>
+            <?php
+               if($_SESSION['user_type'] == 'A1'){
+            ?>
+          <li class="mg_site"><a href="../../admin/index.html"><span>Mgv</span></a></li>
+          <?php
+                };
+          ?>
+          <li class="logout"><a href="./logout.php"><span class="hide">Log out</span></a></li>
           <li class="join"><a href="#"><span class="hide">회원가입</span></a></li>
           <li class="my"><a href="#"><span class="hide">MY CGV</span></a></li>
           <li class="vip"><a href="#"><span class="hide">VIP LOUNGE</span></a></li>
@@ -114,108 +128,177 @@
           <h2 class="hide">CGV 소셜 네트워크</h2>
           <ul class="list_sns clear">
             <li class="app"><a href=""><span class="hide">CGV앱 설치</span></a></li>
-            <li class="facebook"><a href="https://www.facebook.com/CJCGV" target="_blank"><span class="hide">Facebook 좋아요!</span></a></li>
-            <li class="insta"><a href="https://www.instagram.com/cgv_korea/" target="_blank"><span class="hide">Instagram Follow</span></a></li>
+            <li class="facebook"><a href=""><span class="hide">Facebook 좋아요!</span></a></li>
+            <li class="insta"><a href=""><span class="hide">Instagram Follow</span></a></li>
           </ul>
-          <a href="" class="frugal"><span class="hide">알뜰한 영화관람법</span></a>
+          <a href="/contents/util/dc/" class="frugal"><span class="hide">알뜰한 영화관람법</span></a>
         </div>
       </div>
     </div>
     </div>
   </header>
   <main id="main">
+    <section class="sec_visual">
       <div class="wrap_com">
-          <section class="clear">
-              <h2 class="hide">로그인</h2>
-              <div class="left">
-                  <ul class="tab_menu_round">
-                      <li class="on"><a href="">로그인</a></li>
-                      <li><a href="">비회원 예매</a></li>
-                      <li><a href="">비회원 예매확인</a></li>
-                  </ul>
-                  <form action="./login_check.php" method="POST">
-                  <div class="wrap_login">
-                      
-                          <fieldset>
-                            <legend>회원 로그인 입력 양식</legend>
-                            <p>아이디 비밀번호를 입력하신 후, 로그인 버튼을 클릭해 주세요.</p>
-                            <div class="login">
-                                <input type="text" name="x_userid" title="아이디" id="txtId"></li>
-                                <input type="password" name="x_userpw" title="비밀번호" id="txtPw"></li>
-                            </div>
-                            <button type="submit" id="submit" title="로그인">
-                              <span>로그인</span>
-                            </button>
-                            <div class="save_id">
-                              <input type="checkbox" id="chk_id">
-                              <label for="chk_id">아이디 저장</label>
-                            </div>
-                            <div class="login_option">
-                              <a href="">아이디 찾기<img src="/common/images/bg/bg_arrow03.png"></a>
-                              <a href="">비밀번호 찾기<img src="/common/images/bg/bg_arrow03.png"></a>
-                            </div>
-                            <div class="btn_naver">
-                              <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
-                                <img src="/common/images/btn_loginNaver.jpg" alt="네이버버튼">
-                              </a>
-                            </div>
-                          </fieldset>
-                      
-                    </form>
-
-                  </div>
-
-              </div>
-              <div class="right">
-                  <h2 class="hide">간편결제매니저(휴대폰간편로그인)</h2>
-                  <a href="https://sepay.org/spm/join?regSiteCode=OZ&ctgCode=1&subCode=1" target="_blank">
-                      <p class="hide">휴대폰으로 모든 사이트 로그인</p>
-                      <img src="/common/images/img_login.jpg" alt="본 서비스는 (주)민앤지에서 제공하는 1,100원 서비스입니다. CGV는 통신판매 중계자로 본 서비스는 (주)민앤지의 책임하에 운영됩니다. 고객센터 1599-4704">
-                  </a>
-              </div>
-          </section>
-
-          <div class="sect_login_guide">
-              <div class="wrap_useguide">
-                  <strong>CJ ONE 회원이 아니신가요?</strong>
-                    <span>회원가입하시고 다양한 혜택을 누리세요!</span> 
-                  <strong class="round_red">
-                    <a href="https://www.cjone.com/cjmweb/join.do?coopco_cd=7010&brnd_cd=1000" target="_blank">CJ ONE 회원가입하기</a>
-                  </strong>
-                  <em> 
-                    <a href="http://www.cjone.com/cjmweb/about-cjone.do" target="_blank"> 
-                      <span class="round_black">
-                        CJ ONE 멤버십이란?
-                      </span>
-                    </a>
-                  </em>
-              </div>
+        <div class="slide swiper-container">
+          <div class="nav_controls">
+            <button class="btn_play"><span class="hide">슬라이드 자동 넘기기 시작</span></button>
+            <button class="btn_next"><span class="hide">다음슬라이드</span></button>
+            <button class="btn_prev"><span class="hide">이전슬라이드</span></button>
           </div>
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="">
+                <img src="/common/images/img_visual1.jpg" alt="">
+                <p class="txt_visual">
+                  <strong>000님!</strong><br>
+                  혹시 지금 선물 고민중?<br>
+                  누구나 기뻐할 선물이 여기 있어요!
+                </p>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="/common/images/img_visual2.jpg" alt="">
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="/common/images/img_visual3.jpg" alt="">
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="/common/images/img_visual4.jpg" alt="">
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <img src="/common/images/img_visual5.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+          <div class="paging"></div>
+        </div>
       </div>
-
-  <div class="banner_hori">
-    <a href="https://www.credit.co.kr/ib20/mnu/BZW000000000001?NaPm=ct%3Dksa7x28t%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3D73b8e3487f01934833aa6f19e89df2ece76f0e54" target="_blank">
-      <div class="wrap_com">
-        <img src="/common/images/banner_hori.png" alt="">
-      </div>
-    </a>
-  </div>
-</main>
-
+    </section>
+    <div class="wrap_com">
+      <section class="sec_movie">
+        <h2 class="h_type1 bg_line">
+          <span class="hide">movie selection</span>
+          <img src="/common/images/txt_movie_selection.gif" alt="">
+        </h2>
+        <div class="clear">
+          <div class="left">
+            <iframe src="https://ad.cgv.co.kr/NetInsight/html/CGV/CGV_201401/main@Selection_L" width="733" height="388" title="" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" name="Movie_Selection_L" id="Movie_Selection_L"
+              allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
+          </div>
+          <div class="right">
+            <a href="">
+              <img src="/common/images/img_poster1.jpg" alt="광고 - 이스케이프룸2 노 웨이 아웃 7월 대개봉">
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="sec_event">
+        <h2 class="h_type1 bg_line">
+          <span class="hide">event</span>
+          <img src="/common/images/txt_event.gif" alt="">
+        </h2>
+        <nav class="tab_type1">
+          <ul class="clear">
+            <li><a href="">CGV스페셜</a></li>
+            <li><a href="">영화/예매</a></li>
+            <li><a href="">CGV아트하우스</a></li>
+            <li><a href="">제휴/할인</a></li>
+            <li><a href="">멤버십</a></li>
+          </ul>
+        </nav>
+        <div class="">
+          <ul class="list_type1 clear">
+            <li>
+              <a href="">
+                <img src="/common/images/img_event1.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/common/images/img_event2.jpg" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="/common/images/img_event3.jpg" alt="">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bx_type1">
+          <div class="bx_outer">
+            <div class="bx_inner">
+              <a href="">
+                <img src="/common/images/img_ad1.jpg" alt="NH채움카드 프로모션">
+              </a>
+            </div>
+          </div>
+          <div class="bx_outer">
+            <div class="bx_inner">
+              <a href="">
+                <img src="/common/images/img_ad2.jpg" alt="NH채움카드 프로모션">
+              </a>
+            </div>
+          </div>
+          <div class="bx_outer">
+            <div class="bx_inner">
+              <a href="">
+                <img src="/common/images/img_ad3.png" alt="NH채움카드 프로모션">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec_news">
+        <div>
+          <h2>공지사항</h2>
+          <ul class="list_news">
+            <li>
+              <a href="">
+                <p class="title"><span class="category">[기타]</span>포토플레이 서비스 개선 안내 </p>
+                <span class="date">2021.12.04</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p class="title"><span class="category">[기타]</span>포토플레이 서비스 개선 안내</p>
+                <span class="date">2021.12.04</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <div class="banner_hori">
+      <a href="">
+        <div class="wrap_com">
+          <img src="/common/images/banner_hori.png" alt="">
+        </div>
+      </a>
+    </div>
+  </main>
   <footer>
     <section class="sec_special">
       <div class="wrap_com">
         <h2 class="hide">특별관 리스트</h2>
         <ul class="">
-          <li class="dx"><a href="/contents/theaters/special/fourdx.html"><span class="hide">4DX</span></a></li>
-          <li class="imax"><a href="/contents/theaters/special/imax.html"><span class="hide">IMAX</span></a></li>
-          <li class="screenx"><a href="/contents/theaters/special/scrx.html"><span class="hide">SCREENX</span></a></li>
+          <li class="dx"><a href=""><span class="hide">4DX</span></a></li>
+          <li class="imax"><a href=""><span class="hide">IMAX</span></a></li>
+          <li class="screenx"><a href=""><span class="hide">SCREENX</span></a></li>
           <li class="spherex"><a href=""><span class="hide">SphereX</span></a></li>
-          <li class="gold"><a href="/contents/theaters/special/gold.html"><span class="hide">GOLDCLASS</span></a></li>
-          <li class="cine"><a href="/contents/theaters/special/chef.html"><span class="hide">CINE de CHEF</span></a></li>
+          <li class="gold"><a href=""><span class="hide">GOLDCLASS</span></a></li>
+          <li class="cine"><a href=""><span class="hide">CINE de CHEF</span></a></li>
           <li class="cinema"><a href=""><span class="hide">THE PRIVATE CINEMA</span></a></li>
           <li class="kids"><a href=""><span class="hide">Cine kids</span></a></li>
-          <li class="cinenforet"><a href="/contents/theaters/special/foret.html"><span class="hide">CINE&amp;FORET</span></a></li>
+          <li class="cinenforet"><a href=""><span class="hide">CINE&amp;FORET</span></a></li>
         </ul>
       </div>
     </section>

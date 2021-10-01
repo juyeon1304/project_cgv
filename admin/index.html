@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/admin/common/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Document</title>
-</head>
+      </head>
 
 <body>
     <div class="wrap_body">
@@ -25,9 +25,9 @@
                                 <li><div class="profile wrap_img">
                                     <img src="/admin/common/images/img_account.svg" alt="">
                                 </div></li>
-                                <li><a href="">계정생성</a></li>
-                                <li><a href="">계정찾기</a></li>
-                                <li><a href="">로그아웃</a></li>
+                                <li><a href="./user_info/user_reg.php" target="content">계정생성</a></li>
+                                <li><a href="./user_info/user_info.php" target="content">계정찾기</a></li>
+                                <li><a href="../contents/util/logout.php">로그아웃</a></li>
                             </ul>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                             <li>
                                 <a href="">고객관리</a>
                                 <ul>
-                                    <li><a href="">회원 목록</a></li>
+                                    <li><a href="./user_info/user_info.php" target="content">회원 목록</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -62,8 +62,8 @@
         </div>
         <div class="right">
             <main class="">
-                <div class="wrap_comm">
-                    ddd
+                <div id="wrap_comm">
+                    <iframe width="100%" height="1500px" frameborder=0 name="content"></iframe>
                 </div>
             </main>
         </div>

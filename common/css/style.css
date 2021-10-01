@@ -83,7 +83,9 @@ header .wrap_util a { display: block; height:  30px; line-height: 30px;}
 header .wrap_util .left > * { float: left}
 header .list_util > li { float: left; border-left: 1px solid #ddd;}
 header .list_util > li a { padding: 0 10px}
+header .list_util > li.mg_site a { width: 29px;  background-position: -1000px 9px; font-size: 12px; font-weight: 600; }
 header .list_util > li.login a { width: 29px; background-position: 10px 9px; }
+header .list_util > li.logout a { width: 29px; background-position: -528px 9px; }
 header .list_util > li.join a { width: 39px; background-position: -42px 9px;}
 header .list_util > li.my a { width: 39px; background-position: -103px 9px;}
 header .list_util > li.vip a { width: 62px; background-position: -170px 9px;}

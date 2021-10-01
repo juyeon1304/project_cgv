@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* Reset */
+html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,
+dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0;}
+body,input,select,textarea,button {border:none;}
+ul,ol,li{list-style:none;}
+table{width:100%;border-spacing:0;border-collapse:collapse;}
+img,fieldset{border:0;}
+address,cite,code,em{font-style:normal;font-weight:normal;}
+label,img,input,select,textarea,button{vertical-align:middle;}
+hr{display:none;}
+a{color:#000;text-decoration:none;}
+
+
+.clear {clear:both;}
+.clear:after { content:""; display:block; clear:both;}
+.hide {overflow: hidden; display:block; position:absolute; border: 0; width: 1px; height: 1px; clip: rect(1px, 1px, 1px, 1px);}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+/* layout */
+.left { float: left;}
+.right { float: right;}
+
+
+
+nav {
+    
+    height: 50px;
+    width: 900px;
+    /* border : 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+nav > .info_btn {
+    
+    width: 300px;
+    height: 30px;
+    /* border : 1px solid blue; */
+    margin-left: 600px;
+    position: relative;
+}
+.user_del {
+    float: right;
+    width: 50px;
+    height: 100%;
+    margin-right: 10px;
+}
+.container {
+    width: 900px;
+}
+#search_input {
+    outline : 1px solid black;
+    height: 30px;
+    font-size: 16px;
+    width: 150px;
+    
+}
+#search_input:focus{
+    outline : 1px solid pink;
+}
+
+.container > table {
+    border : 1px solid gray;
+    text-align: center;
+}
+.container > table > tr , th, td {
+    border : 1px solid gray;
+    text-align: center;
+}
+
+
+/* 
+==============================================================
+        user detail CSS 시작
+==============================================================
+*/
+#detail_h2 {
+    margin-left: 20px;
+}
+.de_top {
+    
+    /* border : 1px solid red; */
+    width: 800px;
+    height: 50px;
+    padding-top: 10px;
+    
+    
+}
+.de_top > p {
+    display : inline-block;
+}
+.de_top > p:first-child {
+    float: left;
+    margin-left: 20px;
+    font-size: 22px;
+    font-weight: 700;
+  
+}
+.de_top > p:first-child > span {
+  
+    font-size: 16px;
+    text-decoration: underline;
+    text-decoration-color: #B2CCFF;
+  
+}
+.de_top > p:nth-child(2) {
+    float: right;
+    font-size: 22px;
+    font-weight: 700;
+}
+.de_top  input {
+    outline : 1px solid black;
+    margin-right: 10px;
+    height: 30px;
+    font-size: 16px;
+
+}
+.de_top button {
+    margin-right: 10px;
+    height: 30px;
+    width: 50px;
+}
+.de_menu_bar{
+    /* border : 1px solid red; */
+    width: 800px;
+    height: 50px;
+
+}
+.de_menu_bar > .de_menu1{
+    width: 150px;
+    height: 30px;
+    border : 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 20px;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    
+}
+.de_menu_bar > .de_menu2{
+    width: 150px;
+    height: 30px;
+    border : 1px solid black;
+    border-bottom: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 20px;
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+.de_contain{
+    width: 800px;
+    height: 1000px;
+    border : 1px solid black;
+    margin-left : 20px
+}
+/* 
+==============================================================
+        user detail CSS 끝
+==============================================================
+*/
+

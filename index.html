@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,6 +16,15 @@
   <script src="/common/js/swiper.js" charset="utf-8"></script>
   <script src="/common/js/slide.js" charset="utf-8"></script>
   <script src="/common/js/script.js" charset="utf-8" defer></script>
+  <script>
+
+    const userid = sessionStorage.getItem('userId');
+    console.log(userid);
+    if(userid){
+      location.href='./contents/util/index.php';
+    }
+
+  </script>
 </head>
 
 <body class="body_idx">
@@ -102,7 +112,7 @@
       <div class="wrap_util">
         <h2 class="hide">유틸리티 메뉴</h2>
         <ul class="list_util right clear">
-          <li class="login"><a href="#"><span class="hide">로그인</span></a></li>
+          <li class="login"><a href="./contents/util/login.html"><span class="hide">로그인</span></a></li>
           <li class="join"><a href="#"><span class="hide">회원가입</span></a></li>
           <li class="my"><a href="#"><span class="hide">MY CGV</span></a></li>
           <li class="vip"><a href="#"><span class="hide">VIP LOUNGE</span></a></li>
