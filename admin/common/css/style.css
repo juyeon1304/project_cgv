@@ -5,6 +5,7 @@ body { overflow: hidden; font-family: 'Noto Sans KR',sans-serif;}
 .wrap_img img { width: 100%;}
 
 .flex { display: flex;}
+.flex.center { justify-content: center; align-items: center;}
 .clear > .left { float: left;}
 .clear > .right { float: right;}
 
@@ -23,3 +24,12 @@ header > .top .util .profile { width: 5vh; height: 5vh; border-radius: 100%; }
 .wrap_gnb a { display:block; padding:15px 20px; color: #fff; transition: all .3s;}
 .wrap_gnb a:hover { background: #444;}
 
+main { height: 92vh;}
+main > .wrap_comm { height: 100%;}
+
+
+.list_type1 { display: table; width: 800px; border:1px solid #000;}
+.list_type1 > li { display: table-row; }
+.list_type1 > li ~ li > * {  border-top:1px solid #000;}
+.list_type1 > li > * { display: table-cell; padding:10px;  }
+.list_type1 > li > *:first-child { width: 20%; border-right:1px solid #000;}
