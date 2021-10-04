@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/admin/common/css/default.css">
+    <link rel="stylesheet" href="/admin/common/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    <title>영화관등록</title>
+</head>
+
+<body>
+    <div class="wrap_body">
+        <div class="left">
+            <header>
+                <div class="top wrap_comm">
+                    <div class="flex">
+                        <h1 class="left"><a href="/admin/index.html" class="wrap_img"><img
+                                    src="/admin/common/images/logo_cvg.png" alt=""><span
+                                    class="hide">CGV관리자페이지</span></a></h1>
+                        <div class="right">
+                            <ul class="util flex">
+                                <li>
+                                    <div class="profile wrap_img">
+                                        <img src="/admin/common/images/img_account.svg" alt="">
+                                    </div>
+                                </li>
+                                <li><a href="./user_info/user_reg.php" target="content">계정생성</a></li>
+                                <li><a href="./user_info/user_info.php" target="content">계정찾기</a></li>
+                                <li><a href="../contents/util/logout.php">로그아웃</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap_gnb">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="">공지관리</a>
+                                <ul>
+                                    <li><a href="">공지사항 수정</a></li>
+                                    <li><a href="">공지사항 등록</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">상영관리</a>
+                                <ul>
+                                    <li><a href="">영화 등록</a></li>
+                                    <li><a href="">영화 조회</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">극장 관리</a>
+                                <ul>
+                                    <li><a href="">영화관 등록</a></li>
+                                    <li><a href="">영화관 조회</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="">고객관리</a>
+                                <ul>
+                                    <li><a href="./user_info/user_info.php" target="content">회원 목록</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="right">
+            <main class="">
+                <h2>영화관등록</h2>
+                <div id="wrap_comm" class="flex center wrap_comm">
+                    <div class="wrap_fm">
+                        <!-- <form action="">
+                            <ul class="list_type1">
+                                <li>
+                                    <p>관리자</p>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <p>극장 이름</p>
+                                    <div>CGV<input type="text">점</div>
+                                </li>
+                                <li>
+                                    <p>극장 주소</p>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <p>극장 전화번호</p>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <p>교통안내</p>
+                                    <div></div>
+                                </li>
+                                <li>
+                                    <p>주차안내</p>
+                                    <div></div>
+                                </li>
+                            </ul>
+                        </form> -->
+                        <form class="form-horizontal" style="width:70vw">
+                            <div class="form-group">
+                                <label for="userid" class="col-sm-2 control-label">관리자</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="userid" placeholder="">
+                                    <button>조회</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="col-sm-2 control-label">극장 이름</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="name" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="addr" class="col-sm-2 control-label">극장 주소</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="addr" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="telnum" class="col-sm-2 control-label">극장 전화번호</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="telnum" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="access" class="col-sm-2 control-label">교통안내</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="access" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">ID 기억
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-2 col-sm-10">
+                                    <button type="submit" class="btn btn-default">등록</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
