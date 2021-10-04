@@ -1,6 +1,6 @@
 
 <script>
-    sessionStorage.removeItem('userId');
+    sessionStorage.removeItem('userid');
     sessionStorage.claer();
 </script>
 <?php

@@ -147,6 +147,7 @@ nav > .info_btn {
     font-weight: 600;
     margin-left: 20px;
     cursor: pointer;
+    background-color: #999999;
     
 }
 .de_menu_bar > #de_menu2{
@@ -169,6 +170,7 @@ nav > .info_btn {
     height: 1000px;
     border : 1px solid black;
     margin-left : 20px
+
 }
 #de_contain2{
     width: 700px;
@@ -187,9 +189,11 @@ nav > .info_btn {
 }
 .dis_off{
     display: none;
+    
 }
 .dis_on{
     display: block;
+    
 }
 /* 
 ==============================================================

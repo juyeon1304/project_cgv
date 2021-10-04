@@ -21,7 +21,10 @@
   <script src="../../common/js/swiper.js" charset="utf-8"></script>
   <script src="../../common/js/slide.js" charset="utf-8"></script>
   <script src="../../common/js/script.js" charset="utf-8" defer></script>
-
+  <script>
+    const userid = sessionStorage.getItem('userid');
+    // console.log(userid);
+  </script>
 </head>
 
 <body class="body_idx">
