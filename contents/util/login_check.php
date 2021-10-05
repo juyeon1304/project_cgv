@@ -39,6 +39,7 @@
         $_SESSION['userid'] = $userid;
         $_SESSION['useridx'] = $useridx;
         $_SESSION['user_type'] = $type;
+        echo "<script>sessionStorage.setItem('userid','$userid' );</script>";
         $c_ip = get_client_ip();
         $sql = "insert into user_login_his(log_userid,log_ip,log_com,log_date) values ('$userid','$c_ip','',now())";
         $result = mysqli_query($conn, $sql);
