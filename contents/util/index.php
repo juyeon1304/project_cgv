@@ -115,7 +115,7 @@
             <?php
                if($_SESSION['user_type'] == 'A1'){
             ?>
-          <li class="mg_site"><a href="../../admin/index.html"><span>Mgv</span></a></li>
+          <li class="mg_site"><a href="../../admin/index.php"><span>Mgv</span></a></li>
           <?php
                 };
           ?>

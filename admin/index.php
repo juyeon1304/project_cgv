@@ -1,3 +1,8 @@
+<?php
+
+  include '../../admin/user_info/include/sessionadmin.php';
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
