@@ -20,5 +20,5 @@
 ?>
 <script>
     alert('영화 등록 성공!');
-    location.href="../";
+    location.href="./";
 </script>

@@ -1,0 +1,36 @@
+DB접속
+mysqli_connect("DB위치", "아이디", "비밀번호", "DB명") or die("연결 실패시 메세지");
+$conn = mysqli_connect("127.0.0.1", "root", "1234", "frontend") or die("데이터 베이스 연결 실패!");
+
+SQL쿼리 실행
+결과객체 = mysqli_query(접속객체, 쿼리문);
+$sql = "insert into ...";
+$result = mysqli_query($conn, $sql);
+
+SELECT 반환값 배열에 저장하기
+배열명 = mysqli_fetch_array(DB리턴변수);
+
+
+Ajax(Asynchronous JavaScript And XML)
+- 웹 페이지 전체를 다시 로딩하지 않고 백그라운드 영역에서 서버와 통신하여 그 결과를 리턴받고 웹 페이지 일부를 갱신할 수 있게 하는 기술
+
+Ajax의 장점
+- 웹 페이지 전체를 다시 로드하지 않아도 일부분만을 갱신할 수 있음
+- 웹 페이지가 완전히 로드된 후에 서버로 데이터 요청을 보낼 수 있음
+- 백그라운드 영역에서 서버로 데이터를 전송
+
+Ajax의 단점
+- 바이너리 데이터를 전달할 수 없음
+- 서버 푸싱 방식의 실시간 서비스를 만들 수 없음
+
+XMLHttpRequest(XHR) 객체
+
+객체생성
+const XHR객체명 = new XMLHttpRequest();
+
+상태
+httpRequest
+    onreadystatechange = function(){
+        
+    }
+

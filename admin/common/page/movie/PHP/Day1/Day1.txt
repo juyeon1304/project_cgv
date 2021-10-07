@@ -1,0 +1,135 @@
+브라우저가 해석할 수 있는 언어
+    html, css, javascript
+
+PHP
+- 서버측에서 해석되는 언어
+- 웹서버 프로그램에서 해석되는 스크립트 언어
+- 데이터베이스와 연동을 편하게 할 수 있음
+- 거의 모든 운영체제에서 개발이 가능
+- 속도가 매우 빠름
+- 파일 업로드, 메일전송.. 등 기능을 자체적으로 지원
+
+아파치 웹서버 다운로드
+https://www.apachelounge.com/download/
+
+- httpd-2.4.48-win64-VS16.zip 파일을 다운로드 받고 압축을 품
+- 압축 푼 폴더 안에 존재하는 Apache24 디렉토리를 복사하여 c드라이브 루트에 위치
+
+아파치 설정
+- C:\Apache24\conf 디렉토리 안에 httpd.conf 파일을 비주얼스튜디오 코드로 열기
+- ServerAdmin admin@example.com 을 찾아 아래와 같이 변경
+    ServerAdmin localhost:80
+- 아래 내용을 찾아 변경
+    DocumentRoot "${SRVROOT}/htdocs"
+    <Directory "${SRVROOT}/htdocs">
+    를
+    DocumentRoot "C:\Ryuzy\PHP"
+    <Directory "C:\Ryuzy\PHP">
+- 탐색기에서 내pc 우측버튼 속성 -> 고급 시스템 설정 -> 환경 변수 -> 시스템 변수 -> Path을 선택 후 편집 버튼 -> 새로 만들기를 누르고 C:\Apache24\bin 를 입력
+- cmd 에서 httpd -k install 실행
+- cmd 에서 httpd -k start
+- 윈도우 검색 -> 서비스 -> Apache24 더블클릭 -> 시작 버튼이 눌려있는지 확인
+
+아파치가 정상적으로 실행되었는지 확인
+- 브라우저에 localhost 또는 127.0.0.1을 확인
+
+
+PHP 다운로드
+https://windows.php.net/download/
+
+- VC15 x64 Thread Safe (2021-Jun-29 21:29:01) zip 파일을 다운받고 압축을 품
+- 압축 푼 폴더를 c드라이브 루트에 위치하고 디렉토리명을 php7으로 변경
+- php7 디렉토리 안에 php.ini-development 파일명을 php.ini로 변경
+- php.ini를 비주얼스튜디오 코드에서 열고 extension으로 문장을 찾아 아래와 같이 수정
+    ;extension_dir = "./"
+    ; On windows:
+    ;extension_dir = "ext"
+    를
+    extension_dir = "C:\php7\ext"
+    ; On windows:
+    ;extension_dir = "ext"
+- extension=mysqli를 찾아 앞에 주석을 제거함
+    ;extension=mysqli
+    를
+    extension=mysqli
+
+아파치 설정 변경
+- httpd.conf 파일을 아래 내용을 찾아 변경
+    <IfModule dir_module>
+        DirectoryIndex index.html
+    </IfModule>
+    를
+    <IfModule dir_module>
+        DirectoryIndex index.php
+    </IfModule>  
+- 문서의 맨 마지막 부분에 아래 내용을 추가
+    PHPIniDir "c:/php7"
+    LoadModule php7_module "c:/php7/php7apache2_4.dll"
+    AddType application/x-httpd-php .html .php
+    AddHandler application/x-httpd-php .php
+
+
+PHP의 기본 문법
+- HTML 문서내에 <?php 로 시작하고 ?> 끝남
+- PHP문법을 사용하면 확장명을 .php로 저장
+- C언어, Java처럼 PHP 명령문의 끝은 세미콜론(;)으로 끝남
+- 주석문은 /* 로 시작해서 */ 끝남, 한 줄 주석은 // 를 사용
+- HTML에 문자열을 출력하기 위해 echo() 함수를 사용
+
+PHP 변수
+$변수명;        // 변수 선언
+$변수명 = 값;   // 변수 초기화
+
+PHP 변수의 종류
+- 지역변수
+함수 내부에서 선언된 변수. 내부에서 선언된 변수는 함수가 종료되면 메모리에서 삭제
+    {
+        $num = 10;  // 지역변수
+    }
+    echo($num); // 에러!
+
+- 전역변수
+함수 밖에서 선언된 변수. 함수 밖에서만 사용할 수 있음. 함수 내부에서 사용하려면 global 키워드를 함께 사용
+    $num = 10;
+    {
+        global $num;
+        echo($num);
+    }
+
+- 정적변수
+함수 내부에서 static 키워드로 선언된 변수. 정적변수는 함수 호출이 종료되어도 메모리 상에서 삭제되지 않음(공용변수 사용)
+
+- 슈퍼글로벌변수
+미리 정의된 전역변수. 특별한 선언없이 스크립트 내의 어디에서도 바로 사용할 수 있음
+$_GET, $_POST, $_COOKIE, $_SESSION ..
+
+🎁 데이터 전송방식(method)
+
+get 
+- URL에 변수(데이터)를 포함해서 전송
+- URL에 변수(데이터)가 노출되어 보안에 취약
+- 전송하는 길이에 제한이 있음
+- 속도가 빠름
+- 캐싱할 수 있음
+- 예) 네이버 검색
+
+http://localhost/Day1/5-Variable4P.php?q=날씨
+
+파일이름 : 5-Variable4P.php
+? : get방식의 데이터 전송
+q : 요소의 name
+날씨 : 요소의 value
+& : 두개 이상의 데이터 전달 구분자
+
+
+post
+- URL에 변수(데이터)를 노출하지 않고 전송
+- URL에 데이터가 노출되지 않아 기본 보안은 지켜짐
+- 전송하는 길이에 제한이 없음
+- 캐싱할 수 없음
+- GET 방식보다 속도가 느림
+
+
+
+
+
