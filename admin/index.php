@@ -1,3 +1,8 @@
+<?php
+
+  include '../../admin/user_info/include/sessionadmin.php';
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +26,7 @@
             <header>
                 <div class="top wrap_comm">
                     <div class="flex">
-                        <h1 class="left"><a href="/admin/index.html" class="wrap_img"><img
+                        <h1 class="left"><a href="../contents/util/index.php" class="wrap_img"><img
                                     src="/admin/common/images/logo_cvg.png" alt=""><span
                                     class="hide">CGV관리자페이지</span></a></h1>
                         <div class="right">

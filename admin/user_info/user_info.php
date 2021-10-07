@@ -1,4 +1,5 @@
 <?php
+include './include/sessionadmin.php';
 include "./include/dbconn.php";
 
     if(isset($_POST['x_search_btn'])){

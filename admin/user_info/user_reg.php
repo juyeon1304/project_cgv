@@ -1,5 +1,8 @@
 <?php
 include "./include/dbconn.php";
+include './include/sessionadmin.php';
+ 
+
 ?>
 
 <!DOCTYPE html>

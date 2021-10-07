@@ -89,6 +89,8 @@ const idcheck = function(){
     const userid = document.getElementById('userid');
     const idset = document.getElementById('idset');
     const hidden_li = document.getElementsByClassName('hidden_li');
+    const page_type = document.getElementById('page_type');
+    
 
     if(userid.value == '' || userid.value.length < 4){
         alert("아이디를 4글자 이상 입력하세요.");
@@ -122,8 +124,22 @@ const idcheck = function(){
                 }                
             }
         }
-        xhr.open("GET","./ajax/user_idcheck.php?x_userid="+cUserid,true);
+
+        
+        if(!page_type){
+            
+            xhr.open("GET","./ajax/user_idcheck.php?x_userid="+cUserid,true);
+        }else{
+            xhr.open("GET","../../admin/user_info/ajax/user_idcheck.php?x_userid="+cUserid,true);
+        }
+       
 
         xhr.send();
 
 }
+
+  
+    
+
+
+

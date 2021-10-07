@@ -115,12 +115,12 @@
             <?php
                if($_SESSION['user_type'] == 'A1'){
             ?>
-          <li class="mg_site"><a href="../../admin/index.html"><span>Mgv</span></a></li>
+          <li class="mg_site"><a href="../../admin/index.php"><span>Mgv</span></a></li>
           <?php
                 };
           ?>
           <li class="logout"><a href="./logout.php"><span class="hide">Log out</span></a></li>
-          <li class="join"><a href="#"><span class="hide">회원가입</span></a></li>
+          <!-- <li class="join"><a href="#"><span class="hide">회원가입</span></a></li> -->
           <li class="my"><a href="#"><span class="hide">MY CGV</span></a></li>
           <li class="vip"><a href="#"><span class="hide">VIP LOUNGE</span></a></li>
           <li class="club"><a href="#"><span class="hide">Club서비스</span></a></li>

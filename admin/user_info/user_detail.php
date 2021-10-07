@@ -1,6 +1,6 @@
 <?php
 include "./include/dbconn.php";
-include "./include/sessioncheck.php";
+include './include/sessionadmin.php';
     if(isset($_POST['x_p_change'])){
         $Y_password = $_POST['x_password'];
         $Y_user_idx = $_POST['x_user_idx'];

@@ -33,3 +33,4 @@ main > .wrap_comm { height: 100%;}
 .list_type1 > li ~ li > * {  border-top:1px solid #000;}
 .list_type1 > li > * { display: table-cell; padding:10px;  }
 .list_type1 > li > *:first-child { width: 20%; border-right:1px solid #000;}
+
