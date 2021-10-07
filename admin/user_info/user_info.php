@@ -5,9 +5,7 @@ include "./include/dbconn.php";
     if(isset($_POST['x_search_btn'])){
  
         $y_search = $_POST['x_search'];
-        $y_search_btn = $_POST['x_search_btn'];
-       
-      
+        $Y_user_auth = $_POST['x_user_auth'];
         // echo "$y_search_btn";
     }else{
         $y_search = '';
@@ -61,9 +59,29 @@ include "./include/dbconn.php";
             $y_search = '';
         }
          ?>
+         <select name="x_user_auth" id="user_auth">
+             
+             <option value="all">all</option>
+             <?php
+                $sql = 'select info_type From user_info group by info_type';
+                $result = mysqli_query($conn, $sql);
+                while($row = mysqli_fetch_array($result)){
+                $info_type = $row['info_type'];
+                if($Y_user_auth == $info_type){
+             ?>
+                <option value="<?=$Y_user_auth?>" selected><?=$Y_user_auth?></option>
+                <?php
+                }else{
+                ?>
+                <option value="<?=$info_type?>"><?=$info_type?></option>
+             <?php
+                }
+               }
+             ?>
+         </select>
         <input id="search_input" type="text" name="x_search" value="<?=$y_search?>" />
-        <button name="x_search_btn" class="user_del"  type="submit" value="search">확인</button>
         <button name="x_delete_btn" class="user_del" Type="submit" value="delete">삭제</button>
+        <button name="x_search_btn" class="user_del"  type="submit" value="search">확인</button>
     </div></nav>
     <section>
         <div class="container">
@@ -82,7 +100,15 @@ include "./include/dbconn.php";
                     
                     if(isset($_POST['x_search_btn'])){
                         $y_search = $_POST['x_search'];
-                        $sql = "select * From user_info where info_userid like '%$y_search%'";
+                        $Y_user_auth = $_POST['x_user_auth'];
+                        if(!isset($y_search) && !isset($Y_user_auth) || !isset($y_search) && $Y_user_auth == 'all'){
+                            $sql = "select * From user_info where info_userid";
+                        }elseif(isset($y_search) && $Y_user_auth != 'all'){
+                            $sql = "select * From user_info where info_userid like '%$y_search%' and info_type = '$Y_user_auth' ";
+                        }else{
+                            $sql = "select * From user_info where info_userid like '%$y_search%' ";
+                        }
+                       
                     }else{
                         $sql = 'select * From user_info';
                     }

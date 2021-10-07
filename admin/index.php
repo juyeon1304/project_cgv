@@ -1,6 +1,6 @@
 <?php
 
-  include '../../admin/user_info/include/sessionadmin.php';
+  include '../admin/user_info/include/sessionadmin.php';
  
 ?>
 <!DOCTYPE html>
@@ -14,11 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <title>Document</title>
-<<<<<<< HEAD
 </head>
-=======
-    </head>
->>>>>>> 406b8b04300545538553afe6a36335b8efe30a13
 
 <body>
     <div class="wrap_body">

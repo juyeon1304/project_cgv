@@ -40,11 +40,14 @@ nav {
 }
 nav > .info_btn {
     
-    width: 300px;
+    width: 500px;
     height: 30px;
     /* border : 1px solid blue; */
-    margin-left: 600px;
+    margin-left: 400px;
     position: relative;
+    text-align: right;
+    
+    
 }
 .user_del {
     float: right;
@@ -57,13 +60,26 @@ nav > .info_btn {
 }
 #search_input {
     outline : 1px solid black;
-    height: 30px;
+    height: 27px;
     font-size: 16px;
     width: 150px;
+    margin-right: 5px;
+    position : absolute;
+    right: 120px;
+    top : 2px;
     
 }
 #search_input:focus{
     outline : 1px solid pink;
+}
+#user_auth{
+    outline: 1px solid black;
+    font-size: 16px;
+    padding : 3px 0;
+    position: absolute;
+    right: 280px;
+    top : 3px;
+
 }
 
 .container > table {
