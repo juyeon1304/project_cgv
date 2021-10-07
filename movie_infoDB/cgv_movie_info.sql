@@ -1,6 +1,6 @@
-CREATE DATABASE movie;
+CREATE DATABASE cgv;
 
-  USE movie;
+  USE cgv;
   
   create table Movie_info (  
   M_idx int auto_increment primary key,
