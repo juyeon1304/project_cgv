@@ -16,13 +16,20 @@
             <script src="/common/js/swiper.js" charset="utf-8"></script>
             <script src="/common/js/slide.js" charset="utf-8"></script>
             <script src="/common/js/script.js" charset="utf-8" defer></script>
+            <script type="text/javascript" src="../../admin/user_info/js/user_reg.js"></script> 
+            <link rel="stylesheet"  href="../../admin/user_info/css/user_reg.css" type="text/css" />
             <script>
                 'use strict';
                 window.onload = function () {
-                    const txtId = document.getElementById('txtId');
+                    const txtId = document.getElementById('user_name');
                     txtId.focus();
                 }
             </script>
+            <style>
+                .content{
+                    margin : 0 auto;
+                }
+            </style>
 </head>
 
 <body class="body_idx">
@@ -112,7 +119,7 @@
                 <h2 class="hide">유틸리티 메뉴</h2>
                 <ul class="list_util right clear">
                     <li class="login"><a href="/contents/util/login.html"><span class="hide">로그인</span></a></li>
-                    <li class="join"><a href="#"><span class="hide">회원가입</span></a></li>
+                    <!-- <li class="join"><a href="#"><span class="hide">회원가입</span></a></li> -->
                     <li class="my"><a href="#"><span class="hide">MY CGV</span></a></li>
                     <li class="vip"><a href="#"><span class="hide">VIP LOUNGE</span></a></li>
                     <li class="club"><a href="#"><span class="hide">Club서비스</span></a></li>
@@ -142,15 +149,46 @@
                     <img src="/common//images/img_join_hd.jpg" alt="">
                 </div>
                 <div class="wrap_fm">
-                    <form action="">
-                        <ul class="list_join">
-                            <li><input type="text" placeholder="아이디"></li>
-                            <li><input type="password" placeholder="비밀번호"></li>
-                            <li><input type="text" placeholder="비밀번호 확인"></li>
-                            <li><input type="text" placeholder="전화번호"></li>
-                            <li><input type="email" placeholder="이메일"></li>
-                        </ul>
-                        <button type="submit"><span>가입하기</span></button>
+                    <form action="../../admin/user_info/user_regP.php" method="post" onsubmit="return sendit()">
+                        <div class="content">
+                            <div class="nav">
+                                <ul>
+                                    <li>이름 : </li>
+                                    <li>ID : </li>
+                                    <li class="hidden_off hidden_li"></li>
+                                    <li>Password : </li>
+                                    <li>password confirm : </li>
+                                    <li>Birthday : </li>
+                                    <li>Phone No : </li>
+                                    <li>Email : </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="nav_info">
+                                <ul>
+                                    <li><input type="text" name="x_user_name" id="user_name"
+                                    onkeyup="nameCheck(this)">
+                                    <input type="hidden" name="nameSet" id="nameSet" value="n">
+                                </li>
+                                    <li><input type="text" name="x_userid" id="userid">
+                                    <input type="button" onclick="idcheck()" value="아이디체크">
+                                    <input type="hidden" name="idset" id="idset" value="n">
+                                </li>
+                                    <li class="hidden_off hidden_li">
+                                        <p id="idchecktext"></p>
+                                    </li>
+                                    <li><input type="password" name="x_userpw" id="userpw"></li>
+                                    <li><input type="password" name="x_c_userpw" id="c_userpw"></li>
+                                    <li><input type="date" name="x_bir_date" id="bir_date"></li>
+                                    <li><input type="text" name="x_p_no" id="p_no"></li>
+                                    <li><input type="email" name="x_email" id="email"></li>
+
+                                </ul>
+                                <input type="hidden" name="x_auth_type" value="U1">
+                                        <input type="hidden" id="page_type" name="x_page" value="user">
+                            </div>
+                            <p><button type='submit' id="reg_btn">저장</button></p>
+                        </div>
                     </form>
                 </div>
             </section>
