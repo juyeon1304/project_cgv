@@ -3,7 +3,7 @@ include './include/sessionadmin.php';
 include "./include/dbconn.php";
 
     if(isset($_POST['x_search_btn'])){
- 
+
         $y_search = $_POST['x_search'];
         $Y_user_auth = $_POST['x_user_auth'];
         // echo "$y_search_btn";
@@ -22,7 +22,7 @@ include "./include/dbconn.php";
             
         }
         $y_delete_btn = $_POST['x_delete_btn'];
-      
+    
     }else{
         $y_search = '';
     }
@@ -54,31 +54,31 @@ include "./include/dbconn.php";
     <nav><div class="info_btn">
         <?php
         if(isset($_POST['x_search_btn'])){
-           $y_search = $_POST['x_search'];
+        $y_search = $_POST['x_search'];
         }else{
             $y_search = '';
         }
-         ?>
-         <select name="x_user_auth" id="user_auth">
-             
-             <option value="all">all</option>
-             <?php
+        ?>
+        <select name="x_user_auth" id="user_auth">
+            
+            <option value="all">all</option>
+            <?php
                 $sql = 'select info_type From user_info group by info_type';
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_array($result)){
                 $info_type = $row['info_type'];
                 if($Y_user_auth == $info_type){
-             ?>
+            ?>
                 <option value="<?=$Y_user_auth?>" selected><?=$Y_user_auth?></option>
                 <?php
                 }else{
                 ?>
                 <option value="<?=$info_type?>"><?=$info_type?></option>
-             <?php
+            <?php
                 }
-               }
-             ?>
-         </select>
+            }
+            ?>
+        </select>
         <input id="search_input" type="text" name="x_search" value="<?=$y_search?>" />
         <button name="x_delete_btn" class="user_del" Type="submit" value="delete">삭제</button>
         <button name="x_search_btn" class="user_del"  type="submit" value="search">확인</button>
@@ -108,7 +108,7 @@ include "./include/dbconn.php";
                         }else{
                             $sql = "select * From user_info where info_userid like '%$y_search%' ";
                         }
-                       
+                    
                     }else{
                         $sql = 'select * From user_info';
                     }
@@ -139,15 +139,15 @@ include "./include/dbconn.php";
                                 $result1 = mysqli_query($conn, $sql1);
                                 while($row1 = mysqli_fetch_array($result1)){
                                     $auth_type = $row1['auth_type'];
-                                 if($type == $auth_type){
+                                if($type == $auth_type){
                             ?>
-                                 <option value="<?=$type?>" selected><?=$type?></option>
+                                <option value="<?=$type?>" selected><?=$type?></option>
                                 <?php
-                                 }else{
+                                }else{
                                 ?>
                                 <option value="<?=$auth_type?>" ><?=$auth_type?></option>
                             <?php
-                                 };
+                                };
                                 };
                             ?>
                         </select>

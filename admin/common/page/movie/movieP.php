@@ -21,5 +21,5 @@
 ?>
 <script>
     alert('영화 등록 성공!');
-    location.href="./movie.php";
+    location.href="./movie_info.php";
 </script>

@@ -16,8 +16,9 @@ include "./include/dbconn.php";
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src='./js/movie.js'></script>
+<link rel="stylesheet" href="./css/movie.css">
 </head>
-<body>
+<body class="body" style="">
     <h2>영화 등록</h2>
     <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()">
         <div class="form-group">

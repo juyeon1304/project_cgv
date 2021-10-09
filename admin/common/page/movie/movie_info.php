@@ -16,7 +16,7 @@ include "./include/dbconn.php";
             $y_user_idx = $_POST['x_user_idx'];
             foreach($y_user_idx as $i){
                 $y_user_idx = $i;
-                $sql = "delete from user_info where info_seq='$y_user_idx'";
+                $sql = "delete from movie_info where info_seq='$y_user_idx'";
                 $result = mysqli_query($conn, $sql);
                 // echo "$y_user_idx";
             }
@@ -30,10 +30,8 @@ include "./include/dbconn.php";
     
     
     
-    $sql = 'select count(info_seq) as total_user From user_info';
+    $sql = 'select count(info_seq) as total_user From movie_info';
     $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result);
-    $total = $row['total_user'];
 
 
 
@@ -45,88 +43,77 @@ include "./include/dbconn.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User List</title>
-    <link rel="stylesheet"  href="./css/user_info.css" type="text/css" />
-    <script type="text/javascript" src="./js/user_info.js"></script> 
+    <title>movie List</title>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet"  href="./css/movie_info.css" type="text/css" />
+    <script type="text/javascript" src="./js/movie_info.js"></script>
 </head>
-<body>
-    <h2>USER List</h2>
-    <form action="user_info.php" method="post">
-    <nav><div class="info_btn">
-        <?php
-        if(isset($_POST['x_search_btn'])){
-        $y_search = $_POST['x_search'];
-        }else{
-            $y_search = '';
-        }
-        ?>
-        <input id="search_input" type="text" name="x_search" value="<?=$y_search?>" />
-        <button name="x_search_btn" class="user_del"  type="submit" value="search">확인</button>
-        <button name="x_delete_btn" class="user_del" Type="submit" value="delete">삭제</button>
-    </div></nav>
+<body class="body">
+    <h2>movie List</h2>
+    <form action="movie_info.php" method="post">
+    <!-- <nav>
+        <div class="info_btn">
+            <?php
+            if(isset($_POST['x_search_btn'])){
+            $y_search = $_POST['x_search'];
+            }else{
+                $y_search = '';
+            }
+            ?>
+            <input id="search_input" type="text" name="x_search" value="<?=$y_search?>" />
+            <button name="x_search_btn" class="user_del"  type="submit" value="search">확인</button>
+            <button name="x_delete_btn" class="user_del" Type="submit" value="delete">삭제</button>
+        </div>
+    </nav> -->
     <section>
-        <div class="container">
-            <table>
+            <table class="table table-condensed">
                 <tr>
-                    <th></th>
-                    <th>User ID</th>
-                    <th>Birth Day</th>
-                    <th>Phone No</th>
-                    <th>Email</th>
-                    <th>User Type</th>
-                    <th>Regist date</th>
-                    
+                    <!-- <th>movie cord</th> -->
+                    <th>movie title</th>
+                    <th>movie title_en</th>
+                    <th>genre</th>
+                    <th>rel date</th>
+                    <th>summary</th>
+                    <th>dircetor</th>
+                    <th>actor</th>
                 </tr>
                 <?php
                     
                     if(isset($_POST['x_search_btn'])){
                         $y_search = $_POST['x_search'];
-                        $sql = "select * From user_info where info_userid like '%$y_search%'";
+                        $sql = "select * From movie_info where M_Title like '%$y_search%'";
                     }else{
-                        $sql = 'select * From user_info';
+                        $sql = 'select * From movie_info';
                     }
                     
                     $result = mysqli_query($conn, $sql);
                     $arr_count = 0;
                     while($row = mysqli_fetch_array($result)){
-                        $userid = $row['info_userid'];
-                        $birth = $row['info_birth'];
-                        $phone = $row['info_phone'];
-                        $email = $row['info_email'];
-                        $type = $row['info_type'];
-                        $reg_date = $row['info_reg_date'];
-                        $useridx = $row['info_seq'];
-                        
-                    
+                        // $m_cord = $row['M_code'];
+                        // $m_picture_tode = $row['M_Picture_Code'];
+                        $m_title = $row['M_Title'];
+                        $e_m_title = $row['E_M_Title'];
+                        $m_genre_code = $row['M_Genre_Code'];
+                        $m_rel_Date = $row['M_Rel_Date'];
+                        $m_summary = $row['M_Summary'];
+                        $aircetor_code = $row['Dircetor_code'];
+                        $actor_code = $row['Actor_Code'];
                 ?>
                 <tr>
-                    <td><input type="checkbox" class="user_idx" name="x_user_idx[]" value=<?=$useridx?>></td>
-                    <td class="user_info1"><a href="./user_detail.php?x_user_idx=<?=$useridx?>"><?=$userid?></td>
-                    <td class="user_info2"><?=$birth?></td>
-                    <td class="user_info3"><?=$phone?></td>
-                    <td class="user_info4"><?=$email?></td>
-                    <td class="user_info5">
-                        <select name="" class="select_type" onchange="user_type(this,'<?=$type?>','<?=$useridx?>','<?=$arr_count?>')">
-                            <?php
-                                $sql1 = "select * From user_auth";
-                                $result1 = mysqli_query($conn, $sql1);
-                                while($row1 = mysqli_fetch_array($result1)){
-                                    $auth_type = $row1['auth_type'];
-                                if($type == $auth_type){
-                            ?>
-                                <option value="<?=$type?>" selected><?=$type?></option>
-                                <?php
-                                }else{
-                                ?>
-                                <option value="<?=$auth_type?>" ><?=$auth_type?></option>
-                            <?php
-                                };
-                                };
-                            ?>
-                        </select>
-                    </td>
-                    <td class="user_info6"><?=$reg_date?></td>
-                    
+                    <!-- <td class="movie_info1"><?=$m_cord?></td> -->
+                    <!-- <td class="movie_info2"><?=$m_picture_tode?></td> -->
+                    <td class="movie_info3"><?=$m_title?></td>
+                    <td class="movie_info4"><?=$e_m_title?></td>
+                    <td class="movie_info5"><?=$m_genre_code?></td>
+                    <td class="movie_info6"><?=$m_rel_Date?></td>
+                    <td class="movie_info7"><?=$m_summary?></td>
+                    <td class="movie_info8"><?=$aircetor_code?></td>
+                    <td class="movie_info9"><?=$actor_code?></td>
                 </tr>
                 <?php
                 $arr_count++;
