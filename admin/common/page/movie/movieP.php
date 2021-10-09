@@ -13,9 +13,9 @@
     // M_Picture_Code,
     if(!$conn){
         echo "DB연결 실패!";
-    }else{
+    }else{ //'$Y_File', 
     $sql = "INSERT INTO movie_info(M_Code,  M_Title, E_M_Title, M_Genre_Code, M_Rel_Date, 
-    M_Summary, Dircetor_code, Actor_Code) VALUES ('$Y_Code', '$Y_File', '$Y_Title', '$Y_Title_en', '$Y_Genre', '$Y_Release', '$Y_Director', '$Y_Actor')";
+    M_Summary, Dircetor_code, Actor_Code) VALUES ('$Y_Code', '$Y_Title', '$Y_Title_en', '$Y_Genre', '$Y_Release', '$Y_Director', '$Y_Actor')";
     $result = mysqli_query($conn, $sql);
 }
 ?>

@@ -73,14 +73,15 @@ include "./include/dbconn.php";
     <section>
             <table class="table table-condensed">
                 <tr>
-                    <!-- <th>movie cord</th> -->
-                    <th>movie title</th>
-                    <th>movie title_en</th>
-                    <th>genre</th>
-                    <th>rel date</th>
-                    <th>summary</th>
-                    <th>dircetor</th>
-                    <th>actor</th>
+                    <th>영화코드</th>
+                    <th>영화 제목</th>
+                    <th>영화 영문 제목</th>
+                    <th>장르</th>
+                    <th>개봉일</th>
+                    <th>영화 내용</th>
+                    <th>감독</th>
+                    <th>배우</th>
+                    <th>영화 등록일</th>
                 </tr>
                 <?php
                     
@@ -94,7 +95,7 @@ include "./include/dbconn.php";
                     $result = mysqli_query($conn, $sql);
                     $arr_count = 0;
                     while($row = mysqli_fetch_array($result)){
-                        // $m_cord = $row['M_code'];
+                        $m_cord = $row['M_code'];
                         // $m_picture_tode = $row['M_Picture_Code'];
                         $m_title = $row['M_Title'];
                         $e_m_title = $row['E_M_Title'];
@@ -103,9 +104,10 @@ include "./include/dbconn.php";
                         $m_summary = $row['M_Summary'];
                         $aircetor_code = $row['Dircetor_code'];
                         $actor_code = $row['Actor_Code'];
+                        $info_reg_date = $row['info_reg_date'];
                 ?>
                 <tr>
-                    <!-- <td class="movie_info1"><?=$m_cord?></td> -->
+                    <td class="movie_info1"><?=$m_cord?></td>
                     <!-- <td class="movie_info2"><?=$m_picture_tode?></td> -->
                     <td class="movie_info3"><?=$m_title?></td>
                     <td class="movie_info4"><?=$e_m_title?></td>
@@ -114,6 +116,7 @@ include "./include/dbconn.php";
                     <td class="movie_info7"><?=$m_summary?></td>
                     <td class="movie_info8"><?=$aircetor_code?></td>
                     <td class="movie_info9"><?=$actor_code?></td>
+                    <td class="movie_info9"><?=$info_reg_date?></td>
                 </tr>
                 <?php
                 $arr_count++;
