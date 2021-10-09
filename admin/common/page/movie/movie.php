@@ -15,9 +15,6 @@ include "./include/dbconn.php";
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<style>
-    
-</style>
 <script src='./js/movie.js'></script>
 </head>
 <body>
@@ -29,11 +26,11 @@ include "./include/dbconn.php";
             <input type="mov_code" class="form-control" name="inputcode" id="inputcode" maxlength="100" placeholder="영화의 코드를 입력하세요">
             </div>
         </div>
-        <div class="form-group">
-            <label for="inputCode" class="col-sm-2 control-label">영화 사진</label>
+        <!-- <div class="form-group">
+            <label for="exampleInputFile" class="col-sm-2 control-label">영화 사진</label>
             <label for="exampleInputFile">파일 업로드</label>
             <input type="file" name="exampleInputFile" id="exampleInputFile">
-        </div>
+        </div> -->
         <div class="form-group">
             <label for="inputTitle" class="col-sm-2 control-label">영화 제목</label>
             <div class="col-sm-7">
