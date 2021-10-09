@@ -95,7 +95,7 @@ include "./include/dbconn.php";
                     $result = mysqli_query($conn, $sql);
                     $arr_count = 0;
                     while($row = mysqli_fetch_array($result)){
-                        $m_cord = $row['M_code'];
+                        $m_cord = $row['M_Code'];
                         // $m_picture_tode = $row['M_Picture_Code'];
                         $m_title = $row['M_Title'];
                         $e_m_title = $row['E_M_Title'];
@@ -104,7 +104,7 @@ include "./include/dbconn.php";
                         $m_summary = $row['M_Summary'];
                         $aircetor_code = $row['Dircetor_code'];
                         $actor_code = $row['Actor_Code'];
-                        $info_reg_date = $row['info_reg_date'];
+                        $info_reg_date = $row['movie_reg_date'];
                 ?>
                 <tr>
                     <td class="movie_info1"><?=$m_cord?></td>
