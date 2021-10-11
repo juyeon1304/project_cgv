@@ -1,22 +1,25 @@
 <?php
     include "./include/dbconn.php";
     
-    $Y_Code = $_POST["inputcode"];
-    // $Y_File = $_POST["exampleInputFile"];
-    $Y_Title = $_POST["inputTitle"];
-    $Y_Title_en  = $_POST["inputTitle_en"];
-    $Y_Genre  = $_POST["inputGenre"];
-    $Y_Release  = $_POST["inputRelease"];
-    $Y_Director   = $_POST["inputDirector"];
-    $Y_Actor   = $_POST["inputActor"];
-    echo $Y_Code;
+    $X_Code = $_POST["inputcode"]; //2
+    // $X_File = $_POST["exampleInputFile"]; //3
+    $X_Title = $_POST["inputTitle"]; //4
+    $X_Title_en  = $_POST["inputTitle_en"]; //5
+    $X_Genre  = $_POST["inputGenre"]; //6~8
+    $X_Basics  = $_POST["inputBasics"]; //9
+    $X_Release  = $_POST["inputRelease"]; //10
+    $X_Summary  = $_POST["inputSummary"]; //11
+    $X_Director   = $_POST["inputDirector"]; //12
+    $X_Actor   = $_POST["inputActor"]; //13
+    $X_ReleaseS   = $_POST["inputReleaseS"]; //14
+    $X_ReleaseE   = $_POST["inputReleaseE"]; //15
+    echo $X_Code;
     // M_Picture_Code,
     if(!$conn){
         echo "DB연결 실패!";
     }else{ 
         
-    $sql = "INSERT INTO movie_info(M_Code,  M_Title, E_M_Title, M_Genre_Code,
-    M_Summary, Dircetor_code, Actor_Code) VALUES ('$Y_Code', '$Y_Title', '$Y_Title_en', '$Y_Genre', '$Y_Release', '$Y_Director', '$Y_Actor')";
+    $sql = "INSERT INTO movie_info(M_Code, M_Title, E_M_Title, M_Genre_Code, M_Basics, M_Rel_Date, M_Summary, Dircetor_code, Actor_Code, M_Rel_DateS, M_Rel_DateE) VALUES ('$X_Code', '$X_Title', '$X_Title_en', '$X_Genre', '$X_Basics', '$X_Release', '$X_Summary', '$X_Director', '$X_Actor', '$X_ReleaseS', '$X_ReleaseE')";
     echo $sql;
     $result = mysqli_query($conn, $sql);
 }

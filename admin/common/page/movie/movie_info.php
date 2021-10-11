@@ -11,18 +11,10 @@ include "./include/dbconn.php";
     }else{
         $y_search = '';
     }
-    if(isset($_POST['x_delete_btn'])){
-        if(isset($_POST['x_user_idx'])){
-            $y_user_idx = $_POST['x_user_idx'];
-            foreach($y_user_idx as $i){
-                $y_user_idx = $i;
-                $sql = "delete from movie_info where info_seq='$y_user_idx'";
-                $result = mysqli_query($conn, $sql);
-                // echo "$y_user_idx";
-            }
-            
-        }
-        $y_delete_btn = $_POST['x_delete_btn'];
+    if(isset($_POST['Del_button'])){
+        $movie_idx = $_POST['M_Code'];
+        
+        $delete_btn = $_POST['Del_button'];
     
     }else{
         $y_search = '';
@@ -50,7 +42,7 @@ include "./include/dbconn.php";
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet"  href="./css/movie_info.css" type="text/css" />
+    <link rel="stylesheet"  href="./css/movie_info.css" type="text/css">
     <script type="text/javascript" src="./js/movie_info.js"></script>
 </head>
 <body class="body">
@@ -71,17 +63,21 @@ include "./include/dbconn.php";
         </div>
     </nav> -->
     <section>
+        <div class="col-md-11">
             <table class="table table-condensed">
-                <tr>
-                    <th>영화코드</th>
-                    <th>영화 제목</th>
-                    <th>영화 영문 제목</th>
+                <tr class="h4">
+                    <th>코드</th>
+                    <th>제목</th>
+                    <th>영문 제목</th>
                     <th>장르</th>
+                    <th>관람가</th>
                     <th>개봉일</th>
-                    <th>영화 내용</th>
+                    <th class="" style="width: 100px">줄거리</th>
                     <th>감독</th>
                     <th>배우</th>
-                    <th>영화 등록일</th>
+                    <th>상영 시작일</th>
+                    <th>상영 종료일</th>
+                    <th>등록일</th>
                 </tr>
                 <?php
                     
@@ -100,23 +96,31 @@ include "./include/dbconn.php";
                         $m_title = $row['M_Title'];
                         $e_m_title = $row['E_M_Title'];
                         $m_genre_code = $row['M_Genre_Code'];
+                        $m_basics = $row['M_Basics'];
                         $m_rel_Date = $row['M_Rel_Date'];
                         $m_summary = $row['M_Summary'];
-                        $aircetor_code = $row['Dircetor_code'];
+                        $dircetor_code = $row['Dircetor_code'];
                         $actor_code = $row['Actor_Code'];
+                        $m_rel_dates = $row['M_Rel_DateS'];
+                        $m_rel_datee = $row['M_Rel_DateE'];
                         $info_reg_date = $row['movie_reg_date'];
                 ?>
-                <tr>
-                    <td class="movie_info1"><?=$m_cord?></td>
+                <tr class="h5" style="height: 50px !important; overflow: hidden !important;">
+                    <td class="movie_info2"><?=$m_cord?></td>
                     <!-- <td class="movie_info2"><?=$m_picture_tode?></td> -->
-                    <td class="movie_info3"><?=$m_title?></td>
-                    <td class="movie_info4"><?=$e_m_title?></td>
-                    <td class="movie_info5"><?=$m_genre_code?></td>
-                    <td class="movie_info6"><?=$m_rel_Date?></td>
-                    <td class="movie_info7"><?=$m_summary?></td>
-                    <td class="movie_info8"><?=$aircetor_code?></td>
-                    <td class="movie_info9"><?=$actor_code?></td>
-                    <td class="movie_info9"><?=$info_reg_date?></td>
+                    <td class="movie_info4"><?=$m_title?></td>
+                    <td class="movie_info5"><?=$e_m_title?></td>
+                    <td class="movie_info6"><?=$m_genre_code?></td>
+                    <td class="movie_info9"><?=$m_basics?></td>
+                    <td class="movie_info10"><?=$m_rel_Date?></td>
+                    <td class="movie_info11"><?=$m_summary?></td>
+                    <td class="movie_info12"><?=$dircetor_code?></td>
+                    <td class="movie_info13"><?=$actor_code?></td>
+                    <td class="movie_info14"><?=$m_rel_dates?></td>
+                    <td class="movie_info15"><?=$m_rel_datee?></td>
+                    <td class="movie_info16"><?=$info_reg_date?></td>
+                    <td>
+                    <button name="Del_button" type="submit" value="delete" class="btn btn-default">삭제</button></td>
                 </tr>
                 <?php
                 $arr_count++;
