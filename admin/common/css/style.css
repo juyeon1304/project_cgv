@@ -21,6 +21,7 @@ header > .top .util .profile { width: 5vh; height: 5vh; border-radius: 100%; }
 
 
 .wrap_gnb { position: fixed; left: 0; top: 0; bottom: 0; box-sizing: border-box;padding-top: 10vh; background: #555; height: 100vh; width: 17vw;}
+.wrap_gnb > nav > ul > li > a { background: #444;}
 .wrap_gnb a { display:block; padding:15px 20px; color: #fff; transition: all .3s;}
 .wrap_gnb a:hover { background: #444;}
 
