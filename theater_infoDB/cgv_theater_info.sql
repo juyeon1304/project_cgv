@@ -1,6 +1,6 @@
 use cgv;
 
-CREATE TABLE tb_theater (
+CREATE TABLE theater_info (
 		theater_idx int auto_increment primary key,
         theater_name varchar(20) not null,
         theater_zipcode char(5), 
@@ -10,6 +10,8 @@ CREATE TABLE tb_theater (
         theater_tel varchar(20) not null
     );
     
-    select * from tb_theater;
+    select * from theater_info;
     
-    DESC tb_theater;
+    DESC theater_info;
+    
+    

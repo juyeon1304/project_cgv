@@ -62,7 +62,6 @@ include "./include/dbconn.php";
                         <td>
                         <button name="Del_button" type="submit" value="delete" class="btn btn-default">삭제</button></td>
                     </tr>
-
                 <?php
                  $arr_count++;
                 };
