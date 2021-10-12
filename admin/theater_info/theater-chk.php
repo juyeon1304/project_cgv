@@ -41,7 +41,6 @@ include "./include/dbconn.php";
                     
                     while($row = mysqli_fetch_array($result)){
 
-                        echo 'row :'.$row;
                         
                         $theaterIdx = $row['theater_idx'];
                         $theaterName = $row['theater_name'];
