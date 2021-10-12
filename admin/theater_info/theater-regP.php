@@ -3,14 +3,18 @@
     
     $inputName = $_POST["inputName"]; 
     $inputTel = $_POST["inputTel"]; 
+    $zipcode = $_POST['zipcode'];
+    $inputAddr1 = $_POST['inputAddr1'];
+    $inputAddr2 = $_POST['inputAddr2'];
+    $inputAddr3 = $_POST['inputAddr3'];
    
 
     if(!$conn){
         echo "DB연결 실패!";
     }else{ 
 
-    $sql = "INSERT INTO movie_info(M_Code, M_Title, E_M_Title, M_Genre_Code, M_Basics, M_Rel_Date, M_Summary, Dircetor_code, Actor_Code, M_Rel_DateS, M_Rel_DateE) VALUES ('$X_Code', '$X_Title', '$X_Title_en', '$X_Genre', '$X_Basics', '$X_Release', '$X_Summary', '$X_Director', '$X_Actor', '$X_ReleaseS', '$X_ReleaseE')";
-    echo $sql;
+    $sql = "INSERT INTO theater_info( theater_name, theater_zipcode, theater_addr1, theater_addr2, theater_addr3, theater_tel) VALUES ('$inputName', '$zipcode', '$inputAddr1', '$inputAddr2', '$inputAddr3', '$inputTel')";
+
     $result = mysqli_query($conn, $sql);
 }
 ?>

@@ -77,9 +77,9 @@
                     <label><input type="text" name="zipcode" class="form-control" id="sample6_postcode"></label>
                     <button type="button" class="btn btn-default" onclick="sample6_execDaumPostcode()">우편번호 검색</button>
                 </p>
-                <p><label>주소<input type="text" class="form-control" name="address1" id="sample6_address"></label></p>
-                <p><label>상세주소<input type="text" class="form-control" name="address2" id="sample6_detailAddress"></label></p>
-                <p><label>참고항목<input type="text" class="form-control" name="address3" id="sample6_extraAddress"></label></p>
+                <p><label>주소<input type="text" class="form-control" name="inputAddr1" id="sample6_address"></label></p>
+                <p><label>상세주소<input type="text" class="form-control" name="inputAddr2" id="sample6_detailAddress"></label></p>
+                <p><label>참고항목<input type="text" class="form-control" name="inputAddr3" id="sample6_extraAddress"></label></p>
             </div>
         </div>
         <div class="form-group">
