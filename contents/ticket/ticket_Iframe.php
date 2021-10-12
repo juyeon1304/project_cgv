@@ -1,3 +1,9 @@
+<?php
+    include "../../admin/user_info/include/sessioncheck.php";
+    include "../../admin/user_info/include/dbconn.php";
+    // echo $_SESSION['userid'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +14,8 @@
     <link rel="stylesheet" href="/common/css/default.css">
     <link rel="stylesheet" href="/common/css/style.css">
     <link rel="stylesheet" href="./css/ticket_iframe.css">
+    <script type="text/javascript" src="../../admin/user_info/js/user_reg.js"></script> 
+    <script></script>
 </head>
 <body>
     <div id="main_container">
@@ -54,119 +62,20 @@
                 </div>
                 <div id="mov_list" class="scrl">
                     <ul class="">
+                    <?php
+                        $sql = "select * From movie_info";
+                        $result = mysqli_query($conn,$sql);
+                        while($row = mysqli_fetch_array($result)){
+                          $m_title = $row['M_Title'];
+                        
+                    ?>
                         <li class="clear">
                         <span class="icon_age" id="icon_list1"></span>
-                        <span class="text_mov" id="text_list1">블랙위도우</span>
+                        <span class="text_mov" id="text_list1"><?=$m_title?></span>
                         </li>
-                        <li class="clear">
-                        <span class="icon_age" id="icon_list2"></span>
-                        <span class="text_mov" id="text_list2">보스베이비</span>
-                        </li>
-                        <li class="clear">
-                        <span class="icon_age" id="icon_list3"></span>
-                        <span class="text_mov" id="text_list3">랑종</span>
-                        
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
-                        <li class="clear">
-                            <span class="icon_age" id="icon_list3"></span>
-                            <span class="text_mov" id="text_list3">랑종</span>
-                            
-                        </li>
+                    <?php
+                        };
+                    ?>
                         
                     </ul>
                 </div>

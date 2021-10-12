@@ -65,7 +65,7 @@
               <div class="wrap_snb">
                 <div>
                   <ul>
-                    <li><a href="">빠른예매</a></li>
+                    <li><a href="../ticket/ticket.php">빠른예매</a></li>
                     <li><a href="">상영시간표</a></li>
                   </ul>
                 </div>
