@@ -28,25 +28,17 @@ include "./include/dbconn.php";
                     <th>코드</th>
                     <th>영화관</th>
                     <th>주소</th>
-                    <th>전화번호</th>
-                    
+             
                 </tr>
                 </thead>
                 <tbody>
                 <?php
-                    $sql = 'select * from theater_info';
-                    $result = mysqli_query($conn, $sql);
-<<<<<<< HEAD
-                    $arr_count = 0;
-                    // $row = mysqli_fetch_array($result);
+                      $sql = 'select * from theater_info';
+                      $result = mysqli_query($conn, $sql);
+                      $arr_count = 0;
+  
+                      while($row = mysqli_fetch_array($result)){
 
-                    
-=======
-                    $arr_count = 0;         
->>>>>>> de3811c1b4c2ac4d949d6b75b4c6a3f57cfb374d
-                    while($row = mysqli_fetch_array($result)){
-
-                        
                         $theaterIdx = $row['theater_idx'];
                         $theaterName = $row['theater_name'];
                         $theaterZipcode = $row['theater_zipcode'];
@@ -54,13 +46,12 @@ include "./include/dbconn.php";
                         $theaterAddr2 = $row['theater_addr2'];
                         $theaterAddr3 = $row['theater_addr3'];
                         $theaterTel = $row['theater_tel'];
-
                     ?>
                 
                     
                     <tr class="" style="">
                         <td class="theater_info1"><?=$theaterIdx?></td>
-                        <td class="theater_info3"><a href="./theater-manage.php" target="content"><?=$theaterName?></a></td>
+                        <td class="theater_info"><a href="./theater-manage.php" target="content"><?=$theaterName?></a></td>
                         <td class="theater_info3"><span><?=$theaterZipcode?></span> <?=$theaterAddr1?> <?=$theaterAddr2?> <?=$theaterAddr3?></td>
                         <td class="theater_info4"><?=$theaterTel?></td>
                         <td>
@@ -68,6 +59,7 @@ include "./include/dbconn.php";
                     </tr>
                 <?php
                  $arr_count++;
+
                 };
                 ?>
                 </tbody>
