@@ -3,6 +3,13 @@
     include "../../admin/user_info/include/dbconn.php";
     // echo $_SESSION['userid'];
 
+ function lastday($this_month){
+    $this_date = date("Y-".$this_month."-d");
+    $L = new DateTime( $this_date );
+    $this_lastDay = $L->format( 't' );
+    return  $this_lastDay;
+ }
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +21,8 @@
     <link rel="stylesheet" href="/common/css/default.css">
     <link rel="stylesheet" href="/common/css/style.css">
     <link rel="stylesheet" href="./css/ticket_iframe.css">
-    <script type="text/javascript" src="../../admin/user_info/js/user_reg.js"></script> 
-    <script></script>
+    <script type="text/javascript" src="./js/ticket.js"></script> 
+    
 </head>
 <body>
     <div id="main_container">
@@ -133,30 +140,62 @@
                     <div id="date_content">
                         <div id="date_month">
                             <ul>
+                            <?php
+                                  $this_day = date('d');
+                                //   $this_day = 24;
+                                  $this_month = date('m');
+                                  $this_year = date("Y");
+                                  $total_day = $this_day;
+                                  $last_day = lastday($this_month);
+                                  $i = 1;
+                                  $day_arr = array("일","월","화","수","목","금","토");
+                                  
+                                  while($i < 16){
+                                    
+                                    $today = date('Y').'-'.date('m').'-'.$total_day;
+
+                                    if($i == 1 || $total_day == 1 ){
+
+                            ?>
                                 <li class="month_li">
-                                    <span class="year">2021</span>
-                                    <span class="month">8</span>
+                                    <span class="year"><?=$this_year?></span>
+                                    <span class="month"><?=$this_month?></span>
                                 </li> 
+                                
+                            <?php
+                                    }
+                                $day_no = date('w', strtotime($today));
+                                $day_text = $day_arr[$day_no];
+                                
+                            ?>
                                 <li class="date_li">
-                                    <span class="dayWeek">화</span>
-                                    <span class="day">3</span>
+                                    <span class="dayWeek" value="<?=$day_text?>"><?=$day_text?></span>
+                                    <span class="day"><?=$total_day?></span>
                                 </li> 
-                                <li class="date_li">
-                                    <span class="dayWeek">수</span>
-                                    <span class="day">4</span>
-                                </li> 
-                                <li class="date_li">
-                                    <span class="dayWeek">목</span>
-                                    <span class="day">5</span>
-                                </li> 
-                                <li class="date_li">
-                                    <span class="dayWeek">금</span>
-                                    <span class="day">6</span>
-                                </li> 
-                                <li class="date_li">
-                                    <span class="dayWeek">토</span>
-                                    <span class="day">7</span>
-                                </li> 
+
+
+                            <?php
+                                    $total_day++;
+                                    if($last_day < $total_day){
+                                        $total_day = 1;
+                                        if($this_month == 12){
+                                            $this_year = $this_year+1;
+                                            $this_month = 1;
+                                        }else{
+                                            $this_month = $this_month+1;
+                                            
+                                        }
+                                       
+                                    }
+                                    
+                                     $i++;
+                                     
+                                    //  echo $today;
+                                    // echo($day_arr[date('w', strtotime($today))]);
+                                    }
+
+                                
+                            ?>
                             
                             </ul>
                         </div>
@@ -270,10 +309,6 @@
         
     <!-- 메인컨테이너 끝 -->
     </div>
-  
-
-
-
 
 </body>
 </html>

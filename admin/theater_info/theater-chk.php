@@ -36,10 +36,14 @@ include "./include/dbconn.php";
                 <?php
                     $sql = 'select * from theater_info';
                     $result = mysqli_query($conn, $sql);
+<<<<<<< HEAD
                     $arr_count = 0;
                     // $row = mysqli_fetch_array($result);
 
                     
+=======
+                    $arr_count = 0;         
+>>>>>>> de3811c1b4c2ac4d949d6b75b4c6a3f57cfb374d
                     while($row = mysqli_fetch_array($result)){
 
                         
