@@ -35,10 +35,7 @@ include "./include/dbconn.php";
                 <?php
                     $sql = 'select * from theater_info';
                     $result = mysqli_query($conn, $sql);
-                    $arr_count = 0;
-                    $row = mysqli_fetch_array($result);
-
-                    
+                    $arr_count = 0;         
                     while($row = mysqli_fetch_array($result)){
 
                         
