@@ -55,12 +55,13 @@ include "./include/dbconn.php";
             <table class="table table-condensed">
                 <tr class="h4">
                     <th>코드</th>
+                    <th style="width: 120px">이미지</th>
                     <th>제목</th>
                     <th>영문 제목</th>
                     <th>장르</th>
                     <th>관람가</th>
-                    <th>개봉일</th>
-                    <th class="" style="width: 100px">줄거리</th>
+                    <th style="width: 110px">개봉일</th>
+                    <!-- <th class="" style="width: 100px">줄거리</th> -->
                     <th>감독</th>
                     <th>배우</th>
                     <th>상영 시작일</th>
@@ -80,7 +81,7 @@ include "./include/dbconn.php";
                     $arr_count = 0;
                     while($row = mysqli_fetch_array($result)){
                         $m_cord = $row['M_Code'];
-                        // $m_picture_tode = $row['M_Picture_Code'];
+                        $m_picture_tode = $row['M_Picture_Code'];
                         $m_title = $row['M_Title'];
                         $e_m_title = $row['E_M_Title'];
                         $m_genre_code = $row['M_Genre_Code'];
@@ -95,13 +96,13 @@ include "./include/dbconn.php";
                 ?>
                 <tr class="h5" style="height: 50px !important; overflow: hidden !important;">
                     <td class="movie_info2"><?=$m_cord?></td>
-                    <!-- <td class="movie_info2"><?=$m_picture_tode?></td> -->
+                    <td class="movie_info2"><?=$m_picture_tode?></td>
                     <td class="movie_info4"><?=$m_title?></td>
                     <td class="movie_info5"><?=$e_m_title?></td>
                     <td class="movie_info6"><?=$m_genre_code?></td>
                     <td class="movie_info9"><?=$m_basics?></td>
                     <td class="movie_info10"><?=$m_rel_Date?></td>
-                    <td class="movie_info11"><?=$m_summary?></td>
+                    <!-- <td class="movie_info11"><?=$m_summary?></td> -->
                     <td class="movie_info12"><?=$dircetor_code?></td>
                     <td class="movie_info13"><?=$actor_code?></td>
                     <td class="movie_info14"><?=$m_rel_dates?></td>
