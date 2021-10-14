@@ -27,11 +27,11 @@ include "./include/dbconn.php";
             <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" placeholder="영화의 코드를 (000-000 형식으로)입력하세요 ">
             </div>
         </div>
-        <!-- <div class="form-group">
+        <div class="form-group">
             <label for="exampleInputFile" class="col-sm-2 control-label">영화 사진</label>
             <label for="exampleInputFile">파일 업로드</label>
             <input type="file" name="exampleInputFile" id="exampleInputFile">
-        </div> -->
+        </div>
         <div class="form-group">
             <label for="inputTitle" class="col-sm-2 control-label">영화 제목</label>
             <div class="col-sm-7">

@@ -8,19 +8,7 @@ include "./include/dbconn.php";
     
     
         // echo "$y_search_btn";
-    }else{
-        $y_search = '';
     }
-    if(isset($_POST['Del_button'])){
-        $movie_idx = $_POST['M_Code'];
-        
-        $delete_btn = $_POST['Del_button'];
-    
-    }else{
-        $y_search = '';
-    }
-    
-    
     
     $sql = 'select count(info_seq) as total_user From movie_info';
     $result = mysqli_query($conn, $sql);
@@ -119,8 +107,6 @@ include "./include/dbconn.php";
                     <td class="movie_info14"><?=$m_rel_dates?></td>
                     <td class="movie_info15"><?=$m_rel_datee?></td>
                     <td class="movie_info16"><?=$info_reg_date?></td>
-                    <td>
-                    <button name="Del_button" type="submit" value="delete" class="btn btn-default">삭제</button></td>
                 </tr>
                 <?php
                 $arr_count++;
