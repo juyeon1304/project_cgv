@@ -29,6 +29,7 @@ include "./include/dbconn.php";
                     <th>영화관</th>
                     <th>주소</th>
                     <th>전화번호</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
@@ -36,7 +37,7 @@ include "./include/dbconn.php";
                     $sql = 'select * from theater_info';
                     $result = mysqli_query($conn, $sql);
                     $arr_count = 0;
-                    $row = mysqli_fetch_array($result);
+                    // $row = mysqli_fetch_array($result);
 
                     
                     while($row = mysqli_fetch_array($result)){
@@ -55,7 +56,7 @@ include "./include/dbconn.php";
                     
                     <tr class="" style="">
                         <td class="theater_info1"><?=$theaterIdx?></td>
-                        <td class="theater_info3"><?=$theaterName?></td>
+                        <td class="theater_info3"><a href="./theater-manage.php" target="content"><?=$theaterName?></a></td>
                         <td class="theater_info3"><span><?=$theaterZipcode?></span> <?=$theaterAddr1?> <?=$theaterAddr2?> <?=$theaterAddr3?></td>
                         <td class="theater_info4"><?=$theaterTel?></td>
                         <td>
