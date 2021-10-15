@@ -81,7 +81,7 @@ include "./include/dbconn.php";
                     $arr_count = 0;
                     while($row = mysqli_fetch_array($result)){
                         $m_cord = $row['M_Code'];
-                        $m_picture_tode = $row['M_Picture_Code'];
+                        $m_picture_code = $row['M_Picture_Code'];
                         $m_title = $row['M_Title'];
                         $e_m_title = $row['E_M_Title'];
                         $m_genre_code = $row['M_Genre_Code'];
@@ -96,7 +96,9 @@ include "./include/dbconn.php";
                 ?>
                 <tr class="h5" style="height: 50px !important; overflow: hidden !important;">
                     <td class="movie_info2"><?=$m_cord?></td>
-                    <td class="movie_info2"><?=$m_picture_tode?></td>
+                    <td class="movie_info2">
+                        <!-- <img src="./file/<?=$m_picture_code?>" alt="image"> -->
+                    </td>
                     <td class="movie_info4"><?=$m_title?></td>
                     <td class="movie_info5"><?=$e_m_title?></td>
                     <td class="movie_info6"><?=$m_genre_code?></td>

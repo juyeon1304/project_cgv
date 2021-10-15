@@ -2,7 +2,6 @@
     include "./include/dbconn.php";
     
     $X_Code = $_POST["inputcode"]; //2
-    $X_File = $_POST["exampleInputFile"]; //3
     $X_Title = $_POST["inputTitle"]; //4
     $X_Title_en  = $_POST["inputTitle_en"]; //5
     $X_Genre  = $_POST["inputGenre"]; //6~8
@@ -13,12 +12,29 @@
     $X_Actor   = $_POST["inputActor"]; //13
     $X_ReleaseS   = $_POST["inputReleaseS"]; //14
     $X_ReleaseE   = $_POST["inputReleaseE"]; //15
-    echo $X_Code;
+    if($_FILES['exampleInputFile']['tmp_name']){
+        $uploads_dir = "./file";
+        $allowd_ext = array('jpg','jpeg','png','gif','bmp');
+        $error = $_FILES['exampleInputFile']['error'];
+        $name = $_FILES['exampleInputFile']['name'];
+        $ext = explode('.',$name);
+        $rename = $ext[0].time();
+        $rename = $rename.".".$ext[1];
+        $ext = strtolower(array_pop($ext));
+        $filepath = $uploads_dir."/".$rename;
+        if(!in_array($ext,$allowd_ext)){
+            echo "허용되지 않은 확장명입니다.";
+            exit;
+        }
+        move_uploaded_file($_FILES['exampleInputFile']['tmp_name'],$filepath);
+        echo $filepath;
+    
+    }
     if(!$conn){
         echo "DB연결 실패!";
     }else{  
         
-    $sql = "INSERT INTO movie_info(M_Code, M_Picture_Code, M_Title, E_M_Title, M_Genre_Code, M_Basics, M_Rel_Date, M_Summary, Dircetor_code, Actor_Code, M_Rel_DateS, M_Rel_DateE) VALUES ('$X_Code', '$_X_File', '$X_Title', '$X_Title_en', '$X_Genre', '$X_Basics', '$X_Release', '$X_Summary', '$X_Director', '$X_Actor', '$X_ReleaseS', '$X_ReleaseE')";
+    $sql = "INSERT INTO movie_info(M_Code, M_Picture_Code, M_Title, E_M_Title, M_Genre_Code, M_Basics, M_Rel_Date, M_Summary, Dircetor_code, Actor_Code, M_Rel_DateS, M_Rel_DateE) VALUES ('$X_Code', '$rename', '$X_Title', '$X_Title_en', '$X_Genre', '$X_Basics', '$X_Release', '$X_Summary', '$X_Director', '$X_Actor', '$X_ReleaseS', '$X_ReleaseE')";
     echo $sql;
     $result = mysqli_query($conn, $sql);
 }

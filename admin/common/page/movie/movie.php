@@ -20,7 +20,7 @@ include "./include/dbconn.php";
 </head>
 <body class="body" style="">
     <h2>영화 등록</h2>
-    <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()">
+    <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()" enctype="multipart/form-data">
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화 코드</label>
             <div class="col-sm-7">
