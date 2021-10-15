@@ -16,7 +16,7 @@
     echo $X_Code;
     if(!$conn){
         echo "DB연결 실패!";
-    }else{ 
+    }else{  
         
     $sql = "INSERT INTO movie_info(M_Code, M_Picture_Code, M_Title, E_M_Title, M_Genre_Code, M_Basics, M_Rel_Date, M_Summary, Dircetor_code, Actor_Code, M_Rel_DateS, M_Rel_DateE) VALUES ('$X_Code', '$_X_File', '$X_Title', '$X_Title_en', '$X_Genre', '$X_Basics', '$X_Release', '$X_Summary', '$X_Director', '$X_Actor', '$X_ReleaseS', '$X_ReleaseE')";
     echo $sql;
