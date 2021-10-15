@@ -120,7 +120,7 @@
                                 <li>광주/전라/제주</li>
                             </ul>
                         </div>
-                        <div id="theater_name"  class="theater_ul">
+                        <div id="theater_name"  class="theater_ul scrl">
                             <ul>
                                 <li>강남</li>
                                 <li>강변</li>
@@ -138,7 +138,7 @@
                         날짜
                     </div>
                     <div id="date_content">
-                        <div id="date_month">
+                        <div id="date_month" class="scrl">
                             <ul>
                             <?php
                                   $this_day = date('d');
@@ -149,16 +149,24 @@
                                   $last_day = lastday($this_month);
                                   $i = 1;
                                   $day_arr = array("일","월","화","수","목","금","토");
-                                  
+                                  $m_last_day = 19;
                                   while($i < 16){
                                     
                                     $today = date('Y').'-'.date('m').'-'.$total_day;
 
                                     if($i == 1 || $total_day == 1 ){
+                                        
 
                             ?>
+                                <input type="hidden" id="m_last_day" value="<?=$m_last_day?>">
                                 <li class="month_li">
+                                    <?php
+                                        if($i == 1){
+                                    ?>
                                     <span class="year"><?=$this_year?></span>
+                                    <?php
+                                        }
+                                    ?>
                                     <span class="month"><?=$this_month?></span>
                                 </li> 
                                 

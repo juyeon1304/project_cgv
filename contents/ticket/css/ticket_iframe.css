@@ -294,9 +294,6 @@ p.move_sort {
 
 .theater_ul {
     float: left;
-  
-    
-    
 }
 
 
@@ -325,8 +322,7 @@ p.move_sort {
  
     padding : 0 0 0 10px;
     text-align: left;
-    overflow :scroll;
-    overflow-x: hidden;
+ 
     
 }
 #theater_select{
