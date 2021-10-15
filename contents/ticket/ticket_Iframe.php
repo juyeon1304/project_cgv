@@ -106,8 +106,8 @@
                         </div>
                         
                     </div>   
-                    <div id="theather_content" class="clear">
-                        <div id="theater_area" class="theater_ul">
+                    <div id="theather_content" class="theater_content clear">
+                        <div id="theater_area" class="theater_area theater_ul">
                             <ul>
                                 <li id="theater_select">서울</li>
                                 <li>경기</li>
@@ -120,8 +120,30 @@
                                 <li>광주/전라/제주</li>
                             </ul>
                         </div>
-                        <div id="theater_name"  class="theater_ul scrl">
-                            <ul>
+                        <div id="theater_name"  class="theater_ul theater_name">
+                            <ul class=" scrl">
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
+                                <li>강남</li>
+                                <li>강변</li>
                                 <li>강남</li>
                                 <li>강변</li>
                             
@@ -138,8 +160,8 @@
                         날짜
                     </div>
                     <div id="date_content">
-                        <div id="date_month" class="scrl">
-                            <ul>
+                        <div id="date_month">
+                            <ul class="scrl">
                             <?php
                                   $this_day = date('d');
                                 //   $this_day = 24;

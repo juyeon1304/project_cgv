@@ -207,10 +207,16 @@ p.move_sort {
     background: url("../image/sortmenu_btn_on.png") repeat-x bottom;
    
 }
+
+
+.scrl{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 .scrl::-webkit-scrollbar {
     background-color: transparent;
-    width: 10px;
-    border-radius: 10px;
+    width: 8px;
+    border-radius: 8px;
 }
 
 .scrl::-webkit-scrollbar-track  {
@@ -218,7 +224,7 @@ p.move_sort {
 }
 .scrl::-webkit-scrollbar-thumb { 
     background-color: #797872;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 #theather_content { margin-left: 20px;}
@@ -297,6 +303,11 @@ p.move_sort {
 }
 
 
+.theater_content { display: flex;}
+.theater_area { width: 109px;}
+.theater_name { flex: 1; height: 300px;}
+
+
 #theater_area > ul > li {
     color: #333;
     font-family: 'Tahoma','돋움',dotum,Nanum Gothic,sans-serif;
@@ -305,6 +316,10 @@ p.move_sort {
     background-color: #e6e4d6;
     list-style: none;
     line-height: 30px;
+    box-sizing: border-box;
+    padding-right: 5px;
+
+
 }
 #theater_name > ul > li {
     color: #333;
@@ -319,9 +334,10 @@ p.move_sort {
     text-align: right;
 }
 #theater_name > ul{
- 
     padding : 0 0 0 10px;
+    width: 80%;
     text-align: left;
+    height: 300px;
  
     
 }
@@ -353,8 +369,9 @@ p.move_sort {
 #date_month > ul {
     margin : 0;
     padding : 0;
-    overflow :scroll;
-    overflow-x: hidden;
+    height: 500px;
+    width: 85%;
+
 
 }
 
