@@ -75,7 +75,7 @@
         <div class="right">
             <main class="">
                 <div id="wrap_comm">
-                    <iframe width="100%" height="1500px" frameborder=0 name="content"></iframe>
+                    <iframe width="100%" height="1083px" frameborder=0 name="content"></iframe>
                 </div>
             </main>
         </div>

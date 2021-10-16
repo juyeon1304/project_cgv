@@ -17,13 +17,13 @@
         $allowd_ext = array('jpg','jpeg','png','gif','bmp');
         $error = $_FILES['exampleInputFile']['error'];
         $name = $_FILES['exampleInputFile']['name'];
-        $ext = explode('.',$name);
-        $rename = $ext[0].time();
+        $ext = explode('.',$name); // explode()는 문자열을 분할하여 배열로 저장하는 함수
         $rename = $rename.".".$ext[1];
-        $ext = strtolower(array_pop($ext));
+        $ext = strtolower(array_pop($ext)); //strtolower()는 대문자를 소문자로 변환하는 함수
         $filepath = $uploads_dir."/".$rename;
         if(!in_array($ext,$allowd_ext)){
-            echo "허용되지 않은 확장명입니다.";
+            echo "이미지 없이 등록되었습니다.";
+            $filepath = $uploads_dir."/.noimg.jpg"; 
             exit;
         }
         move_uploaded_file($_FILES['exampleInputFile']['tmp_name'],$filepath);

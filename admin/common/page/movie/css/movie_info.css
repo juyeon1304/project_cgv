@@ -10,3 +10,9 @@ address,cite,code,em{font-style:normal;font-weight:normal;}
 label,img,input,select,textarea,button{vertical-align:middle;}
 hr{display:none;}
 a{color:#000;text-decoration:none;}
+
+.form { 
+    position: relative;
+    width: auto; height: auto;
+    padding-top: 20px; padding-left: 20px;
+}

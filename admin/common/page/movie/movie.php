@@ -16,7 +16,7 @@ include "./include/dbconn.php";
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src='./js/movie.js'></script>
-<link rel="stylesheet" href="./css/movie.css">
+<link rel="stylesheet" href="../css/movie.css" type="text/css">
 </head>
 <body class="body" style="">
     <h2>영화 등록</h2>
@@ -27,10 +27,20 @@ include "./include/dbconn.php";
             <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" placeholder="영화의 코드를 (000-000 형식으로)입력하세요 ">
             </div>
         </div>
-        <div class="form-group">
+        <div class="">
             <label for="exampleInputFile" class="col-sm-2 control-label">영화 사진</label>
-            <label for="exampleInputFile">파일 업로드</label>
-            <input type="file" name="exampleInputFile" id="exampleInputFile">
+            <label for="exampleInputFile" style="
+                position: relative;
+                padding: 4px 40px;
+                border: 0.14em solid #ccc;
+                border-radius: 4px;
+                margin-bottom: 15px;
+                left: 5px;
+                cursor : pointer;
+                z-index: 10;">업로드</label>
+            <input type="file" name="exampleInputFile" id="exampleInputFile" style="
+                display:none;"
+            >
         </div>
         <div class="form-group">
             <label for="inputTitle" class="col-sm-2 control-label">영화 제목</label>

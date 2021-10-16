@@ -1,6 +1,8 @@
+@charset "utf-8";
 .body { 
     position: relative;
     width: auto; height: auto;
     left: 50px;
     top: 50px;
+    vertical-align: middle;
 }
