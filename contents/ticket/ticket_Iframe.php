@@ -74,11 +74,13 @@
                         $result = mysqli_query($conn,$sql);
                         while($row = mysqli_fetch_array($result)){
                           $m_title = $row['M_Title'];
+                          $M_Code = $row['M_Code'];
                         
                     ?>
-                        <li class="clear">
-                        <span class="icon_age" id="icon_list1"></span>
-                        <span class="text_mov" id="text_list1"><?=$m_title?></span>
+                        <li class="li_mov clear">
+                        <span class="icon_age icon_list1"></span>
+                        <span class="text_mov text_list1"><?=$m_title?></span>
+                        <input type="hidden" class="mov_code" value="<?=$M_Code?>">
                         </li>
                     <?php
                         };
@@ -122,28 +124,6 @@
                         </div>
                         <div id="theater_name"  class="theater_ul theater_name">
                             <ul class=" scrl">
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
-                                <li>강남</li>
-                                <li>강변</li>
                                 <li>강남</li>
                                 <li>강변</li>
                             
@@ -330,7 +310,21 @@
             </div>
         </div>
         <div class="side_banner1"></div>
-        <div class="select_line"></div>
+        <div class="select_line">
+            <div class="select_mov ">
+                <div id="select_img">
+                       
+                </div>
+                <div id="select_title">
+
+                </div>
+               
+                
+            </div>
+            <div class="dev_line">
+                    
+            </div>
+        </div>
         <div class="movie_bottom"></div>
                         
 

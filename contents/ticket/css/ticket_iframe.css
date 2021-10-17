@@ -252,7 +252,7 @@ p.move_sort {
 }
 
 
-#icon_list1 {
+.icon_list1 {
     background : url("../image/icon_ratings2.png") no-repeat;
     background-position: 2px -32px;
     
@@ -264,6 +264,11 @@ p.move_sort {
     height: 29px;
     line-height: 29px;
 }
+.li_mov {
+    height: 40px;
+    padding-top: 8px;
+    box-sizing: border-box;
+}
 
 .text_mov {
     /* border : 1px solid blue; */
@@ -273,6 +278,8 @@ p.move_sort {
     font-weight: bold;
     font-family: 'Tahoma','돋움',dotum,Nanum Gothic,sans-serif;
     white-space: nowrap;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .clear {
@@ -582,11 +589,43 @@ p.move_sort {
     width: 100%;
     height: 150px;
     display: inline-block;
-   
+    box-sizing: border-box;
 }
 
 .movie_bottom{
     background: url("../image/movie_bottom.jpg") no-repeat;
     height: 130px;
     margin-top: 30px;
+}
+.tag_on{
+    display: block;
+}
+.tag_off{
+    display: none;
+}
+.select_mov {
+    width: 250px;
+    height: 150px;
+    /* border : 1px solid red; */
+    float: left;
+}
+.dev_line{
+    width: 2px;
+    height: 120px;
+    border-radius: 20%;
+    background-color: #999999;
+    float: left;
+    margin-top: 15px;
+    margin-left: 5px;
+
+}
+#select_img{
+    width: 120px;
+    height: 140px;
+    padding-top: 5px;
+    float: left;
+    color : #ffffff;
+}
+#select_title{
+    color : #ffffff;
 }
