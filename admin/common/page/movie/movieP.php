@@ -15,7 +15,7 @@
     if($_FILES['exampleInputFile']['tmp_name']){
         $uploads_dir = "./file";
         $allowd_ext = array('jpg','jpeg','png','gif','bmp');
-        $error = $_FILES['exampleInputFile']['error'];
+        // $error = $_FILES['exampleInputFile']['error'];
         $name = $_FILES['exampleInputFile']['name'];
         $ext = explode('.',$name); // explode()는 문자열을 분할하여 배열로 저장하는 함수
         $rename = $rename.".".$ext[1];
