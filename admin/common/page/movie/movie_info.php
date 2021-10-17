@@ -48,7 +48,6 @@ include "./include/dbconn.php";
         <!-- <nav>
             <div class="info_btn">
                 <?php
-<<<<<<< Updated upstream
                 if(isset($_POST['x_search_btn'])){
                 $y_search = $_POST['x_search'];
                 }else{
@@ -131,59 +130,5 @@ include "./include/dbconn.php";
         </form>
         <div id="text"></div>
     </div>
-=======
-                    
-                    if(isset($_POST['x_search_btn'])){
-                        $y_search = $_POST['x_search'];
-                        $sql = "select * From movie_info where M_Title like '%$y_search%'";
-                    }else{
-                        $sql = 'select * From movie_info';
-                    }
-                    
-                    $result = mysqli_query($conn, $sql);
-                    $arr_count = 0;
-                    while($row = mysqli_fetch_array($result)){
-                        $m_cord = $row['M_Code'];
-                        $m_picture_code = $row['M_Picture_Code'];
-                        $m_title = $row['M_Title'];
-                        $e_m_title = $row['E_M_Title'];
-                        $m_genre_code = $row['M_Genre_Code'];
-                        $m_basics = $row['M_Basics'];
-                        $m_rel_Date = $row['M_Rel_Date'];
-                        $m_summary = $row['M_Summary'];
-                        $dircetor_code = $row['Dircetor_code'];
-                        $actor_code = $row['Actor_Code'];
-                        $m_rel_dates = $row['M_Rel_DateS'];
-                        $m_rel_datee = $row['M_Rel_DateE'];
-                        $info_reg_date = $row['movie_reg_date'];
-                        $picture = '<img src="./file/'.$m_picture_code.'" width="300" height="100" alt="">';
-                ?>
-                <tr class="h5" style="height: 50px !important; overflow: hidden !important;">
-                    <td class="movie_info2"><?=$m_cord?></td>
-                    <td class="movie_info2">
-                          <?=$picture?>
-                    </td>
-                    <td class="movie_info4"><?=$m_title?></td>
-                    <td class="movie_info5"><?=$e_m_title?></td>
-                    <td class="movie_info6"><?=$m_genre_code?></td>
-                    <td class="movie_info9"><?=$m_basics?></td>
-                    <td class="movie_info10"><?=$m_rel_Date?></td>
-                    <!-- <td class="movie_info11"><?=$m_summary?></td> -->
-                    <td class="movie_info12"><?=$dircetor_code?></td>
-                    <td class="movie_info13"><?=$actor_code?></td>
-                    <td class="movie_info14"><?=$m_rel_dates?></td>
-                    <td class="movie_info15"><?=$m_rel_datee?></td>
-                    <td class="movie_info16"><?=$info_reg_date?></td>
-                </tr>
-                <?php
-                $arr_count++;
-                };
-                ?>
-            </table>
-        </div>
-    </section>
-    </form>
-    <div id="text"></div>
->>>>>>> Stashed changes
 </body>
 </html>
