@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/admin/common/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <title>Document</title>
+    <title>관리자 페이지</title>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="../admin/common/page/movie/test.php" target="content">상영관리</a>
+                                <a href="" target="">상영관리</a>
                                 <ul>
                                     <li><a href="../admin/common/page/movie/movie.php" target="content">영화 등록</a></li>
                                     <li><a href="../admin/common/page/movie/movie_info.php" target="content">영화 조회</a></li>

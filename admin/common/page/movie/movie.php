@@ -1,7 +1,3 @@
-<?php
-include "./include/dbconn.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,9 +19,11 @@ include "./include/dbconn.php";
     <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()" enctype="multipart/form-data">
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화 코드</label>
-            <div class="col-sm-7">
-            <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" placeholder="영화의 코드를 (000-000 형식으로)입력하세요 ">
+            <div class="col-sm-2">
+                <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" placeholder="코드 종류 선택 ">
             </div>
+            <button class="btn btn-default" name="past_movie_btn" Type="submit" value="past_movie">구 영화</button>
+            <button class="btn btn-default" name="new_movie_btn" Type="submit" value="new_movie">신 영화</button>
         </div>
         <div class="">
             <label for="exampleInputFile" class="col-sm-2 control-label">영화 사진</label>
