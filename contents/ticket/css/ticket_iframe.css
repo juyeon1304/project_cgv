@@ -254,15 +254,18 @@ p.move_sort {
 
 .icon_list1 {
     background : url("../image/icon_ratings2.png") no-repeat;
-    background-position: 2px -32px;
+    background-position: 2px -34px;
     
     /* border : 1px solid red; */
 }
 .icon_age {
+    box-sizing: border-box;
     float: left;
     width: 29px;
     height: 29px;
-    line-height: 29px;
+ 
+   /* border: 1px solid red; */
+ 
 }
 .li_mov {
     height: 40px;
@@ -590,6 +593,7 @@ p.move_sort {
     height: 150px;
     display: inline-block;
     box-sizing: border-box;
+    
 }
 
 .movie_bottom{
@@ -613,7 +617,7 @@ p.move_sort {
     width: 2px;
     height: 120px;
     border-radius: 20%;
-    background-color: #999999;
+    background-color: #d4d3c9;
     float: left;
     margin-top: 15px;
     margin-left: 5px;

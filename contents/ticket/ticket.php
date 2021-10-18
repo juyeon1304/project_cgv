@@ -149,7 +149,7 @@
       </div>
     </div>
     <!-- 빠른 예매 페이지 시작 -->
-    <iframe title="CGV 빠른예매" id="ticket_iframe" src="./ticket_iframe.php" scrolling="no" frameborder="0" width="100%" height="1050" style="width:100%; border:0 none;"></iframe>
+    <iframe title="CGV 빠른예매" id="ticket_iframe" src="./ticket_iframe.php" scrolling="no" frameborder="0" width="100%" height="1150" style="width:100%; border:0 none;"></iframe>
     <!-- 빠른 예매페이지 끝 -->
     <div class="banner_hori">
       <a href="">
