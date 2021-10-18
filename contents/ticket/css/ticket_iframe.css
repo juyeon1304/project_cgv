@@ -254,9 +254,19 @@ p.move_sort {
 
 .icon_list1 {
     background : url("../image/icon_ratings2.png") no-repeat;
+    background-position: 2px 0px;
+}
+.icon_list2 {
+    background : url("../image/icon_ratings2.png") no-repeat;
     background-position: 2px -34px;
-    
-    /* border : 1px solid red; */
+}
+.icon_list3 {
+    background : url("../image/icon_ratings2.png") no-repeat;
+    background-position: 2px -68px;
+}
+.icon_list4 {
+    background : url("../image/icon_ratings2.png") no-repeat;
+    background-position: 2px -102px;
 }
 .icon_age {
     box-sizing: border-box;

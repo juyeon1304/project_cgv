@@ -75,10 +75,29 @@
                         while($row = mysqli_fetch_array($result)){
                           $m_title = $row['M_Title'];
                           $M_Code = $row['M_Code'];
+                          $M_Basics = $row['M_Basics'];
                         
+                         switch($M_Basics){
+                             case 'all';
+                             $icon_type = 'icon_list1';
+                             break;
+                             case '12';
+                             $icon_type = 'icon_list2';
+                             break;
+                             case '15';
+                             $icon_type = 'icon_list3';
+                             break;
+                             case '19';
+                             $icon_type = 'icon_list4';
+                             break;
+                             default;
+                             $icon_type = 'icon_list1';
+
+                         }
+
                     ?>
                         <li class="li_mov clear">
-                        <span class="icon_age icon_list1"></span>
+                        <span class="icon_age <?=$icon_type?>"></span>
                         <span class="text_mov text_list1"><?=$m_title?></span>
                         <input type="hidden" class="mov_code" value="<?=$M_Code?>">
                         </li>
