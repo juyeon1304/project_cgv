@@ -20,10 +20,18 @@
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화 코드</label>
             <div class="col-sm-2">
-                <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" placeholder="코드 종류 선택 ">
+
+<!-- $sql = 'select M_Code from movie_info order by M_Code desc limit 1';
+$result = mysqli_query($conn, $sql);
+$arr_count = 0;
+while($row = mysqli_fetch_array($result)){
+$m_cord = $row['M_Code']; -->
+
+                <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" >
+                <!-- value="<=$m_cord?>" 
+                placeholder="<=$m_cord?>" -->
             </div>
-            <button class="btn btn-default" name="past_movie_btn" Type="submit" value="past_movie">구 영화</button>
-            <button class="btn btn-default" name="new_movie_btn" Type="submit" value="new_movie">신 영화</button>
+            <!-- <button class="btn btn-default" name="new_movie_btn" Type="submit" value="new_movie">코드 입력</button> -->
         </div>
         <div class="">
             <label for="exampleInputFile" class="col-sm-2 control-label">영화 사진</label>
@@ -55,13 +63,23 @@
         <div class="form-group">
             <label for="inputGenre" class="col-sm-2 control-label">장르</label>
             <div class="col-sm-7">
-            <input type="text" class="form-control" name="inputGenre" id="inputGenre" placeholder="영화의 장르를 입력하세요">
+            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c1" value="SF">SF</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c2" value=", 드라마">드라마</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c3" value=", 액션">액션</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c4" value=", 코미디">코미디</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c5" value=", 환타지">환타지</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c6" value=", 공포">공포</label>
             </div>
         </div>
         <div class="form-group"> 
             <label for="inputBasics" class="col-sm-2 control-label">관람가</label>
             <div class="col-sm-7">
-            <input type="text" class="form-control" name="inputBasics" id="inputBasics" placeholder="영화의 관람가를 입력하세요">
+            <select name="inputBasics">
+                <option value="전체">전체 관람가</option>
+                <option value="12세">12세 관람가</option>
+                <option value="15세">15세 관람가</option>
+                <option value="19세">19세 관람가</option>
+		    </select>
             </div>
         </div>
         <div class="form-group">

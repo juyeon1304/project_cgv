@@ -1,20 +1,5 @@
 <?php
 include "./include/dbconn.php";
-
-    if(isset($_POST['x_search_btn'])){
-
-        $y_search = $_POST['x_search'];
-        $y_search_btn = $_POST['x_search_btn'];
-    
-    
-        // echo "$y_search_btn";
-    }
-    
-    $sql = 'select count(info_seq) as total_user From movie_info';
-    $result = mysqli_query($conn, $sql);
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -45,20 +30,7 @@ include "./include/dbconn.php";
     ">
         <h2>movie List</h2>
         <form action="movie_info.php" method="post"> 
-        <!-- <nav>
-            <div class="info_btn">
-                <?php
-                if(isset($_POST['x_search_btn'])){
-                $y_search = $_POST['x_search'];
-                }else{
-                    $y_search = '';
-                }
-                ?>
-                <input id="search_input" type="text" name="x_search" value="<?=$y_search?>" />
-                <button name="x_search_btn" class="user_del"  type="submit" value="search">확인</button>
-                <button name="x_delete_btn" class="user_del" Type="submit" value="delete">삭제</button>
-            </div>
-        </nav> -->
+        
         <section>
             <div class="col-md-11">
                 <table class="table table-condensed" style="position: absolute; top : 0px;">
