@@ -65,6 +65,22 @@
     <h2>영화관 등록</h2>
     <form class="form-horizontal" name="regform" id="regform" method="post" action="theater-regP.php" onsubmit="return sendit()">
         <div class="form-group">
+            <label for="inputCity" class="col-sm-2 control-label">도시 선택</label>
+            <div class="col-sm-7">
+                <select name="" id="">
+                    <option value="SE">서울</option>
+                    <option value="GG">경기</option>
+                    <option value="IC">인천</option>
+                    <option value="GW">강원</option>
+                    <option value="DJ">대전/충청</option>
+                    <option value="DG">대구</option>
+                    <option value="BS">부산/울산</option>
+                    <option value="GS">경상</option>
+                    <option value="GJ">광주/전라/제주</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
             <label for="inputName" class="col-sm-2 control-label">영화관 이름</label>
             <div class="col-sm-7">
             <input type="text" class="form-control" name="inputName" id="inputName" maxlength="100" placeholder="새로 등록할 영화관 이름을 입력해주세요.">

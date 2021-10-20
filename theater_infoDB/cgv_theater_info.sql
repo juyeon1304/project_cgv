@@ -30,6 +30,8 @@ CREATE TABLE `theater_info` (
   `theater_addr2` varchar(100) DEFAULT NULL,
   `theater_addr3` varchar(100) DEFAULT NULL,
   `theater_tel` varchar(20) NOT NULL,
+  `theater_room` int DEFAULT '0',
+  `theater_cityCode` varchar(30) NOT NULL,
   PRIMARY KEY (`theater_idx`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -40,7 +42,7 @@ CREATE TABLE `theater_info` (
 
 LOCK TABLES `theater_info` WRITE;
 /*!40000 ALTER TABLE `theater_info` DISABLE KEYS */;
-INSERT INTO `theater_info` VALUES (1,'건대입구','05072','서울 광진구 아차산로30길 26','',' (자양동)','02456789'),(2,'강남 ','06123','서울 강남구 강남대로 438','스타플렉스',' (역삼동)','0278945678'),(3,'계양','21079','인천 계양구 작전동 899-1','메트로몰','8층','025555555'),(4,'홍대','03995','서울 마포구 동교동 159-8','','4층','029999999'),(5,'압구정','06025','서울 강남구 신사동 600','603-2','','028745457'),(6,'왕십리','04750','서울 성동구 행당동 168-2','왕십리 민자역사',' 5층','023333333'),(7,'김포','10113','경기 김포시 풍무동 202-1','김포풍무웰라움퍼펙트시티','5층','026666666'),(8,'고양행신','10526','경기 고양시 덕양구 행신동 762-2','로터스플레이스 ','5층','028888888');
+INSERT INTO `theater_info` VALUES (1,'건대입구','05072','서울 광진구 아차산로30길 26','',' (자양동)','02456789',0,''),(2,'강남 ','06123','서울 강남구 강남대로 438','스타플렉스',' (역삼동)','0278945678',0,''),(3,'계양','21079','인천 계양구 작전동 899-1','메트로몰','8층','025555555',0,''),(4,'홍대','03995','서울 마포구 동교동 159-8','','4층','029999999',0,''),(5,'압구정','06025','서울 강남구 신사동 600','603-2','','028745457',0,''),(6,'왕십리','04750','서울 성동구 행당동 168-2','왕십리 민자역사',' 5층','023333333',0,''),(7,'김포','10113','경기 김포시 풍무동 202-1','김포풍무웰라움퍼펙트시티','5층','026666666',0,''),(8,'고양행신','10526','경기 고양시 덕양구 행신동 762-2','로터스플레이스 ','5층','028888888',0,'');
 /*!40000 ALTER TABLE `theater_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-17 19:06:21
+-- Dump completed on 2021-10-20 10:04:28
