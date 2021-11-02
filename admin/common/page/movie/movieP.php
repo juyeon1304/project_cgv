@@ -4,7 +4,7 @@
     $X_Code = $_POST["inputcode"]; //2
     $X_Title = $_POST["inputTitle"]; //4
     $X_Title_en  = $_POST["inputTitle_en"]; //5
-    $X_Genre  = $_POST["inputGenre"]; //6~8
+    $X_Genre  = $_POST["inputGenre[]"]; //6~8    @@ foreach($_post) as 저장 할 변수 값 { arr=x."," } -- 첫 콤마는 안들어가게끔 장치, substring 마지막 콤마 지워주기, lastinthestring 으로 마지막 콤마를 찾고 ...
     $X_Basics  = $_POST["inputBasics"]; //9
     $X_Release  = $_POST["inputRelease"]; //10
     $X_Summary  = $_POST["inputSummary"]; //11

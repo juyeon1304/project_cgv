@@ -61,7 +61,7 @@ include "./include/dbconn.php";
                         $result = mysqli_query($conn, $sql);
                         $arr_count = 0;
                         while($row = mysqli_fetch_array($result)){
-                            $m_cord = $row['M_Code'];
+                            $m_cord = $row['M_Code']; 
                             $m_picture_code = $row['M_Picture_Code'];
                             $m_title = $row['M_Title'];
                             $e_m_title = $row['E_M_Title'];

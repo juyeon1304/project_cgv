@@ -19,19 +19,12 @@
     <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()" enctype="multipart/form-data">
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화 코드</label>
+            <!-- 영화 코드가 어떤 종류가 있는지 테이블 만들고 -->
+            <!-- select 로 php로 돌려서 ajex 셀렉(드롭박스)으로 구현 onechage로 값을 던져주면 다른 php 페이지에서 return id 값이 input.value = return -->
             <div class="col-sm-2">
-
-<!-- $sql = 'select M_Code from movie_info order by M_Code desc limit 1';
-$result = mysqli_query($conn, $sql);
-$arr_count = 0;
-while($row = mysqli_fetch_array($result)){
-$m_cord = $row['M_Code']; -->
-
                 <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" >
-                <!-- value="<=$m_cord?>" 
-                placeholder="<=$m_cord?>" -->
             </div>
-            <!-- <button class="btn btn-default" name="new_movie_btn" Type="submit" value="new_movie">코드 입력</button> -->
+            <button class="btn btn-default" name="new_movie_btn" Type="submit" value="new_movie">코드 입력</button>
         </div>
         <div class="">
             <label for="exampleInputFile" class="col-sm-2 control-label">영화 사진</label>
@@ -45,7 +38,7 @@ $m_cord = $row['M_Code']; -->
                 cursor : pointer;
                 z-index: 10;">업로드</label>
             <input type="file" name="exampleInputFile" id="exampleInputFile" style="
-                display:none;"
+                "
             >
         </div>
         <div class="form-group">
@@ -63,18 +56,20 @@ $m_cord = $row['M_Code']; -->
         <div class="form-group">
             <label for="inputGenre" class="col-sm-2 control-label">장르</label>
             <div class="col-sm-7">
-            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c1" value="SF">SF</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c2" value=", 드라마">드라마</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c3" value=", 액션">액션</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c4" value=", 코미디">코미디</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c5" value=", 환타지">환타지</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre" /><span>  </span><label for="c6" value=", 공포">공포</label>
+                <!-- DB로 테이블 별도로 만들어서 -->
+            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c1" value="SF">SF</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c2" value="드라마">드라마</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c3" value="액션">액션</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c4" value="코미디">코미디</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c5" value="환타지">환타지</label>
+            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c6" value="공포">공포</label>
             </div>
         </div>
         <div class="form-group"> 
             <label for="inputBasics" class="col-sm-2 control-label">관람가</label>
             <div class="col-sm-7">
-            <select name="inputBasics">
+            <select name="inputBasics"> 
+                <!-- mysql에서 테이블을 별도로 만들어서 불러오게끔 -->
                 <option value="전체">전체 관람가</option>
                 <option value="12세">12세 관람가</option>
                 <option value="15세">15세 관람가</option>
