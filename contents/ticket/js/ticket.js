@@ -84,5 +84,21 @@ window.onload = function(){
         xhr.send();
     }
 
+    // ======================= 영화관 선택 ==================
+    const th_li = document.getElementsByClassName('th_li');
+    const total_area = document.getElementsByClassName('th_hid1');
+    const city_code = document.getElementsByClassName('th_hid2');
 
+    for(i=0; i< th_li.length; i++){
+        // console.log(total_area[i]);
+        th_li[i].addEventListener('click',(e,x=i)=>{
+            console.log(x);
+            for(i=0; i< th_li.length; i++){
+                th_li[i].id = '';
+            }
+            e.target.id = 'theater_select'         
+        });      
+    }
+   
 }
+

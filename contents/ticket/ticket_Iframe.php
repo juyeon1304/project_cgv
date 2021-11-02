@@ -129,16 +129,42 @@
                     </div>   
                     <div id="theather_content" class="theater_content clear">
                         <div id="theater_area" class="theater_area theater_ul">
-                            <ul>
-                                <li id="theater_select">서울</li>
-                                <li>경기</li>
-                                <li>인천</li>
-                                <li>강원</li>
-                                <li>대전/충청</li>
-                                <li>대구</li>
-                                <li>부산/울산</li>
-                                <li>경상</li>
-                                <li>광주/전라/제주</li>
+                            <ul id="th_ul">
+                                <?php
+                                    $sql = "select * From city_info order by city_code desc";
+                                    $idx = 1;
+                                    $result = mysqli_query($conn,$sql);
+                                    while($row = mysqli_fetch_array($result)){
+                                        $city_code = $row['city_code'];
+                                        $city_name = $row['city_name'];
+
+                                        $sql1 = "select count(theater_idx) as total From theater_info where theater_cityCode = '$city_code' group by theater_cityCode" ;
+                                        $result1 = mysqli_query($conn, $sql1);
+                                        $row1 = mysqli_fetch_array($result1);
+                                        if(isset( $row1['total'])){
+                                            $total_area = $row1['total'];
+                                        }else{
+                                            $total_area = 0;
+                                        }
+
+                                    if($idx == 1){
+                                ?>
+                                <li id="theater_select" class="th_li"><?=$city_name?>(<?=$total_area?>)</li>
+                                <input type="hidden" class="th_hid1" value="<?=$total_area?>">
+                                <input type="hidden" class="th_hid2" value="<?=$city_code?>">
+                                <?php
+                                    }else{
+                                ?>
+                                    <li class="th_li"><?=$city_name?>(<?=$total_area?>)
+                                    <input type="hidden" class="th_hid1" value="<?=$total_area?>">
+                                    <input type="hidden" class="th_hid2" value="<?=$city_code?>">
+                                    </li>
+                                <?php
+                                    }
+                                    $idx++;
+                                    $total_area = 0;
+                                  }
+                                ?>
                             </ul>
                         </div>
                         <div id="theater_name"  class="theater_ul theater_name">
@@ -339,6 +365,15 @@
                 </div>
                
                 
+            </div>
+            <div class="dev_line">
+                    
+            </div>
+            <div id="select_theater">
+                 <span>극장</span><span id="th_name"></span><br />
+                 <span>일시</span><span id="th_date"></span><br />
+                 <span>상영관</span><span id="th_room"></span><br />
+                 <span >인원</span>
             </div>
             <div class="dev_line">
                     
