@@ -39,6 +39,7 @@ window.onload = function(){
     const text_mov = document.getElementsByClassName('text_mov');
     const mov_code = document.getElementsByClassName('mov_code');
     const li_mov = document.getElementsByClassName('li_mov');
+    
    
 
     for(let i = 0; i < text_mov.length; i++){
@@ -50,6 +51,7 @@ window.onload = function(){
             }
             li_mov[i].style = 'background-color : #333333;';
              text_mov[i].style = ' color : white;'
+          
             
         });
     };
@@ -88,17 +90,68 @@ window.onload = function(){
     const th_li = document.getElementsByClassName('th_li');
     const total_area = document.getElementsByClassName('th_hid1');
     const city_code = document.getElementsByClassName('th_hid2');
-
+    
+    th_li[0].id = 'theater_select';
     for(i=0; i< th_li.length; i++){
-        // console.log(total_area[i]);
-        th_li[i].addEventListener('click',(e,x=i)=>{
-            console.log(x);
+            
+        th_li[i].addEventListener('click',(e)=>{
+         
             for(i=0; i< th_li.length; i++){
                 th_li[i].id = '';
             }
-            e.target.id = 'theater_select'         
-        });      
+            
+            e.target.id = 'theater_select' ;   
+            
+            for(i=0; i < th_li.length; i++){
+                if(th_li[i].id == 'theater_select'){
+                   const cl_no = i;
+                //    console.log(city_code[cl_no].value);
+                //    console.log(total_area[cl_no].value);
+                    const area_no = total_area[cl_no].value;
+                    console.log(area_no)
+                const xhr = new XMLHttpRequest();
+       
+                xhr.onreadystatechange = function(){
+
+                if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
+                const rep_text = xhr.responseText;
+                const parent = document.getElementById('area_ul');
+                // 선택시 무조건 parent 자식 노드 삭제, 노드 겹치기 방지
+                while ( parent.hasChildNodes() ) {
+                    parent.removeChild( parent.firstChild ); 
+                    }
+
+
+                      if(rep_text == 'emty'){
+
+                      }else{
+                          const area_arr = rep_text.split(',');
+                        //   console.log(area_arr[1]);
+                       
+                        for(let i = 0; i < area_no; i++){
+                            li = document.createElement('li');
+                            li.innerText=area_arr[i];
+                            parent.appendChild(li);
+                            
+                        }
+
+                      }
+                    }
+                }
+
+                xhr.open("GET","./Ajax/theater_info.php?city_code="+city_code[cl_no].value,true);
+
+                xhr.send();
+
+
+
+                }
+            }
+           
+        });   
+
     }
-   
+
+    
 }
 

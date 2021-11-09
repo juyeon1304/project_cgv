@@ -147,20 +147,14 @@
                                             $total_area = 0;
                                         }
 
-                                    if($idx == 1){
+                                    
                                 ?>
-                                <li id="theater_select" class="th_li"><?=$city_name?>(<?=$total_area?>)</li>
-                                <input type="hidden" class="th_hid1" value="<?=$total_area?>">
-                                <input type="hidden" class="th_hid2" value="<?=$city_code?>">
-                                <?php
-                                    }else{
-                                ?>
-                                    <li class="th_li"><?=$city_name?>(<?=$total_area?>)
+                              
+                                    <li class="th_li"><?=$city_name?>(<?=$total_area?>)</li>
                                     <input type="hidden" class="th_hid1" value="<?=$total_area?>">
                                     <input type="hidden" class="th_hid2" value="<?=$city_code?>">
-                                    </li>
                                 <?php
-                                    }
+                                  
                                     $idx++;
                                     $total_area = 0;
                                   }
@@ -168,9 +162,8 @@
                             </ul>
                         </div>
                         <div id="theater_name"  class="theater_ul theater_name">
-                            <ul class=" scrl">
-                                <li>강남</li>
-                                <li>강변</li>
+                            <ul class=" scrl" id="area_ul">
+                              
                             
                             </ul>
                         </div>
