@@ -6,3 +6,15 @@
     top: 50px;
     vertical-align: middle;
 }
+
+#sel { 
+    left : 15px;
+    position: relative;
+    padding: 4px 5px;
+    border: 0.14em solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    cursor : pointer;
+    z-index: 10;
+}
