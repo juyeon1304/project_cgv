@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>영화 등록</title>
-<!-- 합쳐지고 최소화된 최신 CSS -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<!-- 부가적인 테마 -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src='./js/movie.js'></script>
-<link rel="stylesheet" href="../css/movie.css" type="text/css">
+<link rel="stylesheet" href="./css/movie.css" type="text/css" />
+<script type="text/javascript" src="./js/movie.js"></script>
 </head>
-<body class="body" style="">
+<body class="body">
     <h2>영화 등록</h2>
     <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()" enctype="multipart/form-data">
+        
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화 코드</label>
-            <!-- 영화 코드가 어떤 종류가 있는지 테이블 만들고 -->
+            <select id="sel" name="sort" >
+                <option value="N" name="N" id="N" selected> 신 영화
+                <option value="O" name="O" id="O">구 영화
+            </select>
             <!-- select 로 php로 돌려서 ajex 셀렉(드롭박스)으로 구현 onechage로 값을 던져주면 다른 php 페이지에서 return id 값이 input.value = return -->
-            <div class="col-sm-2">
-                <input type="text" class="form-control" name="inputcode" id="inputcode" maxlength="100" >
-            </div>
-            <button class="btn btn-default" name="new_movie_btn" Type="submit" value="new_movie">코드 입력</button>
+        </div>
         </div>
         <div class="">
             <label for="exampleInputFile" class="col-sm-2 control-label">영화 사진</label>
-            <label for="exampleInputFile" style="
+            <input type="file" name="exampleInputFile" id="exampleInputFile" style="
+                left : 6px;
                 position: relative;
-                padding: 4px 40px;
+                padding: 4px 5px;
                 border: 0.14em solid #ccc;
                 border-radius: 4px;
                 margin-bottom: 15px;
-                left: 5px;
                 cursor : pointer;
-                z-index: 10;">업로드</label>
-            <input type="file" name="exampleInputFile" id="exampleInputFile" style="
-                "
-            >
+                z-index: 10;">
         </div>
         <div class="form-group">
             <label for="inputTitle" class="col-sm-2 control-label">영화 제목</label>
@@ -57,12 +51,25 @@
             <label for="inputGenre" class="col-sm-2 control-label">장르</label>
             <div class="col-sm-7">
                 <!-- DB로 테이블 별도로 만들어서 -->
-            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c1" value="SF">SF</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c2" value="드라마">드라마</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c3" value="액션">액션</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c4" value="코미디">코미디</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c5" value="환타지">환타지</label>
-            <input type="checkbox" id="inputGenre" name="inputGenre[]" /><span>  </span><label for="c6" value="공포">공포</label>
+
+                <label>SF <span>  </span>
+                    <input type="checkbox" name="inputGenre[]" value="SF" />
+                </label>
+                <label>드라마 <span>  </span>
+                    <input type="checkbox" name="inputGenre[]" value="드라마" />
+                </label>
+                <label>액션 <span>  </span>
+                    <input type="checkbox" name="inputGenre[]" value="액션" />
+                </label>
+                <label>코미디 <span>  </span>
+                    <input type="checkbox" name="inputGenre[]" value="코미디" />
+                </label>
+                <label>환타지 <span>  </span>
+                    <input type="checkbox" name="inputGenre[]" value="환타지" />
+                </label>
+                <label>공포 <span>  </span>
+                    <input type="checkbox" name="inputGenre[]" value="공포" />
+                </label>
             </div>
         </div>
         <div class="form-group"> 
@@ -70,11 +77,11 @@
             <div class="col-sm-7">
             <select name="inputBasics"> 
                 <!-- mysql에서 테이블을 별도로 만들어서 불러오게끔 -->
-                <option value="전체">전체 관람가</option>
-                <option value="12세">12세 관람가</option>
-                <option value="15세">15세 관람가</option>
-                <option value="19세">19세 관람가</option>
-		    </select>
+                <option value="all">전체 관람가</option>
+                <option value="12">12세 관람가</option>
+                <option value="15">15세 관람가</option>
+                <option value="19">19세 관람가</option>
+            </select>
             </div>
         </div>
         <div class="form-group">

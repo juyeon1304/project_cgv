@@ -48,7 +48,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="" target="">상영관리</a>
+                                <a href="../admin/common/page/movie/PHP/test/part5.php" target="content">상영관리</a>
                                 <ul>
                                     <li><a href="../admin/common/page/movie/movie.php" target="content">영화 등록</a></li>
                                     <li><a href="../admin/common/page/movie/movie_info.php" target="content">영화 조회</a></li>
