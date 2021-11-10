@@ -163,7 +163,21 @@
                         </div>
                         <div id="theater_name"  class="theater_ul theater_name">
                             <ul class=" scrl" id="area_ul">
+                            <?php
+                                   $sql = "select theater_name from theater_info where theater_cityCode = 'SE'";
+                                   $result = mysqli_query($conn, $sql);
+                                   $x = 0;
+                                   while($row = mysqli_fetch_array($result)){
+                                   $theater_name =$row['theater_name'];
+
+                                ?>
                               
+                                    <li class="area_li"><?=$theater_name?></li>
+                                  
+                                <?php
+
+                                  }
+                                ?>
                             
                             </ul>
                         </div>
@@ -220,7 +234,7 @@
                                     <span class="dayWeek" value="<?=$day_text?>"><?=$day_text?></span>
                                     <span class="day"><?=$total_day?></span>
                                 </li> 
-
+                                <input type="hidden" class="theater_date" value="<?=$this_year.'.'.$this_month.'.'.$total_day.'('.$day_text.')'?>">
 
                             <?php
                                     $total_day++;

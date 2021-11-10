@@ -1,3 +1,5 @@
+'use strict';
+
 window.onload = function(){
     // ========= 요일 관련 js ====================
     const move_day_week = document.getElementsByClassName('dayWeek');
@@ -33,6 +35,21 @@ window.onload = function(){
         }
     
     }
+    // ==================== 요일 선택 =========================
+    const date_li = document.getElementsByClassName('date_li');
+    const theater_date = document.getElementsByClassName('theater_date');
+    const th_date = document.getElementById('th_date');
+    for(let i = 0; i < date_li.length; i++){
+        date_li[i].addEventListener('click',(e)=>{
+            // console.log(date_li[i].textContent);
+            // console.log(theater_date[i].value);
+            th_date.innerText = theater_date[i].value;
+
+        })
+    }
+
+
+
 
 
     //================ 영화 선택 =======================
@@ -92,7 +109,7 @@ window.onload = function(){
     const city_code = document.getElementsByClassName('th_hid2');
     
     th_li[0].id = 'theater_select';
-    for(i=0; i< th_li.length; i++){
+    for(let i=0; i< th_li.length; i++){
             
         th_li[i].addEventListener('click',(e)=>{
          
@@ -102,7 +119,7 @@ window.onload = function(){
             
             e.target.id = 'theater_select' ;   
             
-            for(i=0; i < th_li.length; i++){
+            for(let i=0; i < th_li.length; i++){
                 if(th_li[i].id == 'theater_select'){
                    const cl_no = i;
                 //    console.log(city_code[cl_no].value);
@@ -129,12 +146,33 @@ window.onload = function(){
                         //   console.log(area_arr[1]);
                        
                         for(let i = 0; i < area_no; i++){
-                            li = document.createElement('li');
+                          const  li = document.createElement('li');
                             li.innerText=area_arr[i];
                             parent.appendChild(li);
+                           
                             
                         }
+                        // 추가된 노드에 className 삽입
+                        const add_li = parent.childNodes;
+                        // console.log(add_li.length);
+                        for(let i = 0; i < add_li.length; i++){
+                            add_li[i].className = 'area_li';
+                        }
 
+                         // ======================== 상영관 선택 ==============================
+                        const area_li = document.getElementsByClassName('area_li');
+
+                        for(let i=0; i < area_li.length; i++){
+                            area_li[i].addEventListener('click',(e)=>{
+                                for(let x = 0; x<area_li.length ; x++){
+                                    area_li[x].style = 'background-color : none;color : black;';
+                                }
+                                e.target.style = 'background-color : #333333;color : white;';
+                                const th_name = document.getElementById('th_name');
+                                th_name.innerText = e.target.textContent;
+                                
+                            });
+                        }
                       }
                     }
                 }
@@ -152,6 +190,24 @@ window.onload = function(){
 
     }
 
+     // ======================== 상영관 선택 ==============================
+     const area_li = document.getElementsByClassName('area_li');
+
+     for(let i=0; i < area_li.length; i++){
+         
+        
+         area_li[i].addEventListener('click',(e)=>{
+
+            for(let x = 0; x<area_li.length ; x++){
+                area_li[x].style = 'background-color : none;color : black;';
+            }
+             e.target.style = 'background-color : #333333;color : white;';
+             const th_name = document.getElementById('th_name');
+             th_name.innerText = e.target.textContent;
+             
+         });
+     }
+       
     
 }
 
