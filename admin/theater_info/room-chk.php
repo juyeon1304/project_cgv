@@ -1,5 +1,29 @@
 <?php
 include "./include/dbconn.php";
+
+// theater_idx 가져옴 
+if(!isset($_GET['theater_idx'])){
+    echo "<script>alert('잘못된 접근'); location.href='./theater-chk.php';</script>";
+}
+
+
+// 총 상영관 수 구하기 
+$sql = "select count(room_idx) as roomCnt from room_info";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_array($result);
+$roomCnt = $row['roomCnt'];
+
+
+//해당 영화관 이름 추출
+$theater_idx = $_GET['theater_idx'];
+$sql = "select theater_name from theater_info where theater_idx = $theater_idx";
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_array($result);
+
+$theater_name = $row['theater_name'];
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +42,10 @@ include "./include/dbconn.php";
     <!-- <script type="text/javascript" src="./js/movie_info.js"></script> -->
 </head>
 <body class="body">
-    <h2>상영관 관리</h2>
+    <h2> 상영관 관리 - <span><?=$theater_name?></span></h2>
+    <p>총 상영관 수 : <?=$roomCnt?></p>
     <form action="theater-chk.php" method="post">
+    <p><input class="btn btn-default" type="button" value="상영관 등록하기" onclick="location.href='./room-reg.php'"></p>
     <section>
         <div class="col-md-11">
             <table class="table table-condensed">
@@ -27,40 +53,34 @@ include "./include/dbconn.php";
                 <tr class="h4">
                     <th>상영관 코드</th>
                     <th>상영관 이름</th>
-                    <th>상영관 이름 추가설명</th>
+                    <th>상영관 추가설명</th>
                     <th>상영관 좌석 수 </th>
                 </tr>
                 </thead>
                 <tbody>
-                <?php
-                    //   $sql = 'select * from theater_info';
-                    //   $result = mysqli_query($conn, $sql);
-                    //   $arr_count = 0;
-  
-                    //   while($row = mysqli_fetch_array($result)){
 
-                    //     $theaterIdx = $row['theater_idx'];
-                    //     $theaterName = $row['theater_name'];
-                    //     $theaterZipcode = $row['theater_zipcode'];
-                    //     $theaterAddr1 = $row['theater_addr1'];
-                    //     $theaterAddr2 = $row['theater_addr2'];
-                    //     $theaterAddr3 = $row['theater_addr3'];
-                    //     $theaterTel = $row['theater_tel'];
+                <?php
+                      $sql = 'select * from room_info';
+                      $result = mysqli_query($conn, $sql);
+  
+                      while($row = mysqli_fetch_array($result)){
+                        $roomIdx = $row['room_idx'];
+                        $roomName = $row['room_name'];
+                        $roomEtc = $row['room_etc'];
+                        $roomSeat = $row['room_seat'];
                     ?>
-                
-                    
+
                     <tr class="" style="">
-                        <td class="theater_info1"><?=$theaterIdx?></td>
-                        <td class="theater_info"><a href="./theater-manage.php" target="content"><?=$theaterName?></a></td>
-                        <td class="theater_info3"><span><?=$theaterZipcode?></span> <?=$theaterAddr1?> <?=$theaterAddr2?> <?=$theaterAddr3?></td>
-                        <td class="theater_info4"><?=$theaterTel?></td>
+                        <td class="room_info1"><?=$roomIdx?></td>
+                        <td class="room_info4"><?=$roomName?></td>
+                        <td class="room_info4"><?=$roomEtc?></td>
+                        <td class="room_info4"><?=$roomSeat?></td>
                         <td>
                         <button name="Del_button" type="submit" value="delete" class="btn btn-default">삭제</button></td>
                     </tr>
-                <?php
-                //  $arr_count++;
 
-                // };
+                <?php
+                    };
                 ?>
                 </tbody>
             </table>

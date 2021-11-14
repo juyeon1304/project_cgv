@@ -7,13 +7,25 @@
     $inputAddr1 = $_POST['inputAddr1'];
     $inputAddr2 = $_POST['inputAddr2'];
     $inputAddr3 = $_POST['inputAddr3'];
-   
+    // global $inputCity;
+    // $inputCity = $_POST['inputCity'];
+
+
+    
+    
+    // echo "<script>alert(typeof('$inputCity'))</script>";
 
     if(!$conn){
         echo "DB연결 실패!";
     }else{ 
 
-    $sql = "INSERT INTO theater_info( theater_name, theater_zipcode, theater_addr1, theater_addr2, theater_addr3, theater_tel) VALUES ('$inputName', '$zipcode', '$inputAddr1', '$inputAddr2', '$inputAddr3', '$inputTel')";
+    if(!empty($_POST['inputCity'])){
+        foreach($_POST['inputCity'] as $cityCode){
+            $inputCity .= $cityCode;
+        }
+    }
+
+    $sql = "INSERT INTO theater_info( theater_name, theater_zipcode, theater_addr1, theater_addr2, theater_addr3, theater_tel, theater_cityCode) VALUES ('$inputName', '$zipcode', '$inputAddr1', '$inputAddr2', '$inputAddr3','$inputTel', '$inputCity')";
 
     $result = mysqli_query($conn, $sql);
 }

@@ -67,16 +67,16 @@
         <div class="form-group">
             <label for="inputCity" class="col-sm-2 control-label">도시 선택</label>
             <div class="col-sm-7">
-                <select name="" id="">
-                    <option value="SE">서울</option>
-                    <option value="GG">경기</option>
-                    <option value="IC">인천</option>
-                    <option value="GW">강원</option>
-                    <option value="DJ">대전/충청</option>
-                    <option value="DG">대구</option>
-                    <option value="BS">부산/울산</option>
-                    <option value="GS">경상</option>
-                    <option value="GJ">광주/전라/제주</option>
+                <select name="inputCity[]" id="inputCity">
+                    <option value="SE" name="SE">서울</option>
+                    <option value="GG" name="GG">경기</option>
+                    <option value="IC" name="IC">인천</option>
+                    <option value="GW" name="GW">강원</option>
+                    <option value="DJ" name="DJ">대전/충청</option>
+                    <option value="DG" name="DG">대구</option>
+                    <option value="BS" name="BS">부산/울산</option>
+                    <option value="GS" name="GS">경상</option>
+                    <option value="GJ" name="GJ">광주/전라/제주</option>
                 </select>
             </div>
         </div>

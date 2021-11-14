@@ -19,16 +19,15 @@ include "./include/dbconn.php";
 </head>
 <body class="body">
     <h2>영화관 조회</h2>
-    <form action="theater-chk.php" method="post">
+    <form action="./theater-manage.php" method="post">
     <section>
         <div class="col-md-11">
             <table class="table table-condensed">
                 <thead>
                 <tr class="h4">
-                    <th>코드</th>
+                    <th>영화관 코드</th>
                     <th>영화관</th>
                     <th>주소</th>
-             
                 </tr>
                 </thead>
                 <tbody>
@@ -47,15 +46,17 @@ include "./include/dbconn.php";
                         $theaterAddr3 = $row['theater_addr3'];
                         $theaterTel = $row['theater_tel'];
                     ?>
-                
-                    
                     <tr class="" style="">
                         <td class="theater_info1"><?=$theaterIdx?></td>
-                        <td class="theater_info"><a href="./theater-manage.php" target="content"><?=$theaterName?></a></td>
-                        <td class="theater_info3"><span><?=$theaterZipcode?></span> <?=$theaterAddr1?> <?=$theaterAddr2?> <?=$theaterAddr3?></td>
+                        <td class="theater_info">
+                            <a href="./room-chk.php?theater_idx=<?=$theaterIdx?>" target="content"><?=$theaterName?></a>
+                        </td>
+                        <td class="theater_info3">
+                            <span><?=$theaterZipcode?></span> <?=$theaterAddr1?> <?=$theaterAddr2?> <?=$theaterAddr3?></td>
                         <td class="theater_info4"><?=$theaterTel?></td>
                         <td>
-                        <button name="Del_button" type="submit" value="delete" class="btn btn-default">삭제</button></td>
+                            <button name="Del_button" type="submit" value="delete" class="btn btn-default">삭제</button>
+                        </td>
                     </tr>
                 <?php
                  $arr_count++;
