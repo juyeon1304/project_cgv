@@ -5,9 +5,9 @@ include "./include/dbconn.php";
 if(!isset($_GET['theater_idx'])){
     echo "<script>alert('잘못된 접근'); location.href='./theater-chk.php';</script>";
 }
-
-
 $theater_idx = $_GET['theater_idx'];
+
+
 // 총 상영관 수 구하기 
 $sql = "select count(room_idx) as roomCnt from room_info where room_theater = $theater_idx";
 $result = mysqli_query($conn, $sql);
@@ -46,6 +46,7 @@ $theater_name = $row['theater_name'];
     <p>총 상영관 수 : <?=$roomCnt?></p>
     <form action="theater-chk.php" method="post">
     <a href="./room-reg.php?theater_idx=<?=$theater_idx?>" class="btn btn-default">상영관 등록하기</a>
+    <a href="./theater-chk.php" class="btn btn-default">영화관 조회</a>
     <section>
         <div class="col-md-11">
             <table class="table table-condensed">

@@ -55,7 +55,7 @@ include "./include/dbconn.php";
                             <span><?=$theaterZipcode?></span> <?=$theaterAddr1?> <?=$theaterAddr2?> <?=$theaterAddr3?></td>
                         <td class="theater_info4"><?=$theaterTel?></td>
                         <td>
-                            <button name="Del_button" type="submit" value="delete" class="btn btn-default">삭제</button>
+                            <a href="./theater-del.php?theater_idx=<?=$theaterIdx?>" ><span class="btn btn-default">삭제</span></a>
                         </td>
                     </tr>
                 <?php

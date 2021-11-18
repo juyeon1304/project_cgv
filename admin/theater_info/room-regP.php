@@ -5,6 +5,10 @@
     $roomEtc = $_POST['roomEtc'];
     $roomSeat = $_POST['roomSeat'];
 
+    // 영화관 코드 
+    $theater_idx = $_GET['theater_idx'];
+
+
     
    
 
@@ -19,5 +23,5 @@
 ?>
 <script>
     alert('상영관 등록 성공!');
-    location.href="/admin/theater_info/room-chk.php";
+    location.href="/admin/theater_info/room-chk.php?theater_idx=<?=$theater_idx?>";
 </script>

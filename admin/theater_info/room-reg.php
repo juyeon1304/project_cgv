@@ -37,7 +37,7 @@ $theater_name = $row['theater_name'];
 </head>
 <body class="body" style="">
     <h2>상영관 등록 - CGV<?=$theater_name?></h2>
-    <form class="form-horizontal" name="fm_regRoom" id="fm_regRoom" method="post" action="room-regP.php" onsubmit="return sendit()">
+    <form class="form-horizontal" name="fm_regRoom" id="fm_regRoom" method="post" action="room-regP.php?theater_idx=<?=$theater_idx?>" onsubmit="return sendit()">
         <div class="form-group">
             <label for="roomCode" class="col-sm-2 control-label">상영관 코드</label>
             <div class="col-sm-7">
