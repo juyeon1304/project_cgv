@@ -7,15 +7,15 @@ if(!isset($_GET['theater_idx'])){
 }
 
 
+$theater_idx = $_GET['theater_idx'];
 // 총 상영관 수 구하기 
-$sql = "select count(room_idx) as roomCnt from room_info";
+$sql = "select count(room_idx) as roomCnt from room_info where room_theater = $theater_idx";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 $roomCnt = $row['roomCnt'];
 
 
 //해당 영화관 이름 추출
-$theater_idx = $_GET['theater_idx'];
 $sql = "select theater_name from theater_info where theater_idx = $theater_idx";
 $result = mysqli_query($conn,$sql);
 $row = mysqli_fetch_array($result);
@@ -42,16 +42,16 @@ $theater_name = $row['theater_name'];
     <!-- <script type="text/javascript" src="./js/movie_info.js"></script> -->
 </head>
 <body class="body">
-    <h2> 상영관 관리 - <span><?=$theater_name?></span></h2>
+    <h2> 상영관 관리 - <span>CGV<?=$theater_name?></span>(영화관 코드:<?=$theater_idx?>)</h2>
     <p>총 상영관 수 : <?=$roomCnt?></p>
     <form action="theater-chk.php" method="post">
-    <p><input class="btn btn-default" type="button" value="상영관 등록하기" onclick="location.href='./room-reg.php'"></p>
+    <a href="./room-reg.php?theater_idx=<?=$theater_idx?>" class="btn btn-default">상영관 등록하기</a>
     <section>
         <div class="col-md-11">
             <table class="table table-condensed">
                 <thead>
                 <tr class="h4">
-                    <th>상영관 코드</th>
+                    <!-- <th>상영관 코드</th> -->
                     <th>상영관 이름</th>
                     <th>상영관 추가설명</th>
                     <th>상영관 좌석 수 </th>
@@ -60,7 +60,7 @@ $theater_name = $row['theater_name'];
                 <tbody>
 
                 <?php
-                      $sql = 'select * from room_info';
+                      $sql = 'select * from room_info where room_theater = '.$theater_idx;
                       $result = mysqli_query($conn, $sql);
   
                       while($row = mysqli_fetch_array($result)){
@@ -71,7 +71,7 @@ $theater_name = $row['theater_name'];
                     ?>
 
                     <tr class="" style="">
-                        <td class="room_info1"><?=$roomIdx?></td>
+                        <!-- <td class="room_info1"><?=$roomIdx?></td> -->
                         <td class="room_info4"><?=$roomName?></td>
                         <td class="room_info4"><?=$roomEtc?></td>
                         <td class="room_info4"><?=$roomSeat?></td>
