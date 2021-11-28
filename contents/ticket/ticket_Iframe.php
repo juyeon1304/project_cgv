@@ -76,6 +76,8 @@
                           $m_title = $row['M_Title'];
                           $M_Code = $row['M_Code'];
                           $M_Basics = $row['M_Basics'];
+                          $M_Rel_DateS = $row['M_Rel_DateS'];
+                          $M_Rel_DateE = $row['M_Rel_DateE'];
                         
                          switch($M_Basics){
                              case 'all';
@@ -100,6 +102,8 @@
                         <span class="icon_age <?=$icon_type?>"></span>
                         <span class="text_mov text_list1"><?=$m_title?></span>
                         <input type="hidden" class="mov_code" value="<?=$M_Code?>">
+                        <input type="hidden" class="s_date" value="<?=$M_Rel_DateS?>">
+                        <input type="hidden" class="E_date" value="<?=$M_Rel_DateE?>">
                         </li>
                     <?php
                         };

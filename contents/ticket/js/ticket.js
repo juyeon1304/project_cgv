@@ -1,52 +1,7 @@
 'use strict';
 
 window.onload = function(){
-    // ========= 요일 관련 js ====================
-    const move_day_week = document.getElementsByClassName('dayWeek');
-    const move_day = document.getElementsByClassName('day');
-    const m_last_day = document.getElementById('m_last_day');
-    // console.log(m_last_day.value);
-    console.log(move_day_week.length);
-    console.log(move_day_week[0].textContent);
-    for(let i = 0; i < move_day_week.length; i++){
-        
-        
-        if(move_day[i].textContent <= m_last_day.value){
-            if(move_day_week[i].textContent == '일'){
-                move_day_week[i].style = "color : red";
-                move_day[i].style = "color : red";
-             }
-             if(move_day_week[i].textContent == '토'){
-                 move_day_week[i].style = "color : blue";
-                move_day[i].style = "color : blue";
-             }  
-        }else{
-            if(move_day_week[i].textContent == '일'){
-                move_day_week[i].style = "color : #FFA7A7";
-                move_day[i].style = "color : #FFA7A7";
-             }else if(move_day_week[i].textContent == '토'){
-                 move_day_week[i].style = "color : #B2CCFF";
-                move_day[i].style = "color : #B2CCFF";
-             }else{
-                move_day_week[i].style = "color : #999999";
-                move_day[i].style = "color : #999999";
-             } 
-           
-        }
-    
-    }
-    // ==================== 요일 선택 =========================
-    const date_li = document.getElementsByClassName('date_li');
-    const theater_date = document.getElementsByClassName('theater_date');
-    const th_date = document.getElementById('th_date');
-    for(let i = 0; i < date_li.length; i++){
-        date_li[i].addEventListener('click',(e)=>{
-            // console.log(date_li[i].textContent);
-            // console.log(theater_date[i].value);
-            th_date.innerText = theater_date[i].value;
-
-        })
-    }
+   
 
 
 
@@ -56,7 +11,8 @@ window.onload = function(){
     const text_mov = document.getElementsByClassName('text_mov');
     const mov_code = document.getElementsByClassName('mov_code');
     const li_mov = document.getElementsByClassName('li_mov');
-    
+    const s_date  = document.getElementsByClassName('s_date');
+    const e_date  = document.getElementsByClassName('E_date');
    
 
     for(let i = 0; i < text_mov.length; i++){
@@ -68,7 +24,11 @@ window.onload = function(){
             }
             li_mov[i].style = 'background-color : #333333;';
              text_mov[i].style = ' color : white;'
-          
+            //  console.log(s_date[i].value);
+
+     
+
+             movie_Date(s_date[i].value,e_date[i].value);
             
         });
     };
@@ -84,9 +44,9 @@ window.onload = function(){
                 
                 const img_code = rep_text.substring(0,rep_text.indexOf(',',0));
 
-                console.log(rep_text);
-                console.log(mov_title);
-                console.log(img_code);
+                // console.log(rep_text);
+                // console.log(mov_title);
+                // console.log(img_code);
                 if(img_code != ''){
                     
                     
@@ -208,6 +168,64 @@ window.onload = function(){
          });
      }
        
+
+
+
+      // ========= 요일 관련 js ====================
+    const move_day_week = document.getElementsByClassName('dayWeek');
+    const move_day = document.getElementsByClassName('day');
+    const m_last_day = document.getElementById('m_last_day');
+    // console.log(m_last_day.value);
+    // console.log(move_day_week.length);
+    // console.log(move_day_week[0].textContent);
+
+    const movie_Date = function(s,e){
+        const s_date = s;
+        const e_date = e;
+        console.log(`s_date : ${new Date(s_date)}, e_date : ${e_date} last day : ${m_last_day.value}`);
+    }
+
+
+
+    for(let i = 0; i < move_day_week.length; i++){
+        
+        
+        if(move_day[i].textContent <= m_last_day.value){
+            if(move_day_week[i].textContent == '일'){
+                move_day_week[i].style = "color : red";
+                move_day[i].style = "color : red";
+             }
+             if(move_day_week[i].textContent == '토'){
+                 move_day_week[i].style = "color : blue";
+                move_day[i].style = "color : blue";
+             }  
+        }else{
+            if(move_day_week[i].textContent == '일'){
+                move_day_week[i].style = "color : #FFA7A7";
+                move_day[i].style = "color : #FFA7A7";
+             }else if(move_day_week[i].textContent == '토'){
+                 move_day_week[i].style = "color : #B2CCFF";
+                move_day[i].style = "color : #B2CCFF";
+             }else{
+                move_day_week[i].style = "color : #999999";
+                move_day[i].style = "color : #999999";
+             } 
+           
+        }
+    
+    }
+    // ==================== 요일 선택 =========================
+    const date_li = document.getElementsByClassName('date_li');
+    const theater_date = document.getElementsByClassName('theater_date');
+    const th_date = document.getElementById('th_date');
+    for(let i = 0; i < date_li.length; i++){
+        date_li[i].addEventListener('click',(e)=>{
+            // console.log(date_li[i].textContent);
+            // console.log(theater_date[i].value);
+            th_date.innerText = theater_date[i].value;
+
+        })
+    }
     
 }
 
