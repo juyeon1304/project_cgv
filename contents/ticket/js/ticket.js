@@ -29,6 +29,8 @@ window.onload = function(){
      
 
              movie_Date(s_date[i].value,e_date[i].value);
+
+         
             
         });
     };
@@ -175,6 +177,7 @@ window.onload = function(){
     const move_day_week = document.getElementsByClassName('dayWeek');
     const move_day = document.getElementsByClassName('day');
     const m_last_day = document.getElementById('m_last_day');
+    const theater_date_r = document.getElementsByClassName("theater_date_r");
     // console.log(m_last_day.value);
     // console.log(move_day_week.length);
     // console.log(move_day_week[0].textContent);
@@ -182,11 +185,17 @@ window.onload = function(){
     const movie_Date = function(s,e){
         const s_date = s;
         const e_date = e;
-        console.log(`s_date : ${new Date(s_date)}, e_date : ${e_date} last day : ${m_last_day.value}`);
+        console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${m_last_day.value}`);
+
+        
+
+        if(s_date > e_date){
+            console.log('s');
+        }else{
+            console.log('e');
+        }
     }
-
-
-
+  
     for(let i = 0; i < move_day_week.length; i++){
         
         
@@ -214,6 +223,8 @@ window.onload = function(){
         }
     
     }
+
+    
     // ==================== 요일 선택 =========================
     const date_li = document.getElementsByClassName('date_li');
     const theater_date = document.getElementsByClassName('theater_date');

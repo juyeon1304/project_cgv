@@ -210,7 +210,8 @@
                                   $m_last_day = 19;
                                   while($i < 16){
                                     
-                                    $today = date('Y').'-'.date('m').'-'.$total_day;
+                                    $today = date('Y').'-'.substr('0'.date('m'),-2,2).'-'.substr('0'.$total_day,-2,2);
+                                    
 
                                     if($i == 1 || $total_day == 1 ){
                                         
@@ -239,6 +240,7 @@
                                     <span class="day"><?=$total_day?></span>
                                 </li> 
                                 <input type="hidden" class="theater_date" value="<?=$this_year.'.'.$this_month.'.'.$total_day.'('.$day_text.')'?>">
+                                <input type="hidden" class="theater_date_r" value="<?=$today?>">
 
                             <?php
                                     $total_day++;
