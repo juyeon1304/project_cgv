@@ -237,7 +237,7 @@
                             ?>
                                 <li class="date_li">
                                     <span class="dayWeek" value="<?=$day_text?>"><?=$day_text?></span>
-                                    <span class="day"><?=$total_day?></span>
+                                    <span class="day"><?=substr('0'.$total_day,-2,2)?></span>
                                 </li> 
                                 <input type="hidden" class="theater_date" value="<?=$this_year.'.'.$this_month.'.'.$total_day.'('.$day_text.')'?>">
                                 <input type="hidden" class="theater_date_r" value="<?=$today?>">

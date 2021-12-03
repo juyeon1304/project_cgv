@@ -178,62 +178,73 @@ window.onload = function(){
     const move_day = document.getElementsByClassName('day');
     const m_last_day = document.getElementById('m_last_day');
     const theater_date_r = document.getElementsByClassName("theater_date_r");
+    const date_li = document.getElementsByClassName('date_li');
     // console.log(m_last_day.value);
     // console.log(move_day_week.length);
     // console.log(move_day_week[0].textContent);
-
+    for(let i = 0; i < move_day_week.length; i++){
+        if(move_day_week[i].textContent == '일'){
+            move_day_week[i].style = "color : red";
+            move_day[i].style = "color : red";
+        }
+        if(move_day_week[i].textContent == '토'){
+            move_day_week[i].style = "color : blue";
+            move_day[i].style = "color : blue";
+        }
+    }
     const movie_Date = function(s,e){
         const s_date = s;
         const e_date = e;
-        console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${m_last_day.value}`);
-
+        for(let i = 0; i < move_day_week.length; i++){
+            
+            console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${theater_date_r[i].value}`);
+            
+            if(s_date <= theater_date_r[i].value && e_date >= theater_date_r[i].value){
+                date_li[i].id = '';
+                if(move_day_week[i].textContent == '일'){
+                    move_day_week[i].style = "color : red";
+                    move_day[i].style = "color : red";
+                 }
+                 else if(move_day_week[i].textContent == '토'){
+                     move_day_week[i].style = "color : blue";
+                    move_day[i].style = "color : blue";
+                 }else{
+                    move_day_week[i].style = "color : #000000";
+                    move_day[i].style = "color : #000000";
+                 }
+            }else{
+                date_li[i].id = 'no_click';
+                if(move_day_week[i].textContent == '일'){
+                    move_day_week[i].style = "color : #FFA7A7";
+                    move_day[i].style = "color : #FFA7A7";
+                 }else if(move_day_week[i].textContent == '토'){
+                     move_day_week[i].style = "color : #B2CCFF";
+                    move_day[i].style = "color : #B2CCFF";
+                 }else{
+                    move_day_week[i].style = "color : #999999";
+                    move_day[i].style = "color : #999999";
+                 } 
+               
+            }
         
-
-        if(s_date > e_date){
-            console.log('s');
-        }else{
-            console.log('e');
         }
+       
     }
   
-    for(let i = 0; i < move_day_week.length; i++){
-        
-        
-        if(move_day[i].textContent <= m_last_day.value){
-            if(move_day_week[i].textContent == '일'){
-                move_day_week[i].style = "color : red";
-                move_day[i].style = "color : red";
-             }
-             if(move_day_week[i].textContent == '토'){
-                 move_day_week[i].style = "color : blue";
-                move_day[i].style = "color : blue";
-             }  
-        }else{
-            if(move_day_week[i].textContent == '일'){
-                move_day_week[i].style = "color : #FFA7A7";
-                move_day[i].style = "color : #FFA7A7";
-             }else if(move_day_week[i].textContent == '토'){
-                 move_day_week[i].style = "color : #B2CCFF";
-                move_day[i].style = "color : #B2CCFF";
-             }else{
-                move_day_week[i].style = "color : #999999";
-                move_day[i].style = "color : #999999";
-             } 
-           
-        }
     
-    }
 
     
     // ==================== 요일 선택 =========================
-    const date_li = document.getElementsByClassName('date_li');
+   
     const theater_date = document.getElementsByClassName('theater_date');
     const th_date = document.getElementById('th_date');
     for(let i = 0; i < date_li.length; i++){
         date_li[i].addEventListener('click',(e)=>{
             // console.log(date_li[i].textContent);
             // console.log(theater_date[i].value);
-            th_date.innerText = theater_date[i].value;
+            if(date_li[i].id != 'no_click'){
+                th_date.innerText = theater_date[i].value;
+            }
 
         })
     }
