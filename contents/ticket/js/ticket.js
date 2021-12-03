@@ -13,11 +13,14 @@ window.onload = function(){
     const li_mov = document.getElementsByClassName('li_mov');
     const s_date  = document.getElementsByClassName('s_date');
     const e_date  = document.getElementsByClassName('E_date');
-   
+    const th_date = document.getElementById('th_date');
+    const th_name = document.getElementById('th_name');
 
     for(let i = 0; i < text_mov.length; i++){
         text_mov[i].addEventListener('click',(e)=>{
             mov_img(mov_code[i].value);
+            th_date.innerText = '';
+            th_name.innerText = '';
             for(let i = 0; i < text_mov.length; i++){
                 li_mov[i].style = 'background-color : none;';
                 text_mov[i].style = ' color : black;'
@@ -26,12 +29,8 @@ window.onload = function(){
              text_mov[i].style = ' color : white;'
             //  console.log(s_date[i].value);
 
-     
-
              movie_Date(s_date[i].value,e_date[i].value);
 
-         
-            
         });
     };
     const mov_img = function(mov_code){
@@ -130,7 +129,7 @@ window.onload = function(){
                                     area_li[x].style = 'background-color : none;color : black;';
                                 }
                                 e.target.style = 'background-color : #333333;color : white;';
-                                const th_name = document.getElementById('th_name');
+                                
                                 th_name.innerText = e.target.textContent;
                                 
                             });
@@ -195,6 +194,10 @@ window.onload = function(){
     const movie_Date = function(s,e){
         const s_date = s;
         const e_date = e;
+        // 영화 변경시 상영관 선택 리셋.
+        for(let i = 0; i < area_li.length; i++){
+            area_li[i].style = 'background-color : none;color : black;';
+        }
         for(let i = 0; i < move_day_week.length; i++){
             
             console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${theater_date_r[i].value}`);
@@ -237,7 +240,7 @@ window.onload = function(){
     // ==================== 요일 선택 =========================
    
     const theater_date = document.getElementsByClassName('theater_date');
-    const th_date = document.getElementById('th_date');
+  
     for(let i = 0; i < date_li.length; i++){
         date_li[i].addEventListener('click',(e)=>{
             // console.log(date_li[i].textContent);
