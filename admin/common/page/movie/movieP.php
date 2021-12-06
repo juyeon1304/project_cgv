@@ -38,7 +38,10 @@
         // $error = $_FILES['exampleInputFile']['error'];
         $name = $_FILES['exampleInputFile']['name'];
         $ext = explode('.',$name); // explode()는 문자열을 분할하여 배열로 저장하는 함수
-        $rename = $rename.".".$ext[1];
+
+        $rename = $ext[0].time(); // @@ 중복 체크(셀렉문) + 파일삭제(언링크<파일명+경로>)
+        $rename = $rename.".".$ext[1]; 
+
         $ext = strtolower(array_pop($ext)); //strtolower()는 대문자를 소문자로 변환하는 함수
         $filepath = $uploads_dir."/".$rename;
         if(!in_array($ext,$allowd_ext)){

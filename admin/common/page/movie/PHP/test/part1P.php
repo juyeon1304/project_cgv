@@ -24,13 +24,16 @@
     'use strict'
     let str=0;
 
-    if($NorO = 'N'){
-        str
-    }else if($NorO = 'O')
+    if(<?=$NorO?>= 'N'){
+        str=N'-';
+    }else if(<?=$NorO?>= 'O'){
+        str=O'-';
+    }
+    echo
 </script>
 
 <?php 
-    $sql ='select max(M_Code) from movie_info;';
+    $sql ='select max(M_Code) from part1;';
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_array($result);
     $max_code = $row['max(M_Code)'];

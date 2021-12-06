@@ -7,7 +7,9 @@ include "./include/dbconn.php";
     foreach($checks as $h){
         $checksstr .= $h.", ";
     }
-    substr($checksstr, 0, -1);
+    substr($checksstr, 0, -1); 
+    // 1. 문자열 길이(strlen) 2. 총 길이에 -1을 주기
+    // foreach 안에 if 문 쓰기
 
     $sql = "INSERT INTO part5(M_Genre_Code) VALUES ('$checksstr')";
     echo $sql;
