@@ -24,11 +24,12 @@ DROP TABLE IF EXISTS `time_info`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `time_info` (
   `time_idx` int NOT NULL AUTO_INCREMENT,
-  `time_date` date NOT NULL,
   `time_theater` varchar(50) NOT NULL,
   `time_room` varchar(50) NOT NULL,
-  `time_schedule` time DEFAULT NULL,
-  `time_movie` varchar(50) DEFAULT NULL,
+  `time_movie` varchar(50) NOT NULL,
+  `time_schedule` date NOT NULL,
+  `time_start` time NOT NULL,
+  `time_end` time NOT NULL,
   PRIMARY KEY (`time_idx`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -39,7 +40,7 @@ CREATE TABLE `time_info` (
 
 LOCK TABLES `time_info` WRITE;
 /*!40000 ALTER TABLE `time_info` DISABLE KEYS */;
-INSERT INTO `time_info` VALUES (1,'2021-11-25','1','1','20:00:00','A01-001'),(2,'2021-11-25','1','1','21:00:00','A01-001'),(3,'2021-11-26','1','1','20:00:00','A01-001'),(4,'2021-11-26','1','1','21:00:00','A01-001');
+INSERT INTO `time_info` VALUES (1,'1','1','A01-001','2021-12-20','14:00:00','16:00:00'),(2,'1','1','A01-001','2021-12-21','14:00:00','16:00:00'),(3,'1','1','A01-001','2021-12-22','14:00:00','16:00:00'),(4,'1','1','A01-001','2021-12-23','14:00:00','16:00:00');
 /*!40000 ALTER TABLE `time_info` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-23 22:14:59
+-- Dump completed on 2021-12-10 12:59:32
