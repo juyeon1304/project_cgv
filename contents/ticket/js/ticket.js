@@ -200,7 +200,7 @@ window.onload = function(){
         }
         for(let i = 0; i < move_day_week.length; i++){
             
-            console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${theater_date_r[i].value}`);
+            // console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${theater_date_r[i].value}`);
             
             if(s_date <= theater_date_r[i].value && e_date >= theater_date_r[i].value){
                 date_li[i].id = '';
