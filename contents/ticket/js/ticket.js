@@ -4,9 +4,6 @@ window.onload = function(){
    
 
 
-
-
-
     //================ 영화 선택 =======================
     const text_mov = document.getElementsByClassName('text_mov');
     const mov_code = document.getElementsByClassName('mov_code');
@@ -245,12 +242,33 @@ window.onload = function(){
         date_li[i].addEventListener('click',(e)=>{
             // console.log(date_li[i].textContent);
             // console.log(theater_date[i].value);
+            se_date(i);
             if(date_li[i].id != 'no_click'){
                 th_date.innerText = theater_date[i].value;
             }
 
         })
     }
+    const se_date = function(date_no){
+       
+        const date_li = document.getElementsByClassName('date_li');
+        const move_day_week = document.getElementsByClassName('dayWeek');
+         const move_day = document.getElementsByClassName('day');
+           for(let i = 0; i < date_li.length; i++){
+            date_li[i].style = 'background-color:none; color:black;';
+            move_day_week[i].style =  'background-color:none; color:black;'
+            move_day[i].style =  'background-color:none; color:black;'
+
+           }
+            date_li[date_no].style = 'background-color:#333333; color:white;';
+            move_day_week[date_no].style =  'background-color:#333333; color:white;'
+            move_day[date_no].style =  'background-color:#333333; color:white;'
+
+            
+            
+          
+        }
+    
     
 }
 

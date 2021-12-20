@@ -450,6 +450,7 @@ p.move_sort {
     font-weight: bold;
     cursor: pointer;
     width: 32px;
+    height: 37px;
 }
 .step_time{
     width: 330px;

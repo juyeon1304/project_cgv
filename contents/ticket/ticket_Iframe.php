@@ -323,47 +323,7 @@
 
                     </div>
             
-                    <div class="time_seat">
-                        <div class="time_theater">
-                            <span class="move_type">2D</span>
-                            <span class="theater_room">3관</span>
-                            <span class="seat_count">(총218석)</span>
-
-                        </div>
-                    </div>
-                    <div class="time_List">
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        
-
-                    </div>
-                </div>
+                    
                 
             </div>
         </div>
