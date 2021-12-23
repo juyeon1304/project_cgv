@@ -199,7 +199,7 @@ window.onload = function(){
             
             // console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${theater_date_r[i].value}`);
             
-            if(s_date <= theater_date_r[i].value && e_date >= theater_date_r[i].value){
+            if(s_date <= theater_date_r[i].value && e_date >= theater_date_r[i].value ){
                 date_li[i].id = '';
                 if(move_day_week[i].textContent == '일'){
                     move_day_week[i].style = "color : red";
@@ -242,10 +242,11 @@ window.onload = function(){
         date_li[i].addEventListener('click',(e)=>{
             // console.log(date_li[i].textContent);
             // console.log(theater_date[i].value);
-            se_date(i);
+          
             if(date_li[i].id != 'no_click'){
                 th_date.innerText = theater_date[i].value;
             }
+            se_date(i);
 
         })
     }
@@ -254,18 +255,55 @@ window.onload = function(){
         const date_li = document.getElementsByClassName('date_li');
         const move_day_week = document.getElementsByClassName('dayWeek');
          const move_day = document.getElementsByClassName('day');
+        console.log(`move_day_week[date_no] = ${move_day_week[date_no].textContent} date_li = ${date_li[date_no].id}`)
+
            for(let i = 0; i < date_li.length; i++){
-            date_li[i].style = 'background-color:none; color:black;';
-            move_day_week[i].style =  'background-color:none; color:black;'
-            move_day[i].style =  'background-color:none; color:black;'
+               if(move_day_week[i].textContent == '일' && date_li[i].id != 'no_click'){
+                    date_li[i].style = 'background-color:none; color:red;';
+                    move_day_week[i].style =  'background-color:none; color:red;'
+                    move_day[i].style =  'background-color:none; color:red;'
+               }else if(move_day_week[i].textContent == '토' && date_li[i].id != 'no_click'){
+                    date_li[i].style = 'background-color:none; color:blue;';
+                    move_day_week[i].style =  'background-color:none; color:blue;'
+                    move_day[i].style =  'background-color:none; color:blue;'
+
+               }else if(date_li[i].id == 'no_click'){
+                    if(move_day_week[i].textContent == '일'){
+                        move_day_week[i].style = "color : #FFA7A7";
+                        move_day[i].style = "color : #FFA7A7";
+                    }else if(move_day_week[i].textContent == '토'){
+                        move_day_week[i].style = "color : #B2CCFF";
+                        move_day[i].style = "color : #B2CCFF";
+                    }else{
+                        move_day_week[i].style = "color : #999999";
+                        move_day[i].style = "color : #999999";
+                    } 
+               
+               }else{
+                date_li[i].style = 'background-color:none; color:black;';
+                move_day_week[i].style =  'background-color:none; color:black;'
+                move_day[i].style =  'background-color:none; color:black;'
+               }
+           
 
            }
-            date_li[date_no].style = 'background-color:#333333; color:white;';
-            move_day_week[date_no].style =  'background-color:#333333; color:white;'
-            move_day[date_no].style =  'background-color:#333333; color:white;'
+            if(date_li[date_no].id == 'no_click'){
+                if(move_day_week[date_no].textContent == '일'){
+                    move_day_week[date_no].style = " background-color:none; color : #FFA7A7";
+                    move_day[date_no].style = "background-color:none; color : #FFA7A7";
+                }else if(move_day_week[date_no].textContent == '토'){
+                    move_day_week[date_no].style = " background-color:none; color : #B2CCFF";
+                    move_day[date_no].style = " background-color:none; color : #B2CCFF";
+                }else{
+                    move_day_week[date_no].style = " background-color:none; color : #999999";
+                    move_day[date_no].style = " background-color:none; color : #999999";
+                } 
+            }else{
+                date_li[date_no].style = 'background-color:#333333; color:white;';
+                move_day_week[date_no].style =  'background-color:#333333; color:white;'
+                move_day[date_no].style =  'background-color:#333333; color:white;'
+            }
 
-            
-            
           
         }
     
