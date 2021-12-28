@@ -12,10 +12,11 @@ window.onload = function(){
     const e_date  = document.getElementsByClassName('E_date');
     const th_date = document.getElementById('th_date');
     const th_name = document.getElementById('th_name');
-
+   
     for(let i = 0; i < text_mov.length; i++){
         text_mov[i].addEventListener('click',(e)=>{
             mov_img(mov_code[i].value);
+            
             th_date.innerText = '';
             th_name.innerText = '';
             for(let i = 0; i < text_mov.length; i++){
@@ -65,6 +66,7 @@ window.onload = function(){
     const th_li = document.getElementsByClassName('th_li');
     const total_area = document.getElementsByClassName('th_hid1');
     const city_code = document.getElementsByClassName('th_hid2');
+    const send_movie_theater = document.getElementById('send_movie_theater');
     
     th_li[0].id = 'theater_select';
     for(let i=0; i< th_li.length; i++){
@@ -104,9 +106,13 @@ window.onload = function(){
                         //   console.log(area_arr[1]);
                        
                         for(let i = 0; i < area_no; i++){
+                          let theater_N_code = area_arr[i].split('&')
                           const  li = document.createElement('li');
-                            li.innerText=area_arr[i];
+                          
+                            li.innerText = theater_N_code[0];
+                           
                             parent.appendChild(li);
+                           
                            
                             
                         }
@@ -115,22 +121,52 @@ window.onload = function(){
                         // console.log(add_li.length);
                         for(let i = 0; i < add_li.length; i++){
                             add_li[i].className = 'area_li';
+                           
+                        }
+                        for(let i = 0; i < area_no; i++){
+                          let theater_N_code = area_arr[i].split('&')
+                          
+                          const  teater_input = document.createElement('input');
+                          teater_input.type = 'hidden';
+                            teater_input.value = theater_N_code[1];
+                           
+                            parent.appendChild(teater_input);
+                           
+                            
+                        }
+                        // 추가된 노드에 className 삽입
+                        const add_input = parent.childNodes;
+                        // console.log(add_li.length);
+                        for(let i = 0; i < add_input.length; i++){
+                            if(add_input[i].className != 'area_li'){
+                                add_input[i].className = 'area_li_code';
+                            }
+                            
+                           
                         }
 
                          // ======================== 상영관 선택 ==============================
                         const area_li = document.getElementsByClassName('area_li');
-
+                        const area_li_code = document.getElementsByClassName('area_li_code');
+                        const send_movie_theater = document.getElementById('send_movie_theater'); 
                         for(let i=0; i < area_li.length; i++){
                             area_li[i].addEventListener('click',(e)=>{
                                 for(let x = 0; x<area_li.length ; x++){
                                     area_li[x].style = 'background-color : none;color : black;';
+                                    send_movie_theater.value = area_li_code[i].value
                                 }
                                 e.target.style = 'background-color : #333333;color : white;';
                                 
                                 th_name.innerText = e.target.textContent;
+
+                                
+                                
+                                
                                 
                             });
+                            
                         }
+                        
                       }
                     }
                 }
@@ -150,7 +186,8 @@ window.onload = function(){
 
      // ======================== 상영관 선택 ==============================
      const area_li = document.getElementsByClassName('area_li');
-
+     const area_li_code = document.getElementsByClassName('area_li_code');
+    
      for(let i=0; i < area_li.length; i++){
          
         
@@ -158,10 +195,13 @@ window.onload = function(){
 
             for(let x = 0; x<area_li.length ; x++){
                 area_li[x].style = 'background-color : none;color : black;';
+               
             }
              e.target.style = 'background-color : #333333;color : white;';
              const th_name = document.getElementById('th_name');
+             send_movie_theater.value = area_li_code[i].value
              th_name.innerText = e.target.textContent;
+            
              
          });
      }
@@ -306,6 +346,10 @@ window.onload = function(){
 
           
         }
+
+         
+
+
     
     
 }

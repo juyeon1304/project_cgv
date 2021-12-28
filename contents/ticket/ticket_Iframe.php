@@ -168,15 +168,17 @@
                         <div id="theater_name"  class="theater_ul theater_name">
                             <ul class=" scrl" id="area_ul">
                             <?php
-                                   $sql = "select theater_name from theater_info where theater_cityCode = 'SE'";
+                                   $sql = "select theater_name,theater_idx from theater_info where theater_cityCode = 'SE'";
                                    $result = mysqli_query($conn, $sql);
                                    $x = 0;
                                    while($row = mysqli_fetch_array($result)){
                                    $theater_name =$row['theater_name'];
+                                   $theater_idx =$row['theater_idx'];
 
                                 ?>
                               
                                     <li class="area_li"><?=$theater_name?></li>
+                                    <input type="hidden" class="area_li_code" value="<?=$theater_idx?>">
                                   
                                 <?php
 
@@ -347,6 +349,9 @@
                  <span>일시</span><span id="th_date"></span><br />
                  <span>상영관</span><span id="th_room"></span><br />
                  <span >인원</span>
+                 <input type="hidden" id="send_movie_code" name="x_movie_code">
+                 <input type="hidden" id="send_movie_date" name="x_movie_date">
+                 <input type="text" id="send_movie_theater" name="x_movie_theater" value="">
             </div>
             <div class="dev_line">
                     

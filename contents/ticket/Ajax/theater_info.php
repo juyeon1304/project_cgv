@@ -6,11 +6,14 @@ $area_list = '';
   if(!$conn){
     echo ("DB연결 실패");
   }else{
-  $sql = "select theater_name from theater_info where theater_cityCode = '$Y_city_code'";
+  $sql = "select theater_name,theater_idx from theater_info where theater_cityCode = '$Y_city_code'";
     $result = mysqli_query($conn, $sql);
     $x = 0;
     while($row = mysqli_fetch_array($result)){
     $theater_name =$row['theater_name'];
+    $theater_idx =$row['theater_idx'];
+    
+    $theater_name = $theater_name.'&'.strval($theater_idx);
     if($x == 0){
         $area_list = $theater_name;
     }else{
