@@ -1,3 +1,7 @@
+<?php
+include "./include/dbconn.php";
+// include './include/sessionadmin.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,16 +14,14 @@
 <link rel="stylesheet" href="../common/page\movie/css/movie.css" type="text/css" />
 <!-- <script src="./js/movie.js"></script> -->
 <script>
+
 const sendit = function(){
-
 const exampleInputFile = document.getElementById('exampleInputFile');
-
-if(exampleInputFile.value ==''){
-    alert('사진을 등록하여 주세요.');
-    exampleInputFile.focus();
-    return false;
-}
-
+// if(exampleInputFile.value ==''){
+//     alert('사진을 등록하여 주세요.');
+//     exampleInputFile.focus();
+//     return false;
+// }
 return true;
 }
 </script>
@@ -29,34 +31,68 @@ return true;
     <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()" enctype="multipart/form-data">
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">지역별 구분</label>
-            <select id="sel" name="sort" >
-                <option value="N" name="N" id="N" selected> 서울
-                <option value="O" name="O" id="O">경기
+            <select name="city_name" class="select_type" >
+<?php
+$sql = "select * From city_info ORDER BY city_name ASC";
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_array($result)){
+$city_name1 = $row['city_name'];
+$city_code1 = $row['theater_cityCode'];
+?>
+
+            <option value="<?=$city_name1?>" ><?=$city_name1?></option>
+<?php
+            };
+?>
             </select>
             <!-- select 로 php로 돌려서 ajex 셀렉(드롭박스)으로 구현 onechage로 값을 던져주면 다른 php 페이지에서 return id 값이 input.value = return -->
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화관 구분</label>
-            <select id="sel" name="sort" >
-                <option value="N" name="N" id="N" selected> 건대 입구
-                <option value="O" name="O" id="O">강남
+            <select name="theater_name" class="select_type" >
+<?php
+$sql = "select theater_name  From theater_info where theater_cityCode = '%$city_code1%'";
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_array($result)){
+$theater_name = $row['theater_name'];
+$theater_idx = $row['theater_idx'];
+?>
+            <option value="<?=$theater_name?>" ><?=$theater_name?></option>
+<?php
+            };
+?>
             </select>
             <!-- select 로 php로 돌려서 ajex 셀렉(드롭박스)으로 구현 onechage로 값을 던져주면 다른 php 페이지에서 return id 값이 input.value = return -->
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">상영관 구분</label>
-            <select id="sel" name="sort" >
-                <option value="N" name="N" id="N" selected> 1관
-                <option value="O" name="O" id="O">2관
-                <option value="O" name="O" id="O">3관
+            <select name="room_info" class="select_type" >
+<?php
+$sql = "select theater_name  From room_info where room_theater = '%$theater_idx%'";
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_array($result)){
+$room_name = $row['room_name'];
+$room_theater = $row['room_theater'];
+?>
+            <option value="<?=$room_name?>" ><?=$room_name?></option>
+<?php
+            };
+?>
             </select>
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">상영중 영화 구분</label>
-            <select id="sel" name="sort" >
-                <option value="N" name="N" id="N" selected>어벤져스
-                <option value="O" name="O" id="O">듄
-                <option value="O" name="O" id="O">엔칸토-마법의 세계
+            <select name="movie_info" class="select_type" >
+<?php
+$sql = "select M_Title from movie_info where DATE(NOW()) between date(M_Rel_DateS) and date(M_Rel_DateE)+1";
+$result = mysqli_query($conn, $sql);
+while($row = mysqli_fetch_array($result)){
+$M_Title = $row['M_Title'];
+?>
+            <option value="<?=$M_Title?>" ><?=$M_Title?></option>
+<?php
+            };
+?>
             </select>
         </div>
         <div class="form-group">
