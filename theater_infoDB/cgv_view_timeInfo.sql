@@ -31,6 +31,7 @@ SET @saved_cs_client     = @@character_set_client;
  1 AS `roomName`,
  1 AS `roomSeat`,
  1 AS `time_schedule`,
+ 1 AS `time_schedule_e`,
  1 AS `time_start`,
  1 AS `time_end`*/;
 SET character_set_client = @saved_cs_client;
@@ -48,7 +49,7 @@ SET character_set_client = @saved_cs_client;
 /*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `view_timeinfo` AS select `time_info`.`time_idx` AS `time_idx`,`time_info`.`time_theater` AS `thaeterCode`,(select `theater_info`.`theater_name` from `theater_info` where (`theater_info`.`theater_idx` = `time_info`.`time_theater`)) AS `theaterName`,`time_info`.`time_room` AS `roomCode`,(select `room_info`.`room_name` from `room_info` where ((`room_info`.`room_theater` = `time_info`.`time_theater`) and (`room_info`.`room_idx` = `time_info`.`time_room`))) AS `roomName`,(select `room_info`.`room_seat` from `room_info` where ((`room_info`.`room_theater` = `time_info`.`time_theater`) and (`room_info`.`room_idx` = `time_info`.`time_room`))) AS `roomSeat`,`time_info`.`time_schedule` AS `time_schedule`,`time_info`.`time_start` AS `time_start`,`time_info`.`time_end` AS `time_end` from `time_info` */;
+/*!50001 VIEW `view_timeinfo` AS select `time_info`.`time_idx` AS `time_idx`,`time_info`.`time_theater` AS `thaeterCode`,(select `theater_info`.`theater_name` from `theater_info` where (`theater_info`.`theater_idx` = `time_info`.`time_theater`)) AS `theaterName`,`time_info`.`time_room` AS `roomCode`,(select `room_info`.`room_name` from `room_info` where ((`room_info`.`room_theater` = `time_info`.`time_theater`) and (`room_info`.`room_idx` = `time_info`.`time_room`))) AS `roomName`,(select `room_info`.`room_seat` from `room_info` where ((`room_info`.`room_theater` = `time_info`.`time_theater`) and (`room_info`.`room_idx` = `time_info`.`time_room`))) AS `roomSeat`,`time_info`.`time_schedule` AS `time_schedule`,`time_info`.`time_schedule_e` AS `time_schedule_e`,`time_info`.`time_start` AS `time_start`,`time_info`.`time_end` AS `time_end` from `time_info` */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -62,4 +63,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-30 16:53:31
+-- Dump completed on 2021-12-30 17:09:39
