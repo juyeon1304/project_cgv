@@ -27,7 +27,14 @@ return true;
 <body class="body">
     <h2>스케줄 등록</h2>
     <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()" enctype="multipart/form-data">
-        
+        <div class="form-group">
+            <label for="inputCode" class="col-sm-2 control-label">지역별 구분</label>
+            <select id="sel" name="sort" >
+                <option value="N" name="N" id="N" selected> 서울
+                <option value="O" name="O" id="O">경기
+            </select>
+            <!-- select 로 php로 돌려서 ajex 셀렉(드롭박스)으로 구현 onechage로 값을 던져주면 다른 php 페이지에서 return id 값이 input.value = return -->
+        </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화관 구분</label>
             <select id="sel" name="sort" >
@@ -53,9 +60,15 @@ return true;
             </select>
         </div>
         <div class="form-group">
-            <label for="inputRelease" class="col-sm-2 control-label">상영일</label>
+            <label for="inputRelease" class="col-sm-2 control-label">상영 시작일</label>
             <div class="col-sm-7">
-            <input type="date" class="form-control" name="inputRelease" id="inputRelease" placeholder="영화의 상영일을 입력하세요">
+            <input type="date" class="form-control" name="inputRelease" id="inputRelease" placeholder="영화의 상영 시작일을 입력하세요">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputRelease" class="col-sm-2 control-label">상영 종료일</label>
+            <div class="col-sm-7">
+            <input type="date" class="form-control" name="inputRelease" id="inputRelease" placeholder="영화의 상영 종료일을 입력하세요">
             </div>
         </div>
         <div class="form-group">
