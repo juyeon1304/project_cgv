@@ -380,11 +380,21 @@ window.onload = function(){
                 th_date.innerText = theater_date[i].value;
                 const send_date = theater_date[i].value;
                 send_movie_date.value = send_date.substr(0,send_date.indexOf('('));
+                const s_mov_code = send_movie_code.value;
+                const s_mov_theater = send_movie_theater.value;
+                const s_mov_r_date = send_movie_date.value;
+                const s_mov_date = s_mov_r_date.split('.').join('-');
+               
+                // console.log(`movei code : ${s_mov_code} and theater_code = ${s_mov_theater} and send_movie_date = ${s_mov_date}`);
+                if(s_mov_code && s_mov_theater && s_mov_date){
+                    console.log(`movei code : ${s_mov_code} and theater_code = ${s_mov_theater} and send_movie_date = ${s_mov_date}`);  
+                    time_select(s_mov_code,s_mov_theater,s_mov_date);
+                }
                 
             }
             se_date(i);
           
-            console.log(`movei code : ${send_movie_code.value} and theater_code = ${send_movie_theater.value} and send_movie_date = ${send_movie_date.value}`)
+            
 
         })
     }
@@ -464,7 +474,7 @@ window.onload = function(){
             }
         }
         // console.log(`movei code : ${move_a_code} and theater_code = ${theater_a_code}`)
-        xhr1.open("GET","./ajax/movie_date.php?mov_code="+move_a_code+"&theater_code="+theater_a_code,true);
+        xhr1.open("GET","./ajax/movie_time.php?mov_code="+M_code+"&theater_code="+M_theater+"&mov_date="+M_date,true);
 
         xhr1.send();
 
