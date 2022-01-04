@@ -8,15 +8,17 @@ window.onload = function(){
     const text_mov = document.getElementsByClassName('text_mov');
     const mov_code = document.getElementsByClassName('mov_code');
     const li_mov = document.getElementsByClassName('li_mov');
-    const s_date  = document.getElementsByClassName('s_date');
-    const e_date  = document.getElementsByClassName('E_date');
     const th_date = document.getElementById('th_date');
     const th_name = document.getElementById('th_name');
-   
+    const send_movie_code = document.getElementById('send_movie_code');
+    
+    
+    let move_a_code = '';
     for(let i = 0; i < text_mov.length; i++){
         text_mov[i].addEventListener('click',(e)=>{
             mov_img(mov_code[i].value);
-            
+            send_movie_code.value = mov_code[i].value;
+            move_a_code = mov_code[i].value;
             th_date.innerText = '';
             th_name.innerText = '';
             for(let i = 0; i < text_mov.length; i++){
@@ -26,8 +28,31 @@ window.onload = function(){
             li_mov[i].style = 'background-color : #333333;';
              text_mov[i].style = ' color : white;'
             //  console.log(s_date[i].value);
+             // 영화 변경시 상영관 선택 리셋.
+            for(let i = 0; i < area_li.length; i++){
+                area_li[i].style = 'background-color : none;color : black;';
+            }
+            // 영화관 변경시 날짜 선택 리셋
+            const move_day_week = document.getElementsByClassName('dayWeek');
+            const move_day = document.getElementsByClassName('day');
+            for(let i = 0; i < move_day_week.length; i++){
+                move_day_week[i].style = 'background-color : none';
+                move_day[i].style = 'background-color : none';
+                if(move_day_week[i].textContent == '일'){
+                    move_day_week[i].style = "color : red";
+                    move_day[i].style = "color : red";
+                }else if(move_day_week[i].textContent == '토'){
+                    move_day_week[i].style = "color : blue";
+                    move_day[i].style = "color : blue";
+                }else{
+                    move_day_week[i].style = "color : black";
+                    move_day[i].style = "color : black";
+                } 
+            }
+            send_movie_theater.value = '';
+            send_movie_date.value = '';
 
-             movie_Date(s_date[i].value,e_date[i].value);
+             
 
         });
     };
@@ -61,6 +86,7 @@ window.onload = function(){
 
         xhr.send();
     }
+    
 
     // ======================= 영화관 선택 ==================
     const th_li = document.getElementsByClassName('th_li');
@@ -149,20 +175,46 @@ window.onload = function(){
                         const area_li = document.getElementsByClassName('area_li');
                         const area_li_code = document.getElementsByClassName('area_li_code');
                         const send_movie_theater = document.getElementById('send_movie_theater'); 
+
+                        
+                        let theater_a_code = '';
                         for(let i=0; i < area_li.length; i++){
                             area_li[i].addEventListener('click',(e)=>{
                                 for(let x = 0; x<area_li.length ; x++){
                                     area_li[x].style = 'background-color : none;color : black;';
-                                    send_movie_theater.value = area_li_code[i].value
+                                    send_movie_theater.value = area_li_code[i].value;
+                                    theater_a_code = area_li_code[i].value;
                                 }
                                 e.target.style = 'background-color : #333333;color : white;';
                                 
                                 th_name.innerText = e.target.textContent;
 
-                                
-                                
-                                
-                                
+                                const xhr1 = new XMLHttpRequest();
+       
+                                xhr1.onreadystatechange = function(){
+                                   
+                                    if(xhr1.readyState == XMLHttpRequest.DONE && xhr1.status == 200){
+                                       
+                                       
+                                        const rep_date = xhr1.responseText;
+                                     
+                                            const s_e_date = rep_date.split(',');
+                                             const s_date = s_e_date[0] ;
+                                             const e_date = s_e_date[1];
+                                            //  console.log(`시작일 : ${s_date}, 종료일 : ${e_date}`);
+                                             movie_Date(s_date,e_date);
+      
+                                    }
+                                }
+                                // console.log(`movei code : ${move_a_code} and theater_code = ${theater_a_code}`)
+                                xhr1.open("GET","./ajax/movie_date.php?mov_code="+move_a_code+"&theater_code="+theater_a_code,true);
+
+                                xhr1.send();
+                                // 상영관 변경시 날짜 리셋
+                                const send_movie_date = document.getElementById('send_movie_date');
+                                th_date.innerText = '';
+                                send_movie_date.value = '';          
+                               
                             });
                             
                         }
@@ -179,7 +231,7 @@ window.onload = function(){
 
                 }
             }
-           
+            
         });   
 
     }
@@ -187,7 +239,7 @@ window.onload = function(){
      // ======================== 상영관 선택 ==============================
      const area_li = document.getElementsByClassName('area_li');
      const area_li_code = document.getElementsByClassName('area_li_code');
-    
+     let theater_a_code = '';
      for(let i=0; i < area_li.length; i++){
          
         
@@ -201,6 +253,49 @@ window.onload = function(){
              const th_name = document.getElementById('th_name');
              send_movie_theater.value = area_li_code[i].value
              th_name.innerText = e.target.textContent;
+             theater_a_code = area_li_code[i].value;
+            const xhr1 = new XMLHttpRequest();
+
+                xhr1.onreadystatechange = function(){
+
+                if(xhr1.readyState == XMLHttpRequest.DONE && xhr1.status == 200){
+
+
+                    const rep_date = xhr1.responseText;
+
+                    const s_e_date = rep_date.split(',');
+                    const s_date = s_e_date[0];
+                    const e_date = s_e_date[1];
+                    // console.log(`시작일 : ${s_date}, 종료일 : ${e_date}`);
+                    movie_Date(s_date,e_date);
+
+                    }
+                }
+                // console.log(`movei code : ${move_a_code} and theater_code = ${theater_a_code}`)
+                xhr1.open("GET","./ajax/movie_date.php?mov_code="+move_a_code+"&theater_code="+theater_a_code,true);
+
+                xhr1.send();
+
+                // 영화관 변경시 날짜 선택 리셋
+            const move_day_week = document.getElementsByClassName('dayWeek');
+            const move_day = document.getElementsByClassName('day');
+            for(let i = 0; i < move_day_week.length; i++){
+                move_day_week[i].style = 'background-color : none';
+                move_day[i].style = 'background-color : none';
+                if(move_day_week[i].textContent == '일'){
+                    move_day_week[i].style = "color : red";
+                    move_day[i].style = "color : red";
+                }else if(move_day_week[i].textContent == '토'){
+                    move_day_week[i].style = "color : blue";
+                    move_day[i].style = "color : blue";
+                }else{
+                    move_day_week[i].style = "color : black";
+                    move_day[i].style = "color : black";
+                } 
+            }
+            const send_movie_date = document.getElementById('send_movie_date');
+            th_date.innerText = '';
+            send_movie_date.value = '';
             
              
          });
@@ -212,7 +307,6 @@ window.onload = function(){
       // ========= 요일 관련 js ====================
     const move_day_week = document.getElementsByClassName('dayWeek');
     const move_day = document.getElementsByClassName('day');
-    const m_last_day = document.getElementById('m_last_day');
     const theater_date_r = document.getElementsByClassName("theater_date_r");
     const date_li = document.getElementsByClassName('date_li');
     // console.log(m_last_day.value);
@@ -231,15 +325,13 @@ window.onload = function(){
     const movie_Date = function(s,e){
         const s_date = s;
         const e_date = e;
-        // 영화 변경시 상영관 선택 리셋.
-        for(let i = 0; i < area_li.length; i++){
-            area_li[i].style = 'background-color : none;color : black;';
-        }
+        // console.log(s_date);
+       
         for(let i = 0; i < move_day_week.length; i++){
             
             // console.log(`s_date : ${s_date}, e_date : ${e_date} last day : ${theater_date_r[i].value}`);
             
-            if(s_date <= theater_date_r[i].value && e_date >= theater_date_r[i].value ){
+            if(s_date <= theater_date_r[i].value && e_date >= theater_date_r[i].value){
                 date_li[i].id = '';
                 if(move_day_week[i].textContent == '일'){
                     move_day_week[i].style = "color : red";
@@ -277,16 +369,22 @@ window.onload = function(){
     // ==================== 요일 선택 =========================
    
     const theater_date = document.getElementsByClassName('theater_date');
-  
+    const send_movie_date = document.getElementById('send_movie_date');
+    
     for(let i = 0; i < date_li.length; i++){
         date_li[i].addEventListener('click',(e)=>{
             // console.log(date_li[i].textContent);
             // console.log(theater_date[i].value);
-          
+           
             if(date_li[i].id != 'no_click'){
                 th_date.innerText = theater_date[i].value;
+                const send_date = theater_date[i].value;
+                send_movie_date.value = send_date.substr(0,send_date.indexOf('('));
+                
             }
             se_date(i);
+          
+            console.log(`movei code : ${send_movie_code.value} and theater_code = ${send_movie_theater.value} and send_movie_date = ${send_movie_date.value}`)
 
         })
     }
@@ -295,7 +393,8 @@ window.onload = function(){
         const date_li = document.getElementsByClassName('date_li');
         const move_day_week = document.getElementsByClassName('dayWeek');
          const move_day = document.getElementsByClassName('day');
-        console.log(`move_day_week[date_no] = ${move_day_week[date_no].textContent} date_li = ${date_li[date_no].id}`)
+         
+        // console.log(`move_day_week[date_no] = ${move_day_week[date_no].textContent} date_li = ${date_li[date_no].id}`)
 
            for(let i = 0; i < date_li.length; i++){
                if(move_day_week[i].textContent == '일' && date_li[i].id != 'no_click'){
@@ -347,9 +446,29 @@ window.onload = function(){
           
         }
 
-         
+    // ============================================== 시간 부분 노드 추가 ========================================= 
+
+    const time_select = function(M_code,M_theater,M_date){
+
+        const xhr1 = new XMLHttpRequest();
+
+        xhr1.onreadystatechange = function(){
+
+            if(xhr1.readyState == XMLHttpRequest.DONE && xhr1.status == 200){
 
 
+                const rep_date = xhr1.responseText;
+                console.log(rep_date);
+            
+
+            }
+        }
+        // console.log(`movei code : ${move_a_code} and theater_code = ${theater_a_code}`)
+        xhr1.open("GET","./ajax/movie_date.php?mov_code="+move_a_code+"&theater_code="+theater_a_code,true);
+
+        xhr1.send();
+
+    }
     
     
 }

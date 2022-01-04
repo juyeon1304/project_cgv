@@ -27,20 +27,36 @@ return true;
 </script>
 </head>
 <body class="body">
+<?php
+if(isset($_POST["city_name"])){
+    $city_name = $_POST["city_name"];
+
+}
+
+?>
+
     <h2>스케줄 등록</h2>
-    <form class="form-horizontal" name="regform" id="regform" method="post" action="movieP.php" onsubmit="return sendit()" enctype="multipart/form-data">
+    <form class="form-horizontal" name="regform" id="regform" method="post" action="./room-sch.php" onsubmit="return sendit()" >
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">지역별 구분</label>
-            <select name="city_name" class="select_type" >
+            <select name="city_name" class="select_type" onchange="this.form.submit()"  >
 <?php
 $sql = "select * From city_info ORDER BY city_name ASC";
 $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
 $city_name1 = $row['city_name'];
-$city_code1 = $row['theater_cityCode'];
+$city_code1 = $row['city_code'];
+        if( $city_name == $city_code1 ){
 ?>
-
-            <option value="<?=$city_name1?>" ><?=$city_name1?></option>
+          
+            <option value="<?=$city_name?>" selected ><?=$city_name1?></option>
+<?php
+        }else{
+?>           
+            <option value="<?=$city_code1?>" ><?=$city_name1?></option>
+<?php
+        }
+?>
 <?php
             };
 ?>
@@ -51,7 +67,7 @@ $city_code1 = $row['theater_cityCode'];
             <label for="inputCode" class="col-sm-2 control-label">영화관 구분</label>
             <select name="theater_name" class="select_type" >
 <?php
-$sql = "select theater_name  From theater_info where theater_cityCode = '%$city_code1%'";
+$sql = "select theater_name  From theater_info where theater_cityCode = '$city_name'";
 $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
 $theater_name = $row['theater_name'];
@@ -68,7 +84,7 @@ $theater_idx = $row['theater_idx'];
             <label for="inputCode" class="col-sm-2 control-label">상영관 구분</label>
             <select name="room_info" class="select_type" >
 <?php
-$sql = "select theater_name  From room_info where room_theater = '%$theater_idx%'";
+$sql = "select theater_name  From room_info where room_theater = '$theater_idx'";
 $result = mysqli_query($conn, $sql);
 while($row = mysqli_fetch_array($result)){
 $room_name = $row['room_name'];
@@ -76,7 +92,7 @@ $room_theater = $row['room_theater'];
 ?>
             <option value="<?=$room_name?>" ><?=$room_name?></option>
 <?php
-            };
+};
 ?>
             </select>
         </div>
