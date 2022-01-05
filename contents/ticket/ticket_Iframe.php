@@ -278,51 +278,8 @@
                 <div class="time_head">
                     시간
                 </div>
-                <div class="time_body">
-                    <div id="time_icon">
-                        <span class="morning">조조</span>
-                        <span class="night">심야</span>
-                    </div>
-                    <div class="time_seat">
-                        <div class="time_theater">
-                            <span class="move_type">2D</span>
-                            <span class="theater_room">시네엔포레</span>
-                            <span class="seat_count">(총34석)</span>
-
-                        </div>
-                    </div>
-                    <div class="time_List">
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        
-
-                    </div>
+                <div id="time_body">
+                  
             
                     
                 

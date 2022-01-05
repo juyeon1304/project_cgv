@@ -469,6 +469,8 @@ window.onload = function(){
 
                 const rep_date = xhr1.responseText;
                 console.log(rep_date);
+                const time_body = document.getElementById('time_body');
+                time_body.innerHTML = rep_date; 
             
 
             }

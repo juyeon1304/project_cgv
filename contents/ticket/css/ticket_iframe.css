@@ -471,7 +471,7 @@ p.move_sort {
     font-size: 20px;
     border-right: 1px solid white;
 }
-.time_body{
+#time_body{
     width: 306px;
     position: relative;
     overflow: hidden;
@@ -577,7 +577,7 @@ p.move_sort {
     overflow: hidden;
 }
 
-.time_body:last-child{
+#time_body:last-child{
     border : none ;
 }
 .side_banner{
