@@ -1,8 +1,6 @@
 <?php
 include "./include/dbconn.php";
 include './include/sessionadmin.php';
- 
-
 ?>
 
 <!DOCTYPE html>
@@ -51,8 +49,8 @@ include './include/sessionadmin.php';
                 <li><input type="text" name="x_p_no" id="p_no"></li>
                 <li><input type="email" name="x_email" id="email"></li>
                 <li>
-                   
-                    <select name="x_auth_type" class="select_type" >
+                
+                <select name="x_auth_type" class="select_type" >
                     <?php
                         $sql = "select * From user_auth";
                         $result = mysqli_query($conn, $sql);

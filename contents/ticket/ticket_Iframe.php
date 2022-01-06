@@ -102,8 +102,7 @@
                         <span class="icon_age <?=$icon_type?>"></span>
                         <span class="text_mov text_list1"><?=$m_title?></span>
                         <input type="hidden" class="mov_code" value="<?=$M_Code?>">
-                        <input type="hidden" class="s_date" value="<?=$M_Rel_DateS?>">
-                        <input type="hidden" class="E_date" value="<?=$M_Rel_DateE?>">
+                    
                         </li>
                     <?php
                         };
@@ -241,7 +240,7 @@
                                     <span class="dayWeek" value="<?=$day_text?>"><?=$day_text?></span>
                                     <span class="day"><?=substr('0'.$total_day,-2,2)?></span>
                                 </li> 
-                                <input type="hidden" class="theater_date" value="<?=$this_year.'.'.$this_month.'.'.$total_day.'('.$day_text.')'?>">
+                                <input type="hidden" class="theater_date" value="<?=$this_year.'.'.substr('0'.$this_month,-2,2).'.'.substr('0'.$total_day,-2,2).'('.$day_text.')'?>">
                                 <input type="hidden" class="theater_date_r" value="<?=$today?>">
 
                             <?php
@@ -279,56 +278,13 @@
                 <div class="time_head">
                     시간
                 </div>
-                <div class="time_body">
-                    <div id="time_icon">
-                        <span class="morning">조조</span>
-                        <span class="night">심야</span>
-                    </div>
-                    <div class="time_seat">
-                        <div class="time_theater">
-                            <span class="move_type">2D</span>
-                            <span class="theater_room">시네엔포레</span>
-                            <span class="seat_count">(총34석)</span>
-
-                        </div>
-                    </div>
-                    <div class="time_List">
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        <div class="time_seatList">
-                            <span class="time_point">11:15</span> 
-                            <span class="seat_countG">34석</span> 
-                        </div>
-                        
-
-                    </div>
+                <div id="time_body">
+                  
             
                     
                 
+                </div>
             </div>
-        </div>
         <div class="side_banner1"></div>
         <div class="select_line">
             <div class="select_mov ">
@@ -349,8 +305,8 @@
                  <span>일시</span><span id="th_date"></span><br />
                  <span>상영관</span><span id="th_room"></span><br />
                  <span >인원</span>
-                 <input type="hidden" id="send_movie_code" name="x_movie_code">
-                 <input type="hidden" id="send_movie_date" name="x_movie_date">
+                 <input type="text" id="send_movie_code" name="x_movie_code" value="">
+                 <input type="text" id="send_movie_date" name="x_movie_date" value="">
                  <input type="text" id="send_movie_theater" name="x_movie_theater" value="">
             </div>
             <div class="dev_line">
