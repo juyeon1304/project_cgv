@@ -77,7 +77,7 @@
         </div>
         <div class="right">
             <main class="">
-                <div id="wrap_comm">
+                <div id="wrap_comm" style="overflow:scroll; height:80%">
                     <iframe width="100%" height="1083px" frameborder=0 name="content"></iframe>
                 </div>
             </main>
