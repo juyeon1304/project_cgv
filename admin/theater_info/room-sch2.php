@@ -1,6 +1,7 @@
 <?php
 include "./include/dbconn.php";
-// include './include/sessionadmin.php';
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,16 +13,27 @@ include "./include/dbconn.php";
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../common/page\movie/css/movie.css" type="text/css" />
-<script src="./js/room-sch2.js"></script>
+<script src="./js/room-sch2.js" defer></script>
+<script>
+window.addEventListener("load", function(e) {
+    let city_code = document.getElementById('city_name').value;
+    getTheater(city_code);
+    // let theater_code = document.getElementById('theater_name').value;
 
 
-    <h2>스케줄 등록</h2>
+
+    
+});
+</script>
+</head>
+<body>
+    <h2>스케줄 등록2</h2>
     <form class="form-horizontal" name="regform" id="regform" method="post" action="./room-sch.php" onsubmit="return sendit()" >
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">지역별 구분</label>
-            <select name="city_name" class="city_name select_type" onchange="getTheater(this.value)">
+            <select name="city_name" id="city_name" class="city_name select_type" onchange="getTheater(this.value)">
                 <?php
-                    $sql = "select city_code, city_name from city_info";
+                    $sql = "select city_code, city_name from city_info order by city_name ASC";
                     $result = mysqli_query($conn, $sql);
                     while($row = mysqli_fetch_array($result)){
                         $city_code = $row['city_code'];
@@ -35,7 +47,19 @@ include "./include/dbconn.php";
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화관 구분</label>
-            <select name="theater_name" id="theater_name" class="select_type" onchange="getRoom(this.value)"></select>
+            <select name="theater_name" id="theater_name" class="select_type" onchange="getRoom(this.value)">
+            <?php
+                    $sql = "select theater_name from theater_info order by theater_name ASC";
+                    $result = mysqli_query($conn, $sql);
+                    while($row = mysqli_fetch_array($result)){
+                        $theater_name = $row['theater_name'];
+                ?>
+                <option value="<?=$theater_name?>"><?=$theater_name?></option>
+                <?php
+                    }
+                ?>
+
+            </select>
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">상영관 구분</label>
@@ -77,5 +101,8 @@ include "./include/dbconn.php";
             <button type="submit" class="btn btn-default">등록</button>
         </div>
     </form>
+
+
+
 </body>
 </html>

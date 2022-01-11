@@ -2,6 +2,8 @@
 'use strict';
 
 
+
+
 function getTheater(city_code){
     const xhr = new XMLHttpRequest(); 
 
@@ -15,6 +17,8 @@ function getTheater(city_code){
     xhr.send();
 
 }
+
+
 function getRoom(theater_code){
     const xhr = new XMLHttpRequest(); 
 
@@ -28,3 +32,4 @@ function getRoom(theater_code){
     xhr.send();
 
 }
+

@@ -8,7 +8,7 @@
         if(isset($_GET["city_code"])){
             $city_code = $_GET["city_code"]; 
 
-           $sql = "select theater_idx, theater_name from theater_info where theater_cityCode = '$city_code'";
+           $sql = "select theater_idx, theater_name from theater_info where theater_cityCode = '$city_code' order by theater_name ASC";
            $result = mysqli_query($conn, $sql);
             while($row = mysqli_fetch_array($result)){
                 $theater_name = $row['theater_name'];
