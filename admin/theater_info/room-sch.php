@@ -51,7 +51,7 @@ include "./include/dbconn.php";
                 while($row = mysqli_fetch_array($result)){
                     $M_Title = $row['M_Title'];
                     $M_Code = $row['M_Code'];
-            ?>
+            ?> 
             <option value="<?=$M_Code?>" ><?=$M_Title?></option>
             <?php
                 };
