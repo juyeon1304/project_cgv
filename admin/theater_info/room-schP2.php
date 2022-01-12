@@ -9,11 +9,21 @@
             $city_code = $_GET["city_code"]; 
 
            $sql = "select theater_idx, theater_name from theater_info where theater_cityCode = '$city_code' order by theater_name ASC";
+
            $result = mysqli_query($conn, $sql);
+
+           $x = 1;
+
             while($row = mysqli_fetch_array($result)){
                 $theater_name = $row['theater_name'];
                 $theater_idx = $row['theater_idx'];
+                if($x == 1){
+                echo "<option selected value=$theater_idx>".$theater_name."</option>";
+                }else{
                 echo "<option value=$theater_idx>".$theater_name."</option>";
+                }
+                // echo "<option value=$theater_idx>".$theater_name."</option>";
+                $x++;
             }
         }//if end
 

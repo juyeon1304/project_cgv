@@ -13,14 +13,14 @@ include "./include/dbconn.php";
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="../common/page\movie/css/movie.css" type="text/css" />
-<script src="./js/room-sch2.js" defer></script>
+<script src="./js/room-sch2.js" ></script>
 <script>
 window.addEventListener("load", function(e) {
     let city_code = document.getElementById('city_name').value;
     getTheater(city_code);
     // let theater_code = document.getElementById('theater_name').value;
 
-
+    console.log('ddd');
 
     
 });
@@ -48,16 +48,6 @@ window.addEventListener("load", function(e) {
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화관 구분</label>
             <select name="theater_name" id="theater_name" class="select_type" onchange="getRoom(this.value)">
-            <?php
-                    $sql = "select theater_name from theater_info order by theater_name ASC";
-                    $result = mysqli_query($conn, $sql);
-                    while($row = mysqli_fetch_array($result)){
-                        $theater_name = $row['theater_name'];
-                ?>
-                <option value="<?=$theater_name?>"><?=$theater_name?></option>
-                <?php
-                    }
-                ?>
 
             </select>
         </div>
