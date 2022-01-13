@@ -20,8 +20,7 @@ window.addEventListener("load", function(e) {
     getTheater(city_code);
     // let theater_code = document.getElementById('theater_name').value;
 
-    console.log('ddd');
-
+  
     
 });
 </script>

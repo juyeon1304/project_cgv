@@ -7,6 +7,7 @@
 
 function getRoom(theater_code){
     const xhr = new XMLHttpRequest(); 
+    console.log(`theater_name : ${theater_code}`);
 
     xhr.onreadystatechange = function(){ 
         if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
@@ -27,11 +28,18 @@ function getTheater(city_code){
         if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200){
             document.getElementById('theater_name').innerHTML = xhr.responseText;
 
-            let theater_code = 'dddd';
-
-            // getRoom(theater_code);
-            // console.log(theater_code.options[0].value);
-            console.log(theater_code);
+            let x = 0;
+            while(true){
+                const theater_name = document.getElementById('theater_name');
+                
+                
+                getRoom(theater_name.value);
+                if(x == 10 || theater_name.value != ''){
+                  
+                    break;
+                }
+                x++;
+            }
             
         }
     }
