@@ -476,7 +476,8 @@ p.move_sort {
     position: relative;
     overflow: hidden;
 }
-#time_icon{
+.time_icon{
+    float: left;
     width: 306px;
     height: 23px;
     margin-left: 20px;

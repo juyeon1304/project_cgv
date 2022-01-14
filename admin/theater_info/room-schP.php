@@ -3,15 +3,18 @@
 
     $theater_name = $_POST["theater_name"]; 
     $room_name = $_POST['room_name'];
-    $movie_info = $_POST['movie_info'];
+    $movie_name = $_POST['movie_name'];
     $time_start_schedule = $_POST['time_start_schedule'];
     $time_end_schedule = $_POST['time_end_schedule'];
+    $time_run = $_POST['time_run'];
+    $time_break = $_POST['time_break'];
+    $time_cycle = $_POST['time_cycle'];
     $time_start_date = $_POST['time_start_date'];
     $time_end_date = $_POST['time_end_date'];
 
+
     if(isset($_GET["city_code"])){
         $city_code = $_GET["city_code"]; 
-
         $sql = "select theater_idx, theater_name from theater_info where theater_cityCode = '$city_code'";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)){
@@ -22,12 +25,20 @@
     }//if end
     if(isset($_GET["theater_code"])){
         $theater_code = $_GET["theater_code"]; 
-
         $sql = "select room_name from room_info where room_theater = '$theater_code'";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)){
             $room_name = $row['room_name'];
             echo "<option value=$room_name>".$room_name."</option>";
+        }
+    }//if end
+    if(isset($_GET["M_Code"])){
+        $M_Code = $_GET["M_Code"]; 
+        $sql = "select M_run from movie_info where M_Code = '$M_Code'";
+        $result = mysqli_query($conn, $sql);
+        while($row = mysqli_fetch_array($result)){
+            $M_run = $row['M_run'];
+            echo "<input value=$M_run>".$M_run."</input>";
         }
     }//if end
 
@@ -36,7 +47,7 @@
     if(!$conn){
         echo "DB연결 실패!";
     }else{ 
-        $sql = "INSERT INTO time_info( time_theater, time_room, time_movie, time_schedule, time_schedule_e, time_start, time_end ) VALUES ( '$theater_name', '$room_name', '$movie_info', '$time_start_schedule', '$time_end_schedule', '$time_start_date', '$time_end_date' )";
+        $sql = "INSERT INTO time_info( time_theater, time_room, time_movie, time_schedule, time_schedule_e, time_movie_run, time_break, time_cycle, time_start, time_end ) VALUES ( '$theater_name', '$room_name', '$movie_name', '$time_start_schedule', '$time_end_schedule', '$time_run', '$time_break', '$time_cycle', '$time_start_date', '$time_end_date' )";
         echo $sql;
         $result = mysqli_query($conn, $sql);
     }//else end
@@ -51,13 +62,16 @@
     <title>스케줄 등록 완료</title>
 </head>
 <body>
-    <h2>스케줄 등록 완료</h2>
+<h2>스케줄 등록 완료</h2>
     <p>영화관 코드 : <?=$theater_name?></p>
     <p>상영관 코드 : <?=$room_name?></p>
-    <p>영화코드 : <?=$movie_info?></p>
+    <p>영화코드 : <?=$movie_name?></p>
     <p>시작 날짜 : <?=$time_start_schedule?></p>
     <p>종료 날짜 : <?=$time_end_schedule?></p>
-    <p>종료 시간 : <?=$time_start_date?></p>
-    <p>시작 시간 : <?=$time_end_date?></p>
+    <p>영화 러닝 타임 : <?=$time_run?></p>
+    <p>정비 시간 : <?=$time_break?></p>
+    <p>세트 수 : <?=$time_cycle?></p>
+    <p>시작 시간 : <?=$time_start_date?></p>
+    <p>종료 시간 : <?=$time_end_date?></p>
 </body>
 </html>

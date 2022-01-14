@@ -19,55 +19,36 @@ if(!$conn){
     $time_schedule =$row['time_schedule'];
     $room_name =$row['room_name'];
     $room_seat =$row['room_seat'];
-    
-    $Y_text = ' <div id="time_icon">
-    <span class="morning">조조</span>
-    <span class="night">심야</span>
+    $time_start = $row['time_start'];
+    $time_start = substr($time_start,0,5);
+    if($x == 0){
+        $Y_text = $Y_text.'
+        <div class="time_icon">
+            <span class="morning">조조</span>
+            <span class="night">심야</span>
         </div>
         <div class="time_seat">
-            <div class="time_theater">
-                <span class="move_type">2D</span>
-                <span class="theater_room">시네엔포레</span>
-                <span class="seat_count">(총34석)</span>
-
-            </div>
+                <div class="time_theater">
+                    <span class="move_type">'.$room_name.'</span>
+                    <span class="theater_room"></span>
+                    <span class="seat_count">'.$room_seat.'</span>
+    
+                </div>
         </div>
-        <div class="time_List">
+        <div class="time_List">';
+    }else{
+        $Y_text = $Y_text.'
             <div class="time_seatList">
-                <span class="time_point">11:15</span> 
-                <span class="seat_countG">34석</span> 
+                <span class="time_point">'.$time_start.'</span> 
+                <span class="seat_countG">'.$room_seat.'</span> 
             </div>
-            <div class="time_seatList">
-                <span class="time_point">11:15</span> 
-                <span class="seat_countG">34석</span> 
-            </div>
-            <div class="time_seatList">
-                <span class="time_point">11:15</span> 
-                <span class="seat_countG">34석</span> 
-            </div>
-            <div class="time_seatList">
-                <span class="time_point">11:15</span> 
-                <span class="seat_countG">34석</span> 
-            </div>
-            <div class="time_seatList">
-                <span class="time_point">11:15</span> 
-                <span class="seat_countG">34석</span> 
-            </div>
-            <div class="time_seatList">
-                <span class="time_point">11:15</span> 
-                <span class="seat_countG">34석</span> 
-            </div>
-            <div class="time_seatList">
-                <span class="time_point">11:15</span> 
-                <span class="seat_countG">34석</span> 
-            </div>
-            
 
-        </div>';
-        
+        ';
+    }
+        $x++;
 
     }
-   
+    $Y_text = $Y_text.'</div>';
     echo $Y_text;
     
   }

@@ -279,10 +279,7 @@
                     시간
                 </div>
                 <div id="time_body">
-                  
-            
-                    
-                
+
                 </div>
             </div>
         <div class="side_banner1"></div>

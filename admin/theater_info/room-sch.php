@@ -39,20 +39,19 @@ include "./include/dbconn.php";
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">상영관 구분</label>
-            <select name="room_name" id="room_name" class="select_type" >
-            </select>
+            <select name="room_name" id="room_name" class="select_type" ></select>
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">상영중 영화 구분</label>
-            <select name="movie_info" id="movie_info" class="select_type" >
+            <select name="movie_name" id="movie_name" class="select_type" onchange="getMovie(this.value)" >
             <?php
-                $sql = "select M_Title from movie_info where DATE(NOW()) between date(M_Rel_DateS) and date(M_Rel_DateE)+1";
+                $sql = "select M_Title, M_Code from movie_info where DATE(NOW()) between date(M_Rel_DateS) and date(M_Rel_DateE)+1";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_array($result)){
                     $M_Title = $row['M_Title'];
                     $M_Code = $row['M_Code'];
             ?> 
-            <option value="<?=$M_Code?>" ><?=$M_Title?></option>
+            <option value="<?=$M_Code?>" ><?=$M_Title?>-<?=$M_Code?></option>
             <?php
                 };
             ?>
@@ -68,6 +67,24 @@ include "./include/dbconn.php";
             <label for="inputRelease" class="col-sm-2 control-label">상영 종료일</label>
             <div class="col-sm-7">
             <input type="date" class="form-control" name="time_end_schedule" placeholder="영화의 상영 종료일을 입력하세요" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputRelease" class="col-sm-2 control-label">영화 러닝 타임</label>
+            <div class="col-sm-7">
+            <input name="time_run" id="time_run" ></input>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputRelease" class="col-sm-2 control-label">정비 시간</label>
+            <div class="col-sm-7">
+            <input type="int" class="form-control" name="time_break" placeholder="정비 시간(분)을 입력하세요" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputRelease" class="col-sm-2 control-label">세트 수</label>
+            <div class="col-sm-7">
+            <input type="int" class="form-control" name="time_cycle" placeholder="스케줄의 반복 수를 입력 하세요" >
             </div>
         </div>
         <div class="form-group">
