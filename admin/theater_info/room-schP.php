@@ -3,8 +3,9 @@
 
     $theater_name = $_POST["theater_name"]; 
     $room_name = $_POST['room_name'];
-    $room_name = substr($room_name, 0, 1);
+    $room_name = intval((substr($room_name, 0, 1));
     $movie_name = $_POST['movie_name'];
+    
     $time_start_schedule = $_POST['time_start_schedule'];
     $time_end_schedule = $_POST['time_end_schedule'];
     $time_run = $_POST['time_run'];
