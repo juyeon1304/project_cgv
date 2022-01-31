@@ -62,6 +62,7 @@
                                     <li><a href="/admin/theater_info/room-sch.php" target="content">스케줄 관리</a></li>
                                     <li><a href="/admin/theater_info/room-sch2.php" target="content">스케줄 관리2</a></li>
                                     <li><a href="/admin/theater_info/sch_info.php" target="content">스케줄 조회</a></li>
+                                    <li><a href="/admin/theater_info/sch_info2.php" target="content">스케줄 조회2</a></li>
                                 </ul>
                             </li>
                             <li>

@@ -15,6 +15,7 @@ include "./include/dbconn.php";
 <script src="./js/room-sch.js"></script>
 
 
+
     <h2>스케줄 등록</h2>
     <form class="form-horizontal" name="regform" id="regform" method="post" action="./room-schP.php" onsubmit="return sendit()" >
         <div class="form-group">
@@ -49,9 +50,9 @@ include "./include/dbconn.php";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_array($result)){
                     $M_Title = $row['M_Title'];
-                    $M_Code = $row['M_Code'];
+                    $timeM_code = $row['M_Code'];
             ?> 
-            <option value="<?=$M_Code?>" ><?=$M_Title?>-<?=$M_Code?></option>
+            <option value="<?=$timeM_code?>" ><?=$M_Title?>-<?=$timeM_code?></option>
             <?php
                 };
             ?>
@@ -70,33 +71,33 @@ include "./include/dbconn.php";
             </div>
         </div>
         <div class="form-group">
-            <label for="inputRelease" class="col-sm-2 control-label">영화 러닝 타임</label>
-            <div class="col-sm-7">
-            <input name="time_run" id="time_run" ></input>
-            </div>
+            <label for="inputCode" class="col-sm-2 control-label">영화 러닝 타임</label>
+            <select name="time_run" id="time_run" 
+            class="select_type" ></select>
         </div>
         <div class="form-group">
             <label for="inputRelease" class="col-sm-2 control-label">정비 시간</label>
             <div class="col-sm-7">
-            <input type="int" class="form-control" name="time_break" placeholder="정비 시간(분)을 입력하세요" >
+            <input type="int" class="form-control" name="time_break" id="time_break" placeholder="정비 시간(분)을 입력하세요" >
             </div>
         </div>
         <div class="form-group">
             <label for="inputRelease" class="col-sm-2 control-label">세트 수</label>
             <div class="col-sm-7">
-            <input type="int" class="form-control" name="time_cycle" placeholder="스케줄의 반복 수를 입력 하세요" >
+            <input type="int" class="form-control" name="time_cycle" id="time_cycle" placeholder="스케줄의 반복 수를 입력 하세요" >
             </div>
         </div>
         <div class="form-group">
             <label for="inputRelease" class="col-sm-2 control-label">상영 시작 시간</label>
             <div class="col-sm-7">
-            <input type="time" class="form-control" name="time_start_date" placeholder="영화의 상영일을 입력하세요" >
+            <input type="time" class="form-control" name="time_start_date" id="time_start_date" placeholder="영화의 상영일을 입력하세요" >
             </div>
         </div>
         <div class="form-group">
             <label for="inputRelease" class="col-sm-2 control-label">상영 종료 시간</label>
             <div class="col-sm-7">
-            <input type="time" class="form-control" name="time_end_date"  placeholder="영화의 상영일을 입력하세요" >
+            <input type="time" class="form-control" name="time_end_date" id="time_end_date"  placeholder="영화의 상영일을 입력하세요" >
+            <input type="button" value="종료 시간 계산" onclick="endTime()"></input>
             </div>
         </div>
         <div class="form-group">

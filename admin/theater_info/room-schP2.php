@@ -2,9 +2,6 @@
     include "./include/dbconn.php";
 
 
-
-
-
     if(!$conn){
         echo "DB연결 실패!";
     }else{ 
@@ -49,9 +46,36 @@
         }//if end
 
 
+        if(isset($_GET["movie_code"])){
+            $movie_code = $_GET["movie_code"]; 
+            $run_all_text = '';
+           $sql = "select M_run from movie_info where M_Code = '$movie_code'";
+           $result = mysqli_query($conn, $sql);
+            while($row = mysqli_fetch_array($result)){
+                $movie_run = $row['M_run'];
+                $run_all_text = "<p>".$movie_run."</p>";
+            }
+            
+            echo $run_all_text;
+        }//if end
+
+
     }//else end
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+    
 ?>

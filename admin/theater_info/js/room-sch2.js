@@ -3,8 +3,6 @@
 
 
 
-
-
 function getRoom(theater_code){
     const xhr = new XMLHttpRequest(); 
     console.log(`theater_name : ${theater_code}`);
@@ -54,3 +52,6 @@ function getTheater(city_code){
 
 
 
+
+
+// 
