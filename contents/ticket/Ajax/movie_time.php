@@ -18,6 +18,7 @@ if(!$conn){
     while($row = mysqli_fetch_array($result)){
     $time_schedule =$row['time_schedule'];
     $room_name =$row['room_name'];
+    $time_room =$row['time_room'];
     $room_seat =$row['room_seat'];
     $time_start = $row['time_start'];
     $time_start = substr($time_start,0,5);
@@ -29,14 +30,14 @@ if(!$conn){
         </div>
         <div class="time_seat">
                 <div class="time_theater">
-                    <span class="move_type">'.$room_name.'</span>
+                    <span class="time_room_name">'.$room_name.'</span>
                     <span class="theater_room"></span>
                     <span class="seat_count">'.$room_seat.'</span>
-    
+                    <input type="hidden" class="room_code" value="'.$time_room.'">
                 </div>
         </div>
         <div class="time_List">';
-    }else{
+    }
         $Y_text = $Y_text.'
             <div class="time_seatList">
                 <span class="time_point">'.$time_start.'</span> 
@@ -44,7 +45,7 @@ if(!$conn){
             </div>
 
         ';
-    }
+    
         $x++;
 
     }

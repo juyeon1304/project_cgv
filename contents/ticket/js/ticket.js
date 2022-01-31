@@ -11,7 +11,7 @@ window.onload = function(){
     const th_date = document.getElementById('th_date');
     const th_name = document.getElementById('th_name');
     const send_movie_code = document.getElementById('send_movie_code');
-    
+    const time_body = document.getElementById('time_body');
     
     let move_a_code = '';
     for(let i = 0; i < text_mov.length; i++){
@@ -51,6 +51,9 @@ window.onload = function(){
             }
             send_movie_theater.value = '';
             send_movie_date.value = '';
+            while(time_body.hasChildNodes()){
+                time_body.removeChild(time_body.firstChild);
+            }
 
              
 
@@ -111,7 +114,7 @@ window.onload = function(){
                 //    console.log(city_code[cl_no].value);
                 //    console.log(total_area[cl_no].value);
                     const area_no = total_area[cl_no].value;
-                    console.log(area_no)
+                    // console.log(area_no)
                 const xhr = new XMLHttpRequest();
        
                 xhr.onreadystatechange = function(){
@@ -213,7 +216,11 @@ window.onload = function(){
                                 // 상영관 변경시 날짜 리셋
                                 const send_movie_date = document.getElementById('send_movie_date');
                                 th_date.innerText = '';
-                                send_movie_date.value = '';          
+                                send_movie_date.value = ''; 
+                                
+                                while(time_body.hasChildNodes()){
+                                    time_body.removeChild(time_body.firstChild);
+                                }         
                                
                             });
                             
@@ -296,6 +303,9 @@ window.onload = function(){
             const send_movie_date = document.getElementById('send_movie_date');
             th_date.innerText = '';
             send_movie_date.value = '';
+            while(time_body.hasChildNodes()){
+                time_body.removeChild(time_body.firstChild);
+            } 
             
              
          });
@@ -387,7 +397,7 @@ window.onload = function(){
                
                 // console.log(`movei code : ${s_mov_code} and theater_code = ${s_mov_theater} and send_movie_date = ${s_mov_date}`);
                 if(s_mov_code && s_mov_theater && s_mov_date){
-                    console.log(`movei code : ${s_mov_code} and theater_code = ${s_mov_theater} and send_movie_date = ${s_mov_date}`);  
+                    // console.log(`movei code : ${s_mov_code} and theater_code = ${s_mov_theater} and send_movie_date = ${s_mov_date}`);  
                     time_select(s_mov_code,s_mov_theater,s_mov_date);
                 }
                 
@@ -468,9 +478,30 @@ window.onload = function(){
 
 
                 const rep_date = xhr1.responseText;
-                console.log(rep_date);
+                // console.log(rep_date);
                 const time_body = document.getElementById('time_body');
                 time_body.innerHTML = rep_date; 
+
+                // 시간 이벤트 추가
+                const time_point = document.getElementsByClassName('time_point');
+                const time_room_name = document.getElementsByClassName('time_room_name');
+                const room_code = document.getElementsByClassName('room_code');
+                // const seat_countG = docuemnt.getElementsByClassName('seat_countG');
+                const th_room = document.getElementById('th_room');
+                const send_movie_room = document.getElementById('send_movie_room');
+                const th_people = document.getElementById('th_people');
+                
+
+
+                for(let i = 0; i < time_point.length; i++){
+                    time_point[i].addEventListener('click',()=>{
+                        console.log(time_point.length)
+                        th_room.innerText = time_room_name[i].innerText;
+                        send_movie_room.value = room_code[i].value;
+                        // th_people.innerText = seat_countG[i].innerText;
+                    });
+
+                }
             
 
             }
@@ -481,7 +512,13 @@ window.onload = function(){
         xhr1.send();
 
     }
+
+
+
+
+    
     
     
 }
+
 

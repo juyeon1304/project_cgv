@@ -211,7 +211,7 @@
                                   $m_last_day = 19;
                                   while($i < 16){
                                     
-                                    $today = date('Y').'-'.substr('0'.date('m'),-2,2).'-'.substr('0'.$total_day,-2,2);
+                                    $today = $this_year.'-'.substr('0'.$this_month,-2,2).'-'.substr('0'.$total_day,-2,2);
                                     
 
                                     if($i == 1 || $total_day == 1 ){
@@ -301,10 +301,11 @@
                  <span>극장</span><span id="th_name"></span><br />
                  <span>일시</span><span id="th_date"></span><br />
                  <span>상영관</span><span id="th_room"></span><br />
-                 <span >인원</span>
-                 <input type="text" id="send_movie_code" name="x_movie_code" value="">
-                 <input type="text" id="send_movie_date" name="x_movie_date" value="">
-                 <input type="text" id="send_movie_theater" name="x_movie_theater" value="">
+                 <span >인원</span><span id="th_people"></span><br />
+                 <input type="hidden" id="send_movie_code" name="x_movie_code" value="">
+                 <input type="hidden" id="send_movie_date" name="x_movie_date" value="">
+                 <input type="hidden" id="send_movie_theater" name="x_movie_theater" value="">
+                 <input type="hidden" id="send_movie_room" name="x_movie_theater" value="">
             </div>
             <div class="dev_line">
                     
