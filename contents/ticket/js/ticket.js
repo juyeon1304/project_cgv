@@ -12,10 +12,18 @@ window.onload = function(){
     const th_name = document.getElementById('th_name');
     const send_movie_code = document.getElementById('send_movie_code');
     const time_body = document.getElementById('time_body');
+    const select_img_befor = document.getElementById('select_img_befor');
+    const select_img = document.getElementById('select_img');
+    const select_title = document.getElementById('select_title');
     
     let move_a_code = '';
     for(let i = 0; i < text_mov.length; i++){
         text_mov[i].addEventListener('click',(e)=>{
+
+            select_img_befor.style.display = 'none';
+            select_img.style.display = 'block';
+            select_title.style.display = 'block';
+
             mov_img(mov_code[i].value);
             send_movie_code.value = mov_code[i].value;
             move_a_code = mov_code[i].value;
@@ -178,11 +186,15 @@ window.onload = function(){
                         const area_li = document.getElementsByClassName('area_li');
                         const area_li_code = document.getElementsByClassName('area_li_code');
                         const send_movie_theater = document.getElementById('send_movie_theater'); 
-
+                        const select_theater = document.getElementById('select_theater');
+                        const select_theater_befor = document.getElementById('select_theater_befor');
                         
                         let theater_a_code = '';
                         for(let i=0; i < area_li.length; i++){
                             area_li[i].addEventListener('click',(e)=>{
+                                select_theater.style.display = 'block';
+                                select_theater_befor.style.display = 'none';
+
                                 for(let x = 0; x<area_li.length ; x++){
                                     area_li[x].style = 'background-color : none;color : black;';
                                     send_movie_theater.value = area_li_code[i].value;
@@ -252,6 +264,8 @@ window.onload = function(){
         
          area_li[i].addEventListener('click',(e)=>{
 
+            select_theater.style.display = 'block';
+            select_theater_befor.style.display = 'none';
             for(let x = 0; x<area_li.length ; x++){
                 area_li[x].style = 'background-color : none;color : black;';
                
@@ -486,7 +500,7 @@ window.onload = function(){
                 const time_point = document.getElementsByClassName('time_point');
                 const time_room_name = document.getElementsByClassName('time_room_name');
                 const room_code = document.getElementsByClassName('room_code');
-                // const seat_countG = docuemnt.getElementsByClassName('seat_countG');
+                const seat_countG = document.getElementsByClassName('seat_countG');
                 const th_room = document.getElementById('th_room');
                 const send_movie_room = document.getElementById('send_movie_room');
                 const th_people = document.getElementById('th_people');
@@ -495,10 +509,11 @@ window.onload = function(){
 
                 for(let i = 0; i < time_point.length; i++){
                     time_point[i].addEventListener('click',()=>{
-                        console.log(time_point.length)
+                        // console.log(time_point.length)
                         th_room.innerText = time_room_name[i].innerText;
                         send_movie_room.value = room_code[i].value;
-                        // th_people.innerText = seat_countG[i].innerText;
+                        th_people.innerText = seat_countG[i].innerText+'명';
+                        reg_btn_ch();
                     });
 
                 }
@@ -514,7 +529,24 @@ window.onload = function(){
     }
 
 
+    const reg_btn_ch = function(){
+        const reg_btn = document.getElementById('reg_btn');
+        const send_movie_code = document.getElementById('send_movie_code');
+        const send_movie_date = document.getElementById('send_movie_code');
+        const send_movie_theater = document.getElementById('send_movie_code');
+        const send_movie_room = document.getElementById('send_movie_code');
 
+        if(typeof send_movie_code.value !== 'undefined' && typeof send_movie_date.value !== 'undefined' && typeof send_movie_theater.value !== 'undefined' && typeof send_movie_room.value !== 'undefined' ){
+
+            reg_btn.style.backgroundPosition = '-140px -220px';
+
+
+
+        }
+
+
+
+    }
 
     
     

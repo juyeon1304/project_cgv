@@ -284,13 +284,17 @@
             </div>
         <div class="side_banner1"></div>
         <div class="select_line">
-            <div class="select_mov ">
+            <div id="select_mov ">
+                <div id="select_img_befor">
+                       
+                </div>
                 <div id="select_img">
                        
                 </div>
                 <div id="select_title">
 
                 </div>
+
                
                 
             </div>
@@ -298,6 +302,7 @@
                     
             </div>
             <div id="select_theater">
+
                  <span>극장</span><span id="th_name"></span><br />
                  <span>일시</span><span id="th_date"></span><br />
                  <span>상영관</span><span id="th_room"></span><br />
@@ -306,10 +311,19 @@
                  <input type="hidden" id="send_movie_date" name="x_movie_date" value="">
                  <input type="hidden" id="send_movie_theater" name="x_movie_theater" value="">
                  <input type="hidden" id="send_movie_room" name="x_movie_theater" value="">
+               
+            </div>
+            <div id="select_theater_befor">
+
+             
+               
             </div>
             <div class="dev_line">
                     
             </div>
+            <div id="select_conment1"></div>
+            <div id="select_conment2"></div>
+            <div id="reg_btn"></div>
         </div>
         <div class="movie_bottom"></div>
                         

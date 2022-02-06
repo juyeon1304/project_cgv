@@ -18,11 +18,12 @@ if(!$conn){
     while($row = mysqli_fetch_array($result)){
     $time_schedule =$row['time_schedule'];
     $room_name =$row['room_name'];
+    $room_name_R = '';
     $time_room =$row['time_room'];
     $room_seat =$row['room_seat'];
     $time_start = $row['time_start'];
     $time_start = substr($time_start,0,5);
-    if($x == 0){
+    if($room_name != $room_name_R){
         $Y_text = $Y_text.'
         <div class="time_icon">
             <span class="morning">조조</span>
@@ -47,7 +48,10 @@ if(!$conn){
         ';
     
         $x++;
-
+    if($room_name != $room_name_R){
+        $Y_text = $Y_text.'</div>';
+        $room_name_R = $room_name; 
+    }
     }
     $Y_text = $Y_text.'</div>';
     echo $Y_text;
