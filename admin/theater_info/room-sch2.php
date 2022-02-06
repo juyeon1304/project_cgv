@@ -12,22 +12,25 @@ include "./include/dbconn.php";
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="./js/room-sch2-2.js" defer></script>
+<script src="./js/room-sch2.js" defer></script>
 <link rel="stylesheet" href="../common/page\movie/css/movie.css" type="text/css" />
-<script src="./js/room-sch2.js" ></script>
 
 <script>
     window.addEventListener("load", function(e) {
         let city_code = document.getElementById('city_name').value;
         getTheater(city_code);
-        // let theater_code = document.getElementById('theater_name').value;
-        
+
+       
     
     });
 </script>
+
+
 </head>
 <body>
     <h2>스케줄 등록2</h2>
-    <form class="form-horizontal" name="regform" id="regform" method="post" action="./room-sch-regP.php" onsubmit="return sendit()" >
+    <form class="form-horizontal" name="regform" id="regform" method="post" action="./room-schP2-submit.php" onsubmit="return sendit()" >
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">지역별 구분</label>
             <select name="city_code" id="city_name" class="city_name select_type" onchange="getTheater(this.value)">
@@ -47,7 +50,6 @@ include "./include/dbconn.php";
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">영화관 구분</label>
             <select name="theater_code" id="theater_name" class="select_type" onchange="getRoom(this.value)">
-
             </select>
         </div>
         <div class="form-group">
@@ -57,7 +59,7 @@ include "./include/dbconn.php";
         </div>
         <div class="form-group">
             <label for="inputCode" class="col-sm-2 control-label">상영중 영화 구분</label>
-            <select name="movie_code" class="select_type" onchange="getBreaktime(this.value)">
+            <select name="movie_code" class="select_type" onchange="getRuntime(this.value)">
             <?php
                     $sql = "select M_Code, M_Title from movie_info order by M_Title ASC";
                     $result = mysqli_query($conn, $sql);
@@ -66,9 +68,9 @@ include "./include/dbconn.php";
                         $movie_name = $row['M_Title'];
                 ?>
                 <option value="<?=$movie_code?>"><?=$movie_name?></option>
-                <?php
-                    }
-                ?>
+            <?php
+                }
+            ?>
             </select>
         </div>
         <div class="form-group">
@@ -79,7 +81,7 @@ include "./include/dbconn.php";
                     while($row = mysqli_fetch_array($result)){
                         $movie_run = $row['M_run'];
                 ?>
-                <input type="text" value="<?=$movie_run?>" name="movie_run" class="select_type" id="movie_run" >
+                <span name="movie_run" class="select_type" id="movie_run"><?=$movie_run?></span>분
                 <?php
                     }
                 ?>
@@ -129,7 +131,8 @@ include "./include/dbconn.php";
 
 
 
-<script src="./js/room-sch2-2.js"></script>
+
+
 
 </body>
 </html>

@@ -41,7 +41,7 @@
       <div class="wrap_gnb">
         <h1 class="logo_cgv.png">
           <a href="">
-            <img src="common/images/logo_cgv.png" alt="CGV">
+            <img src="/common/images/logo_cgv.png" alt="CGV">
           </a>
         </h1>
         <h2 class="hide">대메뉴</h2>

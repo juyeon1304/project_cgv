@@ -1,7 +1,6 @@
 <?php
     include "./include/dbconn.php";
 
-
     if(!$conn){
         echo "DB연결 실패!";
     }else{ 
@@ -36,11 +35,12 @@
         if(isset($_GET["theater_code"])){
             $theater_code = $_GET["theater_code"]; 
             $room_all_text = '';
-           $sql = "select room_name from room_info where room_theater = '$theater_code'";
+           $sql = "select room_name, room_idx from room_info where room_theater = '$theater_code'";
            $result = mysqli_query($conn, $sql);
             while($row = mysqli_fetch_array($result)){
                 $room_name = $row['room_name'];
-                $room_all_text = $room_all_text."<option value=$room_name>".$room_name."</option>";
+                $room_idx = $row['room_idx'];
+                $room_all_text = $room_all_text."<option value=$room_idx>".$room_name."</option>";
             }
             echo $room_all_text;
         }//if end
@@ -53,29 +53,16 @@
            $result = mysqli_query($conn, $sql);
             while($row = mysqli_fetch_array($result)){
                 $movie_run = $row['M_run'];
-                $run_all_text = "<p>".$movie_run."</p>";
+                // $run_all_text = $movie_run;
             }
             
-            echo $run_all_text;
+            echo $movie_run;
         }//if end
 
 
     }//else end
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     
 ?>

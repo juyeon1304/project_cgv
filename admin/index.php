@@ -60,7 +60,7 @@
                                     <li><a href="/admin/theater_info/theater-reg.php" target="content">영화관 등록</a></li>
                                     <li><a href="/admin/theater_info/theater-chk.php" target="content">영화관 조회</a></li>
                                     <li><a href="/admin/theater_info/room-sch.php" target="content">스케줄 관리</a></li>
-                                    <li><a href="/admin/theater_info/room-sch2.php" target="content">스케줄 관리2</a></li>
+                                    <li><a href="/admin/theater_info/room-sch2.php" target="content">스케줄 등록2</a></li>
                                     <li><a href="/admin/theater_info/sch_info.php" target="content">스케줄 조회</a></li>
                                     <li><a href="/admin/theater_info/sch_info2.php" target="content">스케줄 조회2</a></li>
                                 </ul>
@@ -78,7 +78,7 @@
         </div>
         <div class="right">
             <main class="">
-                <div id="wrap_comm" style="overflow:scroll; height:80%">
+                <div id="wrap_comm" style="">
                     <iframe width="100%" height="1083px" frameborder=0 name="content"></iframe>
                 </div>
             </main>
