@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5_seat_position</title>
+    <style>
+        .c_position {  border: none; box-sizing : border-box;text-align:center; }
+        .c_position:after { display: block; content: ""; clear: both;}
+        .s_position { float:left; margin:0 3px 3px 0; width:16px; height:16px; background-color:rgb(187, 187, 187); font-size: 11px; box-sizing: border-box; line-height: 15px; color:#fff; cursor: pointer;}
+        .l_position {  margin:0 3px 3px 0; width:16px; height:16px; background-color:rgb(187, 187, 187); font-size: 11px; box-sizing: border-box; line-height: 15px; color:#fff; cursor: pointer;}
+        .s_seat_no {border : none;  float: left;  box-sizing : border-box;text-align:center; margin-right:20px;  }
+       #s_contain{border : none; float: left; display: block; box-sizing : border-box;text-align:center; }
+    </style>
+</head>
+<script>
+    'use strict';
+    window.onload = function(){
+        const fd_seat = [1,2,3];
+        let seat_click = [];
+        //클릭여부를 저장할 변수
+        let seat_click_flag = [];
+
+        const container = document.getElementById('container');
+        const s_line_no = document.createElement('div');
+        s_line_no.className = "s_seat_no";
+        container.appendChild(s_line_no);
+
+
+        const seat_contain = document.createElement('div')
+        seat_contain.id = "s_contain";
+
+
+        container.appendChild(seat_contain);
+
+        for(let i=0,c=65; i<7; i++,c++){
+            const l_no =document.createElement('div');
+            l_no.innerHTML= String.fromCharCode([c])
+            l_no.className = "l_position";
+            s_line_no.appendChild(l_no);
+
+        }
+
+        for(let i = 0; i<7;i++){
+            const contain_div = document.createElement('div');
+            contain_div.className = 'c_position';
+
+            seat_contain.appendChild(contain_div);
+            for(let j = 0 ; j < 7 ; j++){
+                const seat_div = document.createElement('div');
+                seat_div.className = 's_position';
+                contain_div.appendChild(seat_div);
+
+            }
+        }
+
+        const class_seat = document.getElementsByClassName('s_position');
+
+
+        for(let i =0,s_no=1; i < 49; i++,s_no++){
+                if(s_no > 7){
+                    s_no = 1;
+                }
+            class_seat[i].innerText = s_no;
+            if(fd_seat.includes(i+1)){
+                class_seat[i].style.border = "1px solid green";
+            }
+
+            class_seat[i].addEventListener('click',()=>{
+                check_div(i);
+            });
+
+            class_seat[i].addEventListener('mouseover',()=>{
+                m_over(i);
+            });
+
+            class_seat[i].addEventListener('mouseout',()=>{
+                m_out(i);
+            });
+        }
+
+        const check_div = function(num1){
+            //클릭된 죄석이라면
+            if(seat_click_flag[num1]){
+                class_seat[num1].style.backgroundColor = "rgb(187, 187, 187)";
+                seat_click_flag[num1] = false;
+
+                if(fd_seat.includes(num1+1)){
+                    console.log(`num1 : ${num1}, fd_seat.indexof : ${fd_seat.includes(num1+1)}`);
+                    class_seat[num1].style.border = "1px solid green";
+                }
+            }else{
+                class_seat[num1].style.backgroundColor = "red";
+                seat_click_flag[num1] = true;
+            }
+        }
+
+        const m_over = function(num1){
+           class_seat[num1].style.backgroundColor = "red";
+       }
+
+        const m_out = function(num1){
+            //초기상태이거나 클릭한 죄석이 아닌 경우
+            if((seat_click_flag[num1] == '') || (!seat_click_flag[num1])) {
+                class_seat[num1].style.backgroundColor = "rgb(187, 187, 187)";
+            }
+       }
+    } //end
+
+</script>
+<body>
+    <h2>15_seat_position</h2>
+    <div id="container"></div>
+</body>
+</html>

@@ -3,8 +3,8 @@
     height: 30px;
     background-color: #f1f0e5;
     position: relative;
-   
-  
+
+
 }
 #nav_content {
     width: 1000px;
@@ -20,7 +20,7 @@
     margin-left: 20px;
     width: 300px;
     /* border : 1px solid red; */
-   
+
 }
 #nav_content > ul > li {
     display: inline-block;
@@ -39,14 +39,13 @@
     content : '>';
     margin : 10px;
 }
- 
+
 #nav_btn {
     float : left;
 }
 
 #nav_btn2 {
     float : right;
-    height: 100%;
     text-align: center;
     /* border: 1px solid #cacac0; */
     box-sizing: border-box;
@@ -55,12 +54,11 @@
 #nav_btn2 > div {
     float : right;
     width: 150px;
-    height: 100%;
     border: 1px solid #cacac0;
     border-top: none;
     border-bottom: none;
 
-        
+
 }
 #nav_btn2 > div:first-child{
     border-left: none;
@@ -72,10 +70,34 @@
 }
 
 
-#nav_btn2 > div > p {
-    padding-top: 5px;
+#nav_btn2 * {
+    display: block;
+    line-height: 30px;
 }
 
 
-
-
+/* 220208 seats.html(좌석선택) 스타일 추가 */
+.flex { display: flex}
+.bg_black { height: 33px; line-height: 33px; text-align: center; background-color: #333333; color: #fff; }
+.sec_seat { border: 2px solid #d4d3c9; background: #f2f0e5}
+.sec_seat .wrap_info { padding: 10px 0 0; border-bottom: 2px solid #d4d3c9; }
+.sec_seat .wrap_info > div { width: 50%;  padding: 0 0 0 20px; box-sizing: border-box; }
+.sec_seat .wrap_info > .left { padding: 0 10px 0 0; border-right: 1px solid #d4d3c9;}
+.sec_seat .wrap_info > .left .txt_red { text-align: right; font-size: 11px ; color: red; }
+.sec_seat .wrap_info > .right .list_info { font-size: 14px;}
+.sec_seat .wrap_info > .right .list_info > li { margin-right: 10px}
+.sec_seat .wrap_info > .right .info_time { padding-top: 10px}
+.list_group > li { display: flex; padding: 0 0 10px}
+.list_group > li > .title { width: 55px; font-size: 14px}
+.list_group > li ul { display: flex;}
+.list_group > li ul li { margin-right: 7px}
+.list_group > li ul li.selected a { background: #333; border-color: #333; color: #fff}
+.list_group > li ul li.dimmed a { background: #bbb; border-color: #bbb; color: #fff}
+.list_group > li ul li a { display: block; width: 22px; height: 22px; line-height: 20px; border:1px solid #d6d3ce; box-sizing: border-box; text-align: center; font-weight: bold; font-size: 15px}
+.wrap_room > .clear > div { padding: 20px 0 0; height: 385px; box-sizing: border-box;}
+.wrap_room > .clear > .left { width: 80%; border: 1px solid red;}
+.wrap_room > .clear > .right { width: 15%; font-size: 13px; color: #333}
+.wrap_room .wrap_seats > .inner { width: 80%; margin: 0 auto; text-align: center;}
+.wrap_room .wrap_seats .seats { margin: 50px 0 0; height:200px; border: 1px solid blue;}
+.wrap_room .screen { line-height: 30px; background:#d8d6d1; color:#757573 ; font-weight: bold;}
+.wrap_room .wrap_info ul li i { display: inline-block; width: 15px; height: 16px; margin-right: 8px; background-image: url(/common/images/sprite/seat_icons.png); background-repeat: no-repeat; vertical-align: middle; }
