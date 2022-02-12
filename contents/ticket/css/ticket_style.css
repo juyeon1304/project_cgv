@@ -82,7 +82,7 @@
 .sec_seat { border: 2px solid #d4d3c9; background: #f2f0e5}
 .sec_seat .wrap_info { padding: 10px 0 0; border-bottom: 2px solid #d4d3c9; }
 .sec_seat .wrap_info > div { width: 50%;  padding: 0 0 0 20px; box-sizing: border-box; }
-.sec_seat .wrap_info > .left { padding: 0 10px 0 0; border-right: 1px solid #d4d3c9;}
+.sec_seat .wrap_info > .left { padding-right:10px; border-right: 1px solid #d4d3c9;}
 .sec_seat .wrap_info > .left .txt_red { text-align: right; font-size: 11px ; color: red; }
 .sec_seat .wrap_info > .right .list_info { font-size: 14px;}
 .sec_seat .wrap_info > .right .list_info > li { margin-right: 10px}
@@ -95,9 +95,19 @@
 .list_group > li ul li.dimmed a { background: #bbb; border-color: #bbb; color: #fff}
 .list_group > li ul li a { display: block; width: 22px; height: 22px; line-height: 20px; border:1px solid #d6d3ce; box-sizing: border-box; text-align: center; font-weight: bold; font-size: 15px}
 .wrap_room > .clear > div { padding: 20px 0 0; height: 385px; box-sizing: border-box;}
-.wrap_room > .clear > .left { width: 80%; border: 1px solid red;}
+.wrap_room > .clear > .left { width: 80%; }
 .wrap_room > .clear > .right { width: 15%; font-size: 13px; color: #333}
 .wrap_room .wrap_seats > .inner { width: 80%; margin: 0 auto; text-align: center;}
-.wrap_room .wrap_seats .seats { margin: 50px 0 0; height:200px; border: 1px solid blue;}
+.wrap_room .wrap_seats .seats { margin: 50px 0 0; height:200px; }
 .wrap_room .screen { line-height: 30px; background:#d8d6d1; color:#757573 ; font-weight: bold;}
 .wrap_room .wrap_info ul li i { display: inline-block; width: 15px; height: 16px; margin-right: 8px; background-image: url(/common/images/sprite/seat_icons.png); background-repeat: no-repeat; vertical-align: middle; }
+
+.c_position {  border: none; box-sizing : border-box;text-align:center; }
+.c_position:after { display: block; content: ""; clear: both;}
+.s_position { float:left; margin:0 3px 3px 0; width:16px; height:16px; background-color:rgb(187, 187, 187); font-size: 11px; box-sizing: border-box; line-height: 15px; color:#fff; cursor: pointer;}
+.l_position {  margin:0 3px 3px 0; width:16px; height:16px; background-color:rgb(187, 187, 187); font-size: 11px; box-sizing: border-box; line-height: 15px; color:#fff; cursor: pointer;}
+.s_seat_no {border : none;  float: left;  box-sizing : border-box;text-align:center; margin-right:20px;  }
+#s_contain{border : none; float: left; display: block; box-sizing : border-box;text-align:center; }
+
+/* 220210 추가 */
+.container { display: table; margin: 0 auto;}
