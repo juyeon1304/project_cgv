@@ -302,7 +302,7 @@
                     
             </div>
             <div id="select_theater">
-
+            <form action="./seats.php" method="post" onsubmit="return reg_seat()">
                  <span>극장</span><span id="th_name"></span><br />
                  <span>일시</span><span id="th_date"></span><br />
                  <span>상영관</span><span id="th_room"></span><br />
@@ -310,8 +310,9 @@
                  <input type="hidden" id="send_movie_code" name="x_movie_code" value="">
                  <input type="hidden" id="send_movie_date" name="x_movie_date" value="">
                  <input type="hidden" id="send_movie_theater" name="x_movie_theater" value="">
-                 <input type="hidden" id="send_movie_room" name="x_movie_theater" value="">
-               
+                 <input type="hidden" id="send_movie_room" name="x_movie_room" value="">
+                 <input type="hidden" id="send_movie_time" name="x_m_time_code" value="">
+            </form>
             </div>
             <div id="select_theater_befor">
 
@@ -324,6 +325,7 @@
             <div id="select_conment1"></div>
             <div id="select_conment2"></div>
             <div id="reg_btn"></div>
+            </form>
         </div>
         <div class="movie_bottom"></div>
                         

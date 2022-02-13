@@ -59,6 +59,7 @@ window.onload = function(){
             }
             send_movie_theater.value = '';
             send_movie_date.value = '';
+            reg_btn_ch();
             while(time_body.hasChildNodes()){
                 time_body.removeChild(time_body.firstChild);
             }
@@ -229,7 +230,7 @@ window.onload = function(){
                                 const send_movie_date = document.getElementById('send_movie_date');
                                 th_date.innerText = '';
                                 send_movie_date.value = ''; 
-                                
+                                reg_btn_ch();
                                 while(time_body.hasChildNodes()){
                                     time_body.removeChild(time_body.firstChild);
                                 }         
@@ -317,6 +318,7 @@ window.onload = function(){
             const send_movie_date = document.getElementById('send_movie_date');
             th_date.innerText = '';
             send_movie_date.value = '';
+            reg_btn_ch();
             while(time_body.hasChildNodes()){
                 time_body.removeChild(time_body.firstChild);
             } 
@@ -394,7 +396,7 @@ window.onload = function(){
    
     const theater_date = document.getElementsByClassName('theater_date');
     const send_movie_date = document.getElementById('send_movie_date');
-    
+    const send_movie_time = document.getElementById('send_movie_time');
     for(let i = 0; i < date_li.length; i++){
         date_li[i].addEventListener('click',(e)=>{
             // console.log(date_li[i].textContent);
@@ -417,7 +419,8 @@ window.onload = function(){
                 
             }
             se_date(i);
-          
+            send_movie_time.value = '';
+            reg_btn_ch();
             
 
         })
@@ -504,15 +507,25 @@ window.onload = function(){
                 const th_room = document.getElementById('th_room');
                 const send_movie_room = document.getElementById('send_movie_room');
                 const th_people = document.getElementById('th_people');
-                
-
+                const send_movie_time = document.getElementById('send_movie_time');
+                const time_idx = document.getElementsByClassName('time_idx');
 
                 for(let i = 0; i < time_point.length; i++){
+                    
+                    
                     time_point[i].addEventListener('click',()=>{
+                        for(let i = 0; i < time_point.length; i++){
+                            time_point[i].style.backgroundColor = "transparent"
+                            time_point[i].style.color = "#000000"
+                        }
                         // console.log(time_point.length)
                         th_room.innerText = time_room_name[i].innerText;
                         send_movie_room.value = room_code[i].value;
                         th_people.innerText = seat_countG[i].innerText+'명';
+                        send_movie_time.value = time_idx[i].value;
+                        time_point[i].style.backgroundColor = "#999999"
+                        time_point[i].style.color = "#ffffff"
+
                         reg_btn_ch();
                     });
 
@@ -532,16 +545,22 @@ window.onload = function(){
     const reg_btn_ch = function(){
         const reg_btn = document.getElementById('reg_btn');
         const send_movie_code = document.getElementById('send_movie_code');
-        const send_movie_date = document.getElementById('send_movie_code');
-        const send_movie_theater = document.getElementById('send_movie_code');
-        const send_movie_room = document.getElementById('send_movie_code');
-
-        if(typeof send_movie_code.value !== 'undefined' && typeof send_movie_date.value !== 'undefined' && typeof send_movie_theater.value !== 'undefined' && typeof send_movie_room.value !== 'undefined' ){
-
+        const send_movie_date = document.getElementById('send_movie_date');
+        const send_movie_theater = document.getElementById('send_movie_theater');
+        const send_movie_room = document.getElementById('send_movie_room');
+       const send_movie_time = document.getElementById('send_movie_time');
+       const select_line = document.getElementsByClassName('select_line');
+        console.log(`${send_movie_code.value}--${send_movie_date.value}--${send_movie_theater.value}--${send_movie_room.value}`)
+        if( send_movie_code.value != '' &&  send_movie_date.value != '' &&  send_movie_theater.value != '' &&  send_movie_room.value != '' && send_movie_time.value != ''){
             reg_btn.style.backgroundPosition = '-140px -220px';
+            const send_a = document.createElement('a');
+            send_a.href="./seats.php";
+            send_a.style.cursor="point";
+            select_line[0].appendChild(send_a);
+            send_a.appendChild(reg_btn);
 
-
-
+        }else{
+            reg_btn.style.backgroundPosition = ' 10px -220px';
         }
 
 
