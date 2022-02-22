@@ -117,7 +117,9 @@
               <div class="inner">
                 <div class="screen">SCREEN</div>
                 <div class="seats">
-                  <div id="container" class="container clear"></div>
+                  <div id="container" class="container clear">
+                      
+                  </div>
                 </div>
               </div>
             </div>
@@ -127,7 +129,11 @@
     </section>
   </main>
   
-<script src="./js/seats.js"></script>
+<!-- <script src="./js/seats.js"></script> -->
+
+<script>
+    
+</script>
 </body>
 
 </html>

@@ -1,0 +1,9 @@
+#container {  padding:50px 0 0 ; width: 30vw; margin: 0 auto; box-sizing: border-box;}
+#container > div { margin-left:20px; padding:3px; color: #fff; background: beige;}
+#container > div > div { margin:0 0 3px; border: 1px solid red;  padding: 5px; }
+#container > div > div > span { display: inline-block; background: #777; vertical-align: middle; width: 22px; height:22px; line-height: 22px; text-align: center; }
+
+
+#container .wrap_no span { color: red; background: none; font-weight: 600; font-size: 18px;}
+#container .wrap_row { display:table; padding-left:7px; }
+#container .wrap_row span { margin-right:7px; }
