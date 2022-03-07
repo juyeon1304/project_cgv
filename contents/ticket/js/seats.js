@@ -4,7 +4,7 @@ window.onload = function(){
     let seat_click = [];
     //클릭여부를 저장할 변수
     let seat_click_flag = [];
-
+    let seat_len = 0 ;
     const container = document.getElementById('container');
     const s_line_no = document.createElement('div');
     s_line_no.className = "s_seat_no";
@@ -39,7 +39,12 @@ window.onload = function(){
     }
 
     const class_seat = document.getElementsByClassName('s_position');
-
+    
+    // 좌석 선택 갯수 받아 오는 함수
+    const seat_lent_fun = function(num1){
+        seat_len = seat_len+Number(num1);
+        console.log(seat_len)
+    }
 
     for(let i =0,s_no=1; i < 49; i++,s_no++){
             if(s_no > 7){
@@ -51,42 +56,128 @@ window.onload = function(){
         }
 
         class_seat[i].addEventListener('click',()=>{
-            check_div(i);
+            check_div(i,seat_len);
         });
 
         class_seat[i].addEventListener('mouseover',()=>{
-            m_over(i);
+            m_over(i,seat_len);
         });
 
         class_seat[i].addEventListener('mouseout',()=>{
-            m_out(i);
+            m_out(i,seat_len);
         });
     }
 
-    const check_div = function(num1){
+    const check_div = function(num1,no_len){
         //클릭된 죄석이라면
-        if(seat_click_flag[num1]){
-            class_seat[num1].style.backgroundColor = "rgb(187, 187, 187)";
-            seat_click_flag[num1] = false;
+     
+            for(let i=0; i < no_len; i++){
+                if( (seat_click_flag[num1+i]) ){
+                    class_seat[num1+i].style.backgroundColor = "rgb(187, 187, 187)";
+                    seat_click_flag[num1+i] = false;
+                    if(fd_seat.includes(num1+1)){
+                        // console.log(`num1 : ${num1}, fd_seat.indexof : ${fd_seat.includes(num1+1)}`);
+                        class_seat[num1+i].style.border = "1px solid green";
+                    }
 
-            if(fd_seat.includes(num1+1)){
-                console.log(`num1 : ${num1}, fd_seat.indexof : ${fd_seat.includes(num1+1)}`);
-                class_seat[num1].style.border = "1px solid green";
+                }else{
+                    class_seat[num1+i].style.backgroundColor = "red";
+                    seat_click_flag[num1+i] = true;
+                }
             }
-        }else{
-            class_seat[num1].style.backgroundColor = "red";
-            seat_click_flag[num1] = true;
-        }
+
     }
 
-    const m_over = function(num1){
-       class_seat[num1].style.backgroundColor = "red";
+    const m_over = function(num1,no_len){
+      
+         
+            for(let i=0; i < no_len; i++){
+                if( (!seat_click_flag[num1+i]) ){
+                    class_seat[num1+i].style.backgroundColor = "red";
+                }
+            }
+       
    }
 
-    const m_out = function(num1){
+    const m_out = function(num1,no_len){
         //초기상태이거나 클릭한 죄석이 아닌 경우
-        if((seat_click_flag[num1] == '') || (!seat_click_flag[num1])) {
-            class_seat[num1].style.backgroundColor = "rgb(187, 187, 187)";
+        for(let i=0; i < no_len; i++){
+            if( (seat_click_flag[num1] == '') || (!seat_click_flag[num1+i]) ){
+                class_seat[num1+i].style.backgroundColor = "rgb(187, 187, 187)";
+            }
         }
+                
+    }   
+            
+        
+            
+        
+
+
+
+
+   // ----------------------------------------- 예매 좌석 갯수 선택 ------------------------------
+
+   const select_no1 = document.getElementsByClassName('select_no1');
+   for(let i = 0; i < select_no1.length;i++){
+       select_no1[i].addEventListener('click',()=>{
+           console.log(select_no1[i].innerText);
+           seat_lent_fun(select_no1[i].innerText);
+        for(let z = 0 ; z < select_no1.length;z++){
+            let parents = select_no1[z].parentElement;
+            parents.className = '';
+        }
+        let parents = select_no1[i].parentElement;
+        parents.className = 'selected';
+       })
+       
    }
-} //end
+
+   const select_no2 = document.getElementsByClassName('select_no2');
+   for(let i = 0; i < select_no2.length;i++){
+       select_no2[i].addEventListener('click',()=>{
+           console.log(select_no2[i].innerText);
+           seat_lent_fun(select_no1[i].innerText);
+        for(let z = 0 ; z < select_no2.length;z++){
+            let parents = select_no2[z].parentElement;
+            parents.className = '';
+        }
+        let parents = select_no2[i].parentElement;
+        parents.className = 'selected';
+       })
+       
+   }
+
+   const select_no3 = document.getElementsByClassName('select_no3');
+   for(let i = 0; i < select_no3.length;i++){
+       select_no3[i].addEventListener('click',()=>{
+           console.log(select_no3[i].innerText);
+           seat_lent_fun(select_no1[i].innerText);
+        for(let z = 0 ; z < select_no3.length;z++){
+            let parents = select_no3[z].parentElement;
+            parents.className = '';
+        }
+        let parents = select_no3[i].parentElement;
+        parents.className = 'selected';
+       })
+       
+   }
+
+   const select_no4 = document.getElementsByClassName('select_no4');
+   for(let i = 0; i < select_no4.length;i++){
+       select_no4[i].addEventListener('click',()=>{
+           console.log(select_no4[i].innerText);
+           seat_lent_fun(select_no1[i].innerText);
+        for(let z = 0 ; z < select_no4.length;z++){
+            let parents = select_no4[z].parentElement;
+            parents.className = '';
+        }
+        let parents = select_no4[i].parentElement;
+        parents.className = 'selected';
+       })
+       
+   }
+
+
+
+}

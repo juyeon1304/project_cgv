@@ -34,57 +34,57 @@
               <li class="" id="g_adult">
                 <span class="title">일반</span>
                 <ul>
-                  <li data-count="0" class="selected" type="adult"><a href="#"><span>0</span></a></li>
-                  <li data-count="1" type="adult"><a href="#"><span>1</span></a></li>
-                  <li data-count="2" type="adult"><a href="#"><span>2</span></a></li>
-                  <li data-count="3" type="adult"><a href="#"><span>3</span></a></li>
-                  <li data-count="4" type="adult"><a href="#"><span>4</span></a></li>
-                  <li data-count="5" type="adult"><a href="#"><span>5</span></a></li>
-                  <li data-count="6" type="adult"><a href="#"><span>6</span></a></li>
-                  <li data-count="7" type="adult" class="dimmed"><a href="#"><span>7</span></a></li>
-                  <li data-count="8" type="adult" class="dimmed"><a href="#"><span>8</span></a></li>
+                  <li data-count="0" class="selected" type="adult"><span class="select_no1">0</span></li>
+                  <li data-count="1" type="adult"><span class="select_no1">1</span  ></li>
+                  <li data-count="2" type="adult"><span class="select_no1">2</span></li>
+                  <li data-count="3" type="adult"><span class="select_no1">3</span></li>
+                  <li data-count="4" type="adult"><span class="select_no1">4</span></li>
+                  <li data-count="5" type="adult"><span class="select_no1">5</span></li>
+                  <li data-count="6" type="adult"><span class="select_no1">6</span></li>
+                  <li data-count="7" type="adult" class="dimmed"><span>7</span></li>
+                  <li data-count="8" type="adult" class="dimmed"><span>8</span></li>
                 </ul>
               </li>
               <li class="" id="g_youth">
                 <span class="title">청소년</span>
                 <ul>
-                  <li data-count="0" class="selected" type="youth"><a href="#"><span>0</span></a></li>
-                  <li data-count="1" type="youth"><a href="#"><span>1</span></a></li>
-                  <li data-count="2" type="youth"><a href="#"><span>2</span></a></li>
-                  <li data-count="3" type="youth"><a href="#"><span>3</span></a></li>
-                  <li data-count="4" type="youth"><a href="#"><span>4</span></a></li>
-                  <li data-count="5" type="youth"><a href="#"><span>5</span></a></li>
-                  <li data-count="6" type="youth"><a href="#"><span>6</span></a></li>
-                  <li data-count="7" type="youth" class="dimmed"><a href="#"><span>7</span></a></li>
-                  <li data-count="8" type="youth" class="dimmed"><a href="#"><span>8</span></a></li>
+                  <li data-count="0" class="selected" type="youth"><span class="select_no2">0</span></li>
+                  <li data-count="1" type="youth"><span class="select_no2">1</span></li>
+                  <li data-count="2" type="youth"><span class="select_no2">2</span></li>
+                  <li data-count="3" type="youth"><span class="select_no2">3</span></li>
+                  <li data-count="4" type="youth"><span class="select_no2">4</span></li>
+                  <li data-count="5" type="youth"><span class="select_no2">5</span></li>
+                  <li data-count="6" type="youth"><span class="select_no2">6</span></li>
+                  <li data-count="7" type="youth" class="dimmed"><span>7</span></li>
+                  <li data-count="8" type="youth" class="dimmed"><span>8</span></li>
                 </ul>
               </li>
               <li class="" id="g_senior">
                 <span class="title">경로</span>
                 <ul>
-                  <li data-count="0" class="selected" type="senior"><a href="#"><span>0</span></a></li>
-                  <li data-count="1" type="senior"><a href="#"><span>1</span></a></li>
-                  <li data-count="2" type="senior"><a href="#"><span>2</span></a></li>
-                  <li data-count="3" type="senior"><a href="#"><span>3</span></a></li>
-                  <li data-count="4" type="senior"><a href="#"><span>4</span></a></li>
-                  <li data-count="5" type="senior"><a href="#"><span>5</span></a></li>
-                  <li data-count="6" type="senior"><a href="#"><span>6</span></a></li>
-                  <li data-count="7" type="senior" class="dimmed"><a href="#"><span>7</span></a></li>
-                  <li data-count="8" type="senior" class="dimmed"><a href="#"><span>8</span></a></li>
+                  <li data-count="0" class="selected" type="senior"><span class="select_no3">0</span></li>
+                  <li data-count="1" type="senior"><span class="select_no3">1</span></li>
+                  <li data-count="2" type="senior"><span class="select_no3">2</span></li>
+                  <li data-count="3" type="senior"><span class="select_no3">3</span></li>
+                  <li data-count="4" type="senior"><span class="select_no3">4</span></li>
+                  <li data-count="5" type="senior"><span class="select_no3">5</span></li>
+                  <li data-count="6" type="senior"><span class="select_no3">6</span></li>
+                  <li data-count="7" type="senior" class="dimmed"><span>7</span></li>
+                  <li data-count="8" type="senior" class="dimmed"><span>8</span></li>
                 </ul>
               </li>
               <li class="" id="g_special">
                 <span class="title">우대</span>
                 <ul>
-                  <li data-count="0" class="selected" type="special"><a href="#"><span>0</span></a></li>
-                  <li data-count="1" type="special"><a href="#"><span>1</span></a></li>
-                  <li data-count="2" type="special"><a href="#"><span>2</span></a></li>
-                  <li data-count="3" type="special"><a href="#"><span>3</span></a></li>
-                  <li data-count="4" type="special"><a href="#"><span>4</span></a></li>
-                  <li data-count="5" type="special"><a href="#"><span>5</span></a></li>
-                  <li data-count="6" type="special"><a href="#"><span>6</span></a></li>
-                  <li data-count="7" type="special" class="dimmed"><a href="#"><span>7</span></a></li>
-                  <li data-count="8" type="special" class="dimmed"><a href="#"><span>8</span></a></li>
+                  <li data-count="0" class="selected" type="special"><span class="select_no4">0</span></li>
+                  <li data-count="1" type="special"><span class="select_no4">1</span></li>
+                  <li data-count="2" type="special"><span class="select_no4">2</span></li>
+                  <li data-count="3" type="special"><span class="select_no4">3</span></li>
+                  <li data-count="4" type="special"><span class="select_no4">4</span></li>
+                  <li data-count="5" type="special"><span class="select_no4">5</span></li>
+                  <li data-count="6" type="special"><span class="select_no4">6</span></li>
+                  <li data-count="7" type="special" class="dimmed"><span>7</span></li>
+                  <li data-count="8" type="special" class="dimmed"><span>8</span></li>
                 </ul>
               </li>
             </ul>

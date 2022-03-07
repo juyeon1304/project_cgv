@@ -91,9 +91,9 @@
 .list_group > li > .title { width: 55px; font-size: 14px}
 .list_group > li ul { display: flex;}
 .list_group > li ul li { margin-right: 7px}
-.list_group > li ul li.selected a { background: #333; border-color: #333; color: #fff}
-.list_group > li ul li.dimmed a { background: #bbb; border-color: #bbb; color: #fff}
-.list_group > li ul li a { display: block; width: 22px; height: 22px; line-height: 20px; border:1px solid #d6d3ce; box-sizing: border-box; text-align: center; font-weight: bold; font-size: 15px}
+.list_group > li ul li.selected span { background: #333; border-color: #333; color: #fff}
+.list_group > li ul li.dimmed span { background: #bbb; border-color: #bbb; color: #fff}
+.list_group > li ul li span { display: block; width: 22px; height: 22px; line-height: 20px; border:1px solid #d6d3ce; box-sizing: border-box; text-align: center; font-weight: bold; font-size: 15px}
 .wrap_room > .clear > div { padding: 20px 0 0; height: 385px; box-sizing: border-box;}
 .wrap_room > .clear > .left { width: 80%; }
 .wrap_room > .clear > .right { width: 15%; font-size: 13px; color: #333}
