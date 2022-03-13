@@ -48,12 +48,21 @@ window.onload = function(){
     const seat_lent_fun = function(ticket_type,num1){
         // console.log(`${seat_len.type.length}, ${seat_len.type[seat_len.type.length]}`);
         let obj_count = seat_len.type.length;
-        seat_len.type[obj_count]= ticket_type;
-        seat_len.quatity[obj_count] = num1;
-        for(let i=0; i <seat_len.type.length ;i++){
+    
+       
+            seat_len.type[obj_count]= ticket_type;
+            seat_len.quatity[obj_count] = num1;
+           
+        
+            for(let i=0; i <seat_len.type.length ;i++){
+
+                console.log(`${seat_len.type.length}, ${seat_len.type[i]}, ${seat_len.quatity[i]}`);
+           
             
-            console.log(`${seat_len.type.length}, ${seat_len.type[i]}, ${seat_len.quatity[i]}`);
         }
+           
+
+        
        
         
     }
@@ -68,15 +77,33 @@ window.onload = function(){
         }
 
         class_seat[i].addEventListener('click',()=>{
-            check_div(i,seat_len);
+           
+            for(let z=0; z <seat_len.type.length ;z++){
+            
+                // console.log(`${seat_len.type.length}, ${seat_len.type[z]}, ${seat_len.quatity[z]}`);
+                console.log(seat_len)
+                check_div(i,seat_len.quatity[z]);
+            } 
+                
+           
+           
         });
 
         class_seat[i].addEventListener('mouseover',()=>{
-            m_over(i,seat_len);
+            for(let z=0; z <seat_len.type.length ;z++){
+            
+              
+                m_over(i,seat_len.quatity[z]);
+            } 
+            
         });
 
         class_seat[i].addEventListener('mouseout',()=>{
-            m_out(i,seat_len);
+            for(let z=0; z <seat_len.type.length ;z++){
+            
+                m_out(i,seat_len.quatity[z]);
+            } 
+           
         });
     }
 
@@ -84,11 +111,12 @@ window.onload = function(){
         //클릭된 죄석이라면
      
             for(let i=0; i < no_len; i++){
-                if( (seat_click_flag[num1+i]) ){
+                // console.log(`${class_seat.length}, ${num1}`);
+                if( (seat_click_flag[num1+i]) && class_seat.length > num1){
                     class_seat[num1+i].style.backgroundColor = "rgb(187, 187, 187)";
                     seat_click_flag[num1+i] = false;
                     if(fd_seat.includes(num1+1)){
-                        // console.log(`num1 : ${num1}, fd_seat.indexof : ${fd_seat.includes(num1+1)}`);
+                        // console.log(no_len);
                         class_seat[num1+i].style.border = "1px solid green";
                     }
 
@@ -96,16 +124,23 @@ window.onload = function(){
                     class_seat[num1+i].style.backgroundColor = "red";
                     seat_click_flag[num1+i] = true;
                 }
+                
             }
-
+   
     }
 
     const m_over = function(num1,no_len){
       
          
             for(let i=0; i < no_len; i++){
-                if( (!seat_click_flag[num1+i]) ){
-                    class_seat[num1+i].style.backgroundColor = "red";
+                if( (!seat_click_flag[num1+i])){
+                    // console.log(class_seat.length)
+                    if(class_seat.length > num1+1){
+                        class_seat[num1+i].style.backgroundColor = "red";
+                    }else{
+                        class_seat[num1-i].style.backgroundColor = "red";
+                    }
+                    
                 }
             }
        
@@ -114,8 +149,14 @@ window.onload = function(){
     const m_out = function(num1,no_len){
         //초기상태이거나 클릭한 죄석이 아닌 경우
         for(let i=0; i < no_len; i++){
-            if( (seat_click_flag[num1] == '') || (!seat_click_flag[num1+i]) ){
-                class_seat[num1+i].style.backgroundColor = "rgb(187, 187, 187)";
+            // console.log(`${class_seat.length}, ${num1}`);
+            if( (seat_click_flag[num1] == '') || (!seat_click_flag[num1+i]) ){              
+                if(class_seat.length > num1+1){
+                    class_seat[num1+i].style.backgroundColor = "rgb(187, 187, 187)";
+                }else{
+                    class_seat[num1-i].style.backgroundColor = "rgb(187, 187, 187)";
+                   
+                }
             }
         }
                 
