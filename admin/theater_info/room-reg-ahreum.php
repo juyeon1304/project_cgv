@@ -77,7 +77,7 @@ $theater_name = $row['theater_name'];
         <div class="form-group">
             <label for="" class="col-sm-2 control-label">복도열 지정(col)</label>
             <div class="col-sm-7">
-            <input type="text" class="form-control" name="" id="" maxlength="1" placeholder="">
+            <input type="text" class="form-control" name="" id="aisle_col" maxlength="1" placeholder="복도로 지정할 열 넘버 입력(예:'2'로 입력할 경우, 1번 좌석 우측에 복도가 생성됩니다.)" value="7">
             </div>
         </div>
         <div class="form-group">
@@ -87,21 +87,34 @@ $theater_name = $row['theater_name'];
             </div>
         </div>
         <!--  -->
-        <div class="form-group">
-            <label for="roomSeat" class="col-sm-2 control-label">총 상영관 좌석수 *</label>
-            <div class="col-sm-7">
-            <input type="number" class="form-control" name="roomSeat" id="roomSeat" >
-            </div>
-        </div>
+       
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-            <button type="button" class="btn_seat btn btn-default">죄석 미리보기</button>
+            <button type="button" class="btn_seat btn btn-default">좌석 미리보기</button>
             <button type="submit" class="btn btn-default">등록</button>
-        </div>
+            </div>
         </div>
         
     </form>
-    <div id="container" class="clear">
+    
+    <div class="wrap_container" style="display:none;">
+        <p class="notice" style="color:red; font-weight:bold; padding-bottom:20px">※미사용 및 사용불가 좌석을 선택하세요.</p>
+        <div id="container" class="clear" >
+        </div>
+        <div class="form-group">
+            <div class=" ">
+            <button type="button" class="btn_apply btn btn-default">반영하기</button>
+            <button type="" class="btn_apply btn btn-default">재선택 </button>
+            </div>
+        </div>
+        <div></div>
+         <div class="form-group">
+            <label for="roomSeat" class="">총 상영관 좌석수</label>
+            <div class="">
+            <input type="text" class="totalResult" name="" id="totalResult">
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
