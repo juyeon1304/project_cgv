@@ -55,7 +55,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="">극장 관리</a>
+                                <a href="./theater_info/room-reg-seongjea.php" target="content">극장 관리</a>
                                 <ul>
                                     <li><a href="/admin/theater_info/theater-reg.php" target="content">영화관 등록</a></li>
                                     <li><a href="/admin/theater_info/theater-chk.php" target="content">영화관 조회</a></li>

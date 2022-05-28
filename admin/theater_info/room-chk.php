@@ -46,6 +46,8 @@ $theater_name = $row['theater_name'];
     <p>총 상영관 수 : <?=$roomCnt?></p>
     <form action="theater-chk.php" method="post">
     <a href="./room-reg.php?theater_idx=<?=$theater_idx?>" class="btn btn-default">상영관 등록하기</a>
+    <a href="./SJ/seat/02.seatsetting.php?theater_idx=<?=$theater_idx?>" class="btn btn-default">엄성재 좌석 등록하기</a>
+    <a href="./SJ/seat/04.seat_list.php?theater_idx=<?=$theater_idx?>" class="btn btn-default">엄성재 좌석 조회하기</a>
     <a href="./theater-chk.php" class="btn btn-default">영화관 조회</a>
     <section>
         <div class="col-md-11">

@@ -1,0 +1,96 @@
+
+
+.nowline {
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+.numline {
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+.numline:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.nulline{
+  border: none;
+  box-sizing: border-box;
+  text-align: center;
+}
+.numbox {
+  float: left;
+  margin: 0 3px 3px 0;
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  font-size: 23px;
+  box-sizing: border-box;
+  line-height: 27px;
+  color: #fff;
+  cursor: pointer;
+}
+.nolbox{
+  float: left;
+  margin: 0 3px 3px 0;
+  width: 20px;
+  height: 30px;
+  background-color: white;
+  font-size: 23px;
+  box-sizing: border-box;
+  line-height: 27px;
+  color: #fff;
+  cursor: pointer;
+}
+.nullbox{
+  float: left;
+  margin: 0 3px 3px 0;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  font-size: 23px;
+  box-sizing: border-box;
+  line-height: 27px;
+  color: #fff;
+  cursor: pointer;
+}
+.abcbox {
+  margin: 0 3px 3px 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(237, 237, 227);
+  font-size: 23px;
+  box-sizing: border-box;
+  line-height: 27px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+.nullabc {
+  margin: 0 3px 3px 0;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(237, 237, 227);
+  font-size: 23px;
+  box-sizing: border-box;
+  line-height: 27px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+.abcblock {
+  border: none;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  margin-right: 20px;
+}
+#numblock {
+  border: none;
+  float: left;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+}
